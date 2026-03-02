@@ -227,15 +227,19 @@ app.post('/api/logs/iot', async (req, res) => {
     }
 
     try {
-        console.log(`🔔 [IoT Event] ${method} unlock by ID #${id}: ${status}`);
+        if (status === 'LOW_BATTERY' || status === 'CRITICAL_BATTERY') {
+            console.warn(`🔋 [POWER ALERT] ${status}: ${message}`);
+        } else {
+            console.log(`🔔 [IoT Event] ${method} unlock by ID #${id}: ${status}`);
+        }
 
         // Record in access_logs
         await supabase.from('access_logs').insert({
-            employee_id: id || 'IOT_DEVICE',
-            status: status || 'success',
+            employee_id: id === 0 ? null : (id || 'IOT_DEVICE'),
+            status: (status === 'LOW_BATTERY' || status === 'CRITICAL_BATTERY') ? 'warning' : (status || 'success'),
             confidence: 1.0,
-            device_id: 'esp32_fingerprint',
-            metadata: { method, message }
+            device_id: 'esp32_hardware',
+            metadata: { method, message, status }
         });
 
         res.json({ success: true });

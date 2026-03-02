@@ -6,9 +6,10 @@
 #include <WiFi.h>
 #include <time.h>
 
-
 // --- Hardware Pins ---
 const int RELAY_PIN = 23;
+const int BATTERY_PIN = 34;  // ADC1_CH6
+const int OVERRIDE_PIN = 13; // Physical Button
 #define FINGER_RX 16
 #define FINGER_TX 17
 
@@ -18,6 +19,11 @@ const char *password = "YOUR_WIFI_PASSWORD";
 const char *secret_token = "door_secret_pass_123";
 const char *backend_url = "http://your_backend_ip:8000";
 
+const float LOW_BATTERY_THRESHOLD = 11.1;
+const float CRITICAL_BATTERY_THRESHOLD = 10.5;
+const float VOLTAGE_DIVIDER_RATIO =
+    5.545; // (10k + 2.2k) / 2.2k (adjusted for ADC)
+
 const long UNLOCK_DURATION = 5000;
 const int MAX_FAILED_ATTEMPTS = 5;
 const unsigned long LOCKOUT_TIME = 300000; // 5 minutes
@@ -26,7 +32,9 @@ const unsigned long LOCKOUT_TIME = 300000; // 5 minutes
 WebServer server(80);
 Adafruit_Fingerprint finger = Adafruit_Fingerprint(&Serial2);
 unsigned long unlockStartTime = 0;
+unsigned long lastBatteryCheck = 0;
 bool isUnlocked = false;
+bool isPowerSaveMode = false;
 int failedAttempts = 0;
 unsigned long lockoutStartTime = 0;
 
@@ -53,11 +61,38 @@ String calculateHMAC(String payload, const char *key) {
   return hash;
 }
 
+// --- Power Management ---
+float readBatteryVoltage() {
+  int raw = analogRead(BATTERY_PIN);
+  float voltage = (raw / 4095.0) * 3.3 * VOLTAGE_DIVIDER_RATIO;
+  return voltage;
+}
+
+void notifyBackend(String method, int id, String status = "success",
+                   String message = "");
+
+void checkBatteryHealth() {
+  float voltage = readBatteryVoltage();
+  Serial.printf("🔋 Battery Voltage: %.2fV\n", voltage);
+
+  if (voltage < CRITICAL_BATTERY_THRESHOLD) {
+    Serial.println("⚠️ CRITICAL BATTERY: Entering Safe Shutdown!");
+    isPowerSaveMode = true;
+    notifyBackend("POWER_EVENT", 0, "CRITICAL_BATTERY",
+                  "Battery critically low. System entering restricted mode.");
+  } else if (voltage < LOW_BATTERY_THRESHOLD) {
+    Serial.println("⚠️ LOW BATTERY: Sending Alert.");
+    notifyBackend("POWER_EVENT", 0, "LOW_BATTERY",
+                  "Battery below 11.1V. Please charge.");
+  }
+}
+
 void setup() {
   Serial.begin(115200);
   Serial2.begin(57600, SERIAL_8N1, FINGER_RX, FINGER_TX);
 
   pinMode(RELAY_PIN, OUTPUT);
+  pinMode(OVERRIDE_PIN, INPUT_PULLUP);
   digitalWrite(RELAY_PIN, LOW);
 
   WiFi.begin(ssid, password);
@@ -80,14 +115,34 @@ void setup() {
 
   server.on("/unlock", HTTP_POST, handleRemoteUnlock);
   server.begin();
+
+  checkBatteryHealth(); // Initial check
 }
 
 void loop() {
   server.handleClient();
   handleAutoLock();
 
+  // Manual Override Check (Instant)
+  if (digitalRead(OVERRIDE_PIN) == LOW) {
+    delay(50); // Debounce
+    if (digitalRead(OVERRIDE_PIN) == LOW) {
+      triggerUnlock("Manual Override", 999);
+      while (digitalRead(OVERRIDE_PIN) == LOW)
+        ; // Wait for release
+    }
+  }
+
+  // Periodic Battery Check (Every 10 minutes)
+  if (millis() - lastBatteryCheck > 600000) {
+    checkBatteryHealth();
+    lastBatteryCheck = millis();
+  }
+
   if (millis() - lockoutStartTime > LOCKOUT_TIME || lockoutStartTime == 0) {
-    checkFingerprint();
+    if (!isPowerSaveMode) {
+      checkFingerprint();
+    }
   } else {
     static unsigned long lastNotify = 0;
     if (millis() - lastNotify > 10000) {
@@ -107,6 +162,12 @@ void handleAutoLock() {
 
 // --- Face/Remote Unlock Path ---
 void handleRemoteUnlock() {
+  if (isPowerSaveMode) {
+    server.send(503, "application/json",
+                "{\"error\":\"Device in Safe Shutdown (Low Battery)\"}");
+    return;
+  }
+
   if (server.hasArg("plain") == false) {
     server.send(400, "application/json", "{\"error\":\"Missing body\"}");
     return;
@@ -177,10 +238,10 @@ void triggerUnlock(String method, int id = 0) {
   digitalWrite(RELAY_PIN, HIGH);
   unlockStartTime = millis();
   isUnlocked = true;
-  notifyBackend(method, id);
+  notifyBackend(method, id, "success", "Unlocked via " + method);
 }
 
-void notifyBackend(String method, int id) {
+void notifyBackend(String method, int id, String status, String message) {
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
     http.begin(String(backend_url) + "/api/logs/iot");
@@ -189,12 +250,12 @@ void notifyBackend(String method, int id) {
     time_t now;
     time(&now);
 
-    StaticJsonDocument<300> doc;
+    StaticJsonDocument<400> doc;
     doc["method"] = method;
     doc["id"] = id;
-    doc["status"] = "success";
+    doc["status"] = status;
     doc["timestamp"] = (long)now;
-    doc["message"] = "Unlocked via " + method;
+    doc["message"] = message;
 
     // --- Sign the log with HMAC ---
     String payload;
