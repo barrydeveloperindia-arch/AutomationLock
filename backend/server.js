@@ -78,10 +78,15 @@ const unlockDoor = async () => {
     }
 
     try {
-        console.log(`🔓 [IoT] Sending unlock command to ${esp32Ip}...`);
-        await axios.post(`http://${esp32Ip}/unlock`, {}, {
-            headers: { 'Authorization': `Bearer ${secret}` },
-            timeout: 5000 // 5 second timeout for local network
+        console.log(`🔓 [IoT] Sending secure unlock command to ${esp32Ip}...`);
+        await axios.post(`http://${esp32Ip}/unlock`, {
+            timestamp: Math.floor(Date.now() / 1000)
+        }, {
+            headers: {
+                'Authorization': `Bearer ${secret}`,
+                'Content-Type': 'application/json'
+            },
+            timeout: 5000
         });
         console.log("✅ [IoT] Door unlocked successfully!");
     } catch (error) {
