@@ -15,8 +15,7 @@ where id in (select id from duplicates where rn > 1);
 
 -- 3. SCHEMA EVOLUTION (EMPLOYEES)
 alter table public.employees 
-add column if not exists status text default 'Active' check (status in ('Active', 'Disabled')),
-add column if not exists is_deleted boolean default false,
+add column if not exists status text default 'Active' check (status in ('Active', 'Disabled', 'Deleted')),
 add column if not exists updated_at timestamp with time zone default timezone('utc'::text, now());
 
 -- Add strict unique constraint on name to prevent display confusion
@@ -72,7 +71,31 @@ create trigger update_employees_updated_at
     for each row
     execute function update_updated_at_column();
 
--- 7. PERFORMANCE INDEXES
+-- 7. SOFT-DELETE & PURGE LOGIC
+create or replace function purge_biometrics_on_delete()
+returns trigger as $$
+begin
+    if new.status = 'Deleted' then
+        -- Clear face embeddings
+        update public.face_encodings set embedding = null where employee_id = new.employee_id;
+        -- Clear other biometrics
+        delete from public.fingerprints where employee_id = new.employee_id;
+        delete from public.rfid_tags where employee_id = new.employee_id;
+        -- Clear old column if it still exists
+        new.face_embedding = null;
+        new.image_url = null;
+    end if;
+    return new;
+end;
+$$ language plpgsql;
+
+create trigger tr_purge_biometrics
+    before update on public.employees
+    for each row
+    when (new.status = 'Deleted' and old.status <> 'Deleted')
+    execute function purge_biometrics_on_delete();
+
+-- 8. PERFORMANCE INDEXES
 create index if not exists idx_employees_active_not_deleted on public.employees (status, is_deleted);
 create index if not exists idx_face_embedding_cosine on public.face_encodings using ivfflat (embedding vector_cosine_ops) with (lists = 100);
 create index if not exists idx_logs_created_at on public.access_logs (created_at desc);

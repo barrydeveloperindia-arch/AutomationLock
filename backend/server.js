@@ -68,19 +68,32 @@ const authenticateToken = (req, res, next) => {
 
     if (!token) return res.sendStatus(401);
 
-    jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+    jwt.verify(token, process.env.JWT_SECRET, async (err, user) => {
         if (err) {
             console.error("❌ Token Verification Failed:", err.message);
-            console.log("🔑 Received Token (Partial):", token.substring(0, 20) + "...");
-            return res.status(403).json({
-                error: "Forbidden",
-                message: `Invalid or expired token: ${err.message}`
-            });
+            return res.status(403).json({ error: "Forbidden", message: "Invalid or expired token" });
         }
+
+        // --- Security Check: Account Status ---
+        if (user.role !== 'admin') {
+            const { data: dbUser } = await supabase.from('employees').select('status').eq('email', user.email).single();
+            if (dbUser && dbUser.status !== 'Active') {
+                return res.status(403).json({ error: "Access Denied", message: "Account is disabled or deleted" });
+            }
+        }
+
         console.log("🔓 Authenticated User:", user.email);
         req.user = user;
         next();
     });
+};
+
+const isAdmin = (req, res, next) => {
+    if (req.user && req.user.role === 'admin') {
+        next();
+    } else {
+        res.status(403).json({ error: "Access Denied", message: "Admin privileges required" });
+    }
 };
 
 // --- IoT Utilities ---
@@ -250,26 +263,42 @@ app.post('/api/logs/iot', async (req, res) => {
 });
 
 // Users Endpoints
-app.get('/api/users', authenticateToken, async (req, res) => {
+app.get('/api/users', authenticateToken, isAdmin, async (req, res) => {
     try {
-        console.log("🔍 [API] Fetching all employees for user:", req.user.email);
-        const { data: users, error } = await supabase.from('employees').select('*');
+        const { includeDeleted = 'false' } = req.query;
+        let query = supabase.from('employees').select('*');
+
+        if (includeDeleted !== 'true') {
+            query = query.neq('status', 'Deleted');
+        }
+
+        const { data: users, error } = await query;
         if (error) throw error;
 
-        console.log(`✅ [API] Found ${users?.length || 0} employees.`);
         res.json(users || []);
     } catch (error) {
         console.error("❌ Get users error:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
 
-        // Detect HTML error pages (like Cloudflare 5xx)
-        if (typeof error.message === 'string' && error.message.includes('<!DOCTYPE html>')) {
-            return res.status(503).json({
-                success: false,
-                message: "Supabase service temporarily unavailable (SSL Handshake Error 525). Please retry in a few moments."
-            });
-        }
+app.patch('/api/users/:id', authenticateToken, isAdmin, async (req, res) => {
+    try {
+        const { id } = req.params;
+        const updates = req.body;
 
-        res.status(500).json({ error: "Internal Server Error", message: error.message });
+        const { data: updatedUser, error } = await supabase
+            .from('employees')
+            .update(updates)
+            .eq('id', id)
+            .select()
+            .single();
+
+        if (error) throw error;
+        res.json(updatedUser);
+    } catch (error) {
+        console.error("❌ Update user error:", error);
+        res.status(500).json({ error: "Internal Server Error" });
     }
 });
 
@@ -312,16 +341,21 @@ app.post('/api/users', authenticateToken, async (req, res) => {
     }
 });
 
-app.delete('/api/users/:id', authenticateToken, async (req, res) => {
+app.delete('/api/users/:id', authenticateToken, isAdmin, async (req, res) => {
     try {
         const { id } = req.params;
+
+        // --- Security: Soft Delete & Purge ---
         const { error } = await supabase
             .from('employees')
-            .delete()
+            .update({
+                status: 'Deleted',
+                // Note: The database trigger 'tr_purge_biometrics' handles clearing embeddings/rfid/etc.
+            })
             .eq('id', id);
 
         if (error) throw error;
-        res.json({ message: 'User deleted successfully' });
+        res.json({ message: 'User soft-deleted and sensitive data purged successfully' });
     } catch (error) {
         console.error("❌ Delete user error:", error);
         res.status(500).json({ error: "Internal Server Error" });
@@ -459,6 +493,7 @@ app.post('/api/biometrics/face/verify', biometricLimiter, upload.single('file'),
         const { data: employees, error } = await supabase
             .from('employees')
             .select('*')
+            .eq('status', 'Active')
             .order('created_at', { ascending: false });
 
         if (error || !employees || employees.length === 0) {
