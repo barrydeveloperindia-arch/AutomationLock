@@ -55,17 +55,17 @@ async def sync_task():
                 with open(PENDING_LOGS_FILE, "r") as f:
                     pending = json.load(f)
                 if pending:
-                    print(f"🔄 Syncing {len(pending)} pending logs to Supabase...")
+                    print(f"Syncing {len(pending)} pending logs to Supabase...")
                     supabase.table("access_logs").insert(pending).execute()
                     os.remove(PENDING_LOGS_FILE)
             
             # 2. Refresh Cache
             response = supabase.table("employees").select("id, name, employee_id, face_embedding, role").not_.is_("face_embedding", "null").execute()
             save_face_cache(response.data)
-            print("✅ Face cache refreshed from Supabase.")
+            print("[SUCCESS] Face cache refreshed from Supabase.")
             
         except Exception as e:
-            print(f"⚠️ Sync failed (likely offline): {str(e)}")
+            print(f"[WARNING] Sync failed (likely offline): {str(e)}")
         
         await asyncio.sleep(300) # Sync every 5 minutes
 
@@ -114,7 +114,7 @@ async def register_face(
             if min_conflict_dist < 0.35:
                 conflict_idx = np.argmin(existing_distances)
                 conflicting_emp = cache[conflict_idx]
-                print(f"🚫 [REJECTED] Biometric Conflict! Face already registered to: {conflicting_emp['name']} ({conflicting_emp['employee_id']})")
+                print(f"[REJECTED] Biometric Conflict! Face already registered to: {conflicting_emp['name']} ({conflicting_emp['employee_id']})")
                 return {
                     "success": False, 
                     "message": f"Biometric Conflict: This person is already registered as {conflicting_emp['name']}.",
@@ -133,7 +133,7 @@ async def register_face(
             )
             image_url = str(supabase.storage.from_("biometrics").get_public_url(file_path))
         except Exception as upload_err:
-            print(f"⚠️ Storage Upload Failed (Offline?): {str(upload_err)}")
+            print(f"[WARNING] Storage Upload Failed (Offline?): {str(upload_err)}")
         
         # 4. Save Metadata to Supabase Database
         user_data = {
@@ -147,9 +147,9 @@ async def register_face(
 
         try:
             supabase.table("employees").upsert(user_data, on_conflict="employee_id").execute()
-            print(f"✅ Registered in Cloud.")
+            print(f"[SUCCESS] Registered in Cloud.")
         except Exception as db_err:
-            print(f"⚠️ Cloud Registration Failed: {str(db_err)}")
+            print(f"[WARNING] Cloud Registration Failed: {str(db_err)}")
 
         # 5. Always Update Local Cache
         cache = load_face_cache()
@@ -163,7 +163,7 @@ async def register_face(
         if not updated:
             cache.append(user_data)
         save_face_cache(cache)
-        print(f"✅ Local cache updated for {employeeId}")
+        print(f"[SUCCESS] Local cache updated for {employeeId}")
 
         return {
             "success": True, 
@@ -173,7 +173,7 @@ async def register_face(
         }
 
     except Exception as e:
-        print(f"❌ Registration Error: {str(e)}")
+        print(f"[ERROR] Registration Error: {str(e)}")
         return {"success": False, "message": f"Engine Error: {str(e)}"}
 
 @app.post("/api/biometrics/face/verify")
@@ -201,7 +201,7 @@ async def verify_face(file: UploadFile = File(...)):
             employees = response.data
             save_face_cache(employees) # Update cache on success
         except Exception as e:
-            print(f"⚠️ Supabase Offline, using local cache: {str(e)}")
+            print(f"[WARNING] Supabase Offline, using local cache: {str(e)}")
             employees = load_face_cache()
             mode = "offline"
 
@@ -221,11 +221,11 @@ async def verify_face(file: UploadFile = File(...)):
         STRICT_THRESHOLD = 0.40
         GAP_THRESHOLD = 0.05
         
-        print(f"\n📊 [Biometric Match Analysis] Best Match Distance: {min_distance:.4f}")
+        print(f"\n[INFO] [Biometric Match Analysis] Best Match Distance: {min_distance:.4f}")
 
         # Rejection: Above Threshold
         if min_distance > STRICT_THRESHOLD:
-            print(f"🚫 [REJECTED] Match distance {min_distance:.4f} > Threshold {STRICT_THRESHOLD}")
+            print(f"[REJECTED] Match distance {min_distance:.4f} > Threshold {STRICT_THRESHOLD}")
             return {
                 "success": False, 
                 "message": "Access Denied: Unrecognized face.", 
@@ -236,10 +236,10 @@ async def verify_face(file: UploadFile = File(...)):
         if len(face_distances) > 1:
             second_best_dist = face_distances[sorted_indices[1]]
             gap = second_best_dist - min_distance
-            print(f"📊 [Gap Check] Best: {min_distance:.4f} | 2nd Best: {second_best_dist:.4f} | Gap: {gap:.4f}")
+            print(f"[INFO] [Gap Check] Best: {min_distance:.4f} | 2nd Best: {second_best_dist:.4f} | Gap: {gap:.4f}")
             
             if gap < GAP_THRESHOLD:
-                print(f"⚠️ [REJECTED] Ambiguity Detected! Gap {gap:.4f} < {GAP_THRESHOLD}")
+                print(f"[REJECTED] Ambiguity Detected! Gap {gap:.4f} < {GAP_THRESHOLD}")
                 return {
                     "success": False, 
                     "message": "Ambiguous Match: Multiple users similar.", 
@@ -249,7 +249,7 @@ async def verify_face(file: UploadFile = File(...)):
 
         # Success: Best Match Confirmed
         matched_emp = employees[best_idx]
-        print(f"✅ [VERIFIED] Best match confirmed: {matched_emp['employee_id']}")
+        print(f"[VERIFIED] Best match confirmed: {matched_emp['employee_id']}")
 
         # Log to Database
         log_data = {
@@ -267,7 +267,7 @@ async def verify_face(file: UploadFile = File(...)):
             else:
                 queue_pending_log(log_data)
         except Exception as log_err:
-            print(f"⚠️ Log save error: {str(log_err)}")
+            print(f"[WARNING] Log save error: {str(log_err)}")
             queue_pending_log(log_data)
 
         return {
@@ -276,22 +276,9 @@ async def verify_face(file: UploadFile = File(...)):
             "employee_id": matched_emp["employee_id"],
             "confidence": round(1.0 - min_distance, 4)
         }
-        else:
-            fail_log = {
-                "status": "failed",
-                "device_id": "terminal_01",
-                "created_at": datetime.utcnow().isoformat()
-            }
-            if mode == "online":
-                try: supabase.table("access_logs").insert(fail_log).execute()
-                except: queue_pending_log(fail_log)
-            else:
-                queue_pending_log(fail_log)
-            
-            return {"success": False, "message": "Access Denied."}
 
     except Exception as e:
-        print(f"❌ Verification Error: {str(e)}")
+        print(f"[ERROR] Verification Error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
