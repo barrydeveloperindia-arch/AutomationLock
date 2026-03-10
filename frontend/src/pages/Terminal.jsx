@@ -79,7 +79,7 @@ export default function Terminal() {
         if (status === 'idle' && camEnabled) {
             interval = setInterval(() => {
                 captureAndVerify();
-            }, 3000); // Check every 3 seconds
+            }, 2000); // Check every 2 seconds
         }
         return () => clearInterval(interval);
     }, [status, camEnabled]);
