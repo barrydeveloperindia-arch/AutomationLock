@@ -31,7 +31,7 @@ const authLimiter = rateLimit({
 
 const biometricLimiter = rateLimit({
     windowMs: 1 * 60 * 1000, // 1 minute
-    max: 15, // Limit each IP to 15 face verification scans per minute
+    max: 60, // Limit each IP to 60 face verification scans per minute
     message: { error: 'Too many scans, please wait a minute.' }
 });
 
@@ -46,8 +46,8 @@ const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 app.use(cors({
-    origin: ['http://localhost:5180', 'http://localhost:5181'],
-    credentials: true
+    origin: '*', // Allow connections from ANY origin (including Wi-Fi IP and arbitrary phones)
+    // credentials: true (Must be removed if origin is '*')
 }));
 
 app.use(express.json());
@@ -161,12 +161,12 @@ const recordAttendance = async (employeeId, method, deviceId = 'server') => {
             // Late arrival detection (IST)
             const OFFICE_START_HOUR = 9;
             const GRACE_PERIOD_MINUTES = 15;
-            const lateThresholdMins = OFFICE_START_HOUR * 60 + GRACE_PERIOD_MINUTES; 
-            
+            const lateThresholdMins = OFFICE_START_HOUR * 60 + GRACE_PERIOD_MINUTES;
+
             const checkInIST = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata', hour12: false });
             const [h, m] = checkInIST.split(':').map(Number);
             const checkInMins = h * 60 + m;
-            
+
             const arrivalStatus = checkInMins > lateThresholdMins ? 'LATE' : 'ON_TIME';
             console.log(`🕒 [Attendance] Arrival status: ${arrivalStatus} (check-in at ${checkInIST})`);
 
@@ -254,14 +254,14 @@ app.post(['/api/attendance/mark', '/attendance/mark'], async (req, res) => {
         // 1. Resolve to UUID if it looks like a custom employee_id string
         let finalUuid = targetId;
         const uuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
-        
+
         if (!uuidRegex.test(targetId)) {
             const { data: emp, error: empErr } = await supabase
                 .from('employees')
                 .select('id')
                 .eq('employee_id', targetId)
                 .single();
-            
+
             if (empErr || !emp) {
                 console.error(`❌ [Attendance Mark] Could not resolve ID: ${targetId}`);
                 return res.status(404).json({ error: "Employee not found or ID invalid" });
@@ -271,7 +271,7 @@ app.post(['/api/attendance/mark', '/attendance/mark'], async (req, res) => {
 
         // 2. Record Attendance
         const attendanceResult = await recordAttendance(finalUuid, method || 'face', device_id || 'api_call');
-        
+
         res.json(attendanceResult);
     } catch (error) {
         console.error("❌ [Attendance Mark] Critical Error:", error.message);
@@ -318,7 +318,7 @@ app.post('/auth/login', authLimiter, async (req, res) => {
     try {
         console.log(`🔐 [Login Attempt] Email: "${email}", Expected: "${process.env.ADMIN_EMAIL}"`);
         console.log(`🔑 [Login Attempt] Pass Match: ${password === process.env.ADMIN_PASSWORD}`);
-        
+
         if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
             console.log("✅ Admin credentials verified");
             loginFailures.delete(ip); // Reset on success
@@ -464,7 +464,7 @@ app.get('/api/attendance/employee/:employee_id', authenticateToken, async (req, 
         // 1. Resolve UUID
         let finalUuid = employee_id;
         const uuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
-        
+
         let employeeData;
         if (!uuidRegex.test(employee_id)) {
             const { data: emp, error: empErr } = await supabase
@@ -472,7 +472,7 @@ app.get('/api/attendance/employee/:employee_id', authenticateToken, async (req, 
                 .select('id, name, department, employee_id')
                 .eq('employee_id', employee_id)
                 .single();
-            
+
             if (empErr || !emp) return res.status(404).json({ error: "Employee not found" });
             finalUuid = emp.id;
             employeeData = emp;
@@ -1504,7 +1504,7 @@ app.get('/api/access-logs/employee/:employee_id/summary', authenticateToken, asy
         const nowIST = new Date(Date.now() + istOffset);
         const todayStr = nowIST.toISOString().split('T')[0];
         const istMidnightUTC = new Date(new Date(todayStr).getTime() - istOffset).toISOString();
-        
+
         const startOfMonthIST = new Date(nowIST.getFullYear(), nowIST.getMonth(), 1);
         const istMonthStartUTC = new Date(startOfMonthIST.getTime() - istOffset).toISOString();
 
@@ -1538,7 +1538,7 @@ async function handleAccessExcelExport(req, res) {
     try {
         const { startDate, endDate, employee_id, device, result, month, year } = req.query;
         const now = new Date();
-        
+
         let fromDate, toDate;
         if (month && year) {
             fromDate = `${year}-${String(month).padStart(2, '0')}-01`;
@@ -1603,7 +1603,7 @@ async function handleAccessPdfExport(req, res) {
     try {
         const { startDate, endDate, employee_id, device, result, month, year } = req.query;
         const now = new Date();
-        
+
         let fromDate, toDate;
         if (month && year) {
             fromDate = `${year}-${String(month).padStart(2, '0')}-01`;
@@ -1643,7 +1643,7 @@ async function handleAccessPdfExport(req, res) {
         const startY = doc.y;
         const colWidths = [120, 80, 100, 80, 70, 70];
         const headers = ['Employee', 'Method', 'Timestamp', 'Confidence', 'Device', 'Status'];
-        
+
         let cx = 30;
         doc.font('Helvetica-Bold').fontSize(10);
         headers.forEach((h, i) => {
@@ -1654,7 +1654,7 @@ async function handleAccessPdfExport(req, res) {
 
         let curY = startY + 25;
         doc.font('Helvetica').fontSize(9);
-        records.slice(0, 100).forEach(r => { 
+        records.slice(0, 100).forEach(r => {
             if (curY > 750) { doc.addPage(); curY = 30; }
             cx = 30;
             const row = [
@@ -1749,9 +1749,9 @@ app.post('/api/logs/iot', async (req, res) => {
             confidence: 1.0,
             device_id: 'esp32_hardware',
             method: (method === 'fingerprint' ? 'FINGERPRINT' : (method || 'FACE')),
-            metadata: { 
-                method, 
-                message, 
+            metadata: {
+                method,
+                message,
                 status,
                 unlock_source: 'BIOMETRIC'
             }
@@ -1765,6 +1765,27 @@ app.post('/api/logs/iot', async (req, res) => {
 });
 
 // Users Endpoints
+
+// Public Terminal Fetch (Unauthenticated - safe for kiosk)
+app.get('/api/terminal/users', async (req, res) => {
+    try {
+        const { data: users, error } = await supabase
+            .from('employees')
+            .select('id, employee_id, name, email, department, image_url, status')
+            .eq('status', 'Active')
+            .order('created_at', { ascending: false });
+
+        if (error) {
+            console.error("❌ Terminal fetch error:", error);
+            return res.status(500).json({ message: "Failed to load users" });
+        }
+        res.json(users || []);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: "System error" });
+    }
+});
+
 app.get('/api/users', authenticateToken, isAdmin, async (req, res) => {
     try {
         const { includeDeleted = 'false' } = req.query;
@@ -1849,7 +1870,7 @@ app.patch('/api/users/:id', authenticateToken, isAdmin, validateIdentity, async 
             console.log(`🔄 [Cache] Evicting old biometric cache for ID: ${old_id}`);
             try {
                 await axios.delete(`http://localhost:8001/api/biometrics/face/${encodeURIComponent(old_id)}`, { timeout: 3000 });
-            } catch (ce) { 
+            } catch (ce) {
                 console.warn(`⚠️ [Cache] Old ID eviction skipped: ${ce.message}`);
             }
         }
@@ -2184,7 +2205,7 @@ app.post('/api/biometrics/face/verify', biometricLimiter, upload.single('file'),
                 }
 
                 // --- TRIGGER DOOR UNLOCK ---
-                await safeTriggerDoorUnlock();
+                // await safeTriggerDoorUnlock(); // Handled locally by Android Tablet now!
 
                 // --- RECORD ATTENDANCE ---
                 // We need the internal UUID for the attendance table
@@ -2235,7 +2256,7 @@ app.post('/api/biometrics/face/verify', biometricLimiter, upload.single('file'),
                             confidence: response.data.confidence || null,
                             device_id: 'terminal_01',
                             method: 'FACE',
-                            metadata: { 
+                            metadata: {
                                 reason: response.data.message,
                                 unlock_source: 'BIOMETRIC'
                             }

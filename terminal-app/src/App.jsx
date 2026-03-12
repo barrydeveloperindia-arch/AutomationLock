@@ -1,14 +1,18 @@
 import { useState, useEffect, useRef } from 'react';
-import { Camera, Fingerprint, X, CheckCircle2, LogOut, AlertTriangle, Clock } from 'lucide-react';
+import { Camera, Fingerprint, X, CheckCircle2, LogOut, AlertTriangle, Clock, ShieldAlert, Unlock, UserPlus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import axios from 'axios';
 import { NativeBiometric } from 'capacitor-native-biometric';
 import { Camera as CapCamera, CameraResultType, CameraSource } from '@capacitor/camera';
+import { BleClient } from '@capacitor-community/bluetooth-le';
 
-// LAN IP of the backend server — phone and PC must be on the same WiFi network.
-// Change this if your router assigns a new IP to the PC.
-const API_BASE = 'http://192.168.2.165:8000';
+// Firewall Unblocked! We can now beam traffic wirelessly over Wi-Fi without ADB!
+const API_BASE = 'http://192.168.2.154:8000';
 const RESET_DELAY = 5; // seconds
+
+const BLE_MAC = '58:8C:81:CC:65:29';
+const DOOR_SERVICE_UUID = '4fafc201-1fb5-459e-8fcc-c5c9c331914b';
+const DOOR_CHAR_UUID = 'beb5483e-36e1-4688-b7f5-ea07361b26a8';
 
 // ── Animated countdown ring ───────────────────────────────────────────────────
 function CountdownRing({ seconds, total = RESET_DELAY, color = '#10b981' }) {
@@ -52,11 +56,55 @@ export default function App() {
     const [searchTerm, setSearchTerm] = useState('');
     const [result, setResult] = useState(null);
     const [countdown, setCountdown] = useState(RESET_DELAY);
+    const [adminPin, setAdminPin] = useState('');
+    const [selectedEmp, setSelectedEmp] = useState(null);
+    const videoRef = useRef(null);
+    const streamRef = useRef(null);
+
+    // ── Local Door BLE Controller ─────────────────────────────────────────────
+    const triggerDoorUnlock = async () => {
+        try {
+            console.log('Initializing BleClient...');
+            await BleClient.initialize();
+
+            console.log(`Connecting to lock: ${BLE_MAC}`);
+            await BleClient.connect(BLE_MAC);
+
+            const buffer = new ArrayBuffer(2);
+            const view = new DataView(buffer);
+            view.setUint8(0, 'O'.charCodeAt(0));
+            view.setUint8(1, 'N'.charCodeAt(0));
+
+            console.log('Sending direct ON GATT command to BLE door...');
+            await BleClient.write(BLE_MAC, DOOR_SERVICE_UUID, DOOR_CHAR_UUID, view);
+
+            // Hold open for 5.5 seconds then auto-relock
+            setTimeout(async () => {
+                try {
+                    console.log('Sending OFF GATT command to auto-lock door...');
+                    const offBuffer = new ArrayBuffer(3);
+                    const offView = new DataView(offBuffer);
+                    offView.setUint8(0, 'O'.charCodeAt(0));
+                    offView.setUint8(1, 'F'.charCodeAt(0));
+                    offView.setUint8(2, 'F'.charCodeAt(0));
+                    await BleClient.write(BLE_MAC, DOOR_SERVICE_UUID, DOOR_CHAR_UUID, offView);
+
+                    console.log('Relocked. Disconnecting BLE...');
+                    await BleClient.disconnect(BLE_MAC);
+                } catch (e) {
+                    console.error('Auto-lock failed:', e);
+                }
+            }, 5500);
+
+        } catch (err) {
+            console.error('BLE Door Error:', err);
+        }
+    };
 
     useEffect(() => {
         const fetchEmployees = async () => {
             try {
-                const res = await axios.get(`${API_BASE}/api/users`);
+                const res = await axios.get(`${API_BASE}/api/terminal/users`);
                 setEmployees(res.data.filter(u => u.status !== 'Deleted'));
             } catch (err) { console.error('Failed to fetch employees:', err); }
         };
@@ -83,54 +131,145 @@ export default function App() {
         setCountdown(RESET_DELAY);
     };
 
-    // ── Face scan ─────────────────────────────────────────────────────────────
-    const handleFaceScan = async () => {
+    // ── Face Scan Live Feed ───────────────────────────────────────────────────
+    const handleFaceScan = () => {
         setView('face');
-        setLoading(true);
         setMessage('Initializing biometric camera…');
-        try {
-            const image = await CapCamera.getPhoto({
-                quality: 90,
-                allowEditing: false,
-                resultType: CameraResultType.Base64,
-                source: CameraSource.Camera,
-            });
-            setMessage('Processing biometric identity…');
+    };
 
-            const rawRes = await fetch(`data:image/jpeg;base64,${image.base64String}`);
-            const blob = await rawRes.blob();
-            const form = new FormData();
-            form.append('file', blob, 'face.jpg');
+    useEffect(() => {
+        let interval;
+        const startCamera = async () => {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } });
+                streamRef.current = stream;
+                if (videoRef.current) {
+                    videoRef.current.srcObject = stream;
+                }
+                setMessage('Analyzing...');
 
-            const res = await axios.post(`${API_BASE}/api/biometrics/face/verify`, form, {
-                headers: { 'Content-Type': 'multipart/form-data' },
-            });
-
-            if (res.data.success) {
-                const isCheckout = !!(res.data.check_out || res.data.checkout);
-                const now = new Date();
-                setResult({
-                    name: res.data.user?.name || res.data.name || res.data.employee_name || 'Employee',
-                    time: res.data.check_in
-                        ? new Date(res.data.check_in).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
-                        : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
-                    checkoutTime: res.data.check_out
-                        ? new Date(res.data.check_out).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
-                        : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
-                    workingHours: res.data.working_hours != null ? formatWorkHours(res.data.working_hours) : null,
-                    isCheckout,
-                });
-                setView(isCheckout ? 'checkout' : 'checkin');
-            } else {
-                throw new Error(res.data.message || 'Face not recognized');
+                // Interval captures frame every 2s and sends to backend silently
+                if (view === 'face') {
+                    interval = setInterval(captureAndVerify, 2000);
+                } else if (view === 'admin_scan') {
+                    // admin registration handles its own capture
+                }
+            } catch (err) {
+                console.error(err);
+                setMessage('Camera access denied or unavailable.');
+                setView('error');
             }
-        } catch (err) {
-            console.error(err);
-            setMessage(err.response?.data?.message || err.message || 'Recognition failed');
-            setView('error');
-        } finally {
-            setLoading(false);
+        };
+
+        if (view === 'face' || view === 'admin_scan') {
+            startCamera();
+        } else {
+            if (streamRef.current) {
+                streamRef.current.getTracks().forEach(t => t.stop());
+                streamRef.current = null;
+            }
+            if (interval) clearInterval(interval);
         }
+
+        return () => {
+            if (interval) clearInterval(interval);
+            if (streamRef.current) {
+                streamRef.current.getTracks().forEach(t => t.stop());
+            }
+        };
+    }, [view]);
+
+    const captureAndVerify = () => {
+        if (!videoRef.current || view !== 'face') return;
+
+        const canvas = document.createElement('canvas');
+        canvas.width = videoRef.current.videoWidth || 640;
+        canvas.height = videoRef.current.videoHeight || 480;
+        if (canvas.width === 0) return; // Video not playing yet
+
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
+
+        canvas.toBlob(async (blob) => {
+            if (!blob) return;
+            try {
+                const form = new FormData();
+                form.append('file', blob, 'face.jpg');
+
+                const res = await axios.post(`${API_BASE}/api/biometrics/face/verify`, form, {
+                    headers: { 'Content-Type': 'multipart/form-data' },
+                });
+
+                if (res.data.success && view === 'face') {
+                    // Success!
+                    const isCheckout = !!(res.data.check_out || res.data.checkout);
+                    const now = new Date();
+                    setResult({
+                        name: res.data.user?.name || res.data.name || res.data.employee_name || 'Employee',
+                        time: res.data.check_in
+                            ? new Date(res.data.check_in).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
+                            : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
+                        checkoutTime: res.data.check_out
+                            ? new Date(res.data.check_out).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
+                            : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
+                        workingHours: res.data.working_hours != null ? formatWorkHours(res.data.working_hours) : null,
+                        isCheckout,
+                    });
+                    setView(isCheckout ? 'checkout' : 'checkin');
+                    triggerDoorUnlock();
+                }
+            } catch (err) {
+                // Output real errors if backend fails (e.g., Engine Offline 503 or Network Error)
+                if (err.response?.status === 401 || err.response?.status === 403) {
+                    setMessage(err.response.data.message || 'Face Not Identified');
+                    setTimeout(() => { if (view === 'face') setMessage('Analyzing...') }, 1200);
+                } else if (err.response?.status === 503) {
+                    setMessage('Biometric Engine Offline');
+                } else if (err.code === 'ERR_NETWORK') {
+                    setMessage('Network disconnected');
+                }
+            }
+        }, 'image/jpeg', 0.9);
+    };
+
+    const captureAndRegister = () => {
+        if (!videoRef.current || view !== 'admin_scan' || !selectedEmp) return;
+
+        setLoading(true);
+        setMessage('Capturing & Enrolling...');
+        const canvas = document.createElement('canvas');
+        canvas.width = videoRef.current.videoWidth || 640;
+        canvas.height = videoRef.current.videoHeight || 480;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
+
+        canvas.toBlob(async (blob) => {
+            if (!blob) { setLoading(false); return; }
+            try {
+                const form = new FormData();
+                form.append('file', blob, 'register.jpg');
+                form.append('employeeId', selectedEmp.employee_id || selectedEmp.id);
+                form.append('email', selectedEmp.email);
+                form.append('name', selectedEmp.name);
+                form.append('re_enroll', 'true');
+
+                const res = await axios.post(`${API_BASE}/api/biometrics/face/register`, form, {
+                    headers: { 'Content-Type': 'multipart/form-data' },
+                });
+
+                if (res.data.success) {
+                    setMessage('Enrollment Successful!');
+                    setTimeout(() => {
+                        reset();
+                    }, 2500);
+                }
+            } catch (err) {
+                setMessage(err.response?.data?.message || 'Enrollment failed');
+                setTimeout(() => setMessage('Tap Capture to try again'), 2000);
+            } finally {
+                setLoading(false);
+            }
+        }, 'image/jpeg', 0.9);
     };
 
     // ── Fingerprint ───────────────────────────────────────────────────────────
@@ -174,6 +313,7 @@ export default function App() {
                 isCheckout,
             });
             setView(isCheckout ? 'checkout' : 'checkin');
+            triggerDoorUnlock();
         } catch (err) {
             setMessage(err.response?.data?.error || 'Connection failure');
             setView('error');
@@ -194,8 +334,8 @@ export default function App() {
         <div className="w-screen h-screen kiosk-gradient flex flex-col items-center justify-center p-8 text-white relative overflow-hidden">
 
             {/* Top bar */}
-            <div className="absolute top-0 left-0 right-0 px-8 py-5 flex items-center justify-between border-b border-white/[0.04]">
-                <div>
+            <div className="absolute top-0 left-0 right-0 px-8 py-5 flex items-center justify-between border-b border-white/[0.04] z-10">
+                <div onClick={() => { if (view === 'home') setView('admin_auth'); }} className="cursor-pointer hover:opacity-80 transition-opacity">
                     <div className="text-xs font-black uppercase tracking-[0.3em] text-blue-400">AuraLock</div>
                     <div className="text-[10px] text-slate-600 font-medium uppercase tracking-widest">Smart Biometric Terminal</div>
                 </div>
@@ -207,6 +347,60 @@ export default function App() {
             </div>
 
             <AnimatePresence mode="wait">
+
+                {/* ── ADMIN AUTH ── */}
+                {view === 'admin_auth' && (
+                    <motion.div key="admin_auth" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="glass p-8 rounded-3xl w-full max-w-md flex flex-col gap-6 items-center z-20">
+                        <div className="flex items-center justify-between w-full border-b border-white/[0.06] pb-4">
+                            <h2 className="text-lg font-black flex items-center gap-2"><ShieldAlert size={20} className="text-blue-400" /> Admin Access</h2>
+                            <button onClick={reset} className="p-2 hover:bg-white/10 rounded-full transition-colors"><X size={20} /></button>
+                        </div>
+                        <input type="password" placeholder="Enter Admin PIN" className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl p-4 text-center text-xl tracking-widest focus:outline-none focus:border-blue-500/50" value={adminPin} onChange={e => setAdminPin(e.target.value)} autoFocus />
+                        <button onClick={() => { if (adminPin === '1234') { setView('admin_select'); setAdminPin(''); } else { setMessage('Invalid PIN'); setTimeout(() => setMessage(''), 2000); } }} className="w-full py-4 bg-blue-600 hover:bg-blue-500 rounded-xl font-black text-white uppercase tracking-widest transition-colors flex items-center justify-center gap-2"><Unlock size={18} /> Authenticate</button>
+                        {message && <p className="text-red-400 text-sm font-bold">{message}</p>}
+                    </motion.div>
+                )}
+
+                {/* ── ADMIN EMPLOYEE SELECT ── */}
+                {view === 'admin_select' && (
+                    <motion.div key="admin_select" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="glass p-8 rounded-3xl w-full max-w-2xl flex flex-col gap-5 z-20">
+                        <div className="flex items-center justify-between border-b border-white/[0.06] pb-4">
+                            <h2 className="text-lg font-black flex items-center gap-2"><UserPlus size={20} className="text-blue-400" /> Select Employee for Face Registration</h2>
+                            <button onClick={reset} className="p-2 hover:bg-white/10 rounded-full transition-colors"><X size={20} /></button>
+                        </div>
+                        <input type="text" placeholder="Search by name…" className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl p-4 text-base focus:outline-none focus:border-blue-500/50 placeholder:text-slate-600 transition-colors" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} autoFocus />
+                        <div className="grid grid-cols-2 gap-3 max-h-[380px] overflow-y-auto pr-1 custom-scrollbar">
+                            {employees.filter(e => e.name.toLowerCase().includes(searchTerm.toLowerCase())).map(emp => (
+                                <button key={emp.id} onClick={() => { setSelectedEmp(emp); setView('admin_scan'); setMessage('Ready to capture'); }} className="flex items-center gap-3 p-4 glass hover:glass-active rounded-2xl transition-all text-left">
+                                    <div className="w-10 h-10 rounded-full bg-slate-800 overflow-hidden shrink-0"><img src={emp.image_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(emp.name)}&background=1e293b&color=94a3b8`} alt="" className="w-full h-full object-cover" /></div>
+                                    <div><div className="font-bold text-sm truncate">{emp.name}</div><div className="text-slate-500 text-[10px]">{emp.department || 'General'}</div></div>
+                                </button>
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
+
+                {/* ── ADMIN CAPTURE SCAN ── */}
+                {view === 'admin_scan' && (
+                    <motion.div key="admin_scan" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center gap-10 z-20">
+                        <h2 className="text-2xl font-black text-white tracking-tight">Register: {selectedEmp?.name}</h2>
+                        <div className="relative w-64 h-64">
+                            {/* Corner brackets */}
+                            {[['top-0 left-0', 'border-t-2 border-l-2'], ['top-0 right-0', 'border-t-2 border-r-2'], ['bottom-0 left-0', 'border-b-2 border-l-2'], ['bottom-0 right-0', 'border-b-2 border-r-2']].map(([pos, br], i) => (<div key={i} className={`absolute w-8 h-8 ${pos} ${br} border-blue-400 rounded-sm`} />))}
+                            <div className="w-full h-full rounded-2xl flex items-center justify-center bg-blue-500/5 border border-blue-500/10 overflow-hidden relative">
+                                <video ref={videoRef} autoPlay playsInline muted className="w-full h-full object-cover" style={{ transform: 'scaleX(-1)' }} />
+                                <div className="absolute inset-0 pointer-events-none flex items-center justify-center"><div className="w-40 h-52 rounded-[100px] border-[3px] border-emerald-400/40 border-dashed" /></div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-4 text-center w-full max-w-sm">
+                            <p className="text-xl font-bold text-emerald-300 min-h-[30px]">{message}</p>
+                            <button onClick={captureAndRegister} disabled={loading} className="w-full py-4 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 rounded-xl font-black text-white uppercase tracking-widest transition-colors flex items-center justify-center">
+                                {loading ? 'Processing...' : 'Capture & Save'}
+                            </button>
+                            <button onClick={reset} disabled={loading} className="px-6 py-2 bg-slate-800 rounded-xl font-bold text-white uppercase text-[10px] tracking-widest hover:bg-slate-700 transition-colors">Cancel</button>
+                        </div>
+                    </motion.div>
+                )}
 
                 {/* ── HOME ── */}
                 {view === 'home' && (
@@ -297,8 +491,12 @@ export default function App() {
                             ['bottom-0 left-0', 'border-b-2 border-l-2'], ['bottom-0 right-0', 'border-b-2 border-r-2']].map(([pos, br], i) => (
                                 <div key={i} className={`absolute w-8 h-8 ${pos} ${br} border-blue-400 rounded-sm`} />
                             ))}
-                            <div className="w-full h-full rounded-2xl flex items-center justify-center bg-blue-500/5 border border-blue-500/10">
-                                <Camera size={80} className="text-blue-400/30" />
+                            <div className="w-full h-full rounded-2xl flex items-center justify-center bg-blue-500/5 border border-blue-500/10 overflow-hidden relative">
+                                <video ref={videoRef} autoPlay playsInline muted className="w-full h-full object-cover" style={{ transform: 'scaleX(-1)' }} />
+                                {/* Face Guide Overlay */}
+                                <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
+                                    <div className="w-40 h-52 rounded-[100px] border-[3px] border-blue-400/40 border-dashed" />
+                                </div>
                             </div>
                             {/* Scanning line */}
                             <motion.div
@@ -311,6 +509,7 @@ export default function App() {
                             <p className="text-xl font-bold text-blue-300">{message}</p>
                             <p className="text-slate-600 text-xs mt-2 font-medium uppercase tracking-widest">Do not move</p>
                         </div>
+                        <button onClick={reset} className="px-6 py-2 bg-slate-800 rounded-xl font-bold text-white uppercase text-[10px] tracking-widest hover:bg-slate-700 transition-colors">Cancel</button>
                     </motion.div>
                 )}
 

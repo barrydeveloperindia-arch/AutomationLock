@@ -4,7 +4,7 @@ import {
     Search, Trash2, Edit2, UserPlus, X, Save,
     ScanFace, Fingerprint, AlertTriangle, UserX, UserCheck,
     Briefcase, CheckCircle2, Camera, RefreshCw, Loader2,
-    ShieldCheck, AlertCircle
+    ShieldCheck, AlertCircle, Upload
 } from 'lucide-react';
 
 const DEPARTMENTS = ['Engineering', 'Operations', 'Security', 'Management', 'HR', 'General'];
@@ -161,6 +161,18 @@ function FaceEnrollModal({ user, onDone, onClose }) {
     const [loading, setLoading] = useState(false);
     const [camError, setCamError] = useState('');
     const [status, setStatus] = useState('');
+    const fileInputRef = useRef(null);
+
+    const handleFileUpload = (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            setCaptured(event.target.result);
+            stopCamera();
+        };
+        reader.readAsDataURL(file);
+    };
 
     const startCamera = useCallback(async () => {
         setCamError('');
@@ -274,10 +286,17 @@ function FaceEnrollModal({ user, onDone, onClose }) {
                     </div>
 
                     {!captured ? (
-                        <button onClick={capture} disabled={!!camError || loading}
-                            className="w-full flex items-center justify-center gap-2 py-2.5 bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white text-sm font-black rounded-xl transition-all">
-                            <Camera className="w-4 h-4" /> Capture Photo
-                        </button>
+                        <div className="flex gap-2">
+                            <button onClick={capture} disabled={!!camError || loading}
+                                className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white text-[13px] font-black rounded-xl transition-all">
+                                <Camera className="w-4 h-4" /> Capture Photo
+                            </button>
+                            <button onClick={() => fileInputRef.current?.click()} disabled={loading}
+                                className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 text-white text-[13px] font-black rounded-xl transition-all">
+                                <Upload className="w-4 h-4" /> Upload Photo
+                            </button>
+                            <input type="file" ref={fileInputRef} onChange={handleFileUpload} accept="image/*" className="hidden" />
+                        </div>
                     ) : (
                         <button onClick={retake} disabled={loading}
                             className="w-full flex items-center justify-center gap-2 py-2.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-40 text-white text-sm font-bold rounded-xl transition-all">

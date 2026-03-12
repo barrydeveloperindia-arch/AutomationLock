@@ -74,3 +74,502 @@
 2026-03-12T15:03:31: INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
 2026-03-12T15:03:38: 2026-03-12 15:03:38.321638: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 2026-03-12T15:03:38: To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-03-12T17:26:02: Traceback (most recent call last):
+2026-03-12T17:26:02:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 10, in <module>
+2026-03-12T17:26:05: Traceback (most recent call last):
+2026-03-12T17:26:05:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 10, in <module>
+2026-03-12T17:26:05:     from bleak import BleakClient, BleakScanner
+2026-03-12T17:26:05: ModuleNotFoundError: No module named 'bleak'
+2026-03-12T17:26:08: Traceback (most recent call last):
+2026-03-12T17:26:08:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 10, in <module>
+2026-03-12T17:26:08:     from bleak import BleakClient, BleakScanner
+2026-03-12T17:26:08: ModuleNotFoundError: No module named 'bleak'
+2026-03-12T17:26:11: Traceback (most recent call last):
+2026-03-12T17:26:11:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 10, in <module>
+2026-03-12T17:26:11:     from bleak import BleakClient, BleakScanner
+2026-03-12T17:26:11: : No module named 'bleak'
+2026-03-12T17:26:15: Traceback (most recent call last):
+2026-03-12T17:26:15:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 10, in <module>
+2026-03-12T17:26:15:     from bleak import BleakClient, BleakScanner
+2026-03-12T17:26:15: ModuleNotFoundError: No module named 'bleak'
+2026-03-12T17:26:18: Traceback (most recent call last):
+2026-03-12T17:26:18:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 10, in <module>
+2026-03-12T17:26:18:     from bleak import BleakClient, BleakScanner
+2026-03-12T17:26:18: ModuleNotFoundError: No module named 'bleak'
+2026-03-12T17:26:21: Traceback (most recent call last):
+2026-03-12T17:26:21:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 10, in <module>
+2026-03-12T17:26:21:     from bleak import BleakClient, BleakScanner
+2026-03-12T17:26:21: ModuleNotFoundError: No module named 'bleak'
+2026-03-12T17:26:24: Traceback (most recent call last):
+2026-03-12T17:26:24:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 10, in <module>
+2026-03-12T17:26:24:     from bleak import BleakClient, BleakScanner
+2026-03-12T17:26:24: ModuleNotFoundError: No module named 'bleak'
+2026-03-12T17:26:27: Traceback (most recent call last):
+2026-03-12T17:26:27:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 10, in <module>
+2026-03-12T17:26:27:     from bleak import BleakClient, BleakScanner
+2026-03-12T17:26:27: ModuleNotFoundError: No module named 'bleak'
+2026-03-12T17:26:30: Traceback (most recent call last):
+2026-03-12T17:26:30:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 10, in <module>
+2026-03-12T17:26:30:     from bleak import BleakClient, BleakScanner
+2026-03-12T17:26:30: ModuleNotFoundError: No module named 'bleak'
+2026-03-12T17:32:11: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:11: I0000 00:00:1773316931.596597   37160 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:13: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:13: I0000 00:00:1773316933.864551   37160 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:15: Traceback (most recent call last):
+2026-03-12T17:32:15:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:32:15:     import tf_keras
+2026-03-12T17:32:15: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:32:15: 
+2026-03-12T17:32:15: The above exception was the direct cause of the following exception:
+2026-03-12T17:32:15: 
+2026-03-12T17:32:15: Traceback (most recent call last):
+2026-03-12T17:32:15:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:32:15:     from deepface import DeepFace
+2026-03-12T17:32:15:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:32:15:     from deepface.modules import (
+2026-03-12T17:32:15:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:32:15:     from deepface.models.face_detection import (
+2026-03-12T17:32:15:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:32:15:     from retinaface import RetinaFace as rf
+2026-03-12T17:32:15:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:32:15:     package_utils.validate_for_keras3()
+2026-03-12T17:32:15:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:32:15:     raise ValueError(
+2026-03-12T17:32:15: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:32:19: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:19: I0000 00:00:1773316939.877000   35364 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:21: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:21: I0000 00:00:1773316941.420061   35364 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:22: Traceback (most recent call last):
+2026-03-12T17:32:22:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:32:22:     import tf_keras
+2026-03-12T17:32:22: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:32:22: 
+2026-03-12T17:32:22: The above exception was the direct cause of the following exception:
+2026-03-12T17:32:22: 
+2026-03-12T17:32:22: Traceback (most recent call last):
+2026-03-12T17:32:22:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:32:22:     from deepface import DeepFace
+2026-03-12T17:32:22:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:32:22:     from deepface.modules import (
+2026-03-12T17:32:22:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:32:22:     from deepface.models.face_detection import (
+2026-03-12T17:32:22:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:32:22:     from retinaface import RetinaFace as rf
+2026-03-12T17:32:22:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:32:22:     package_utils.validate_for_keras3()
+2026-03-12T17:32:22:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:32:22:     raise ValueError(
+2026-03-12T17:32:22: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:32:26: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:26: I0000 00:00:1773316946.371124   21236 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:27: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:27: I0000 00:00:1773316947.893136   21236 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:28: Traceback (most recent call last):
+2026-03-12T17:32:28:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:32:28:     import tf_keras
+2026-03-12T17:32:28: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:32:28: 
+2026-03-12T17:32:28: The above exception was the direct cause of the following exception:
+2026-03-12T17:32:28: 
+2026-03-12T17:32:28: Traceback (most recent call last):
+2026-03-12T17:32:28:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:32:28:     from deepface import DeepFace
+2026-03-12T17:32:28:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:32:28:     from deepface.modules import (
+2026-03-12T17:32:28:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:32:28:     from deepface.models.face_detection import (
+2026-03-12T17:32:28:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:32:28:     from retinaface import RetinaFace as rf
+2026-03-12T17:32:28:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:32:28:     package_utils.validate_for_keras3()
+2026-03-12T17:32:28:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:32:28:     raise ValueError(
+2026-03-12T17:32:28: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:32:32: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:32: I0000 00:00:1773316952.866495   33996 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:34: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:34: I0000 00:00:1773316954.389976   33996 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:35: Traceback (most recent call last):
+2026-03-12T17:32:35:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:32:35:     import tf_keras
+2026-03-12T17:32:35: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:32:35: 
+2026-03-12T17:32:35: The above exception was the direct cause of the following exception:
+2026-03-12T17:32:35: 
+2026-03-12T17:32:35: Traceback (most recent call last):
+2026-03-12T17:32:35:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:32:35:     from deepface import DeepFace
+2026-03-12T17:32:35:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:32:35:     from deepface.modules import (
+2026-03-12T17:32:35:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:32:35:     from deepface.models.face_detection import (
+2026-03-12T17:32:35:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:32:35:     from retinaface import RetinaFace as rf
+2026-03-12T17:32:35:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:32:35:     package_utils.validate_for_keras3()
+2026-03-12T17:32:35:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:32:35:     raise ValueError(
+2026-03-12T17:32:35: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:32:39: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:39: I0000 00:00:1773316959.355569   14788 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:40: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:40: I0000 00:00:1773316960.934282   14788 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:42: Traceback (most recent call last):
+2026-03-12T17:32:42:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:32:42:     import tf_keras
+2026-03-12T17:32:42: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:32:42: 
+2026-03-12T17:32:42: The above exception was the direct cause of the following exception:
+2026-03-12T17:32:42: 
+2026-03-12T17:32:42: Traceback (most recent call last):
+2026-03-12T17:32:42:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:32:42:     from deepface import DeepFace
+2026-03-12T17:32:42:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:32:42:     from deepface.modules import (
+2026-03-12T17:32:42:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:32:42:     from deepface.models.face_detection import (
+2026-03-12T17:32:42:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:32:42:     from retinaface import RetinaFace as rf
+2026-03-12T17:32:42:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:32:42:     package_utils.validate_for_keras3()
+2026-03-12T17:32:42:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:32:42:     raise ValueError(
+2026-03-12T17:32:42: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:32:45: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:45: I0000 00:00:1773316965.949126   35072 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:47: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:47: I0000 00:00:1773316967.514698   35072 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:48: Traceback (most recent call last):
+2026-03-12T17:32:48:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:32:48:     import tf_keras
+2026-03-12T17:32:48: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:32:48: 
+2026-03-12T17:32:48: The above exception was the direct cause of the following exception:
+2026-03-12T17:32:48: 
+2026-03-12T17:32:48: Traceback (most recent call last):
+2026-03-12T17:32:48:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:32:48:     from deepface import DeepFace
+2026-03-12T17:32:48:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:32:48:     from deepface.modules import (
+2026-03-12T17:32:48:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:32:48:     from deepface.models.face_detection import (
+2026-03-12T17:32:48:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:32:48:     from retinaface import RetinaFace as rf
+2026-03-12T17:32:48:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:32:48:     package_utils.validate_for_keras3()
+2026-03-12T17:32:48:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:32:48:     raise ValueError(
+2026-03-12T17:32:48: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:32:52: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:52: I0000 00:00:1773316972.502902    8024 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:54: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:54: I0000 00:00:1773316974.069548    8024 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:32:55: Traceback (most recent call last):
+2026-03-12T17:32:55:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:32:55:     import tf_keras
+2026-03-12T17:32:55: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:32:55: 
+2026-03-12T17:32:55: The above exception was the direct cause of the following exception:
+2026-03-12T17:32:55: 
+2026-03-12T17:32:55: Traceback (most recent call last):
+2026-03-12T17:32:55:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:32:55:     from deepface import DeepFace
+2026-03-12T17:32:55:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:32:55:     from deepface.modules import (
+2026-03-12T17:32:55:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:32:55:     from deepface.models.face_detection import (
+2026-03-12T17:32:55:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:32:55:     from retinaface import RetinaFace as rf
+2026-03-12T17:32:55:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:32:55: package_utils.validate_for_keras3()
+2026-03-12T17:32:55:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:32:55:     raise ValueError(
+2026-03-12T17:32:55: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:32:59: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:32:59: I0000 00:00:1773316979.105389   40800 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:00: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:00: I0000 00:00:1773316980.718699   40800 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:01: Traceback (most recent call last):
+2026-03-12T17:33:01:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:33:01:     import tf_keras
+2026-03-12T17:33:01: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:33:01: 
+2026-03-12T17:33:01: The above exception was the direct cause of the following exception:
+2026-03-12T17:33:01: 
+2026-03-12T17:33:01: Traceback (most recent call last):
+2026-03-12T17:33:01:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:33:01:     from deepface import DeepFace
+2026-03-12T17:33:01:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:33:01:     from deepface.modules import (
+2026-03-12T17:33:01:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:33:01:     from deepface.models.face_detection import (
+2026-03-12T17:33:01:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:33:01:     from retinaface import RetinaFace as rf
+2026-03-12T17:33:01:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:33:01:     package_utils.validate_for_keras3()
+2026-03-12T17:33:01:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:33:01:     raise ValueError(
+2026-03-12T17:33:01: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:33:05: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:05: I0000 00:00:1773316985.773682   21236 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:07: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:07: I0000 00:00:1773316987.373210   21236 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:08: Traceback (most recent call last):
+2026-03-12T17:33:08:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:33:08:     import tf_keras
+2026-03-12T17:33:08: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:33:08: 
+2026-03-12T17:33:08: The above exception was the direct cause of the following exception:
+2026-03-12T17:33:08: 
+2026-03-12T17:33:08: Traceback (most recent call last):
+2026-03-12T17:33:08:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:33:08:     from deepface import DeepFace
+2026-03-12T17:33:08:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:33:08:     from deepface.modules import (
+2026-03-12T17:33:08:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:33:08:     from deepface.models.face_detection import (
+2026-03-12T17:33:08:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:33:08:     from retinaface import RetinaFace as rf
+2026-03-12T17:33:08:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:33:08:     package_utils.validate_for_keras3()
+2026-03-12T17:33:08:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:33:08:     raise ValueError(
+2026-03-12T17:33:08: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:33:12: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:12: I0000 00:00:1773316992.456096   33664 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:14: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:14: I0000 00:00:1773316994.104994   33664 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:15: Traceback (most recent call last):
+2026-03-12T17:33:15:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:33:15:     import tf_keras
+2026-03-12T17:33:15: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:33:15: 
+2026-03-12T17:33:15: The above exception was the direct cause of the following exception:
+2026-03-12T17:33:15: 
+2026-03-12T17:33:15: Traceback (most recent call last):
+2026-03-12T17:33:15:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:33:15:     from deepface import DeepFace
+2026-03-12T17:33:15:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:33:15:     from deepface.modules import (
+2026-03-12T17:33:15:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:33:15:     from deepface.models.face_detection import (
+2026-03-12T17:33:15:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:33:15:     from retinaface import RetinaFace as rf
+2026-03-12T17:33:15:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:33:15:     package_utils.validate_for_keras3()
+2026-03-12T17:33:15:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:33:15:     raise ValueError(
+2026-03-12T17:33:15: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:33:19: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:19: I0000 00:00:1773316999.198432   39312 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:20: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:20: I0000 00:00:1773317000.824304   39312 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:21: Traceback (most recent call last):
+2026-03-12T17:33:21:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:33:21:     import tf_keras
+2026-03-12T17:33:21: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:33:21: 
+2026-03-12T17:33:21: The above exception was the direct cause of the following exception:
+2026-03-12T17:33:21: 
+2026-03-12T17:33:21: Traceback (most recent call last):
+2026-03-12T17:33:21:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:33:21:     from deepface import DeepFace
+2026-03-12T17:33:21:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:33:21:     from deepface.modules import (
+2026-03-12T17:33:21:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:33:21:     from deepface.models.face_detection import (
+2026-03-12T17:33:21:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:33:21:     from retinaface import RetinaFace as rf
+2026-03-12T17:33:21:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:33:21:     package_utils.validate_for_keras3()
+2026-03-12T17:33:21:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:33:21:     raise ValueError(
+2026-03-12T17:33:21: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:33:25: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:25: I0000 00:00:1773317005.797250    8860 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:27: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:27: I0000 00:00:1773317007.370021    8860 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:28: Traceback (most recent call last):
+2026-03-12T17:33:28:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:33:28:     import tf_keras
+2026-03-12T17:33:28: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:33:28: 
+2026-03-12T17:33:28: The above exception was the direct cause of the following exception:
+2026-03-12T17:33:28: 
+2026-03-12T17:33:28: Traceback (most recent call last):
+2026-03-12T17:33:28:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:33:28:     from deepface import DeepFace
+2026-03-12T17:33:28:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:33:28:     from deepface.modules import (
+2026-03-12T17:33:28:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:33:28:     from deepface.models.face_detection import (
+2026-03-12T17:33:28:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:33:28:     from retinaface import RetinaFace as rf
+2026-03-12T17:33:28:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:33:28:     package_utils.validate_for_keras3()
+2026-03-12T17:33:28:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:33:28:     raise ValueError(
+2026-03-12T17:33:28: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:33:32: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:32: I0000 00:00:1773317012.395045   34728 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:33: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:33: I0000 00:00:1773317013.974817   34728 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:35: Traceback (most recent call last):
+2026-03-12T17:33:35:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:33:35:     import tf_keras
+2026-03-12T17:33:35: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:33:35: 
+2026-03-12T17:33:35: The above exception was the direct cause of the following exception:
+2026-03-12T17:33:35: 
+2026-03-12T17:33:35: Traceback (most recent call last):
+2026-03-12T17:33:35:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:33:35:     from deepface import DeepFace
+2026-03-12T17:33:35:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:33:35:     from deepface.modules import (
+2026-03-12T17:33:35:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:33:35:     from deepface.models.face_detection import (
+2026-03-12T17:33:35:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:33:35:     from retinaface import RetinaFace as rf
+2026-03-12T17:33:35:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:33:35:     package_utils.validate_for_keras3()
+2026-03-12T17:33:35:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:33:35:     raise ValueError(
+2026-03-12T17:33:35: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:33:39: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:39: I0000 00:00:1773317019.024638   39100 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:40: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:40: I0000 00:00:1773317020.630344   39100 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:41: Traceback (most recent call last):
+2026-03-12T17:33:41:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:33:41:     import tf_keras
+2026-03-12T17:33:41: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:33:41: 
+2026-03-12T17:33:41: The above exception was the direct cause of the following exception:
+2026-03-12T17:33:41: 
+2026-03-12T17:33:41: Traceback (most recent call last):
+2026-03-12T17:33:41:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:33:41:     from deepface import DeepFace
+2026-03-12T17:33:41:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:33:41:     from deepface.modules import (
+2026-03-12T17:33:41:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:33:41:     from deepface.models.face_detection import (
+2026-03-12T17:33:41:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:33:41:     from retinaface import RetinaFace as rf
+2026-03-12T17:33:41:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:33:41:     package_utils.validate_for_keras3()
+2026-03-12T17:33:41:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:33:41:     raise ValueError(
+2026-03-12T17:33:41: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:33:45: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:45: I0000 00:00:1773317025.630455   35844 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:47: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:47: I0000 00:00:1773317027.228137   35844 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:48: Traceback (most recent call last):
+2026-03-12T17:33:48:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:33:48:     import tf_keras
+2026-03-12T17:33:48: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:33:48: 
+2026-03-12T17:33:48: The above exception was the direct cause of the following exception:
+2026-03-12T17:33:48: 
+2026-03-12T17:33:48: Traceback (most recent call last):
+2026-03-12T17:33:48:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:33:48:     from deepface import DeepFace
+2026-03-12T17:33:48:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:33:48:     from deepface.modules import (
+2026-03-12T17:33:48:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:33:48:     from deepface.models.face_detection import (
+2026-03-12T17:33:48:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:33:48:     from retinaface import RetinaFace as rf
+2026-03-12T17:33:48:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:33:48:     package_utils.validate_for_keras3()
+2026-03-12T17:33:48:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:33:48:     raise ValueError(
+2026-03-12T17:33:48: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:33:52: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:52: I0000 00:00:1773317032.259119   20908 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:53: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:53: I0000 00:00:1773317033.871067   20908 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:33:55: Traceback (most recent call last):
+2026-03-12T17:33:55:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:33:55:     import tf_keras
+2026-03-12T17:33:55: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:33:55: 
+2026-03-12T17:33:55: The above exception was the direct cause of the following exception:
+2026-03-12T17:33:55: 
+2026-03-12T17:33:55: Traceback (most recent call last):
+2026-03-12T17:33:55:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:33:55:     from deepface import DeepFace
+2026-03-12T17:33:55:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:33:55:     from deepface.modules import (
+2026-03-12T17:33:55:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:33:55:     from deepface.models.face_detection import (
+2026-03-12T17:33:55:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:33:55:     from retinaface import RetinaFace as rf
+2026-03-12T17:33:55:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:33:55: 
+2026-03-12T17:33:55:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:33:55:     raise ValueError(
+2026-03-12T17:33:55: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:33:58: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:33:58: I0000 00:00:1773317038.950594   38100 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:34:00: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+2026-03-12T17:34:00: I0000 00:00:1773317040.501973   38100 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:34:01: Traceback (most recent call last):
+2026-03-12T17:34:01:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 19, in validate_for_keras3
+2026-03-12T17:34:01:     import tf_keras
+2026-03-12T17:34:01: ModuleNotFoundError: No module named 'tf_keras'
+2026-03-12T17:34:01: 
+2026-03-12T17:34:01: The above exception was the direct cause of the following exception:
+2026-03-12T17:34:01: 
+2026-03-12T17:34:01: Traceback (most recent call last):
+2026-03-12T17:34:01:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:34:01:     from deepface import DeepFace
+2026-03-12T17:34:01:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 22, in <module>
+2026-03-12T17:34:01:     from deepface.modules import (
+2026-03-12T17:34:01:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\modules\modeling.py", line 19, in <module>
+2026-03-12T17:34:01:     from deepface.models.face_detection import (
+2026-03-12T17:34:01:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\models\face_detection\RetinaFace.py", line 6, in <module>
+2026-03-12T17:34:01:     from retinaface import RetinaFace as rf
+2026-03-12T17:34:01:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\RetinaFace.py", line 20, in <module>
+2026-03-12T17:34:01:     package_utils.validate_for_keras3()
+2026-03-12T17:34:01:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\retinaface\commons\package_utils.py", line 24, in validate_for_keras3
+2026-03-12T17:34:01:     raise ValueError(
+2026-03-12T17:34:01: ValueError: You have tensorflow 2.21.0 and this requires tf-keras package. Please run `pip install tf-keras` or downgrade your tensorflow.
+2026-03-12T17:34:05: Traceback (most recent call last):
+2026-03-12T17:34:05:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:34:05:     from deepface import DeepFace
+2026-03-12T17:34:05:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 15, in <module>
+2026-03-12T17:34:05:     import tensorflow as tf
+2026-03-12T17:34:05:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\tensorflow\__init__.py", line 40, in <module>
+2026-03-12T17:34:05:     from tensorflow.python import pywrap_tensorflow as _pywrap_tensorflow  # pylint: disable=unused-import
+2026-03-12T17:34:05:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-12T17:34:05: ModuleNotFoundError: No module named 'tensorflow.python'
+2026-03-12T17:34:09: Traceback (most recent call last):
+2026-03-12T17:34:09:   File "c:\Users\SAM\Documents\Antigravity\LockingApp\edge\biometric_api.py", line 14, in <module>
+2026-03-12T17:34:09:     from deepface import DeepFace
+2026-03-12T17:34:09:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\deepface\DeepFace.py", line 15, in <module>
+2026-03-12T17:34:09:     import tensorflow as tf
+2026-03-12T17:34:09:   File "C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\tensorflow\__init__.py", line 40, in <module>
+2026-03-12T17:34:09:     from tensorflow.python import pywrap_tensorflow as _pywrap_tensorflow  # pylint: disable=unused-import
+2026-03-12T17:34:09:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-12T17:34:09: ImportError: cannot import name 'pywrap_tensorflow' from 'tensorflow.python' (C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\tensorflow\python\__init__.py)
+2026-03-12T17:34:12: 2026-03-12 17:34:12.756093: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:34:15: 2026-03-12 17:34:15.197917: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:34:17: WARNING:tensorflow:From C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+2026-03-12T17:34:17: 
+2026-03-12T17:34:18: INFO:     Started server process [34832]
+2026-03-12T17:34:18: INFO:     Waiting for application startup.
+2026-03-12T17:34:18: INFO:     Application startup complete.
+2026-03-12T17:34:18: INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-03-12T17:34:30: 2026-03-12 17:34:30.364730: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:34:32: 2026-03-12 17:34:32.024443: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T17:34:32: WARNING:tensorflow:From C:\Users\SAM\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+2026-03-12T17:34:32: 
+2026-03-12T17:34:33: INFO:     Started server process [5920]
+2026-03-12T17:34:33: INFO:     Waiting for application startup.
+2026-03-12T17:34:34: INFO:     Application startup complete.
+2026-03-12T17:34:34: INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-03-12T17:55:53: 2026-03-12 17:55:53.512652: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2026-03-12T17:55:53: To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.

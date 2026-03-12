@@ -5716,3 +5716,144 @@
 2026-03-12T15:16:36: [SYNC] Refreshing biometric cache from face_templates...
 2026-03-12T15:16:36: [CACHE] Optimized cache loaded with 3 employees.
 2026-03-12T15:16:36: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:34:17: 26-03-12 17:34:17 - Directory C:\Users\SAM\.deepface has been created
+2026-03-12T17:34:17: 26-03-12 17:34:17 - Directory C:\Users\SAM\.deepface\weights has been created
+2026-03-12T17:34:18: [STARTUP] Initializing Biometric Engine...
+2026-03-12T17:34:18: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:34:18: [STARTUP] System ready.
+2026-03-12T17:34:18: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:34:18: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:34:18: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:34:33: [STARTUP] Initializing Biometric Engine...
+2026-03-12T17:34:33: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:34:33: [STARTUP] System ready.
+2026-03-12T17:34:33: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:34:34: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:34:34: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:35:34: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:35:34: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:35:34: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:36:34: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:36:34: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:36:34: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:37:34: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:37:34: 
+2026-03-12T17:37:34: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:37:34: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:38:34: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:38:35: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:38:35: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:39:35: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:39:35: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:39:35: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:40:35: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:40:35: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:40:35: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:41:35: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:41:36: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:41:36: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:42:36: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:42:36: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:42:36: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:43:36: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:43:36: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:43:36: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:44:36: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:44:37: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:44:37: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:45:37: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:45:37: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:45:37: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:46:37: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:46:38: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:46:38: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:47:38: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:47:38: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:47:38: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:48:38: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:48:39: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:48:39: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:49:39: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:49:39: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:49:39: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:50:39: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:50:39: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:50:39: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:51:39: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:51:40: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:51:40: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:52:40: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:52:40: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:52:40: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:53:38: INFO:     127.0.0.1:62874 - "GET /api/door/status HTTP/1.1" 200 OK
+2026-03-12T17:53:38: INFO:     127.0.0.1:62874 - "GET /api/door/status HTTP/1.1" 200 OK
+2026-03-12T17:53:40: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:53:40: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:53:40: 
+2026-03-12T17:53:40: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:54:40: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:54:40: 
+2026-03-12T17:54:41: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:54:41: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:54:41: INFO:     127.0.0.1:54848 - "GET /api/door/status HTTP/1.1" 200 OK
+2026-03-12T17:54:41: INFO:     127.0.0.1:54848 - "GET /api/door/status HTTP/1.1" 200 OK
+2026-03-12T17:54:46: INFO:     127.0.0.1:54848 - "GET /api/door/status HTTP/1.1" 200 OK
+2026-03-12T17:54:46: INFO:     127.0.0.1:54849 - "POST /SCAN HTTP/1.1" 200 OK
+2026-03-12T17:54:51: INFO:     127.0.0.1:50197 - "GET /api/door/status HTTP/1.1" 200 OK
+2026-03-12T17:54:51: INFO:     127.0.0.1:54849 - "POST /SCAN HTTP/1.1" 200 OK
+2026-03-12T17:54:56: INFO:     127.0.0.1:54849 - "GET /api/door/status HTTP/1.1" 200 OK
+2026-03-12T17:55:01: INFO:     127.0.0.1:54849 - "GET /api/door/status HTTP/1.1" 200 OK
+2026-03-12T17:55:06: INFO:     127.0.0.1:52650 - "GET /api/door/status HTTP/1.1" 200 OK
+2026-03-12T17:55:11: INFO:     127.0.0.1:64160 - "GET /api/door/status HTTP/1.1" 200 OK
+2026-03-12T17:55:15: INFO:     127.0.0.1:52650 - "POST /SCAN HTTP/1.1" 200 OK
+2026-03-12T17:55:16: INFO:     127.0.0.1:52650 - "GET /api/door/status HTTP/1.1" 200 OK
+2026-03-12T17:55:21: INFO:     127.0.0.1:52650 - "GET /api/door/status HTTP/1.1" 200 OK
+2026-03-12T17:55:41: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:55:41: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:55:41: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:55:53: INFO:     127.0.0.1:52755 - "GET /health HTTP/1.1" 200 OK
+2026-03-12T17:55:53: [DEBUG] Verification frame saved (Size: (640, 480))
+2026-03-12T17:55:55: INFO:     127.0.0.1:52755 - "POST /api/biometrics/face/verify HTTP/1.1" 200 OK
+2026-03-12T17:56:41: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:56:42: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:56:42: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:57:42: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:57:42: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:57:42: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:58:42: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:58:43: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:58:43: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T17:59:43: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T17:59:43: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T17:59:43: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T18:00:43: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T18:00:43: 
+2026-03-12T18:00:43: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T18:00:43: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T18:01:43: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T18:01:44: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T18:01:44: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T18:02:44: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T18:02:45: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T18:02:45: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T18:02:55: [INFO] Registering face for: 7767726c-a146-4cc1-8db9-8f8d906cb7b5
+2026-03-12T18:02:56: INFO:     127.0.0.1:59976 - "POST /api/biometrics/face/register HTTP/1.1" 200 OK
+2026-03-12T18:03:44: [INFO] Registering face for: 7767726c-a146-4cc1-8db9-8f8d906cb7b5
+2026-03-12T18:03:45: INFO:     127.0.0.1:49209 - "POST /api/biometrics/face/register HTTP/1.1" 200 OK
+2026-03-12T18:03:45: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T18:03:46: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T18:03:46: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T18:04:05: [INFO] Registering face for: 7767726c-a146-4cc1-8db9-8f8d906cb7b5
+2026-03-12T18:04:06: INFO:     127.0.0.1:60575 - "POST /api/biometrics/face/register HTTP/1.1" 200 OK
+2026-03-12T18:04:46: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T18:04:46: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T18:04:46: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T18:05:04: INFO:     127.0.0.1:61208 - "POST /api/face/register HTTP/1.1" 404 Not Found
+2026-03-12T18:05:15: INFO:     127.0.0.1:58375 - "POST /register HTTP/1.1" 404 Not Found
+2026-03-12T18:05:43: [INFO] Registering face for: 7767726c-a146-4cc1-8db9-8f8d906cb7b5
+2026-03-12T18:05:44: INFO:     127.0.0.1:58735 - "POST /api/biometrics/face/register HTTP/1.1" 200 OK
+2026-03-12T18:05:46: [SYNC] Refreshing biometric cache from face_templates...
+2026-03-12T18:05:46: [CACHE] Optimized cache loaded with 3 employees.
+2026-03-12T18:05:46: [SUCCESS] Biometric cache refreshed: 3 templates.
+2026-03-12T18:06:01: [INFO] Registering face for: 7767726c-a146-4cc1-8db9-8f8d906cb7b5
+2026-03-12T18:06:02: INFO:     127.0.0.1:63362 - "POST /api/biometrics/face/register HTTP/1.1" 200 OK

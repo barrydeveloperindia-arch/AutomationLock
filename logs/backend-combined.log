@@ -20285,3 +20285,479 @@
 2026-03-12T15:16:34: 🔍 [Verification] Checking face identity...
 2026-03-12T15:16:34: 📡 Attempting Biometric Engine (Port 8001)...
 2026-03-12T15:16:34: 🚫 Engine Rejection: No face detected.
+2026-03-12T17:26:02: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+2026-03-12T17:26:02: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-03-12T17:26:02: Error: supabaseUrl is required.
+2026-03-12T17:26:02:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:26:02:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:26:02:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:26:02:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:26:02:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:26:02:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:26:02:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:26:02:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:26:02:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:26:02:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:26:07: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+2026-03-12T17:26:08: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-03-12T17:26:08: Error: supabaseUrl is required.
+2026-03-12T17:26:08:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:26:08:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:26:08:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:26:08:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:26:08:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:26:08:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:26:08:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:26:08:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:26:08:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:26:08:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:26:13: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+2026-03-12T17:26:13: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+2026-03-12T17:26:13: Error: supabaseUrl is required.
+2026-03-12T17:26:13:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:26:13:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:26:13:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:26:13:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:26:13:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:26:13:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:26:13:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:26:13:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:26:13:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:26:13:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:26:18: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+2026-03-12T17:26:18: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-03-12T17:26:18: Error: supabaseUrl is required.
+2026-03-12T17:26:18:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:26:18:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:26:18:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:26:18:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:26:18:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:26:18:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:26:18:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:26:18:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:26:18:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:26:18:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:26:23: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+2026-03-12T17:26:23: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+2026-03-12T17:26:23: Error: supabaseUrl is required.
+2026-03-12T17:26:23:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:26:23:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:26:23:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:26:23:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:26:23:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:26:23:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:26:23:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:26:23:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:26:23:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:26:23:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:26:28: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-03-12T17:26:29: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-03-12T17:26:29: Error: supabaseUrl is required.
+2026-03-12T17:26:29:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:26:29:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:26:29:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:26:29:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:26:29:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:26:29:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:26:29:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:26:29:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:26:29:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:26:29:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:26:34: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+2026-03-12T17:26:34: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-03-12T17:26:34: Error: supabaseUrl is required.
+2026-03-12T17:26:34:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:26:34:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:26:34:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:26:34:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:26:34:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:26:34:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:26:34:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:26:34:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:26:34:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:26:34:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:26:39: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-03-12T17:26:39: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-03-12T17:26:39: Error: supabaseUrl is required.
+2026-03-12T17:26:39:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:26:39:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:26:39:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:26:39:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:26:39:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:26:39:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:26:39:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:26:39:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:26:39:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:26:39:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:26:44: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-03-12T17:26:44: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+2026-03-12T17:26:44: Error: supabaseUrl is required.
+2026-03-12T17:26:44:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:26:44:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:26:44:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:26:44:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:26:44:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:26:44:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:26:44:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:26:44:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:26:44:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:26:44:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:26:49: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+2026-03-12T17:26:50: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-03-12T17:26:50: Error: supabaseUrl is required.
+2026-03-12T17:26:50:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:26:50:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:26:50:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:26:50:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:26:50:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:26:50:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:26:50:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:26:50:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:26:50:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:26:50:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:26:55: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+2026-03-12T17:26:55: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-03-12T17:26:55: Error: supabaseUrl is required.
+2026-03-12T17:26:55:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:26:55:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:26:55:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:26:55:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:26:55:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:26:55:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:26:55:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:26:55:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:26:55:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:26:55:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:27:00: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-03-12T17:27:00: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-03-12T17:27:00: Error: supabaseUrl is required.
+2026-03-12T17:27:00:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:27:00:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:27:00:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:27:00:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:27:00:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:27:00:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:27:00:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:27:00:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:27:00:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:27:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:27:05: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-03-12T17:27:05: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-03-12T17:27:05: Error: supabaseUrl is required.
+2026-03-12T17:27:05:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:27:05:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:27:05:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:27:05:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:27:05:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:27:05:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:27:05:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:27:05:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:27:05:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:27:05:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:27:10: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-03-12T17:27:10: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-03-12T17:27:10: Error: supabaseUrl is required.
+2026-03-12T17:27:10:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:27:10:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:27:10:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:27:10:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:27:10:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:27:10:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:27:10:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:27:10:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:27:10:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:27:10:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:27:16: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-03-12T17:27:16: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+2026-03-12T17:27:16: Error: supabaseUrl is required.
+2026-03-12T17:27:16:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:27:16:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:27:16:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:27:16:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:27:16:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:27:16:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:27:16:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:27:16:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:27:16:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:27:16:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:27:21: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+2026-03-12T17:27:21: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-03-12T17:27:21: Error: supabaseUrl is required.
+2026-03-12T17:27:21:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:27:21:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:27:21:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:27:21:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:27:21:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:27:21:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:27:21:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:27:21:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:27:21:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:27:21:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:27:26: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-03-12T17:27:26: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-03-12T17:27:26: Error: supabaseUrl is required.
+2026-03-12T17:27:26:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:27:26:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:27:26:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:27:26:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:27:26:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:27:26:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:27:26:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:27:26:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:27:26:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:27:26:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:27:31: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+2026-03-12T17:27:31: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+2026-03-12T17:27:31: Error: supabaseUrl is required.
+2026-03-12T17:27:31:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:27:31:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:27:31:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:27:31:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:27:31:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:27:31:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:27:31:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:27:31:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:27:31:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:27:31:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:27:37: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+2026-03-12T17:27:37: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-03-12T17:27:37: Error: supabaseUrl is required.
+2026-03-12T17:27:37:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:27:37:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:27:37:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:27:37:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:27:37:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:27:37:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:27:37:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:27:37:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:27:37:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:27:37:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:27:42: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-03-12T17:27:42: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+2026-03-12T17:27:42: Error: supabaseUrl is required.
+2026-03-12T17:27:42:     at validateSupabaseUrl (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:146:25)
+2026-03-12T17:27:42:     at new SupabaseClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:195:19)
+2026-03-12T17:27:42:     at createClient (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\node_modules\@supabase\supabase-js\dist\index.cjs:388:9)
+2026-03-12T17:27:42:     at Object.<anonymous> (c:\Users\SAM\Documents\Antigravity\LockingApp\backend\middleware\validateIdentity.js:5:18)
+2026-03-12T17:27:42:     at Module._compile (node:internal/modules/cjs/loader:1761:14)
+2026-03-12T17:27:42:     at Object..js (node:internal/modules/cjs/loader:1893:10)
+2026-03-12T17:27:42:     at Module.load (node:internal/modules/cjs/loader:1481:32)
+2026-03-12T17:27:42:     at Module._load (node:internal/modules/cjs/loader:1300:12)
+2026-03-12T17:27:42:     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+2026-03-12T17:27:42:     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+2026-03-12T17:30:40: [dotenv@17.3.1] injecting env (2) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+2026-03-12T17:30:41: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🛡️ auth for agents: https://vestauth.com
+2026-03-12T17:30:41: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-03-12T17:30:41: 🚀 [Config] ADMIN_EMAIL: undefined
+2026-03-12T17:30:41: 🚀 [Config] ADMIN_PASSWORD: MISSING
+2026-03-12T17:30:41: 🚀 [Config] JWT_SECRET: MISSING
+2026-03-12T17:30:41: 🚀 [Config] SUPABASE_URL: https://wdtizlzfsijikcejerwq.supabase.co
+2026-03-12T17:30:41: Backend running on http://localhost:8000
+2026-03-12T17:32:11: [dotenv@17.3.1] injecting env (5) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+2026-03-12T17:32:11: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-03-12T17:32:11: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-03-12T17:32:11: 🚀 [Config] ADMIN_EMAIL: admin@auralock.com
+2026-03-12T17:32:11: 🚀 [Config] ADMIN_PASSWORD: SET
+2026-03-12T17:32:11: 🚀 [Config] JWT_SECRET: SET
+2026-03-12T17:32:11: 🚀 [Config] SUPABASE_URL: https://wdtizlzfsijikcejerwq.supabase.co
+2026-03-12T17:32:11: Backend running on http://localhost:8000
+2026-03-12T17:34:29: [dotenv@17.3.1] injecting env (5) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-03-12T17:34:30: [dotenv@17.3.1] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-03-12T17:34:30: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-03-12T17:34:30: 🚀 [Config] ADMIN_EMAIL: admin@auralock.com
+2026-03-12T17:34:30: 🚀 [Config] ADMIN_PASSWORD: SET
+2026-03-12T17:34:30: 🚀 [Config] JWT_SECRET: SET
+2026-03-12T17:34:30: 🚀 [Config] SUPABASE_URL: https://wdtizlzfsijikcejerwq.supabase.co
+2026-03-12T17:34:30: Backend running on http://localhost:8000
+2026-03-12T17:51:41: 📡 [5:51:41 pm] GET /api/users
+2026-03-12T17:53:38: 📡 [5:53:38 pm] POST /auth/login
+2026-03-12T17:53:38: 📦 Body: {
+2026-03-12T17:53:38:   "email": "admin@auralock.com",
+2026-03-12T17:53:38:   "password": "admin123"
+2026-03-12T17:53:38: }
+2026-03-12T17:53:38: 🔐 [Login Attempt] Email: "admin@auralock.com", Expected: "admin@auralock.com"
+2026-03-12T17:53:38: 🔑 [Login Attempt] Pass Match: true
+2026-03-12T17:53:38: ✅ Admin credentials verified
+2026-03-12T17:53:38: 📡 [5:53:38 pm] GET /api/stats
+2026-03-12T17:53:38: 📡 [5:53:38 pm] GET /api/stats/activity
+2026-03-12T17:53:38: 📡 [5:53:38 pm] GET /api/stats/attendance-analytics
+2026-03-12T17:53:38: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:53:38: 📡 [5:53:38 pm] GET /api/door/status
+2026-03-12T17:53:38: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:53:38: 📡 [5:53:38 pm] GET /api/door/status
+2026-03-12T17:53:38: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:53:38: 📡 [5:53:38 pm] GET /api/stats/activity
+2026-03-12T17:53:38: 📊 [Stats] todayIST=2026-03-12 | employees=3 | present=1 | late=1 | scans=233
+2026-03-12T17:53:38: 📡 [5:53:38 pm] GET /api/stats
+2026-03-12T17:53:38: 📡 [5:53:38 pm] GET /api/stats/attendance-analytics
+2026-03-12T17:53:38: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:53:39: 📊 [Stats] todayIST=2026-03-12 | employees=3 | present=1 | late=1 | scans=233
+2026-03-12T17:53:43: 📡 [5:53:43 pm] GET /api/users
+2026-03-12T17:53:43: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:53:43: 📡 [5:53:43 pm] GET /api/users
+2026-03-12T17:53:43: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:54:41: 📡 [5:54:41 pm] GET /api/ble/status
+2026-03-12T17:54:41: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:54:41: 📡 [5:54:41 pm] GET /api/ble/scan
+2026-03-12T17:54:41: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:54:41: 🔍 Starting BLE scan...
+2026-03-12T17:54:41: 📡 [5:54:41 pm] GET /api/ble/status
+2026-03-12T17:54:41: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:54:46: 📡 [5:54:46 pm] GET /api/ble/status
+2026-03-12T17:54:46: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:54:46: 📡 [5:54:46 pm] GET /api/ble/scan
+2026-03-12T17:54:46: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:54:46: 🔍 Starting BLE scan...
+2026-03-12T17:54:51: 📡 [5:54:51 pm] GET /api/ble/status
+2026-03-12T17:54:51: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:54:56: 📡 [5:54:56 pm] GET /api/ble/status
+2026-03-12T17:54:56: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:55:01: 📡 [5:55:01 pm] GET /api/ble/status
+2026-03-12T17:55:01: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:55:06: 📡 [5:55:06 pm] GET /api/ble/status
+2026-03-12T17:55:06: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:55:10: 📡 [5:55:10 pm] GET /api/ble/scan
+2026-03-12T17:55:10: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:55:10: 🔍 Starting BLE scan...
+2026-03-12T17:55:11: 📡 [5:55:11 pm] GET /api/ble/status
+2026-03-12T17:55:11: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:55:16: 📡 [5:55:16 pm] GET /api/ble/status
+2026-03-12T17:55:16: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:55:21: 📡 [5:55:21 pm] GET /api/ble/status
+2026-03-12T17:55:21: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:55:23: 📡 [5:55:23 pm] GET /api/users
+2026-03-12T17:55:23: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:55:23: 📡 [5:55:23 pm] GET /api/attendance?startDate=2026-03-12&endDate=2026-03-12&employee_id=&department=&search=&status=&page=1&pageSize=10&sortBy=date&sortDir=desc
+2026-03-12T17:55:23: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:55:24: 📡 [5:55:24 pm] GET /api/attendance?startDate=2026-03-12&endDate=2026-03-12&employee_id=&department=&search=&status=&page=1&pageSize=10&sortBy=date&sortDir=desc
+2026-03-12T17:55:24: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:55:24: 📡 [5:55:24 pm] GET /api/users
+2026-03-12T17:55:24: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:55:48: 📡 [5:55:48 pm] GET /api/users
+2026-03-12T17:55:48: 📡 [5:55:48 pm] GET /api/users
+2026-03-12T17:55:52: 📡 [5:55:52 pm] POST /api/biometrics/face/verify
+2026-03-12T17:55:52: 📦 Body: {}
+2026-03-12T17:55:52: 🔍 [Verification] Checking face identity...
+2026-03-12T17:55:53: 📡 Attempting Biometric Engine (Port 8001)...
+2026-03-12T17:55:55: 🚫 Engine Rejection: No face detected.
+2026-03-12T17:55:59: 📡 [5:55:59 pm] GET /api/users
+2026-03-12T17:55:59: 📡 [5:55:59 pm] GET /api/users
+2026-03-12T17:56:01: 📡 [5:56:01 pm] GET /api/users
+2026-03-12T17:56:01: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:56:01: 📡 [5:56:01 pm] GET /api/attendance?startDate=2026-03-12&endDate=2026-03-12&employee_id=&department=&search=&status=&page=1&pageSize=10&sortBy=date&sortDir=desc
+2026-03-12T17:56:01: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:56:02: 📡 [5:56:02 pm] GET /api/users
+2026-03-12T17:56:02: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:56:02: 📡 [5:56:02 pm] GET /api/attendance?startDate=2026-03-12&endDate=2026-03-12&employee_id=&department=&search=&status=&page=1&pageSize=10&sortBy=date&sortDir=desc
+2026-03-12T17:56:02: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:56:06: 📡 [5:56:06 pm] GET /api/users
+2026-03-12T17:56:06: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T17:56:06: 📡 [5:56:06 pm] GET /api/users
+2026-03-12T17:56:06: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T18:02:13: 📡 [6:02:13 pm] POST /api/users
+2026-03-12T18:02:13: 📦 Body: {
+2026-03-12T18:02:13:   "name": "Bharat Anand",
+2026-03-12T18:02:13:   "email": "bharat@auralock.com",
+2026-03-12T18:02:13:   "employee_id": "EMP-004",
+2026-03-12T18:02:13:   "department": "Engineering",
+2026-03-12T18:02:13:   "role": "employee"
+2026-03-12T18:02:13: }
+2026-03-12T18:02:54: 📡 [6:02:54 pm] POST /auth/login
+2026-03-12T18:02:54: 📦 Body: {
+2026-03-12T18:02:54:   "email": "admin@auralock.com",
+2026-03-12T18:02:54:   "password": "admin123"
+2026-03-12T18:02:54: }
+2026-03-12T18:02:54: 🔐 [Login Attempt] Email: "admin@auralock.com", Expected: "admin@auralock.com"
+2026-03-12T18:02:54: 🔑 [Login Attempt] Pass Match: true
+2026-03-12T18:02:54: ✅ Admin credentials verified
+2026-03-12T18:02:54: 📡 [6:02:54 pm] POST /api/users
+2026-03-12T18:02:54: 📦 Body: {
+2026-03-12T18:02:54:   "name": "Bharat Anand",
+2026-03-12T18:02:54:   "email": "bharat@auralock.com",
+2026-03-12T18:02:54:   "employee_id": "EMP-004",
+2026-03-12T18:02:54:   "department": "Engineering",
+2026-03-12T18:02:54:   "role": "employee"
+2026-03-12T18:02:54: }
+2026-03-12T18:02:54: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T18:02:54: 🛡️ [IdentityValidation] POST /api/users | finalId: EMP-004 | isReEnroll: false
+2026-03-12T18:02:55: ✅ User created/updated in Supabase: EMP-004
+2026-03-12T18:02:55: 📡 [6:02:55 pm] POST /api/biometrics/face/register
+2026-03-12T18:02:55: 📦 Body: {}
+2026-03-12T18:02:55: 🛡️ [IdentityValidation] POST /api/biometrics/face/register | finalId: 7767726c-a146-4cc1-8db9-8f8d906cb7b5 | isReEnroll: true
+2026-03-12T18:02:55: ✅ [IdentityValidation] Bypassing checks for re-enrollment.
+2026-03-12T18:02:55: 📸 Received biometric registration for: 7767726c-a146-4cc1-8db9-8f8d906cb7b5
+2026-03-12T18:02:55: 📡 Forwarding to Biometric Engine (Port 8001)...
+2026-03-12T18:02:56: ❌ Biometric Engine error: No face detected.
+2026-03-12T18:02:56: ❌ Registration error: No face detected.
+2026-03-12T18:03:44: 📡 [6:03:44 pm] POST /auth/login
+2026-03-12T18:03:44: 📦 Body: {
+2026-03-12T18:03:44:   "email": "admin@auralock.com",
+2026-03-12T18:03:44:   "password": "admin123"
+2026-03-12T18:03:44: }
+2026-03-12T18:03:44: 🔐 [Login Attempt] Email: "admin@auralock.com", Expected: "admin@auralock.com"
+2026-03-12T18:03:44: 🔑 [Login Attempt] Pass Match: true
+2026-03-12T18:03:44: ✅ Admin credentials verified
+2026-03-12T18:03:44: 📡 [6:03:44 pm] GET /api/users
+2026-03-12T18:03:44: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T18:03:44: 📡 [6:03:44 pm] POST /api/biometrics/face/register
+2026-03-12T18:03:44: 📦 Body: {}
+2026-03-12T18:03:44: 🛡️ [IdentityValidation] POST /api/biometrics/face/register | finalId: 7767726c-a146-4cc1-8db9-8f8d906cb7b5 | isReEnroll: true
+2026-03-12T18:03:44: ✅ [IdentityValidation] Bypassing checks for re-enrollment.
+2026-03-12T18:03:44: 📸 Received biometric registration for: 7767726c-a146-4cc1-8db9-8f8d906cb7b5
+2026-03-12T18:03:44: 📡 Forwarding to Biometric Engine (Port 8001)...
+2026-03-12T18:03:45: ❌ Biometric Engine error: No face detected.
+2026-03-12T18:03:45: ❌ Registration error: No face detected.
+2026-03-12T18:04:05: 📡 [6:04:05 pm] POST /auth/login
+2026-03-12T18:04:05: 📦 Body: {
+2026-03-12T18:04:05:   "email": "admin@auralock.com",
+2026-03-12T18:04:05:   "password": "admin123"
+2026-03-12T18:04:05: }
+2026-03-12T18:04:05: 🔐 [Login Attempt] Email: "admin@auralock.com", Expected: "admin@auralock.com"
+2026-03-12T18:04:05: 🔑 [Login Attempt] Pass Match: true
+2026-03-12T18:04:05: ✅ Admin credentials verified
+2026-03-12T18:04:05: 📡 [6:04:05 pm] GET /api/users
+2026-03-12T18:04:05: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T18:04:05: 📡 [6:04:05 pm] POST /api/biometrics/face/register
+2026-03-12T18:04:05: 📦 Body: {}
+2026-03-12T18:04:05: 🛡️ [IdentityValidation] POST /api/biometrics/face/register | finalId: 7767726c-a146-4cc1-8db9-8f8d906cb7b5 | isReEnroll: true
+2026-03-12T18:04:05: ✅ [IdentityValidation] Bypassing checks for re-enrollment.
+2026-03-12T18:04:05: 📸 Received biometric registration for: 7767726c-a146-4cc1-8db9-8f8d906cb7b5
+2026-03-12T18:04:05: 📡 Forwarding to Biometric Engine (Port 8001)...
+2026-03-12T18:04:06: ❌ Biometric Engine error: No face detected.
+2026-03-12T18:04:06: ❌ Registration error: No face detected.
+2026-03-12T18:05:43: 📡 [6:05:43 pm] POST /auth/login
+2026-03-12T18:05:43: 📦 Body: {
+2026-03-12T18:05:43:   "email": "admin@auralock.com",
+2026-03-12T18:05:43:   "password": "admin123"
+2026-03-12T18:05:43: }
+2026-03-12T18:05:43: 🔐 [Login Attempt] Email: "admin@auralock.com", Expected: "admin@auralock.com"
+2026-03-12T18:05:43: 🔑 [Login Attempt] Pass Match: true
+2026-03-12T18:05:43: ✅ Admin credentials verified
+2026-03-12T18:05:43: 📡 [6:05:43 pm] GET /api/users
+2026-03-12T18:05:43: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T18:05:43: 📡 [6:05:43 pm] POST /api/biometrics/face/register
+2026-03-12T18:05:43: 📦 Body: {}
+2026-03-12T18:05:43: 🛡️ [IdentityValidation] POST /api/biometrics/face/register | finalId: 7767726c-a146-4cc1-8db9-8f8d906cb7b5 | isReEnroll: true
+2026-03-12T18:05:43: ✅ [IdentityValidation] Bypassing checks for re-enrollment.
+2026-03-12T18:05:43: 📸 Received biometric registration for: 7767726c-a146-4cc1-8db9-8f8d906cb7b5
+2026-03-12T18:05:43: 📡 Forwarding to Biometric Engine (Port 8001)...
+2026-03-12T18:05:44: ❌ Biometric Engine error: No face detected.
+2026-03-12T18:05:44: ❌ Registration error: No face detected.
+2026-03-12T18:06:00: 📡 [6:06:00 pm] POST /auth/login
+2026-03-12T18:06:00: 📦 Body: {
+2026-03-12T18:06:00:   "email": "admin@auralock.com",
+2026-03-12T18:06:00:   "password": "admin123"
+2026-03-12T18:06:00: }
+2026-03-12T18:06:00: 🔐 [Login Attempt] Email: "admin@auralock.com", Expected: "admin@auralock.com"
+2026-03-12T18:06:00: 🔑 [Login Attempt] Pass Match: true
+2026-03-12T18:06:00: ✅ Admin credentials verified
+2026-03-12T18:06:00: 📡 [6:06:00 pm] GET /api/users
+2026-03-12T18:06:00: 🔓 Authenticated User: admin@auralock.com
+2026-03-12T18:06:01: 📡 [6:06:01 pm] POST /api/biometrics/face/register
+2026-03-12T18:06:01: 📦 Body: {}
+2026-03-12T18:06:01: 🛡️ [IdentityValidation] POST /api/biometrics/face/register | finalId: 7767726c-a146-4cc1-8db9-8f8d906cb7b5 | isReEnroll: true
+2026-03-12T18:06:01: ✅ [IdentityValidation] Bypassing checks for re-enrollment.
+2026-03-12T18:06:01: 📸 Received biometric registration for: 7767726c-a146-4cc1-8db9-8f8d906cb7b5
+2026-03-12T18:06:01: 📡 Forwarding to Biometric Engine (Port 8001)...
+2026-03-12T18:06:02: ❌ Biometric Engine error: No face detected.
+2026-03-12T18:06:02: ❌ Registration error: No face detected.

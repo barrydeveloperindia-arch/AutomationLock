@@ -22,6 +22,7 @@
  *   - form-data: npm install form-data (already installed)
  ──────────────────────────────────────────────────────────────────────────────*/
 
+require('dotenv').config();
 const axios = require('axios');
 const FormData = require('form-data');
 const fs = require('fs');

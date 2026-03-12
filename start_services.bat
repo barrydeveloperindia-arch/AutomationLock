@@ -19,7 +19,7 @@ IF "%1"=="stop"    GOTO STOP
 
 :START
 echo [AuraLock] Starting all services via PM2...
-%PM2% start "D:\SMART DOOR LOCK\ecosystem.config.js" 2>nul
+%PM2% start "%~dp0ecosystem.config.js" 2>nul
 IF %ERRORLEVEL% NEQ 0 (
     echo [AuraLock] Services already running. Checking status...
 )

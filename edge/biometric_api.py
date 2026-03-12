@@ -365,7 +365,7 @@ async def register_face(
             objs = DeepFace.represent(
                 img_path = frame,
                 model_name = MODEL_NAME,
-                detector_backend = DETECTOR_BACKEND,
+                detector_backend = 'mtcnn',
                 enforce_detection = True,
                 align = True,
                 normalization = 'Facenet'
@@ -374,8 +374,8 @@ async def register_face(
             # L2 Normalize before storing
             encoding_vec = np.array(encoding_list)
             encoding_list = (encoding_vec / np.linalg.norm(encoding_vec)).tolist()
-        except ValueError:
-            return {"success": False, "message": "No face detected.", "error_code": "NO_FACE"}
+        except ValueError as custom_err:
+            return {"success": False, "message": f"No face detected. {str(custom_err)}", "error_code": "NO_FACE"}
 
         # 3. Cross-Identity Conflict Guard
         cache = load_face_cache()
@@ -527,8 +527,8 @@ async def verify_face(file: UploadFile = File(...)):
             objs = DeepFace.represent(
                 img_path = frame,
                 model_name = MODEL_NAME,
-                detector_backend = DETECTOR_BACKEND,
-                enforce_detection = True,
+                detector_backend = 'mtcnn',
+                enforce_detection = False,
                 align = True,
                 normalization = 'Facenet'
             )
