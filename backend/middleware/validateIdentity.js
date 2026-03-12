@@ -16,12 +16,17 @@ const validateIdentity = async (req, res, next) => {
     const { employee_id, employeeId, name, rfid, fingerprint_id } = req.body;
     const finalId = employee_id || employeeId;
     const isUpdate = req.method === 'PATCH' || req.method === 'PUT';
-    const isReEnroll = req.body.re_enroll === 'true' || req.body.re_enroll === true;
+    const isReEnroll = req.body.re_enroll === 'true' || req.body.re_enroll === true || req.body.re_enroll === 'on';
     const targetId = req.params.id; // UUID of employee being updated
 
+    console.log(`🛡️ [IdentityValidation] ${req.method} ${req.url} | finalId: ${finalId} | isReEnroll: ${isReEnroll}`);
+    if (Object.keys(req.body).length === 0) {
+        console.warn("⚠️ [IdentityValidation] Empty body detected! Possibly Multer hasn't finished parsing?");
+    }
+
     // When re-enrolling biometrics the employee MUST already exist.
-    // Skip all duplicate-existence checks in that case.
     if (isReEnroll) {
+        console.log("✅ [IdentityValidation] Bypassing checks for re-enrollment.");
         return next();
     }
 
@@ -54,7 +59,14 @@ const validateIdentity = async (req, res, next) => {
             }
         }
 
-        // 3. Check RFID Uniqueness
+        // 3. Check Face Biometric Uniqueness (normalized)
+        const { data: faceData } = await supabase
+            .from('face_templates')
+            .select('employee_id')
+            .eq('employee_id', finalId || targetId)
+            .single();
+
+        // 4. Check RFID Uniqueness
         if (rfid) {
             const { data } = await supabase
                 .from('rfid_tags')
@@ -63,21 +75,21 @@ const validateIdentity = async (req, res, next) => {
                 .single();
 
             if (data && (!isUpdate || data.employee_id !== targetId)) {
-                await logAlert('suspicious_rfid_reassignment', employee_id || targetId, { rfid, current_owner: data.employee_id });
+                await logAlert('suspicious_rfid_reassignment', finalId || targetId, { rfid, current_owner: data.employee_id });
                 return res.status(400).json({ success: false, message: `RFID Tag ${rfid} is already assigned to ${data.employee_id}.` });
             }
         }
 
-        // 4. Check Fingerprint Uniqueness
+        // 5. Check Fingerprint Uniqueness (normalized)
         if (fingerprint_id) {
             const { data } = await supabase
-                .from('fingerprints')
+                .from('fingerprint_templates')
                 .select('employee_id')
                 .eq('id', fingerprint_id)
                 .single();
 
             if (data && (!isUpdate || data.employee_id !== targetId)) {
-                await logAlert('duplicate_id_attempt', employee_id || targetId, { field: 'fingerprint', fingerprint_id });
+                await logAlert('duplicate_id_attempt', finalId || targetId, { field: 'fingerprint', fingerprint_id });
                 return res.status(400).json({ success: false, message: `Fingerprint ID ${fingerprint_id} is already registered.` });
             }
         }

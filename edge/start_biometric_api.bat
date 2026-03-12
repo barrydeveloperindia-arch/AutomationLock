@@ -49,7 +49,13 @@ exit /b
 
 :FOUND
 echo ✅ Using Python command: !PY_CMD!
-echo 🚀 Starting Biometric API on http://localhost:8001...
+
+:: --- Kill any stale Python processes on port 8001 to prevent WinError 10048 ---
+echo 🔄 Clearing port 8001 of any stale processes...
+for /f "tokens=5" %%a in ('netstat -aon ^| findstr ":8001"') do (
+    taskkill /F /PID %%a >nul 2>&1
+)
+echo ✅ Port 8001 is clear. Starting Biometric API...
 
 !PY_CMD! biometric_api.py
 

@@ -1,14 +1,9 @@
 {
-	"appId": "com.smartdoor.terminal",
-	"appName": "AuraLock Terminal",
+	"appId": "com.smartlock.terminal",
+	"appName": "Smart Lock Terminal",
 	"webDir": "dist",
 	"server": {
-		"androidScheme": "http",
-		"cleartext": true,
-		"hostname": "localhost",
-		"allowNavigation": [
-			"192.168.2.165:8000"
-		]
+		"androidScheme": "https"
 	},
 	"android": {
 		"allowMixedContent": true,

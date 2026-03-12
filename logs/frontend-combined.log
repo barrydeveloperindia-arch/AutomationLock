@@ -1,0 +1,554 @@
+2026-03-10T11:26:38: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:38: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:38: ^
+2026-03-10T11:26:38: 
+2026-03-10T11:26:38: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:38:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:38:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:38:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:38:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:38:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:38:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:38:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:38: 
+2026-03-10T11:26:38: Node.js v20.20.0
+2026-03-10T11:26:38: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:38: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:38: ^
+2026-03-10T11:26:38: 
+2026-03-10T11:26:38: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:38:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:38:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:38:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:38:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:38:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:38:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:38:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:38: 
+2026-03-10T11:26:38: Node.js v20.20.0
+2026-03-10T11:26:38: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:38: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:38: ^
+2026-03-10T11:26:38: 
+2026-03-10T11:26:38: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:38:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:38:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:38:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:38:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:38:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:38:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:38:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:38: 
+2026-03-10T11:26:38: Node.js v20.20.0
+2026-03-10T11:26:39: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:39: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:39: ^
+2026-03-10T11:26:39: 
+2026-03-10T11:26:39: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:39:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:39:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:39:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:39:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:39:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:39:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:39:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:39: 
+2026-03-10T11:26:39: Node.js v20.20.0
+2026-03-10T11:26:39: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:39: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:39: ^
+2026-03-10T11:26:39: 
+2026-03-10T11:26:39: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:39:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:39:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:39:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:39:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:39:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:39:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:39:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:39: 
+2026-03-10T11:26:39: Node.js v20.20.0
+2026-03-10T11:26:39: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:39: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:39: ^
+2026-03-10T11:26:39: 
+2026-03-10T11:26:39: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:39:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:39:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:39:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:39:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:39:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:39:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:39:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:39: 
+2026-03-10T11:26:39: Node.js v20.20.0
+2026-03-10T11:26:39: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:39: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:39: ^
+2026-03-10T11:26:39: 
+2026-03-10T11:26:39: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:39:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:39:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:39:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:39:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:39:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:39:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:39:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:39: 
+2026-03-10T11:26:39: Node.js v20.20.0
+2026-03-10T11:26:40: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:40: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:40: ^
+2026-03-10T11:26:40: 
+2026-03-10T11:26:40: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:40:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:40:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:40:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:40:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:40:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:40:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:40:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:40: 
+2026-03-10T11:26:40: Node.js v20.20.0
+2026-03-10T11:26:40: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:40: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:40: ^
+2026-03-10T11:26:40: 
+2026-03-10T11:26:40: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:40:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:40:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:40:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:40:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:40:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:40:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:40:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:40: 
+2026-03-10T11:26:40: Node.js v20.20.0
+2026-03-10T11:26:40: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:40: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:40: ^
+2026-03-10T11:26:40: 
+2026-03-10T11:26:40: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:40:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:40:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:40:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:40:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:40:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:40:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:40:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:40: 
+2026-03-10T11:26:40: Node.js v20.20.0
+2026-03-10T11:26:40: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:40: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:40: ^
+2026-03-10T11:26:40: 
+2026-03-10T11:26:40: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:40:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:40:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:40:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:40:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:40:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:40:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:40:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:40: 
+2026-03-10T11:26:40: Node.js v20.20.0
+2026-03-10T11:26:41: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:41: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:41: ^
+2026-03-10T11:26:41: 
+2026-03-10T11:26:41: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:41:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:41:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:41:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:41:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:41:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:41:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:41:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:41: 
+2026-03-10T11:26:41: Node.js v20.20.0
+2026-03-10T11:26:41: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:41: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:41: ^
+2026-03-10T11:26:41: 
+2026-03-10T11:26:41: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:41:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:41:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:41:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:41:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:41:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:41:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:41:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:41: 
+2026-03-10T11:26:41: Node.js v20.20.0
+2026-03-10T11:26:41: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:41: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:41: ^
+2026-03-10T11:26:41: 
+2026-03-10T11:26:41: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:41:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:41:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:41:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:41:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:41:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:41:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:41:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:41: 
+2026-03-10T11:26:41: Node.js v20.20.0
+2026-03-10T11:26:42: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:42: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:42: ^
+2026-03-10T11:26:42: 
+2026-03-10T11:26:42: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:42:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:42:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:42:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:42:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:42:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:42:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:42:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:42: 
+2026-03-10T11:26:42: Node.js v20.20.0
+2026-03-10T11:26:42: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:26:42: :: Created by npm, please don't edit manually.
+2026-03-10T11:26:42: ^
+2026-03-10T11:26:42: 
+2026-03-10T11:26:42: SyntaxError: Unexpected token ':'
+2026-03-10T11:26:42:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:26:42:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:26:42:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:26:42:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:26:42:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:26:42:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:26:42:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:26:42: 
+2026-03-10T11:26:42: Node.js v20.20.0
+2026-03-10T11:27:29: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:29: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:29: ^
+2026-03-10T11:27:29: 
+2026-03-10T11:27:29: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:29:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:29:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:29:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:29:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:29:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:29:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:29:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:29: 
+2026-03-10T11:27:29: Node.js v20.20.0
+2026-03-10T11:27:30: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:30: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:30: ^
+2026-03-10T11:27:30: 
+2026-03-10T11:27:30: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:30:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:30:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:30:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:30:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:30:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:30:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:30:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:30: 
+2026-03-10T11:27:30: Node.js v20.20.0
+2026-03-10T11:27:30: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:30: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:30: ^
+2026-03-10T11:27:30: 
+2026-03-10T11:27:30: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:30:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:30:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:30:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:30:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:30:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:30:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:30:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:30: 
+2026-03-10T11:27:30: Node.js v20.20.0
+2026-03-10T11:27:31: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:31: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:31: ^
+2026-03-10T11:27:31: 
+2026-03-10T11:27:31: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:31:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:31:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:31:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:31:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:31:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:31:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:31:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:31: 
+2026-03-10T11:27:31: Node.js v20.20.0
+2026-03-10T11:27:31: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:31: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:31: ^
+2026-03-10T11:27:31: 
+2026-03-10T11:27:31: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:31:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:31:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:31:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:31:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:31:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:31:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:31:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:31: 
+2026-03-10T11:27:31: Node.js v20.20.0
+2026-03-10T11:27:31: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:31: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:31: ^
+2026-03-10T11:27:31: 
+2026-03-10T11:27:31: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:31:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:31:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:31:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:31:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:31:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:31:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:31:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:31: 
+2026-03-10T11:27:31: Node.js v20.20.0
+2026-03-10T11:27:32: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:32: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:32: ^
+2026-03-10T11:27:32: 
+2026-03-10T11:27:32: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:32:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:32:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:32:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:32:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:32:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:32:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:32:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:32: 
+2026-03-10T11:27:32: Node.js v20.20.0
+2026-03-10T11:27:32: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:32: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:32: ^
+2026-03-10T11:27:32: 
+2026-03-10T11:27:32: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:32:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:32:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:32:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:32:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:32:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:32:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:32:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:32: 
+2026-03-10T11:27:32: Node.js v20.20.0
+2026-03-10T11:27:32: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:32: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:32: ^
+2026-03-10T11:27:32: 
+2026-03-10T11:27:32: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:32:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:32:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:32:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:32:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:32:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:32:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:32:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:32: 
+2026-03-10T11:27:32: Node.js v20.20.0
+2026-03-10T11:27:32: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:32: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:32: ^
+2026-03-10T11:27:32: 
+2026-03-10T11:27:32: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:32:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:32:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:32:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:32:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:32:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:32:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:32:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:32: 
+2026-03-10T11:27:32: Node.js v20.20.0
+2026-03-10T11:27:32: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:32: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:32: ^
+2026-03-10T11:27:32: 
+2026-03-10T11:27:32: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:32:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:32:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:32:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:32:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:32:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:32:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:32:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:32: 
+2026-03-10T11:27:32: Node.js v20.20.0
+2026-03-10T11:27:33: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:33: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:33: ^
+2026-03-10T11:27:33: 
+2026-03-10T11:27:33: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:33:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:33:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:33:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:33:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:33:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:33:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:33: 
+2026-03-10T11:27:33: Node.js v20.20.0
+2026-03-10T11:27:33: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:33: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:33: ^
+2026-03-10T11:27:33: 
+2026-03-10T11:27:33: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:33:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:33:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:33:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:33:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:33:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:33:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:33: 
+2026-03-10T11:27:33: Node.js v20.20.0
+2026-03-10T11:27:33: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:33: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:33: ^
+2026-03-10T11:27:33: 
+2026-03-10T11:27:33: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:33:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:33:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:33:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:33:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:33:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:33:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:33: 
+2026-03-10T11:27:33: Node.js v20.20.0
+2026-03-10T11:27:33: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:33: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:33: ^
+2026-03-10T11:27:33: 
+2026-03-10T11:27:33: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:33:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:33:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:33:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:33:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:33:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:33:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:33: 
+2026-03-10T11:27:33: Node.js v20.20.0
+2026-03-10T11:27:34: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2026-03-10T11:27:34: :: Created by npm, please don't edit manually.
+2026-03-10T11:27:34: ^
+2026-03-10T11:27:34: 
+2026-03-10T11:27:34: SyntaxError: Unexpected token ':'
+2026-03-10T11:27:34:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T11:27:34:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T11:27:34:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T11:27:34:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T11:27:34:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T11:27:34:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+2026-03-10T11:27:34:     at node:internal/main/run_main_module:28:49
+2026-03-10T11:27:34: 
+2026-03-10T11:27:34: Node.js v20.20.0
+2026-03-10T11:28:15: 
+2026-03-10T11:28:15:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m4312[22m[2m[0m ms[22m
+2026-03-10T11:28:15: 
+2026-03-10T11:28:15:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-10T11:28:15:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-10T17:39:00: [2m5:39:00 pm[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Terminal.jsx, /src/index.css[22m
+2026-03-11T10:07:57: [2m10:07:57 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Terminal.jsx, /src/index.css[22m
+2026-03-11T10:39:05: 
+2026-03-11T10:39:05:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m3914[22m[2m[0m ms[22m
+2026-03-11T10:39:05: 
+2026-03-11T10:39:05:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T10:39:05:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T11:49:59: [2m11:49:59 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/biometrics/face/verify[39m
+2026-03-11T11:49:59: AggregateError [ECONNREFUSED]: 
+2026-03-11T11:49:59:     at internalConnectMultiple (node:net:1122:18)
+2026-03-11T11:49:59:     at afterConnectMultiple (node:net:1689:7)
+2026-03-11T11:50:06: [2m11:50:06 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/biometrics/face/verify[39m
+2026-03-11T11:50:06: AggregateError [ECONNREFUSED]: 
+2026-03-11T11:50:06:     at internalConnectMultiple (node:net:1122:18)
+2026-03-11T11:50:06:     at afterConnectMultiple (node:net:1689:7)
+2026-03-11T11:50:14: [2m11:50:14 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/biometrics/face/verify[39m
+2026-03-11T11:50:14: AggregateError [ECONNREFUSED]: 
+2026-03-11T11:50:14:     at internalConnectMultiple (node:net:1122:18)
+2026-03-11T11:50:14:     at afterConnectMultiple (node:net:1689:7)
+2026-03-11T11:58:35: [2m11:58:35 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/biometrics/face/verify[39m
+2026-03-11T11:58:35: AggregateError [ECONNREFUSED]: 
+2026-03-11T11:58:35:     at internalConnectMultiple (node:net:1122:18)
+2026-03-11T11:58:35:     at afterConnectMultiple (node:net:1689:7)
+2026-03-11T11:58:44: [2m11:58:44 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/biometrics/face/verify[39m
+2026-03-11T11:58:44: AggregateError [ECONNREFUSED]: 
+2026-03-11T11:58:44:     at internalConnectMultiple (node:net:1122:18)
+2026-03-11T11:58:44:     at afterConnectMultiple (node:net:1689:7)
+2026-03-11T12:06:19: 
+2026-03-11T12:06:19:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m4422[22m[2m[0m ms[22m
+2026-03-11T12:06:19: 
+2026-03-11T12:06:19:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T12:06:19:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T12:27:28: 
+2026-03-11T12:27:28:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m2610[22m[2m[0m ms[22m
+2026-03-11T12:27:28: 
+2026-03-11T12:27:28:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T12:27:28:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T12:59:32: 
+2026-03-11T12:59:32:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m3520[22m[2m[0m ms[22m
+2026-03-11T12:59:32: 
+2026-03-11T12:59:32:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T12:59:32:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T13:02:17: 
+2026-03-11T13:02:17:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m4020[22m[2m[0m ms[22m
+2026-03-11T13:02:17: 
+2026-03-11T13:02:17:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T13:02:17:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T13:11:03: 
+2026-03-11T13:11:03:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m2305[22m[2m[0m ms[22m
+2026-03-11T13:11:03: 
+2026-03-11T13:11:03:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T13:11:03:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T14:47:07: 
+2026-03-11T14:47:07:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m2985[22m[2m[0m ms[22m
+2026-03-11T14:47:07: 
+2026-03-11T14:47:07:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T14:47:07:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T14:50:38: 
+2026-03-11T14:50:38:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m2229[22m[2m[0m ms[22m
+2026-03-11T14:50:38: 
+2026-03-11T14:50:38:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T14:50:38:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T15:02:31: 
+2026-03-11T15:02:31:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m2962[22m[2m[0m ms[22m
+2026-03-11T15:02:31: 
+2026-03-11T15:02:31:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T15:02:31:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T15:03:43: 
+2026-03-11T15:03:43:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m2859[22m[2m[0m ms[22m
+2026-03-11T15:03:43: 
+2026-03-11T15:03:43:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T15:03:43:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T15:33:01: 
+2026-03-11T15:33:01:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m2589[22m[2m[0m ms[22m
+2026-03-11T15:33:01: 
+2026-03-11T15:33:01:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T15:33:01:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T15:33:44: 
+2026-03-11T15:33:44:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m2456[22m[2m[0m ms[22m
+2026-03-11T15:33:44: 
+2026-03-11T15:33:44:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T15:33:44:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T16:10:49: 
+2026-03-11T16:10:49:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m3014[22m[2m[0m ms[22m
+2026-03-11T16:10:49: 
+2026-03-11T16:10:49:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T16:10:49:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T17:51:18: 
+2026-03-11T17:51:18:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m5929[22m[2m[0m ms[22m
+2026-03-11T17:51:18: 
+2026-03-11T17:51:18:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T17:51:18:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-11T18:02:49: 
+2026-03-11T18:02:49:   [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m2564[22m[2m[0m ms[22m
+2026-03-11T18:02:49: 
+2026-03-11T18:02:49:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5180[22m/[39m
+2026-03-11T18:02:49:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.165:[1m5180[22m/[39m
+2026-03-12T11:50:15: [2m11:50:15 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/biometrics/face/verify[39m
+2026-03-12T11:50:15: AggregateError [ECONNREFUSED]: 
+2026-03-12T11:50:15:     at internalConnectMultiple (node:net:1122:18)
+2026-03-12T11:50:15:     at afterConnectMultiple (node:net:1689:7)

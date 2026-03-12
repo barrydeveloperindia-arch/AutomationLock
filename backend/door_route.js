@@ -19,11 +19,14 @@ router.post('/unlock', async (req, res) => {
             // Log the remote unlock event
             try {
                 await supabase.from('access_logs').insert({
-                    employee_id: req.user?.id || 'admin_remote',
+                    employee_id: null,
                     status: 'success',
                     device_id: 'admin_panel',
-                    method: 'remote_unlock',
-                    metadata: { operator: req.user?.email || 'admin' }
+                    method: 'REMOTE',
+                    metadata: { 
+                        operator: req.user?.email || 'admin',
+                        unlock_source: 'ADMIN_PANEL'
+                    }
                 });
             } catch (logError) {
                 console.error("⚠️ Failed to record remote unlock log:", logError.message);

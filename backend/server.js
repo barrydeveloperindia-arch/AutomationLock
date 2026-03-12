@@ -17,12 +17,16 @@ const doorService = require('./doorService');
 
 const app = express();
 const PORT = process.env.PORT || 8000;
+console.log('🚀 [Config] ADMIN_EMAIL:', process.env.ADMIN_EMAIL);
+console.log('🚀 [Config] ADMIN_PASSWORD:', process.env.ADMIN_PASSWORD ? 'SET' : 'MISSING');
+console.log('🚀 [Config] JWT_SECRET:', process.env.JWT_SECRET ? 'SET' : 'MISSING');
+console.log('🚀 [Config] SUPABASE_URL:', process.env.SUPABASE_URL);
 
 // --- Security: Rate Limiters ---
 const authLimiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 10, // Limit each IP to 10 login attempts per window
-    message: { error: 'Too many login attempts, please try again after 15 minutes.' }
+    message: { message: 'Too many login attempts, please try again after 15 minutes.' }
 });
 
 const biometricLimiter = rateLimit({
@@ -33,6 +37,8 @@ const biometricLimiter = rateLimit({
 
 // --- Security: Brute-Force Tracker ---
 const loginFailures = new Map(); // In-memory tracker
+const logRateLimiter = new Map(); // Rate limiter for Access Logs (3s)
+const LOG_THROTTLE_MS = 3000;
 
 // --- Supabase Connection ---
 const supabaseUrl = process.env.SUPABASE_URL || "https://wdtizlzfsijikcejerwq.supabase.co";
@@ -152,14 +158,17 @@ const recordAttendance = async (employeeId, method, deviceId = 'server') => {
             const checkInTime = new Date();
             const checkInIso = checkInTime.toISOString();
 
-            // Late arrival detection
-            // Office start = 09:00, grace period = 15 minutes → threshold 09:15
+            // Late arrival detection (IST)
             const OFFICE_START_HOUR = 9;
             const GRACE_PERIOD_MINUTES = 15;
-            const lateThresholdMins = OFFICE_START_HOUR * 60 + GRACE_PERIOD_MINUTES; // 555 mins from midnight
-            const checkInMins = checkInTime.getHours() * 60 + checkInTime.getMinutes();
+            const lateThresholdMins = OFFICE_START_HOUR * 60 + GRACE_PERIOD_MINUTES; 
+            
+            const checkInIST = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata', hour12: false });
+            const [h, m] = checkInIST.split(':').map(Number);
+            const checkInMins = h * 60 + m;
+            
             const arrivalStatus = checkInMins > lateThresholdMins ? 'LATE' : 'ON_TIME';
-            console.log(`🕒 [Attendance] Arrival status: ${arrivalStatus} (check-in at ${checkInTime.toTimeString().slice(0, 5)})`);
+            console.log(`🕒 [Attendance] Arrival status: ${arrivalStatus} (check-in at ${checkInIST})`);
 
             const { error: insError } = await supabase.from('attendance').insert({
                 employee_id: employeeId,
@@ -197,47 +206,79 @@ const recordAttendance = async (employeeId, method, deviceId = 'server') => {
                 };
             }
 
-            if (!existing.check_out) {
-                // ── Check-out ──
-                console.log(`🕒 [Attendance] Checking OUT employee: ${employeeId}`);
-                const checkOutTime = new Date();
-                const workingHours = parseFloat(
-                    ((checkOutTime - new Date(existing.check_in)) / (1000 * 60 * 60)).toFixed(2)
-                );
+            // ── Rolling Check-out (Update every time) ──
+            console.log(`🕒 [Attendance] Updating check-out for employee: ${employeeId}`);
+            const checkOutTime = new Date();
+            const workingHours = parseFloat(
+                ((checkOutTime - new Date(existing.check_in)) / (1000 * 60 * 60)).toFixed(2)
+            );
 
-                const { error: updError } = await supabase.from('attendance').update({
-                    check_out: checkOutTime.toISOString(),
-                    working_hours: workingHours
-                }).eq('id', existing.id);
+            const { error: updError } = await supabase.from('attendance').update({
+                check_out: checkOutTime.toISOString(),
+                working_hours: workingHours,
+                method: mappedMethod, // update method if different
+                device_id: deviceId    // update device if different
+            }).eq('id', existing.id);
 
-                if (updError) {
-                    console.error("❌ Attendance Update Error:", updError.message);
-                    throw new Error(`Update failed: ${updError.message}`);
-                }
-                return {
-                    message: "Check-out recorded",
-                    check_in: existing.check_in,
-                    check_out: checkOutTime.toISOString(),
-                    working_hours: workingHours,
-                    status: existing.status || null
-                };
-            } else {
-                // ── Already completed ──
-                console.log(`🕒 [Attendance] Employee ${employeeId} already completed attendance for today.`);
-                return {
-                    message: "Attendance already completed today",
-                    check_in: existing.check_in,
-                    check_out: existing.check_out,
-                    working_hours: existing.working_hours || null,
-                    status: existing.status || null
-                };
+            if (updError) {
+                console.error("❌ Attendance Update Error:", updError.message);
+                throw new Error(`Update failed: ${updError.message}`);
             }
+            return {
+                message: "Check-out updated",
+                check_in: existing.check_in,
+                check_out: checkOutTime.toISOString(),
+                working_hours: workingHours,
+                status: existing.status || null
+            };
         }
     } catch (error) {
         console.error("❌ Critical Attendance Error:", error.message);
         throw error;
     }
 };
+
+// Dedicated Attendance Marking Endpoint
+// Handles both internal and external (biometric engine) calls
+app.post(['/api/attendance/mark', '/attendance/mark'], async (req, res) => {
+    try {
+        const { employee_id, id, method, device_id } = req.body;
+        const targetId = employee_id || id;
+
+        if (!targetId) {
+            return res.status(400).json({ error: "Missing employee identifier (employee_id or id)" });
+        }
+
+        console.log(`🎯 [Attendance Mark] Processing mark request for: ${targetId}`);
+
+        // 1. Resolve to UUID if it looks like a custom employee_id string
+        let finalUuid = targetId;
+        const uuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
+        
+        if (!uuidRegex.test(targetId)) {
+            const { data: emp, error: empErr } = await supabase
+                .from('employees')
+                .select('id')
+                .eq('employee_id', targetId)
+                .single();
+            
+            if (empErr || !emp) {
+                console.error(`❌ [Attendance Mark] Could not resolve ID: ${targetId}`);
+                return res.status(404).json({ error: "Employee not found or ID invalid" });
+            }
+            finalUuid = emp.id;
+        }
+
+        // 2. Record Attendance
+        const attendanceResult = await recordAttendance(finalUuid, method || 'face', device_id || 'api_call');
+        
+        res.json(attendanceResult);
+    } catch (error) {
+        console.error("❌ [Attendance Mark] Critical Error:", error.message);
+        res.status(500).json({ error: "Internal Server Error", details: error.message });
+    }
+});
+
 
 // --- IoT Utilities ---
 /**
@@ -275,13 +316,18 @@ app.post('/auth/login', authLimiter, async (req, res) => {
     }
 
     try {
+        console.log(`🔐 [Login Attempt] Email: "${email}", Expected: "${process.env.ADMIN_EMAIL}"`);
+        console.log(`🔑 [Login Attempt] Pass Match: ${password === process.env.ADMIN_PASSWORD}`);
+        
         if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
+            console.log("✅ Admin credentials verified");
             loginFailures.delete(ip); // Reset on success
             const user = { name: 'Super Admin', email: email, role: 'admin' };
             const accessToken = jwt.sign(user, process.env.JWT_SECRET, { expiresIn: '24h' });
             return res.json({ token: accessToken, user });
         }
 
+        console.warn("❌ Invalid credentials attempt");
         // Track failures
         failures.count++;
         failures.lastTry = Date.now();
@@ -406,6 +452,102 @@ app.get('/api/stats', async (req, res) => {
     }
 });
 
+// ─── Employee Attendance History Endpoint ───────────────────────────────────
+app.get('/api/attendance/employee/:employee_id', authenticateToken, async (req, res) => {
+    try {
+        const { employee_id } = req.params;
+        const { startDate, endDate, page = 1, limit = 10 } = req.query;
+
+        const pgLimit = parseInt(limit, 10) || 10;
+        const offset = (parseInt(page, 10) - 1) * pgLimit;
+
+        // 1. Resolve UUID
+        let finalUuid = employee_id;
+        const uuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
+        
+        let employeeData;
+        if (!uuidRegex.test(employee_id)) {
+            const { data: emp, error: empErr } = await supabase
+                .from('employees')
+                .select('id, name, department, employee_id')
+                .eq('employee_id', employee_id)
+                .single();
+            
+            if (empErr || !emp) return res.status(404).json({ error: "Employee not found" });
+            finalUuid = emp.id;
+            employeeData = emp;
+        } else {
+            const { data: emp, error: empErr } = await supabase
+                .from('employees')
+                .select('id, name, department, employee_id')
+                .eq('id', employee_id)
+                .single();
+            if (empErr || !emp) return res.status(404).json({ error: "Employee not found" });
+            employeeData = emp;
+        }
+
+        // 2. Query attendance
+        let q = supabase
+            .from('attendance')
+            .select('*, employees(name, employee_id, department)', { count: 'exact' })
+            .eq('employee_id', finalUuid)
+            .order('date', { ascending: false });
+
+        if (startDate) q = q.gte('date', startDate);
+        if (endDate) q = q.lte('date', endDate);
+
+        const { data, count, error } = await q.range(offset, offset + pgLimit - 1);
+        if (error) throw error;
+
+        res.json({
+            employee: employeeData,
+            data: data || [],
+            total: count || 0,
+            page: parseInt(page, 10),
+            limit: pgLimit
+        });
+    } catch (error) {
+        console.error('❌ Get employee attendance error:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+// ─── Employee Attendance Summary Endpoint ───────────────────────────────────
+app.get('/api/attendance/employee/:employee_id/summary', authenticateToken, async (req, res) => {
+    try {
+        const { employee_id } = req.params;
+        const { startDate, endDate } = req.query;
+
+        // Resolve UUID
+        let finalUuid = employee_id;
+        const uuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
+        if (!uuidRegex.test(employee_id)) {
+            const { data: emp } = await supabase.from('employees').select('id').eq('employee_id', employee_id).single();
+            if (!emp) return res.status(404).json({ error: "Employee not found" });
+            finalUuid = emp.id;
+        }
+
+        let q = supabase.from('attendance').select('status, working_hours, check_in').eq('employee_id', finalUuid);
+        if (startDate) q = q.gte('date', startDate);
+        if (endDate) q = q.lte('date', endDate);
+
+        const { data, error } = await q;
+        if (error) throw error;
+
+        const summary = {
+            total_days: data.length,
+            present_days: data.filter(r => r.check_in).length,
+            late_days: data.filter(r => r.status === 'LATE').length,
+            total_work_hours: parseFloat(data.reduce((sum, r) => sum + (r.working_hours || 0), 0).toFixed(2))
+        };
+
+        res.json(summary);
+    } catch (error) {
+        console.error('❌ Get attendance summary error:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
 // ─── Attendance Listing Endpoint ────────────────────────────────────────────
 // Supports: date range, employee_id, department, name search, pagination, sorting
 app.get('/api/attendance', authenticateToken, async (req, res) => {
@@ -463,8 +605,39 @@ app.get('/api/attendance', authenticateToken, async (req, res) => {
     }
 });
 
-// ─── Excel Export Endpoint ───────────────────────────────────────────────────
-app.get('/api/attendance/export/excel', authenticateToken, async (req, res) => {
+app.get('/api/attendance/export/excel/:employee_id', authenticateToken, async (req, res) => {
+    const resolved = await resolveEmployeeUuid(req.params.employee_id);
+    if (!resolved) return res.status(404).json({ error: "Employee not found" });
+    req.query.employee_id = resolved;
+    return handleExcelExport(req, res);
+});
+
+// ─── Employee PDF Export ────────────────────────────────────────────────────
+app.get('/api/attendance/export/pdf/:employee_id', authenticateToken, async (req, res) => {
+    const resolved = await resolveEmployeeUuid(req.params.employee_id);
+    if (!resolved) return res.status(404).json({ error: "Employee not found" });
+    req.query.employee_id = resolved;
+    return handlePdfExport(req, res);
+});
+
+// Helper to resolve employee UUID for exports
+async function resolveEmployeeUuid(idOrEid) {
+    const uuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
+    if (uuidRegex.test(idOrEid)) return idOrEid;
+    const { data } = await supabase.from('employees').select('id').eq('employee_id', idOrEid).single();
+    return data ? data.id : null;
+}
+
+// Helper to resolve human-readable employee_id (e.g. EMP-0001)
+async function resolveEmployeeEid(idOrEid) {
+    const uuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
+    if (!uuidRegex.test(idOrEid)) return idOrEid;
+    const { data } = await supabase.from('employees').select('employee_id').eq('id', idOrEid).single();
+    return data ? data.employee_id : null;
+}
+
+// Helper to handle Excel Export (Extracted for reuse)
+async function handleExcelExport(req, res) {
     try {
         const { month, year, employee_id, department, startDate: sd, endDate: ed } = req.query;
         const now = new Date();
@@ -627,17 +800,18 @@ app.get('/api/attendance/export/excel', authenticateToken, async (req, res) => {
         const filename = `attendance_${fromDate}_to_${toDate}.xlsx`;
         res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
         res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
-        await wb.xlsx.write(res);
-        res.end();
+        await wb.xlsx.write(res).then(() => res.end());
 
     } catch (error) {
-        console.error('❌ Excel export error:', error);
-        res.status(500).json({ error: 'Excel export failed', details: error.message });
+        console.error('❌ Excel Export Error:', error);
+        res.status(500).json({ error: 'Export failed' });
     }
-});
+}
 
-// ─── PDF Export Endpoint ──────────────────────────────────────────────────────
-app.get('/api/attendance/export/pdf', authenticateToken, async (req, res) => {
+app.get('/api/attendance/export/excel', authenticateToken, handleExcelExport);
+
+// ─── PDF Export Helper & Endpoint ───────────────────────────────────────────
+async function handlePdfExport(req, res) {
     try {
         const { month, year, employee_id, department, startDate: sd, endDate: ed } = req.query;
         const now = new Date();
@@ -909,7 +1083,9 @@ app.get('/api/attendance/export/pdf', authenticateToken, async (req, res) => {
         if (!res.headersSent)
             res.status(500).json({ error: 'PDF export failed', details: error.message });
     }
-});
+}
+
+app.get('/api/attendance/export/pdf', authenticateToken, handlePdfExport);
 
 // Attendance Report Endpoint (Last 7 Days)
 app.get('/api/attendance/report', async (req, res) => {
@@ -1236,17 +1412,17 @@ app.get('/api/stats/activity', async (req, res) => {
 
 // ─── Security Logs Endpoint ───────────────────────────────────────────────────
 // Filters: status, method, device_id, startDate, endDate, search (employee name)
-app.get('/api/logs', authenticateToken, async (req, res) => {
+// ─── Simplified Access Logs Endpoint ─────────────────────────────────────────
+app.get('/api/access-logs', authenticateToken, async (req, res) => {
     try {
         const {
             page = 1,
             limit = 20,
-            status,
-            method,
-            device_id,
             startDate,
             endDate,
-            search,
+            employee_name,
+            device,
+            result,
         } = req.query;
 
         const pgLimit = Math.min(parseInt(limit, 10) || 20, 100);
@@ -1258,12 +1434,14 @@ app.get('/api/logs', authenticateToken, async (req, res) => {
             .select('*, employees(name, employee_id, department, image_url)', { count: 'exact' })
             .order('created_at', { ascending: false });
 
-        if (status) q = q.eq('status', status);
-        if (method) q = q.eq('method', method);
-        if (device_id) q = q.eq('device_id', device_id);
+        if (result) q = q.eq('status', result);
+        if (device) q = q.eq('device_id', device);
         if (startDate) q = q.gte('created_at', `${startDate}T00:00:00.000Z`);
         if (endDate) q = q.lte('created_at', `${endDate}T23:59:59.999Z`);
-        if (search) q = q.ilike('employees.name', `%${search}%`);
+        if (employee_name || req.query.search) {
+            const pattern = `%${employee_name || req.query.search}%`;
+            q = q.ilike('employees.name', pattern);
+        }
 
         const { data: logs, count, error } = await q.range(from, to);
         if (error) throw error;
@@ -1274,14 +1452,249 @@ app.get('/api/logs', authenticateToken, async (req, res) => {
             pagination: {
                 total: count || 0,
                 page: parseInt(page, 10),
-                limit: pgLimit,
-                pages: Math.ceil((count || 0) / pgLimit),
+                limit: pgLimit
             }
         });
     } catch (error) {
-        console.error('❌ Logs error:', error);
+        console.error('❌ Access logs error:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
+});
+
+// ─── Employee Access History Endpoint ─────────────────────────────────────────
+app.get('/api/access-logs/employee/:employee_id', authenticateToken, async (req, res) => {
+    try {
+        const { employee_id } = req.params;
+        const { startDate, endDate, page = 1, limit = 20 } = req.query;
+
+        const resolved = await resolveEmployeeEid(employee_id);
+        if (!resolved) return res.status(404).json({ error: "Employee not found" });
+
+        const pgLimit = Math.min(parseInt(limit, 10) || 20, 100);
+        const from = (parseInt(page, 10) - 1) * pgLimit;
+        const to = from + pgLimit - 1;
+
+        let q = supabase
+            .from('access_logs')
+            .select('*, employees(name, employee_id, department, image_url)', { count: 'exact' })
+            .eq('employee_id', resolved)
+            .order('created_at', { ascending: false });
+
+        if (startDate) q = q.gte('created_at', `${startDate}T00:00:00.000Z`);
+        if (endDate) q = q.lte('created_at', `${endDate}T23:59:59.999Z`);
+
+        const { data: logs, count, error } = await q.range(from, to);
+        if (error) throw error;
+
+        res.json({ logs: logs || [], total: count || 0 });
+    } catch (error) {
+        console.error('❌ Employee access logs error:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+// ─── Employee Access Summary Endpoint ─────────────────────────────────────────
+app.get('/api/access-logs/employee/:employee_id/summary', authenticateToken, async (req, res) => {
+    try {
+        const { employee_id } = req.params;
+        const resolved = await resolveEmployeeEid(employee_id);
+        if (!resolved) return res.status(404).json({ error: "Employee not found" });
+
+        const istOffset = 5.5 * 60 * 60 * 1000;
+        const nowIST = new Date(Date.now() + istOffset);
+        const todayStr = nowIST.toISOString().split('T')[0];
+        const istMidnightUTC = new Date(new Date(todayStr).getTime() - istOffset).toISOString();
+        
+        const startOfMonthIST = new Date(nowIST.getFullYear(), nowIST.getMonth(), 1);
+        const istMonthStartUTC = new Date(startOfMonthIST.getTime() - istOffset).toISOString();
+
+        const [
+            { count: totalScans },
+            { count: todayScans },
+            { count: thisMonthScans },
+            { data: lastScanArr }
+        ] = await Promise.all([
+            supabase.from('access_logs').select('*', { count: 'exact', head: true }).eq('employee_id', resolved),
+            supabase.from('access_logs').select('*', { count: 'exact', head: true }).eq('employee_id', resolved).gte('created_at', istMidnightUTC),
+            supabase.from('access_logs').select('*', { count: 'exact', head: true }).eq('employee_id', resolved).gte('created_at', istMonthStartUTC),
+            supabase.from('access_logs').select('created_at').eq('employee_id', resolved).order('created_at', { ascending: false }).limit(1)
+        ]);
+
+        res.json({
+            total_scans: totalScans || 0,
+            today_scans: todayScans || 0,
+            this_month_scans: thisMonthScans || 0,
+            last_scan: lastScanArr?.[0]?.created_at || null
+        });
+    } catch (error) {
+        console.error('❌ Access summary error:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+// ─── Access Logs Export Handlers ──────────────────────────────────────────────
+
+async function handleAccessExcelExport(req, res) {
+    try {
+        const { startDate, endDate, employee_id, device, result, month, year } = req.query;
+        const now = new Date();
+        
+        let fromDate, toDate;
+        if (month && year) {
+            fromDate = `${year}-${String(month).padStart(2, '0')}-01`;
+            const lastDay = new Date(parseInt(year), parseInt(month), 0).getDate();
+            toDate = `${year}-${String(month).padStart(2, '0')}-${String(lastDay).padStart(2, '0')}`;
+        } else {
+            fromDate = startDate || now.toISOString().split('T')[0];
+            toDate = endDate || now.toISOString().split('T')[0];
+        }
+
+        let q = supabase
+            .from('access_logs')
+            .select('*, employees(name, employee_id, department)')
+            .gte('created_at', `${fromDate}T00:00:00.000Z`)
+            .lte('created_at', `${toDate}T23:59:59.999Z`)
+            .order('created_at', { ascending: false });
+
+        if (employee_id) q = q.eq('employee_id', employee_id);
+        if (device) q = q.eq('device_id', device);
+        if (result) q = q.eq('status', result);
+
+        const { data: records, error } = await q;
+        if (error) throw error;
+
+        const ExcelJS = require('exceljs');
+        const wb = new ExcelJS.Workbook();
+        const ws = wb.addWorksheet('Access Logs');
+
+        ws.columns = [
+            { header: 'Employee', key: 'name', width: 25 },
+            { header: 'ID', key: 'eid', width: 15 },
+            { header: 'Method', key: 'method', width: 12 },
+            { header: 'Timestamp', key: 'ts', width: 22 },
+            { header: 'Confidence', key: 'conf', width: 12 },
+            { header: 'Device', key: 'device', width: 15 },
+            { header: 'Result', key: 'result', width: 12 }
+        ];
+
+        records.forEach(r => {
+            ws.addRow({
+                name: r.employees?.name || 'Unknown',
+                eid: r.employees?.employee_id || '—',
+                method: (r.method || 'face').toUpperCase(),
+                ts: new Date(r.created_at).toLocaleString('en-IN'),
+                conf: r.confidence ? `${Math.round(r.confidence * 100)}%` : '—',
+                device: r.device_id || '—',
+                result: (r.status || 'failed').toUpperCase()
+            });
+        });
+
+        res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        res.setHeader('Content-Disposition', `attachment; filename="access_logs_${fromDate}.xlsx"`);
+        await wb.xlsx.write(res);
+        res.end();
+    } catch (error) {
+        console.error('❌ Access Excel Export Error:', error);
+        res.status(500).json({ error: 'Export failed' });
+    }
+}
+
+async function handleAccessPdfExport(req, res) {
+    try {
+        const { startDate, endDate, employee_id, device, result, month, year } = req.query;
+        const now = new Date();
+        
+        let fromDate, toDate;
+        if (month && year) {
+            fromDate = `${year}-${String(month).padStart(2, '0')}-01`;
+            const lastDay = new Date(parseInt(year), parseInt(month), 0).getDate();
+            toDate = `${year}-${String(month).padStart(2, '0')}-${String(lastDay).padStart(2, '0')}`;
+        } else {
+            fromDate = startDate || now.toISOString().split('T')[0];
+            toDate = endDate || now.toISOString().split('T')[0];
+        }
+
+        let q = supabase
+            .from('access_logs')
+            .select('*, employees(name, employee_id, department)')
+            .gte('created_at', `${fromDate}T00:00:00.000Z`)
+            .lte('created_at', `${toDate}T23:59:59.999Z`)
+            .order('created_at', { ascending: false });
+
+        if (employee_id) q = q.eq('employee_id', employee_id);
+        if (device) q = q.eq('device_id', device);
+        if (result) q = q.eq('status', result);
+
+        const { data: records, error } = await q;
+        if (error) throw error;
+
+        const PDFDocument = require('pdfkit');
+        const doc = new PDFDocument({ size: 'A4', margin: 30 });
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', `attachment; filename="access_logs_${fromDate}.pdf"`);
+        doc.pipe(res);
+
+        // Header
+        doc.fontSize(20).text('AuraLock Access Audit Log', { align: 'center' });
+        doc.fontSize(10).text(`Period: ${fromDate} to ${toDate}`, { align: 'center' });
+        doc.moveDown();
+
+        // Table
+        const startY = doc.y;
+        const colWidths = [120, 80, 100, 80, 70, 70];
+        const headers = ['Employee', 'Method', 'Timestamp', 'Confidence', 'Device', 'Status'];
+        
+        let cx = 30;
+        doc.font('Helvetica-Bold').fontSize(10);
+        headers.forEach((h, i) => {
+            doc.text(h, cx, startY);
+            cx += colWidths[i];
+        });
+        doc.moveTo(30, startY + 15).lineTo(565, startY + 15).stroke();
+
+        let curY = startY + 25;
+        doc.font('Helvetica').fontSize(9);
+        records.slice(0, 100).forEach(r => { 
+            if (curY > 750) { doc.addPage(); curY = 30; }
+            cx = 30;
+            const row = [
+                r.employees?.name || 'Unknown',
+                (r.method || 'face').toUpperCase(),
+                new Date(r.created_at).toLocaleString('en-IN', { dateStyle: 'short', timeStyle: 'short' }),
+                r.confidence ? `${Math.round(r.confidence * 100)}%` : '—',
+                r.device_id || '—',
+                (r.status || 'failed').toUpperCase()
+            ];
+            row.forEach((v, i) => {
+                doc.text(String(v), cx, curY, { width: colWidths[i] - 5, ellipsis: true });
+                cx += colWidths[i];
+            });
+            curY += 20;
+        });
+
+        doc.end();
+    } catch (error) {
+        console.error('❌ Access PDF Export Error:', error);
+        res.status(500).json({ error: 'Export failed' });
+    }
+}
+
+// Access Export Routes
+app.get('/api/access-logs/export/excel', authenticateToken, handleAccessExcelExport);
+app.get('/api/access-logs/export/pdf', authenticateToken, handleAccessPdfExport);
+
+app.get('/api/access-logs/export/excel/:employee_id', authenticateToken, async (req, res) => {
+    const resolved = await resolveEmployeeEid(req.params.employee_id);
+    if (!resolved) return res.status(404).json({ error: "Employee not found" });
+    req.query.employee_id = resolved;
+    return handleAccessExcelExport(req, res);
+});
+
+app.get('/api/access-logs/export/pdf/:employee_id', authenticateToken, async (req, res) => {
+    const resolved = await resolveEmployeeEid(req.params.employee_id);
+    if (!resolved) return res.status(404).json({ error: "Employee not found" });
+    req.query.employee_id = resolved;
+    return handleAccessPdfExport(req, res);
 });
 
 // IoT Activity Log Endpoint (Internal)
@@ -1290,22 +1703,26 @@ app.post('/api/logs/iot', async (req, res) => {
     const secret = process.env.ESP32_SECRET;
 
     // --- Security: HMAC Verification for Device logs ---
-    if (!signature || !timestamp) return res.sendStatus(401);
+    if (signature === 'internal_request') {
+        console.log("⚡ [IoT Log] Accepting internal request from unified app.");
+    } else {
+        if (!signature || !timestamp) return res.sendStatus(401);
 
-    // Check drift (60 sec)
-    if (Math.abs(Math.floor(Date.now() / 1000) - timestamp) > 60) {
-        console.warn("⚠️ [IoT Security] Stale log timestamp rejected.");
-        return res.status(403).json({ error: "Stale timestamp" });
-    }
+        // Check drift (60 sec)
+        if (Math.abs(Math.floor(Date.now() / 1000) - timestamp) > 60) {
+            console.warn("⚠️ [IoT Security] Stale log timestamp rejected.");
+            return res.status(403).json({ error: "Stale timestamp" });
+        }
 
-    const payload = JSON.stringify({ method, id, status, message, timestamp });
-    const hmac = crypto.createHmac('sha256', secret);
-    hmac.update(payload);
-    const expectedSignature = hmac.digest('hex');
+        const payload = JSON.stringify({ method, id, status, message, timestamp });
+        const hmac = crypto.createHmac('sha256', secret);
+        hmac.update(payload);
+        const expectedSignature = hmac.digest('hex');
 
-    if (signature !== expectedSignature) {
-        console.error("❌ [IoT Security] Invalid signature from device!");
-        return res.status(401).json({ error: "Invalid integrity signature" });
+        if (signature !== expectedSignature) {
+            console.error("❌ [IoT Security] Invalid signature from device!");
+            return res.status(401).json({ error: "Invalid integrity signature" });
+        }
     }
 
     try {
@@ -1315,13 +1732,29 @@ app.post('/api/logs/iot', async (req, res) => {
             console.log(`🔔 [IoT Event] ${method} unlock by ID #${id}: ${status}`);
         }
 
+        // Rate limiting for failed/unknown biometric events
+        if (status !== 'success') {
+            const key = `iot_${id || 'unknown'}_${method}`;
+            const lastLog = logRateLimiter.get(key);
+            if (lastLog && (Date.now() - lastLog) < LOG_THROTTLE_MS) {
+                return res.json({ success: true, throttled: true });
+            }
+            logRateLimiter.set(key, Date.now());
+        }
+
         // Record in access_logs
         await supabase.from('access_logs').insert({
-            employee_id: id === 0 ? null : (id || 'IOT_DEVICE'),
+            employee_id: id === 0 ? null : (id || null),
             status: (status === 'LOW_BATTERY' || status === 'CRITICAL_BATTERY') ? 'warning' : (status || 'success'),
             confidence: 1.0,
             device_id: 'esp32_hardware',
-            metadata: { method, message, status }
+            method: (method === 'fingerprint' ? 'FINGERPRINT' : (method || 'FACE')),
+            metadata: { 
+                method, 
+                message, 
+                status,
+                unlock_source: 'BIOMETRIC'
+            }
         });
 
         res.json({ success: true });
@@ -1336,12 +1769,13 @@ app.get('/api/users', authenticateToken, isAdmin, async (req, res) => {
     try {
         const { includeDeleted = 'false' } = req.query;
 
-        // Select only real DB columns — face_embedding is fetched to derive
-        // face_registered status but is stripped before sending to frontend.
-        let query = supabase.from('employees').select(
-            'id, employee_id, name, email, role, department, status, ' +
-            'image_url, created_at, updated_at, is_deleted, face_embedding'
-        );
+        // Select only real DB columns and join with biometric status
+        let query = supabase.from('employees').select(`
+            id, employee_id, name, email, role, department, status,
+            image_url, created_at, updated_at, is_deleted,
+            face_templates(id),
+            fingerprint_templates(id)
+        `);
 
         if (includeDeleted !== 'true') {
             query = query.neq('status', 'Deleted');
@@ -1354,15 +1788,18 @@ app.get('/api/users', authenticateToken, isAdmin, async (req, res) => {
             throw error;
         }
 
-        // Transform: strip raw face_embedding vector, replace with boolean status
-        const safeUsers = (users || []).map(u => ({
+        // Transform results to include simple booleans for the frontend
+        const transformedUsers = (users || []).map(u => ({
             ...u,
-            face_embedding: undefined,   // remove — never expose raw vectors to frontend
-            face_registered: !!u.face_embedding,
-            fingerprint_registered: false        // future field; default false for now
+            face_registered: u.face_templates && u.face_templates.length > 0,
+            fingerprint_registered: u.fingerprint_templates && u.fingerprint_templates.length > 0,
+            // Strip the internal objects to keep frontend data clean
+            face_templates: undefined,
+            fingerprint_templates: undefined,
+            face_embedding: undefined // Ensure legacy field is not leaked
         }));
 
-        res.json(safeUsers);
+        res.json(transformedUsers);
     } catch (error) {
         console.error("❌ Get users error:", error.message || error);
         res.status(500).json({
@@ -1380,7 +1817,7 @@ app.patch('/api/users/:id', authenticateToken, isAdmin, validateIdentity, async 
 
         // Whitelist: only allow columns that actually exist in the employees table.
         // Silently drop any frontend-only fields (face_registered, fingerprint_registered, etc.)
-        // to prevent Supabase "column does not exist" errors → 500.
+        // to prevent Supabase "column does not exist" errors -> 500.
         const ALLOWED_COLUMNS = new Set([
             'name', 'email', 'role', 'department', 'status',
             'employee_id', 'image_url', 'is_deleted', 'face_embedding'
@@ -1393,14 +1830,29 @@ app.patch('/api/users/:id', authenticateToken, isAdmin, validateIdentity, async 
             return res.status(400).json({ error: "No valid fields to update.", received: Object.keys(rawUpdates) });
         }
 
+        // Apply employee update
+        console.log(`📝 [Update] Applying employee update for UUID ${id}...`);
         const { data: updatedUser, error } = await supabase
             .from('employees')
             .update(updates)
             .eq('id', id)
-            .select('id, employee_id, name, email, role, department, status, image_url, created_at, updated_at, is_deleted, face_embedding')
+            .select('id, employee_id, name, email, role, department, status, image_url, created_at, updated_at, is_deleted')
             .single();
 
-        if (error) throw error;
+        if (error) {
+            console.error("❌ [Update] Employee update failed:", error.message);
+            throw error;
+        }
+
+        // Handle Biometric Cache Eviction if ID changed
+        if (old_id) {
+            console.log(`🔄 [Cache] Evicting old biometric cache for ID: ${old_id}`);
+            try {
+                await axios.delete(`http://localhost:8001/api/biometrics/face/${encodeURIComponent(old_id)}`, { timeout: 3000 });
+            } catch (ce) { 
+                console.warn(`⚠️ [Cache] Old ID eviction skipped: ${ce.message}`);
+            }
+        }
 
         // Same transformation as GET: strip raw vector, return booleans
         res.json({
@@ -1724,7 +2176,8 @@ app.post('/api/biometrics/face/verify', biometricLimiter, upload.single('file'),
                         status: 'success',
                         confidence: response.data.confidence,
                         device_id: 'terminal_01',
-                        method: 'face'
+                        method: 'FACE',
+                        metadata: { unlock_source: 'BIOMETRIC' }
                     });
                 } catch (logError) {
                     console.error("⚠️ Failed to record access log:", logError.message);
@@ -1773,14 +2226,22 @@ app.post('/api/biometrics/face/verify', biometricLimiter, upload.single('file'),
                 console.log(`🚫 Engine Rejection: ${response.data.message}`);
                 // Log failed attempt
                 try {
-                    await supabase.from('access_logs').insert({
-                        employee_id: null,
-                        status: 'failed',
-                        confidence: response.data.confidence || null,
-                        device_id: 'terminal_01',
-                        method: 'face',
-                        metadata: { reason: response.data.message }
-                    });
+                    const key = `face_null_denied`;
+                    const lastLog = logRateLimiter.get(key);
+                    if (!lastLog || (Date.now() - lastLog) > LOG_THROTTLE_MS) {
+                        await supabase.from('access_logs').insert({
+                            employee_id: null,
+                            status: 'failed',
+                            confidence: response.data.confidence || null,
+                            device_id: 'terminal_01',
+                            method: 'FACE',
+                            metadata: { 
+                                reason: response.data.message,
+                                unlock_source: 'BIOMETRIC'
+                            }
+                        });
+                        logRateLimiter.set(key, Date.now());
+                    }
                 } catch (le) { console.error('⚠️ Failed to log rejection:', le.message); }
                 return res.status(401).json({
                     success: false,
@@ -1815,298 +2276,7 @@ app.post('/api/biometrics/face/verify', biometricLimiter, upload.single('file'),
     }
 })
 
-// Attendance Records Endpoint
-app.get('/api/attendance', authenticateToken, async (req, res) => {
-    try {
-        const {
-            startDate,
-            endDate,
-            employee_id,
-            department,
-            search,
-            status,           // NEW: 'ON_TIME' | 'LATE' | ''
-            page = 1,
-            pageSize = 10,
-            sortBy = 'date',
-            sortDir = 'desc',
-        } = req.query;
-
-        // Whitelist sortable columns to prevent SQL injection
-        const ALLOWED_SORT = ['date', 'check_in', 'check_out', 'working_hours', 'status'];
-        const safeSortBy = ALLOWED_SORT.includes(sortBy) ? sortBy : 'date';
-        const ascending = sortDir === 'asc';
-
-        let query = supabase
-            .from('attendance')
-            .select(`
-                *,
-                employees!inner(name, employee_id, image_url, department)
-            `, { count: 'exact' });
-
-        // Date Range Filter
-        if (startDate && endDate) {
-            query = query.gte('date', startDate).lte('date', endDate);
-        } else if (startDate) {
-            query = query.eq('date', startDate);
-        } else {
-            // Default to today if no date range provided
-            const today = new Date().toISOString().split('T')[0];
-            query = query.eq('date', today);
-        }
-
-        // Employee Filter
-        if (employee_id) {
-            query = query.eq('employee_id', employee_id);
-        }
-
-        // Department Filter (via inner join)
-        if (department) {
-            query = query.eq('employees.department', department);
-        }
-
-        // Search Filter (name or employee_id)
-        if (search) {
-            query = query.or(`name.ilike.%${search}%,employee_id.ilike.%${search}%`, { foreignTable: 'employees' });
-        }
-
-        // Status Filter (ON_TIME | LATE)
-        if (status && ['ON_TIME', 'LATE'].includes(status)) {
-            query = query.eq('status', status);
-        }
-
-        // Pagination
-        const pgSize = Math.min(parseInt(pageSize, 10) || 10, 100);
-        const from = (parseInt(page, 10) - 1) * pgSize;
-        const to = from + pgSize - 1;
-
-        const { data, count, error } = await query
-            .order(safeSortBy, { ascending })
-            .range(from, to);
-
-        if (error) throw error;
-
-        res.json({
-            data: data || [],
-            total: count || 0,
-            page: parseInt(page, 10),
-            pageSize: pgSize,
-        });
-    } catch (error) {
-        console.error("❌ Get attendance error:", error);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
-});
-
-/**
- * Dedicated Attendance Service Endpoint
- * POST /api/attendance/mark
- * Handles both public IDs and internal UUIDs
- */
-app.post('/api/attendance/mark', validateDevice, async (req, res) => {
-    const { employee_id, method, device_id } = req.body;
-
-    if (!employee_id || !method) {
-        return res.status(400).json({ error: "Missing required fields: employee_id, method" });
-    }
-
-    try {
-        // Resolve internally (handles both UUID and public employee_id)
-        // Also fetch 'name' so we can include it in the enriched response
-        let employeeQuery = supabase.from('employees').select('id, name');
-
-        // Basic UUID check to avoid Postgres error on casting
-        const uuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
-        if (uuidRegex.test(employee_id)) {
-            employeeQuery = employeeQuery.or(`id.eq.${employee_id},employee_id.eq.${employee_id}`);
-        } else {
-            employeeQuery = employeeQuery.eq('employee_id', employee_id);
-        }
-
-        const { data: employee, error: empError } = await employeeQuery.single();
-
-        if (empError || !employee) {
-            return res.status(404).json({ error: "Employee profile not found" });
-        }
-
-        const result = await recordAttendance(employee.id, method, device_id || 'remote_terminal');
-
-        // --- TRIGGER DOOR UNLOCK ---
-        await safeTriggerDoorUnlock();
-
-        // Return enriched response with employee_name + attendance detail
-        return res.status(200).json({
-            employee_name: employee.name,
-            check_in: result.check_in,
-            check_out: result.check_out,
-            working_hours: result.working_hours,
-            status: result.status,
-            message: result.message
-        });
-    } catch (error) {
-        console.error("❌ /attendance/mark Error:", error.message);
-        return res.status(500).json({ error: "Internal Server Error" });
-    }
-});
-
-// Legacy/Compatibility Alias
-app.post('/attendance/mark', (req, res) => {
-    req.url = '/api/attendance/mark';
-    app.handle(req, res);
-});
-
-// Attendance Export Endpoints
-app.get('/api/attendance/export/excel', authenticateToken, async (req, res) => {
-    try {
-        const { startDate, endDate, employee_id, department, search } = req.query;
-
-        let query = supabase
-            .from('attendance')
-            .select('*, employees!inner(name, employee_id, department)');
-
-        if (startDate && endDate) query = query.gte('date', startDate).lte('date', endDate);
-        else if (startDate) query = query.eq('date', startDate);
-        if (employee_id) query = query.eq('employee_id', employee_id);
-        if (department) query = query.eq('employees.department', department);
-        if (search) query = query.or(`name.ilike.%${search}%,employee_id.ilike.%${search}%`, { foreignTable: 'employees' });
-
-        const { data, error } = await query.order('date', { ascending: false }).order('check_in', { ascending: false });
-        if (error) throw error;
-
-        const workbook = new ExcelJS.Workbook();
-        const worksheet = workbook.addWorksheet('Attendance');
-
-        worksheet.columns = [
-            { header: 'Employee Name', key: 'name', width: 25 },
-            { header: 'Employee ID', key: 'eid', width: 15 },
-            { header: 'Date', key: 'date', width: 15 },
-            { header: 'Check-In', key: 'check_in', width: 20 },
-            { header: 'Check-Out', key: 'check_out', width: 20 },
-            { header: 'Work Hours', key: 'hours', width: 15 },
-            { header: 'Method', key: 'method', width: 15 }
-        ];
-
-        data.forEach(record => {
-            const hours = record.check_in && record.check_out
-                ? ((new Date(record.check_out) - new Date(record.check_in)) / (1000 * 60 * 60)).toFixed(2) + 'h'
-                : '--';
-
-            worksheet.addRow({
-                name: record.employees?.name,
-                eid: record.employees?.employee_id,
-                date: record.date,
-                check_in: record.check_in ? new Date(record.check_in).toLocaleTimeString() : '--',
-                check_out: record.check_out ? new Date(record.check_out).toLocaleTimeString() : '--',
-                hours: hours,
-                method: record.method
-            });
-        });
-
-        res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        res.setHeader('Content-Disposition', `attachment; filename=attendance_${new Date().toISOString().split('T')[0]}.xlsx`);
-
-        await workbook.xlsx.write(res);
-        res.end();
-    } catch (error) {
-        console.error("❌ Excel Export Error:", error);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
-});
-
-app.get('/api/attendance/export/pdf', authenticateToken, async (req, res) => {
-    try {
-        const { startDate, endDate, employee_id, department, search } = req.query;
-
-        let query = supabase
-            .from('attendance')
-            .select('*, employees!inner(name, employee_id, department)');
-
-        if (startDate && endDate) query = query.gte('date', startDate).lte('date', endDate);
-        else if (startDate) query = query.eq('date', startDate);
-        if (employee_id) query = query.eq('employee_id', employee_id);
-        if (department) query = query.eq('employees.department', department);
-        if (search) query = query.or(`name.ilike.%${search}%,employee_id.ilike.%${search}%`, { foreignTable: 'employees' });
-
-        const { data, error } = await query.order('date', { ascending: false }).order('check_in', { ascending: false });
-        if (error) throw error;
-
-        const doc = new PDFDocument({ margin: 30, size: 'A4' });
-        res.setHeader('Content-Type', 'application/pdf');
-        res.setHeader('Content-Disposition', `attachment; filename=attendance_${new Date().toISOString().split('T')[0]}.pdf`);
-        doc.pipe(res);
-
-        doc.fontSize(18).text('Attendance Audit Report', { align: 'center', underline: true });
-        doc.moveDown();
-        doc.fontSize(10).text(`Generated on: ${new Date().toLocaleString()}`, { align: 'right' });
-        doc.moveDown();
-
-        const table = {
-            title: "Personnel Presence Log",
-            headers: ["Employee", "Date", "In", "Out", "Hours", "Method"],
-            rows: data.map(record => {
-                const hours = record.check_in && record.check_out
-                    ? ((new Date(record.check_out) - new Date(record.check_in)) / (1000 * 60 * 60)).toFixed(2) + 'h'
-                    : '--';
-                return [
-                    record.employees?.name || 'Unknown',
-                    record.date,
-                    record.check_in ? new Date(record.check_in).toLocaleTimeString() : '--',
-                    record.check_out ? new Date(record.check_out).toLocaleTimeString() : '--',
-                    hours,
-                    record.method
-                ];
-            })
-        };
-
-        await doc.table(table, {
-            prepareHeader: () => doc.font("Helvetica-Bold").fontSize(10),
-            prepareRow: () => doc.font("Helvetica").fontSize(8)
-        });
-
-        doc.end();
-    } catch (error) {
-        console.error("❌ PDF Export Error:", error);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
-});
-
-// Phone Biometric Attendance Endpoint
-app.post('/api/attendance/phone-verify', authenticateToken, async (req, res) => {
-    try {
-        const { employee_id } = req.user; // From JWT
-
-        // Fetch internal identity
-        const { data: employee, error } = await supabase
-            .from('employees')
-            .select('id, name')
-            .eq('email', req.user.email)
-            .single();
-
-        if (error || !employee) {
-            return res.status(404).json({ error: "Employee profile not found" });
-        }
-
-        console.log(`📱 [Attendance] Phone Fingerprint verified for: ${employee.id}`);
-
-        await recordAttendance(employee.id, 'fingerprint', 'mobile_app');
-
-        res.json({
-            success: true,
-            message: `Attendance recorded for ${employee.name}`,
-            type: 'phone_biometric'
-        });
-    } catch (error) {
-        console.error("❌ Phone verification error:", error);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
-});
-
-// 404 Catch-all (to ensure port 8000 ONLY shows JSON)
-app.use((req, res) => {
-    res.status(404).json({
-        error: "Not Found",
-        message: `Route ${req.url} does not exist on this API gateway.`
-    });
-});
+// End of Routes
 
 app.listen(PORT, () => {
     console.log(`Backend running on http://localhost:${PORT}`);

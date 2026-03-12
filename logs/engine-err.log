@@ -1,0 +1,76 @@
+2026-03-11T15:33:44: 2026-03-11 15:33:44.566795: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T15:33:50: 2026-03-11 15:33:50.514868: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T15:33:54: WARNING:tensorflow:From C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+2026-03-11T15:33:54: 
+2026-03-11T15:33:58: INFO:     Started server process [11676]
+2026-03-11T15:33:58: INFO:     Waiting for application startup.
+2026-03-11T15:33:59: INFO:     Application startup complete.
+2026-03-11T15:33:59: INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-03-11T15:35:29: 2026-03-11 15:35:29.696294: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2026-03-11T15:35:29: 
+2026-03-11T15:45:59: 2026-03-11 15:45:59.872398: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T15:46:12: 2026-03-11 15:46:12.202631: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T15:46:18: WARNING:tensorflow:From C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+2026-03-11T15:46:18: 
+2026-03-11T15:46:25: INFO:     Started server process [4768]
+2026-03-11T15:46:25: INFO:     Waiting for application startup.
+2026-03-11T15:46:26: INFO:     Application startup complete.
+2026-03-11T15:46:26: INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-03-11T15:50:27: 2026-03-11 15:50:27.564279: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T15:50:31: 2026-03-11 15:50:31.338469: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T15:50:34: WARNING:tensorflow:From C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+2026-03-11T15:50:34: 
+2026-03-11T15:50:38: INFO:     Started server process [11164]
+2026-03-11T15:50:38: INFO:     Waiting for application startup.
+2026-03-11T15:50:38: INFO:     Application startup complete.
+2026-03-11T15:50:38: INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-03-11T15:52:25: 2026-03-11 15:52:25.311244: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2026-03-11T15:52:25: To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-03-11T16:10:50: 2026-03-11 16:10:50.640576: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T16:10:56: 2026-03-11 16:10:56.063981: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T16:11:00: WARNING:tensorflow:From C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+2026-03-11T16:11:00: 
+2026-03-11T16:11:04: INFO:     Started server process [16244]
+2026-03-11T16:11:04: INFO:     Waiting for application startup.
+2026-03-11T16:11:05: INFO:     Application startup complete.
+2026-03-11T16:11:05: INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-03-11T16:13:20: 2026-03-11 16:13:20.054089: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2026-03-11T16:13:20: To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-03-11T17:51:17: 2026-03-11 17:51:17.934702: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T17:51:28: 2026-03-11 17:51:28.093974: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T17:51:35: WARNING:tensorflow:From C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+2026-03-11T17:51:35: 
+2026-03-11T17:51:43: INFO:     Started server process [9388]
+2026-03-11T17:51:43: INFO:     Waiting for application startup.
+2026-03-11T17:51:45: INFO:     Application startup complete.
+2026-03-11T17:51:45: INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-03-11T17:55:44: 2026-03-11 17:55:44.094561: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2026-03-11T17:55:44: To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-03-11T18:02:48: 2026-03-11 18:02:48.955605: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T18:02:59: 2026-03-11 18:02:59.891188: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T18:03:07: WARNING:tensorflow:From C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+2026-03-11T18:03:07: 
+2026-03-11T18:03:11: INFO:     Started server process [3292]
+2026-03-11T18:03:11: INFO:     Waiting for application startup.
+2026-03-11T18:03:13: INFO:     Application startup complete.
+2026-03-11T18:03:13: INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-03-11T18:05:38: 2026-03-11 18:05:38.153218: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T18:05:43: 2026-03-11 18:05:43.431678: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-11T18:05:46: WARNING:tensorflow:From C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+2026-03-11T18:05:46: 
+2026-03-11T18:05:49: INFO:     Started server process [4456]
+2026-03-11T18:05:49: INFO:     Waiting for application startup.
+2026-03-11T18:05:50: INFO:     Application startup complete.
+2026-03-11T18:05:50: INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-03-12T09:58:34: 2026-03-12 09:58:34.795807: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2026-03-12T09:58:34: To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-03-12T15:02:40: 2026-03-12 15:02:40.918509: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T15:03:01: 2026-03-12 15:03:01.740025: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-03-12T15:03:07: WARNING:tensorflow:From C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+2026-03-12T15:03:07: 
+2026-03-12T15:03:29: INFO:     Started server process [12788]
+2026-03-12T15:03:29: INFO:     Waiting for application startup.
+2026-03-12T15:03:31: INFO:     Application startup complete.
+2026-03-12T15:03:31: INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-03-12T15:03:38: 2026-03-12 15:03:38.321638: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2026-03-12T15:03:38: To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.

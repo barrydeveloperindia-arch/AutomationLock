@@ -69,4 +69,7 @@ export const apiService = {
             headers: { 'Content-Type': 'multipart/form-data' }
         });
     },
+
+    // Attendance
+    recordPhoneAttendance: () => api.post('/api/attendance/phone-verify'),
 };

@@ -1,0 +1,1401 @@
+2026-03-06T18:18:05: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-06T18:22:42: ❌ Biometric Engine error/offline: read ECONNRESET
+2026-03-06T18:22:55: ❌ Biometric Engine error/offline: 
+2026-03-07T09:25:04: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T09:25:21: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T09:26:09: 🚫 Access Denied: No employees registered in database.
+2026-03-07T09:29:31: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T09:30:27: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T09:30:45: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T09:31:11: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T09:31:29: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T09:31:55: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T09:32:41: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T09:33:09: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T11:37:35: 🚨 [Security] Unauthorized device access attempt: unit_test
+2026-03-07T11:39:38: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T12:20:35: ❌ Token Verification Failed: jwt expired
+2026-03-07T16:39:22: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T16:39:39: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T16:40:40: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:00:34: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:00:50: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:03:21: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:04:05: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:04:53: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:09:00: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:09:18: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:09:45: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:10:03: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:11:36: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:11:53: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:12:12: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:12:31: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:12:49: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:14:47: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:15:46: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:16:05: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:20:37: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:21:04: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:21:24: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:21:45: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:22:11: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:22:31: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:22:50: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:23:10: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:23:28: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:24:30: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:26:00: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:26:39: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:27:18: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:27:37: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:27:57: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:28:21: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:29:47: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:30:07: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:30:52: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:31:22: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:32:03: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:32:31: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:32:51: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:33:12: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:34:17: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:34:46: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:35:08: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:35:37: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:35:56: ❌ Logs error: {
+2026-03-07T17:35:56:   message: 'TypeError: fetch failed',
+2026-03-07T17:35:56:   details: 'TypeError: fetch failed\n' +
+2026-03-07T17:35:56:     '\n' +
+2026-03-07T17:35:56:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-07T17:35:56:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms)\n' +
+2026-03-07T17:35:56:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-07T17:35:56:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-07T17:35:56:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-07T17:35:56:   hint: '',
+2026-03-07T17:35:56:   code: ''
+2026-03-07T17:35:56: }
+2026-03-07T17:35:59: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:36:18: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:37:29: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:38:10: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:39:16: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:39:35: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:40:03: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:40:46: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-07T17:41:09: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:42:55: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:42:55: ❌ Logs error: {
+2026-03-07T17:42:55:   message: 'TypeError: fetch failed',
+2026-03-07T17:42:55:   details: 'TypeError: fetch failed\n' +
+2026-03-07T17:42:55:     '\n' +
+2026-03-07T17:42:55:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-07T17:42:55:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms)\n' +
+2026-03-07T17:42:55:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-07T17:42:55:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-07T17:42:55:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-07T17:42:55:   hint: '',
+2026-03-07T17:42:55:   code: ''
+2026-03-07T17:42:55: }
+2026-03-07T17:48:33: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:48:52: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:48:55: ❌ Logs error: {
+2026-03-07T17:48:55:   message: 'TypeError: fetch failed',
+2026-03-07T17:48:55:   details: 'TypeError: fetch failed\n' +
+2026-03-07T17:48:55:     '\n' +
+2026-03-07T17:48:55:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 104.18.38.10:443, 172.64.149.246:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-07T17:48:55:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 104.18.38.10:443, 172.64.149.246:443, timeout: 10000ms)\n' +
+2026-03-07T17:48:55:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-07T17:48:55:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-07T17:48:55:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-07T17:48:55:   hint: '',
+2026-03-07T17:48:55:   code: ''
+2026-03-07T17:48:55: }
+2026-03-07T17:49:54: ❌ Logs error: {
+2026-03-07T17:49:54:   message: 'TypeError: fetch failed',
+2026-03-07T17:49:54:   details: 'TypeError: fetch failed\n' +
+2026-03-07T17:49:54:     '\n' +
+2026-03-07T17:49:54:     'Caused by: Error: read ECONNRESET (ECONNRESET)\n' +
+2026-03-07T17:49:54:     'Error: read ECONNRESET\n' +
+2026-03-07T17:49:54:     '    at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)',
+2026-03-07T17:49:54:   hint: '',
+2026-03-07T17:49:54:   code: ''
+2026-03-07T17:49:54: }
+2026-03-07T17:52:55: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:52:55: ❌ Logs error: {
+2026-03-07T17:52:55:   message: 'TypeError: fetch failed',
+2026-03-07T17:52:55:   details: 'TypeError: fetch failed\n' +
+2026-03-07T17:52:55:     '\n' +
+2026-03-07T17:52:55:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-07T17:52:55:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms)\n' +
+2026-03-07T17:52:55:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-07T17:52:55:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-07T17:52:55:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-07T17:52:55:   hint: '',
+2026-03-07T17:52:55:   code: ''
+2026-03-07T17:52:55: }
+2026-03-07T17:56:10: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:57:06: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:58:04: 🚫 Access Denied: No employees registered in database.
+2026-03-07T17:58:53: 🚫 Access Denied: No employees registered in database.
+2026-03-07T18:00:55: ❌ Logs error: {
+2026-03-07T18:00:55:   message: 'TypeError: fetch failed',
+2026-03-07T18:00:55:   details: 'TypeError: fetch failed\n' +
+2026-03-07T18:00:55:     '\n' +
+2026-03-07T18:00:55:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-07T18:00:55:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms)\n' +
+2026-03-07T18:00:55:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-07T18:00:55:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-07T18:00:55:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-07T18:00:55:   hint: '',
+2026-03-07T18:00:55:   code: ''
+2026-03-07T18:00:55: }
+2026-03-07T18:00:55: 🚫 Access Denied: No employees registered in database.
+2026-03-07T18:01:50: ❌ Logs error: {
+2026-03-07T18:01:50:   message: 'TypeError: fetch failed',
+2026-03-07T18:01:50:   details: 'TypeError: fetch failed\n' +
+2026-03-07T18:01:50:     '\n' +
+2026-03-07T18:01:50:     'Caused by: Error: read ECONNRESET (ECONNRESET)\n' +
+2026-03-07T18:01:50:     'Error: read ECONNRESET\n' +
+2026-03-07T18:01:50:     '    at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)',
+2026-03-07T18:01:50:   hint: '',
+2026-03-07T18:01:50:   code: ''
+2026-03-07T18:01:50: }
+2026-03-07T18:03:19: 🚫 Access Denied: No employees registered in database.
+2026-03-07T18:10:11: 🚫 Access Denied: No employees registered in database.
+2026-03-07T18:13:20: 🚫 Access Denied: No employees registered in database.
+2026-03-07T18:17:33: 🚫 Access Denied: No employees registered in database.
+2026-03-07T18:18:54: ❌ Logs error: {
+2026-03-07T18:18:54:   message: 'TypeError: fetch failed',
+2026-03-07T18:18:54:   details: 'TypeError: fetch failed\n' +
+2026-03-07T18:18:54:     '\n' +
+2026-03-07T18:18:54:     'Caused by: Error: read ECONNRESET (ECONNRESET)\n' +
+2026-03-07T18:18:54:     'Error: read ECONNRESET\n' +
+2026-03-07T18:18:54:     '    at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)',
+2026-03-07T18:18:54:   hint: '',
+2026-03-07T18:18:54:   code: ''
+2026-03-07T18:18:54: }
+2026-03-07T18:18:56: 🚫 Access Denied: No employees registered in database.
+2026-03-07T18:21:47: 🚫 Access Denied: No employees registered in database.
+2026-03-07T18:24:44: 🚫 Access Denied: No employees registered in database.
+2026-03-07T18:25:03: 🚫 Access Denied: No employees registered in database.
+2026-03-09T09:37:32: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-09T09:37:33: ❌ Logs error: {
+2026-03-09T09:37:33:   message: 'TypeError: fetch failed',
+2026-03-09T09:37:33:   details: 'TypeError: fetch failed\n' +
+2026-03-09T09:37:33:     '\n' +
+2026-03-09T09:37:33:     'Caused by: Error: read ECONNRESET (ECONNRESET)\n' +
+2026-03-09T09:37:33:     'Error: read ECONNRESET\n' +
+2026-03-09T09:37:33:     '    at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)',
+2026-03-09T09:37:33:   hint: '',
+2026-03-09T09:37:33:   code: ''
+2026-03-09T09:37:33: }
+2026-03-09T09:37:48: ❌ Token Verification Failed: jwt expired
+2026-03-09T09:37:51: 🚫 Access Denied: No employees registered in database.
+2026-03-09T09:40:19: 🚫 Access Denied: No employees registered in database.
+2026-03-09T09:41:21: 🚫 Access Denied: No employees registered in database.
+2026-03-09T09:47:21: ❌ [IoT] Unlock command failed: timeout of 5000ms exceeded
+2026-03-09T12:45:29: ❌ Logs error: {
+2026-03-09T12:45:29:   message: 'TypeError: fetch failed',
+2026-03-09T12:45:29:   details: 'TypeError: fetch failed\n' +
+2026-03-09T12:45:29:     '\n' +
+2026-03-09T12:45:29:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-09T12:45:29:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms)\n' +
+2026-03-09T12:45:29:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-09T12:45:29:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-09T12:45:29:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-09T12:45:29:   hint: '',
+2026-03-09T12:45:29:   code: ''
+2026-03-09T12:45:29: }
+2026-03-09T12:45:39: ❌ Logs error: {
+2026-03-09T12:45:39:   message: 'TypeError: fetch failed',
+2026-03-09T12:45:39:   details: 'TypeError: fetch failed\n' +
+2026-03-09T12:45:39:     '\n' +
+2026-03-09T12:45:39:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-09T12:45:39:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms)\n' +
+2026-03-09T12:45:39:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-09T12:45:39:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-09T12:45:39:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-09T12:45:39:   hint: '',
+2026-03-09T12:45:39:   code: ''
+2026-03-09T12:45:39: }
+2026-03-09T12:45:50: ❌ Logs error: {
+2026-03-09T12:45:50:   message: 'TypeError: fetch failed',
+2026-03-09T12:45:50:   details: 'TypeError: fetch failed\n' +
+2026-03-09T12:45:50:     '\n' +
+2026-03-09T12:45:50:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-09T12:45:50:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms)\n' +
+2026-03-09T12:45:50:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-09T12:45:50:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-09T12:45:50:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-09T12:45:50:   hint: '',
+2026-03-09T12:45:50:   code: ''
+2026-03-09T12:45:50: }
+2026-03-09T12:45:50: ❌ Logs error: {
+2026-03-09T12:45:50:   message: 'TypeError: fetch failed',
+2026-03-09T12:45:50:   details: 'TypeError: fetch failed\n' +
+2026-03-09T12:45:50:     '\n' +
+2026-03-09T12:45:50:     'Caused by: Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co (ENOTFOUND)\n' +
+2026-03-09T12:45:50:     'Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co\n' +
+2026-03-09T12:45:50:     '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+2026-03-09T12:45:50:   hint: '',
+2026-03-09T12:45:50:   code: ''
+2026-03-09T12:45:50: }
+2026-03-09T12:45:50: ❌ Logs error: {
+2026-03-09T12:45:50:   message: 'TypeError: fetch failed',
+2026-03-09T12:45:50:   details: 'TypeError: fetch failed\n' +
+2026-03-09T12:45:50:     '\n' +
+2026-03-09T12:45:50:     'Caused by: Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co (ENOTFOUND)\n' +
+2026-03-09T12:45:50:     'Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co\n' +
+2026-03-09T12:45:50:     '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+2026-03-09T12:45:50:   hint: '',
+2026-03-09T12:45:50:   code: ''
+2026-03-09T12:45:50: }
+2026-03-09T12:46:10: ❌ Logs error: {
+2026-03-09T12:46:10:   message: 'TypeError: fetch failed',
+2026-03-09T12:46:10:   details: 'TypeError: fetch failed\n' +
+2026-03-09T12:46:10:     '\n' +
+2026-03-09T12:46:10:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-09T12:46:10:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms)\n' +
+2026-03-09T12:46:10:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-09T12:46:10:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-09T12:46:10:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-09T12:46:10:   hint: '',
+2026-03-09T12:46:10:   code: ''
+2026-03-09T12:46:10: }
+2026-03-09T12:46:10: ❌ Logs error: {
+2026-03-09T12:46:10:   message: 'TypeError: fetch failed',
+2026-03-09T12:46:10:   details: 'TypeError: fetch failed\n' +
+2026-03-09T12:46:10:     '\n' +
+2026-03-09T12:46:10:     'Caused by: Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co (ENOTFOUND)\n' +
+2026-03-09T12:46:10:     'Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co\n' +
+2026-03-09T12:46:10:     '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+2026-03-09T12:46:10:   hint: '',
+2026-03-09T12:46:10:   code: ''
+2026-03-09T12:46:10: }
+2026-03-09T12:46:16: ❌ Logs error: {
+2026-03-09T12:46:16:   message: 'TypeError: fetch failed',
+2026-03-09T12:46:16:   details: 'TypeError: fetch failed\n' +
+2026-03-09T12:46:16:     '\n' +
+2026-03-09T12:46:16:     'Caused by: Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co (ENOTFOUND)\n' +
+2026-03-09T12:46:16:     'Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co\n' +
+2026-03-09T12:46:16:     '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+2026-03-09T12:46:16:   hint: '',
+2026-03-09T12:46:16:   code: ''
+2026-03-09T12:46:16: }
+2026-03-09T12:46:16: ❌ Logs error: {
+2026-03-09T12:46:16:   message: 'TypeError: fetch failed',
+2026-03-09T12:46:16:   details: 'TypeError: fetch failed\n' +
+2026-03-09T12:46:16:     '\n' +
+2026-03-09T12:46:16:     'Caused by: Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co (ENOTFOUND)\n' +
+2026-03-09T12:46:16:     'Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co\n' +
+2026-03-09T12:46:16:     '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+2026-03-09T12:46:16:   hint: '',
+2026-03-09T12:46:16:   code: ''
+2026-03-09T12:46:16: }
+2026-03-09T12:46:27: ❌ Logs error: {
+2026-03-09T12:46:27:   message: 'TypeError: fetch failed',
+2026-03-09T12:46:27:   details: 'TypeError: fetch failed\n' +
+2026-03-09T12:46:27:     '\n' +
+2026-03-09T12:46:27:     'Caused by: Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co (ENOTFOUND)\n' +
+2026-03-09T12:46:27:     'Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co\n' +
+2026-03-09T12:46:27:     '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+2026-03-09T12:46:27:   hint: '',
+2026-03-09T12:46:27:   code: ''
+2026-03-09T12:46:27: }
+2026-03-09T12:49:45: ❌ Logs error: {
+2026-03-09T12:49:45:   message: 'TypeError: fetch failed',
+2026-03-09T12:49:45:   details: 'TypeError: fetch failed\n' +
+2026-03-09T12:49:45:     '\n' +
+2026-03-09T12:49:45:     'Caused by: Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co (ENOTFOUND)\n' +
+2026-03-09T12:49:45:     'Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co\n' +
+2026-03-09T12:49:45:     '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+2026-03-09T12:49:45:   hint: '',
+2026-03-09T12:49:45:   code: ''
+2026-03-09T12:49:45: }
+2026-03-09T13:17:31: ❌ Biometric Engine error/offline: timeout of 15000ms exceeded
+2026-03-09T13:17:58: ❌ Biometric Engine error/offline: timeout of 15000ms exceeded
+2026-03-09T13:18:29: ❌ Biometric Engine error/offline: timeout of 15000ms exceeded
+2026-03-09T13:25:26: ❌ Biometric Engine error/offline: timeout of 15000ms exceeded
+2026-03-09T13:26:17: ❌ Biometric Engine error/offline: timeout of 15000ms exceeded
+2026-03-09T13:34:31: ❌ Biometric Engine error/offline: timeout of 15000ms exceeded
+2026-03-09T14:14:43: ❌ Logs error: {
+2026-03-09T14:14:43:   message: 'TypeError: fetch failed',
+2026-03-09T14:14:43:   details: 'TypeError: fetch failed\n' +
+2026-03-09T14:14:43:     '\n' +
+2026-03-09T14:14:43:     'Caused by: Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co (ENOTFOUND)\n' +
+2026-03-09T14:14:43:     'Error: getaddrinfo ENOTFOUND wdtizlzfsijikcejerwq.supabase.co\n' +
+2026-03-09T14:14:43:     '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+2026-03-09T14:14:43:   hint: '',
+2026-03-09T14:14:43:   code: ''
+2026-03-09T14:14:43: }
+2026-03-09T14:18:02: ❌ Logs error: {
+2026-03-09T14:18:02:   message: 'TypeError: fetch failed',
+2026-03-09T14:18:02:   details: 'TypeError: fetch failed\n' +
+2026-03-09T14:18:02:     '\n' +
+2026-03-09T14:18:02:     'Caused by: SocketError: other side closed (UND_ERR_SOCKET)\n' +
+2026-03-09T14:18:02:     'SocketError: other side closed\n' +
+2026-03-09T14:18:02:     '    at TLSSocket.<anonymous> (node:internal/deps/undici/undici:6408:28)\n' +
+2026-03-09T14:18:02:     '    at TLSSocket.emit (node:events:536:35)\n' +
+2026-03-09T14:18:02:     '    at endReadableNT (node:internal/streams/readable:1698:12)\n' +
+2026-03-09T14:18:02:     '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+2026-03-09T14:18:02:   hint: '',
+2026-03-09T14:18:02:   code: ''
+2026-03-09T14:18:02: }
+2026-03-09T14:30:44: ❌ Biometric Engine error/offline: timeout of 15000ms exceeded
+2026-03-09T15:11:58: ❌ Logs error: {
+2026-03-09T15:11:58:   message: 'TypeError: fetch failed',
+2026-03-09T15:11:58:   details: 'TypeError: fetch failed\n' +
+2026-03-09T15:11:58:     '\n' +
+2026-03-09T15:11:58:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted address: wdtizlzfsijikcejerwq.supabase.co:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-09T15:11:58:     'ConnectTimeoutError: Connect Timeout Error (attempted address: wdtizlzfsijikcejerwq.supabase.co:443, timeout: 10000ms)\n' +
+2026-03-09T15:11:58:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-09T15:11:58:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-09T15:11:58:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-09T15:11:58:   hint: '',
+2026-03-09T15:11:58:   code: ''
+2026-03-09T15:11:58: }
+2026-03-09T15:13:10: ❌ Logs error: {
+2026-03-09T15:13:10:   message: 'TypeError: fetch failed',
+2026-03-09T15:13:10:   details: 'TypeError: fetch failed\n' +
+2026-03-09T15:13:10:     '\n' +
+2026-03-09T15:13:10:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 64:ff9b::6812:260a:443, 172.64.149.246:443, 64:ff9b::ac40:95f6:443, 104.18.38.10:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-09T15:13:10:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 64:ff9b::6812:260a:443, 172.64.149.246:443, 64:ff9b::ac40:95f6:443, 104.18.38.10:443, timeout: 10000ms)\n' +
+2026-03-09T15:13:10:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-09T15:13:10:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-09T15:13:10:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-09T15:13:10:   hint: '',
+2026-03-09T15:13:10:   code: ''
+2026-03-09T15:13:10: }
+2026-03-09T15:43:57: ❌ Biometric Engine error/offline: timeout of 15000ms exceeded
+2026-03-09T16:18:19: ❌ Biometric Engine error/offline: Request failed with status code 500
+2026-03-09T16:54:40: ❌ Error unlocking door: timeout of 8000ms exceeded
+2026-03-09T16:54:40: ⚠️ [Trigger] Door unlock service reported failure: ESP32 request timed out. Check WiFi connection.
+2026-03-09T17:08:58: ❌ Logs error: {
+2026-03-09T17:08:58:   message: 'TypeError: fetch failed',
+2026-03-09T17:08:58:   details: 'TypeError: fetch failed\n' +
+2026-03-09T17:08:58:     '\n' +
+2026-03-09T17:08:58:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 64:ff9b::ac40:95f6:443, 104.18.38.10:443, 64:ff9b::6812:260a:443, 172.64.149.246:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-09T17:08:58:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 64:ff9b::ac40:95f6:443, 104.18.38.10:443, 64:ff9b::6812:260a:443, 172.64.149.246:443, timeout: 10000ms)\n' +
+2026-03-09T17:08:58:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-09T17:08:58:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-09T17:08:58:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-09T17:08:58:   hint: '',
+2026-03-09T17:08:58:   code: ''
+2026-03-09T17:08:58: }
+2026-03-09T17:09:21: ❌ Logs error: {
+2026-03-09T17:09:21:   message: 'TypeError: fetch failed',
+2026-03-09T17:09:21:   details: 'TypeError: fetch failed\n' +
+2026-03-09T17:09:21:     '\n' +
+2026-03-09T17:09:21:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 64:ff9b::ac40:95f6:443, 172.64.149.246:443, 64:ff9b::6812:260a:443, 104.18.38.10:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-09T17:09:21:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 64:ff9b::ac40:95f6:443, 172.64.149.246:443, 64:ff9b::6812:260a:443, 104.18.38.10:443, timeout: 10000ms)\n' +
+2026-03-09T17:09:21:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-09T17:09:21:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-09T17:09:21:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-09T17:09:21:   hint: '',
+2026-03-09T17:09:21:   code: ''
+2026-03-09T17:09:21: }
+2026-03-09T17:15:56: ❌ Logs error: {
+2026-03-09T17:15:56:   message: 'TypeError: fetch failed',
+2026-03-09T17:15:56:   details: 'TypeError: fetch failed\n' +
+2026-03-09T17:15:56:     '\n' +
+2026-03-09T17:15:56:     'Caused by: Error: read ECONNRESET (ECONNRESET)\n' +
+2026-03-09T17:15:56:     'Error: read ECONNRESET\n' +
+2026-03-09T17:15:56:     '    at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)',
+2026-03-09T17:15:56:   hint: '',
+2026-03-09T17:15:56:   code: ''
+2026-03-09T17:15:56: }
+2026-03-09T17:18:58: ❌ Logs error: {
+2026-03-09T17:18:58:   message: 'TypeError: fetch failed',
+2026-03-09T17:18:58:   details: 'TypeError: fetch failed\n' +
+2026-03-09T17:18:58:     '\n' +
+2026-03-09T17:18:58:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 64:ff9b::6812:260a:443, 104.18.38.10:443, 64:ff9b::ac40:95f6:443, 172.64.149.246:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-09T17:18:58:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 64:ff9b::6812:260a:443, 104.18.38.10:443, 64:ff9b::ac40:95f6:443, 172.64.149.246:443, timeout: 10000ms)\n' +
+2026-03-09T17:18:58:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-09T17:18:58:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-09T17:18:58:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-09T17:18:58:   hint: '',
+2026-03-09T17:18:58:   code: ''
+2026-03-09T17:18:58: }
+2026-03-09T17:19:58: ❌ Logs error: {
+2026-03-09T17:19:58:   message: 'TypeError: fetch failed',
+2026-03-09T17:19:58:   details: 'TypeError: fetch failed\n' +
+2026-03-09T17:19:58:     '\n' +
+2026-03-09T17:19:58:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 64:ff9b::6812:260a:443, 172.64.149.246:443, 64:ff9b::ac40:95f6:443, 104.18.38.10:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-09T17:19:58:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 64:ff9b::6812:260a:443, 172.64.149.246:443, 64:ff9b::ac40:95f6:443, 104.18.38.10:443, timeout: 10000ms)\n' +
+2026-03-09T17:19:58:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-09T17:19:58:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-09T17:19:58:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-09T17:19:58:   hint: '',
+2026-03-09T17:19:58:   code: ''
+2026-03-09T17:19:58: }
+2026-03-09T17:26:59: ❌ Logs error: {
+2026-03-09T17:26:59:   message: 'TypeError: fetch failed',
+2026-03-09T17:26:59:   details: 'TypeError: fetch failed\n' +
+2026-03-09T17:26:59:     '\n' +
+2026-03-09T17:26:59:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 64:ff9b::ac40:95f6:443, 172.64.149.246:443, 64:ff9b::6812:260a:443, 104.18.38.10:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-09T17:26:59:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 64:ff9b::ac40:95f6:443, 172.64.149.246:443, 64:ff9b::6812:260a:443, 104.18.38.10:443, timeout: 10000ms)\n' +
+2026-03-09T17:26:59:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-09T17:26:59:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-09T17:26:59:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-09T17:26:59:   hint: '',
+2026-03-09T17:26:59:   code: ''
+2026-03-09T17:26:59: }
+2026-03-10T11:08:20: ❌ Token Verification Failed: jwt expired
+2026-03-10T11:29:50: ❌ Error unlocking door: timeout of 8000ms exceeded
+2026-03-10T11:29:50: ⚠️ [Trigger] Door unlock service reported failure: ESP32 request timed out. Check WiFi connection.
+2026-03-10T15:24:51: ❌ Logs error: {
+2026-03-10T15:24:51:   message: 'TypeError: fetch failed',
+2026-03-10T15:24:51:   details: 'TypeError: fetch failed\n' +
+2026-03-10T15:24:51:     '\n' +
+2026-03-10T15:24:51:     'Caused by: ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms) (UND_ERR_CONNECT_TIMEOUT)\n' +
+2026-03-10T15:24:51:     'ConnectTimeoutError: Connect Timeout Error (attempted addresses: 172.64.149.246:443, 104.18.38.10:443, timeout: 10000ms)\n' +
+2026-03-10T15:24:51:     '    at onConnectTimeout (node:internal/deps/undici/undici:2718:28)\n' +
+2026-03-10T15:24:51:     '    at Immediate._onImmediate (node:internal/deps/undici/undici:2684:35)\n' +
+2026-03-10T15:24:51:     '    at process.processImmediate (node:internal/timers:483:21)',
+2026-03-10T15:24:51:   hint: '',
+2026-03-10T15:24:51:   code: ''
+2026-03-10T15:24:51: }
+2026-03-10T16:43:41: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:43:41: const doorRoute = require('./door_route');
+2026-03-10T16:43:41:       ^
+2026-03-10T16:43:41: 
+2026-03-10T16:43:41: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:43:41:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:43:41:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:43:41:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:43:41:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:43:41:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:43:41:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:43:41:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:43:41:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:43:41:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:43:41:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:43:44: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:43:44: const doorRoute = require('./door_route');
+2026-03-10T16:43:44:       ^
+2026-03-10T16:43:44: 
+2026-03-10T16:43:44: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:43:44:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:43:44:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:43:44:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:43:44:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:43:44:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:43:44:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:43:44:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:43:44:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:43:44:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:43:44:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:43:48: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:43:48: const doorRoute = require('./door_route');
+2026-03-10T16:43:48:       ^
+2026-03-10T16:43:48: 
+2026-03-10T16:43:48: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:43:48:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:43:48:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:43:48:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:43:48:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:43:48:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:43:48:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:43:48:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:43:48:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:43:48:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:43:48:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:43:51: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:43:51: const doorRoute = require('./door_route');
+2026-03-10T16:43:51:       ^
+2026-03-10T16:43:51: 
+2026-03-10T16:43:51: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:43:51:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:43:51:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:43:51:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:43:51:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:43:51:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:43:51:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:43:51:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:43:51:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:43:51:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:43:51:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:43:55: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:43:55: const doorRoute = require('./door_route');
+2026-03-10T16:43:55:       ^
+2026-03-10T16:43:55: 
+2026-03-10T16:43:55: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:43:55:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:43:55:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:43:55:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:43:55:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:43:55:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:43:55:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:43:55:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:43:55:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:43:55:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:43:55:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:43:58: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:43:58: const doorRoute = require('./door_route');
+2026-03-10T16:43:58:       ^
+2026-03-10T16:43:58: 
+2026-03-10T16:43:58: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:43:58:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:43:58:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:43:58:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:43:58:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:43:58:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:43:58:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:43:58:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:43:58:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:43:58:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:43:58:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:01: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:01: const doorRoute = require('./door_route');
+2026-03-10T16:44:01:       ^
+2026-03-10T16:44:01: 
+2026-03-10T16:44:01: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:01:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:01:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:01:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:01:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:01:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:01:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:01:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:01:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:01:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:01:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:05: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:05: const doorRoute = require('./door_route');
+2026-03-10T16:44:05:       ^
+2026-03-10T16:44:05: 
+2026-03-10T16:44:05: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:05:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:05:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:05:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:05:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:05:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:05:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:05:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:05:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:05:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:05:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:09: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:09: const doorRoute = require('./door_route');
+2026-03-10T16:44:09:       ^
+2026-03-10T16:44:09: 
+2026-03-10T16:44:09: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:09:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:09:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:09:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:09:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:09:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:09:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:09:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:09:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:09:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:09:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:12: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:12: const doorRoute = require('./door_route');
+2026-03-10T16:44:12:       ^
+2026-03-10T16:44:12: 
+2026-03-10T16:44:12: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:12:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:12:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:12:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:12:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:12:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:12:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:12:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:12:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:12:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:12:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:16: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:16: const doorRoute = require('./door_route');
+2026-03-10T16:44:16:       ^
+2026-03-10T16:44:16: 
+2026-03-10T16:44:16: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:16:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:16:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:16:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:16:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:16:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:16:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:16:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:16:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:16:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:16:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:19: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:19: const doorRoute = require('./door_route');
+2026-03-10T16:44:19:       ^
+2026-03-10T16:44:19: 
+2026-03-10T16:44:19: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:19:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:19:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:19:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:19:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:19:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:19:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:19:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:19:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:19:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:19:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:23: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:23: const doorRoute = require('./door_route');
+2026-03-10T16:44:23:       ^
+2026-03-10T16:44:23: 
+2026-03-10T16:44:23: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:23:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:23:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:23:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:23:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:23:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:23:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:23:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:23:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:23:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:23:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:26: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:26: const doorRoute = require('./door_route');
+2026-03-10T16:44:26:       ^
+2026-03-10T16:44:26: 
+2026-03-10T16:44:26: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:26:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:26:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:26:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:26:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:26:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:26:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:26:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:26:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:26:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:26:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:29: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:29: const doorRoute = require('./door_route');
+2026-03-10T16:44:29:       ^
+2026-03-10T16:44:29: 
+2026-03-10T16:44:29: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:29:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:29:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:29:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:29:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:29:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:29:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:29:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:29:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:29:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:29:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:33: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:33: const doorRoute = require('./door_route');
+2026-03-10T16:44:33:       ^
+2026-03-10T16:44:33: 
+2026-03-10T16:44:33: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:33:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:33:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:33:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:33:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:33:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:33:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:33:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:33:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:36: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:36: const doorRoute = require('./door_route');
+2026-03-10T16:44:36:       ^
+2026-03-10T16:44:36: 
+2026-03-10T16:44:36: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:36:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:36:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:36:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:36:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:36:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:36:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:36:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:36:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:36:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:36:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:39: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:39: const doorRoute = require('./door_route');
+2026-03-10T16:44:39:       ^
+2026-03-10T16:44:39: 
+2026-03-10T16:44:39: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:39:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:39:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:39:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:39:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:39:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:39:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:39:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:39:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:39:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:39:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:43: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:43: const doorRoute = require('./door_route');
+2026-03-10T16:44:43:       ^
+2026-03-10T16:44:43: 
+2026-03-10T16:44:43: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:43:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:43:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:43:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:43:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:43:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:43:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:43:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:43:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:43:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:43:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:46: D:\SMART DOOR LOCK\backend\server.js:263
+2026-03-10T16:44:46: const doorRoute = require('./door_route');
+2026-03-10T16:44:46:       ^
+2026-03-10T16:44:46: 
+2026-03-10T16:44:46: SyntaxError: Identifier 'doorRoute' has already been declared
+2026-03-10T16:44:46:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-10T16:44:46:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-10T16:44:46:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:46:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:46:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-10T16:44:46:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-10T16:44:46:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-10T16:44:46:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-10T16:44:46:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-10T16:44:46:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:58:50: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:58:50: }
+2026-03-11T10:58:50: ^
+2026-03-11T10:58:50: 
+2026-03-11T10:58:50: SyntaxError: missing ) after argument list
+2026-03-11T10:58:50:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:58:50:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:58:50:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:58:50:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:58:50:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:58:50:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:58:50:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:58:50:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:58:50:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:58:50:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:58:54: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:58:54: }
+2026-03-11T10:58:54: ^
+2026-03-11T10:58:54: 
+2026-03-11T10:58:54: SyntaxError: missing ) after argument list
+2026-03-11T10:58:54:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:58:54:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:58:54:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:58:54:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:58:54:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:58:54:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:58:54:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:58:54:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:58:54:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:58:54:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:58:57: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:58:57: }
+2026-03-11T10:58:57: ^
+2026-03-11T10:58:57: 
+2026-03-11T10:58:57: SyntaxError: missing ) after argument list
+2026-03-11T10:58:57:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:58:57:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:58:57:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:58:57:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:58:57:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:58:57:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:58:57:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:58:57:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:58:57:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:58:57:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:01: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:01: }
+2026-03-11T10:59:01: ^
+2026-03-11T10:59:01: 
+2026-03-11T10:59:01: SyntaxError: missing ) after argument list
+2026-03-11T10:59:01:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:01:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:01:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:01:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:01:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:01:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:01:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:01:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:01:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:01:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:04: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:04: }
+2026-03-11T10:59:04: ^
+2026-03-11T10:59:04: 
+2026-03-11T10:59:04: SyntaxError: missing ) after argument list
+2026-03-11T10:59:04:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:04:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:04:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:04:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:04:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:04:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:04:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:04:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:04:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:04:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:08: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:08: }
+2026-03-11T10:59:08: ^
+2026-03-11T10:59:08: 
+2026-03-11T10:59:08: SyntaxError: missing ) after argument list
+2026-03-11T10:59:08:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:08:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:08:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:08:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:08:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:08:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:08:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:08:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:08:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:08:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:11: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:11: }
+2026-03-11T10:59:11: ^
+2026-03-11T10:59:11: 
+2026-03-11T10:59:11: SyntaxError: missing ) after argument list
+2026-03-11T10:59:11:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:11:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:11:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:11:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:11:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:11:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:11:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:11:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:11:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:11:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:15: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:15: }
+2026-03-11T10:59:15: ^
+2026-03-11T10:59:15: 
+2026-03-11T10:59:15: SyntaxError: missing ) after argument list
+2026-03-11T10:59:15:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:15:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:15:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:15:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:15:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:15:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:15:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:15:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:15:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:15:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:18: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:18: }
+2026-03-11T10:59:18: ^
+2026-03-11T10:59:18: 
+2026-03-11T10:59:18: SyntaxError: missing ) after argument list
+2026-03-11T10:59:18:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:18:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:18:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:18:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:18:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:18:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:18:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:18:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:18:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:18:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:22: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:22: }
+2026-03-11T10:59:22: ^
+2026-03-11T10:59:22: 
+2026-03-11T10:59:22: SyntaxError: missing ) after argument list
+2026-03-11T10:59:22:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:22:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:22:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:22:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:22:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:22:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:22:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:22:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:22:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:22:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:25: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:25: }
+2026-03-11T10:59:25: ^
+2026-03-11T10:59:25: 
+2026-03-11T10:59:25: SyntaxError: missing ) after argument list
+2026-03-11T10:59:25:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:25:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:25:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:25:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:25:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:25:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:25:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:25:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:25:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:25:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:29: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:29: }
+2026-03-11T10:59:29: ^
+2026-03-11T10:59:29: 
+2026-03-11T10:59:29: SyntaxError: missing ) after argument list
+2026-03-11T10:59:29:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:29:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:29:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:29:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:29:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:29:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:29:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:29:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:29:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:29:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:32: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:32: }
+2026-03-11T10:59:32: ^
+2026-03-11T10:59:32: 
+2026-03-11T10:59:32: SyntaxError: missing ) after argument list
+2026-03-11T10:59:32:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:32:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:32:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:32:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:32:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:32:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:32:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:32:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:32:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:32:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:36: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:36: }
+2026-03-11T10:59:36: ^
+2026-03-11T10:59:36: 
+2026-03-11T10:59:36: SyntaxError: missing ) after argument list
+2026-03-11T10:59:36:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:36:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:36:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:36:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:36:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:36:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:36:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:36:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:36:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:36:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:40: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:40: }
+2026-03-11T10:59:40: ^
+2026-03-11T10:59:40: 
+2026-03-11T10:59:40: SyntaxError: missing ) after argument list
+2026-03-11T10:59:40:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:40:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:40:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:40:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:40:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:40:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:40:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:40:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:40:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:40:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:44: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:44: }
+2026-03-11T10:59:44: ^
+2026-03-11T10:59:44: 
+2026-03-11T10:59:44: SyntaxError: missing ) after argument list
+2026-03-11T10:59:44:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:44:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:44:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:44:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:44:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:44:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:44:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:44:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:44:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:44:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:48: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:48: }
+2026-03-11T10:59:48: ^
+2026-03-11T10:59:48: 
+2026-03-11T10:59:48: SyntaxError: missing ) after argument list
+2026-03-11T10:59:48:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:48:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:48:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:48:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:48:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:48:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:48:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:48:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:48:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:48:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:51: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:51: }
+2026-03-11T10:59:51: ^
+2026-03-11T10:59:51: 
+2026-03-11T10:59:51: SyntaxError: missing ) after argument list
+2026-03-11T10:59:51:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:51:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:51:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:51:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:51:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:51:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:51:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:51:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:51:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:51:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:55: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:55: }
+2026-03-11T10:59:55: ^
+2026-03-11T10:59:55: 
+2026-03-11T10:59:55: SyntaxError: missing ) after argument list
+2026-03-11T10:59:55:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:55:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:55:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:55:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:55:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:55:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:55:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:55:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:55:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:55:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:59: D:\SMART DOOR LOCK\backend\server.js:1746
+2026-03-11T10:59:59: }
+2026-03-11T10:59:59: ^
+2026-03-11T10:59:59: 
+2026-03-11T10:59:59: SyntaxError: missing ) after argument list
+2026-03-11T10:59:59:     at wrapSafe (node:internal/modules/cjs/loader:1464:18)
+2026-03-11T10:59:59:     at Module._compile (node:internal/modules/cjs/loader:1495:20)
+2026-03-11T10:59:59:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:59:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:59:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T10:59:59:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2026-03-11T10:59:59:     at Module._compile (node:internal/modules/cjs/loader:1521:14)
+2026-03-11T10:59:59:     at Module._extensions..js (node:internal/modules/cjs/loader:1623:10)
+2026-03-11T10:59:59:     at Module.load (node:internal/modules/cjs/loader:1266:32)
+2026-03-11T10:59:59:     at Module._load (node:internal/modules/cjs/loader:1091:12)
+2026-03-11T12:10:41: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:10:41: 
+2026-03-11T12:10:41: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:10:55: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:11:08: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:11:27: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:11:27: 
+2026-03-11T12:11:27: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:11:31: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:11:31: 
+2026-03-11T12:11:31: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:11:44: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:12:51: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:12:59: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:13:07: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:14:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:14:30: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:14:36: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:15:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:15:30: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:15:37: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:16:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:16:30: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:16:37: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:17:19: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:17:19: 
+2026-03-11T12:17:19: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:17:22: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:17:22: 
+2026-03-11T12:17:22: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:17:28: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:17:28: ^C
+2026-03-11T12:17:28: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:18:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:18:30: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:18:38: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:19:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:19:29: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:19:36: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:20:22: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:20:29: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:20:36: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:21:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:21:30: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:21:33: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:21:33: ^C
+2026-03-11T12:21:33: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:22:19: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:22:19: ^C
+2026-03-11T12:22:19: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:22:23: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:22:23: ^C
+2026-03-11T12:22:23: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:22:26: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:22:26: ^C
+2026-03-11T12:22:26: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:23:19: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:23:19: ^C
+2026-03-11T12:23:19: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:23:21: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:23:21: ^C
+2026-03-11T12:23:21: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:23:28: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:24:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:24:25: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:24:25: 
+2026-03-11T12:24:25: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:24:32: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:24:32: ^C
+2026-03-11T12:24:32: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:25:19: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:25:19: ^C
+2026-03-11T12:25:19: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:25:26: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:25:33: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:28:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:28:30: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:28:37: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:29:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:29:30: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:29:36: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:30:24: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:30:29: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:30:29: ^C
+2026-03-11T12:30:29: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:30:36: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:31:19: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:31:19: 
+2026-03-11T12:31:19: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:31:21: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:31:21: ^C
+2026-03-11T12:31:21: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:31:23: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:31:23: ^C
+2026-03-11T12:31:23: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:32:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:32:30: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:32:37: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:33:20: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:33:20: ^C
+2026-03-11T12:33:20: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:33:23: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:33:23: ^C
+2026-03-11T12:33:23: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:33:25: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:33:25: ^C
+2026-03-11T12:33:25: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:34:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:34:30: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:34:37: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:35:22: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:35:29: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:35:36: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:36:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:36:30: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:36:37: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:37:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:37:29: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:37:34: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:37:34: ^C
+2026-03-11T12:37:34: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:38:20: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:38:20: ^C
+2026-03-11T12:38:20: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:38:24: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:38:24: ^C
+2026-03-11T12:38:24: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:38:26: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:38:26: ^C
+2026-03-11T12:38:26: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:39:19: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:39:19: ^C
+2026-03-11T12:39:19: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:39:22: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:39:22: ^C
+2026-03-11T12:39:22: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:39:24: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:39:24: ^C
+2026-03-11T12:39:24: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:40:22: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:40:22: ^C
+2026-03-11T12:40:22: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:40:24: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:40:24: ^C
+2026-03-11T12:40:24: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:40:31: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:41:19: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:41:19: ^C
+2026-03-11T12:41:19: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:41:23: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:41:23: ^C
+2026-03-11T12:41:23: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:41:30: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:42:21: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:42:21: ^C
+2026-03-11T12:42:21: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:42:28: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:42:31: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:42:31: ^C
+2026-03-11T12:42:31: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:43:21: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:43:21: 
+2026-03-11T12:43:21: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:43:24: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:43:24: ^C
+2026-03-11T12:43:24: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:43:27: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:43:27: ^C
+2026-03-11T12:43:27: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:44:19: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:44:19: ^C
+2026-03-11T12:44:19: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:44:22: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:44:22: ^C
+2026-03-11T12:44:22: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:44:26: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:44:26: ^C
+2026-03-11T12:44:26: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:45:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:45:30: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:45:37: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:45:37: ^C
+2026-03-11T12:45:37: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:46:23: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:46:30: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:46:36: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:47:16: ❌ Biometric Engine error/offline: Request failed with status code 500
+2026-03-11T12:47:19: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:47:19: ^C
+2026-03-11T12:47:19: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:47:23: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:47:23: 
+2026-03-11T12:47:23: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:47:26: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:47:26: ^C
+2026-03-11T12:47:26: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:47:57: ❌ Biometric Engine error/offline: Request failed with status code 500
+2026-03-11T12:48:08: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:48:12: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:48:12: ^C
+2026-03-11T12:48:12: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:48:15: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:48:15: ^C
+2026-03-11T12:48:15: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:48:41: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:48:48: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:48:54: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:49:21: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:49:28: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:49:34: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:50:01: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:50:08: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:50:14: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:50:41: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:50:48: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:50:54: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:51:21: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:51:28: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:51:35: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:52:01: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:52:08: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:52:14: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:52:32: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:52:39: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:52:41: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:52:41: ^C
+2026-03-11T12:52:41: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:53:01: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:53:05: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:53:05: ^C
+2026-03-11T12:53:05: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:53:07: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:53:07: ^C
+2026-03-11T12:53:07: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:53:31: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:53:35: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:53:35: ^C
+2026-03-11T12:53:35: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:53:38: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:53:38: ^C
+2026-03-11T12:53:38: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:54:22: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:54:29: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:54:36: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:55:20: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:55:20: ^C
+2026-03-11T12:55:20: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:55:22: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:55:22: ^C
+2026-03-11T12:55:22: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:55:25: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:55:25: ^C
+2026-03-11T12:55:25: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:56:20: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:56:20: ^C
+2026-03-11T12:56:20: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:56:26: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:56:30: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:56:30: ^C
+2026-03-11T12:56:30: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T12:57:19: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:57:19: ^C
+2026-03-11T12:57:19: ⚠️ Command failed, retrying in 1s... (1/3)
+2026-03-11T12:57:22: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:57:22: ^C
+2026-03-11T12:57:22: ⚠️ Command failed, retrying in 1s... (2/3)
+2026-03-11T12:57:25: ❌ BLE Script Error: Command failed: python "D:\SMART DOOR LOCK\backend\ble_lock.py" STATUS 58:8C:81:CC:65:29
+2026-03-11T12:57:25: ^C
+2026-03-11T12:57:25: ⚠️ Command failed, retrying in 1s... (3/3)
+2026-03-11T13:04:29: ❌ Biometric Engine error/offline: read ECONNRESET
+2026-03-11T13:10:10: ❌ Token Verification Failed: jwt malformed
+2026-03-11T14:19:31: ❌ Biometric Engine error/offline: read ECONNRESET
+2026-03-11T14:21:04: ❌ Biometric Engine error/offline: read ECONNRESET
+2026-03-11T15:36:00: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-11T15:37:28: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-11T15:52:47: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-11T16:13:50: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-11T17:54:04: ❌ Door Engine Error (SCAN): Invalid URL
+2026-03-11T17:54:07: ❌ Door Engine Error (SCAN): Invalid URL
+2026-03-11T17:56:29: ❌ Door Engine Error (SCAN): Invalid URL
+2026-03-11T17:56:50: ❌ Door Engine Error (SCAN): Invalid URL
+2026-03-11T17:57:08: ❌ Door Engine Error (SCAN): Invalid URL
+2026-03-11T18:02:32: ❌ Door Engine Error (SCAN): Invalid URL
+2026-03-11T18:02:32: ❌ Door Engine Error (SCAN): Invalid URL
+2026-03-11T18:03:03: ❌ Door Engine Error (SCAN): 
+2026-03-11T18:03:03: ❌ Door Engine Error (SCAN): 
+2026-03-12T09:43:13: ❌ Update user error: update or delete on table "employees" violates foreign key constraint "access_logs_employee_id_fkey" on table "access_logs"
+2026-03-12T09:43:28: ❌ Update user error: update or delete on table "employees" violates foreign key constraint "access_logs_employee_id_fkey" on table "access_logs"
+2026-03-12T09:43:57: ❌ Update user error: update or delete on table "employees" violates foreign key constraint "access_logs_employee_id_fkey" on table "access_logs"
+2026-03-12T09:58:53: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T09:59:00: ❌ Update user error: update or delete on table "employees" violates foreign key constraint "access_logs_employee_id_fkey" on table "access_logs"
+2026-03-12T09:59:09: ❌ Update user error: duplicate key value violates unique constraint "employees_employee_id_key"
+2026-03-12T09:59:43: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T09:59:48: ❌ Door Engine Error (/api/door/unlock): timeout of 15000ms exceeded
+2026-03-12T09:59:48: ⚠️ [Trigger] Door unlock service reported failure: timeout of 15000ms exceeded
+2026-03-12T10:00:19: ❌ Update user error: update or delete on table "employees" violates foreign key constraint "access_logs_employee_id_fkey" on table "access_logs"
+2026-03-12T10:01:03: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T10:02:04: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T10:02:23: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T10:02:42: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T10:03:08: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T10:03:27: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T10:04:00: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T10:05:01: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T10:06:52: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T10:07:32: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T10:17:24: ❌ Update user error: update or delete on table "employees" violates foreign key constraint "access_logs_employee_id_fkey" on table "access_logs"
+2026-03-12T11:27:00: ❌ Token Verification Failed: jwt malformed
+2026-03-12T11:27:01: ❌ Token Verification Failed: jwt malformed
+2026-03-12T11:29:24: ❌ Token Verification Failed: jwt expired
+2026-03-12T11:30:54: TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.
+2026-03-12T11:30:54:     at D:\SMART DOOR LOCK\backend\server.js:303:13
+2026-03-12T11:30:54:     at Layer.handleRequest (D:\SMART DOOR LOCK\backend\node_modules\router\lib\layer.js:152:17)
+2026-03-12T11:30:54:     at next (D:\SMART DOOR LOCK\backend\node_modules\router\lib\route.js:157:13)
+2026-03-12T11:30:54:     at D:\SMART DOOR LOCK\backend\node_modules\express-rate-limit\dist\index.cjs:942:7
+2026-03-12T11:30:54:     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-03-12T11:30:54:     at async D:\SMART DOOR LOCK\backend\node_modules\express-rate-limit\dist\index.cjs:825:5
+2026-03-12T14:39:04: ❌ Door Engine Error (/api/door/unlock): timeout of 15000ms exceeded
+2026-03-12T14:39:04: ⚠️ [Trigger] Door unlock service reported failure: timeout of 15000ms exceeded
+2026-03-12T14:39:19: ❌ Door Engine Error (/api/door/unlock): timeout of 15000ms exceeded
+2026-03-12T14:39:19: ⚠️ [Trigger] Door unlock service reported failure: timeout of 15000ms exceeded
+2026-03-12T14:39:43: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:03:30: ❌ Biometric engine did not become ready in time.
+2026-03-12T15:04:11: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:04:32: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:04:57: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:05:20: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:05:57: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:06:31: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:07:08: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:08:04: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:08:49: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:09:33: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:09:57: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:10:20: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:10:44: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:11:08: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:11:42: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:12:16: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:12:40: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:13:49: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:14:13: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.
+2026-03-12T15:15:52: ⚠️ [Trigger] Door unlock service reported failure: Device with address 58:8C:81:CC:65:29 was not found.

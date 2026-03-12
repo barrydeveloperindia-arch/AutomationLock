@@ -10,6 +10,7 @@ import Dashboard from './pages/admin/Dashboard';
 import UsersPage from './pages/admin/Users';
 import LogsPage from './pages/admin/Logs';
 import DevicesPage from './pages/admin/Devices';
+import AttendancePage from './pages/Attendance';
 
 // Guard Component
 const ProtectedRoute = () => {
@@ -42,6 +43,7 @@ function App() {
           {/* Public Routes */}
           <Route path="/" element={<Terminal />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/attendance" element={<AttendancePage />} />
 
           {/* Protected Admin Routes */}
           <Route element={<ProtectedRoute />}>

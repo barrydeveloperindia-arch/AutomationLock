@@ -21,7 +21,7 @@ try {
 // LAN IP of the backend server — phone and PC must be on the same WiFi network.
 // In the integrated app, we prefer using the same proxy or a shared config.
 const API_BASE = window.location.origin === 'http://localhost:5181' ? '' : 'http://192.168.2.165:8000';
-const RESET_DELAY = 5; // seconds
+const RESET_DELAY = 3; // seconds
 
 // ── Animated countdown ring ───────────────────────────────────────────────────
 function CountdownRing({ seconds, total = RESET_DELAY, color = '#10b981' }) {
@@ -59,14 +59,14 @@ function LiveClock() {
 export default function Scanner() {
     const navigate = useNavigate();
     // view: 'home' | 'face' | 'fingerprint' | 'checkin' | 'checkout' | 'error'
-    const [view, setView] = useState('home');
+    const [view, setView] = useState('face'); // Start on face scan directly
     const [loading, setLoading] = useState(false);
-    const [message, setMessage] = useState('');
+    const [message, setMessage] = useState('Initializing Terminal...');
     const [employees, setEmployees] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [result, setResult] = useState(null);
     const [countdown, setCountdown] = useState(RESET_DELAY);
-    const [isScanning, setIsScanning] = useState(false);
+    const [isProcessing, setIsProcessing] = useState(false);
 
     useEffect(() => {
         const fetchEmployees = async () => {
@@ -89,51 +89,155 @@ export default function Scanner() {
         return () => { clearInterval(tick); clearTimeout(done); };
     }, [view]);
 
+    const stopCamera = (s) => {
+        if (s) {
+            s.getTracks().forEach(track => track.stop());
+        }
+        if (videoRef.current) {
+            videoRef.current.srcObject = null;
+        }
+    };
+
     const reset = () => {
-        setView('home');
         setLoading(false);
-        setMessage('');
         setResult(null);
         setSearchTerm('');
         setCountdown(RESET_DELAY);
+        setIsProcessing(false);
+        setView('face'); // This will trigger the camera useEffect below
     };
 
-    // ── Face scan ─────────────────────────────────────────────────────────────
-    const handleFaceScan = async () => {
-        if (isScanning) return;
-        setIsScanning(true);
+    const videoRef = useRef(null);
+    const canvasRef = useRef(null);
+    const [stream, setStream] = useState(null);
 
-        setView('face');
-        setLoading(true);
-        setMessage('Initializing biometric camera…');
-        try {
-            if (!CapCamera) {
-                throw new Error("Camera plugin not available on this platform.");
+    // ── Refined Camera Lifecycle with Safeguards ─────────────────────────────
+    useEffect(() => {
+        let active = true;
+        let currentStream = null;
+
+        const initCamera = async () => {
+            if (view !== 'face') return;
+            
+            // Wait for video element to mount if it hasn't yet
+            let attempts = 0;
+            while (!videoRef.current && attempts < 10) {
+                await new Promise(r => setTimeout(r, 100));
+                attempts++;
             }
-            const image = await CapCamera.getPhoto({
-                quality: 50,
-                width: 640,
-                height: 480,
-                allowEditing: false,
-                resultType: CameraResultType.Base64,
-                source: CameraSource.Camera,
-            });
-            setMessage('Processing biometric identity…');
 
-            const rawRes = await fetch(`data:image/jpeg;base64,${image.base64String}`);
-            const blob = await rawRes.blob();
+            if (!videoRef.current) return;
+
+            try {
+                setMessage('Starting camera...');
+                
+                // 1. Stop existing tracks & Clear srcObject
+                if (videoRef.current.srcObject) {
+                    const tracks = videoRef.current.srcObject.getTracks();
+                    tracks.forEach(track => track.stop());
+                    videoRef.current.srcObject = null;
+                }
+
+                // 2. Hardware Release Delay (300ms)
+                await new Promise(r => setTimeout(r, 300));
+
+                // 3. Fresh Start
+                const s = await navigator.mediaDevices.getUserMedia({ 
+                    video: { facingMode: 'user', width: { ideal: 640 }, height: { ideal: 480 } } 
+                });
+                
+                if (!active) {
+                    s.getTracks().forEach(t => t.stop());
+                    return;
+                }
+
+                currentStream = s;
+                setStream(s);
+                videoRef.current.srcObject = s;
+                
+                try {
+                    await videoRef.current.play();
+                    setMessage('Looking for face...');
+                } catch (playErr) {
+                    console.warn("Autoplay interrupted:", playErr.message);
+                }
+            } catch (err) {
+                console.error("Camera re-initialization failed:", err);
+                setMessage("Camera Error");
+                setView('error');
+            }
+        };
+
+        initCamera();
+
+        return () => {
+            active = false;
+            stopCamera(currentStream);
+            setStream(null);
+        };
+    }, [view]);
+
+    // ── Continuous Face Verification Loop ────────────────────────────────────
+    useEffect(() => {
+        if (view !== 'face' || isProcessing || loading) return;
+
+        const loop = setInterval(async () => {
+            if (view !== 'face' || isProcessing || loading) return;
+            await captureAndVerify();
+        }, 4000); 
+
+        return () => clearInterval(loop);
+    }, [view, isProcessing, loading]);
+
+    const captureAndVerify = async () => {
+        if (!videoRef.current || !canvasRef.current || view !== 'face' || isProcessing) return;
+        
+        const video = videoRef.current;
+        // Detailed logging for hardware state
+        console.log(`📸 [Scanner] Hardware check: readyState=${video.readyState}, paused=${video.paused}, dim=${video.videoWidth}x${video.videoHeight}`);
+        
+        if (video.readyState !== 4 || video.paused) {
+            console.warn("⚠️ [Scanner] Video not ready or paused. Skipping scan.");
+            return;
+        }
+
+        if (video.videoWidth === 0 || video.videoHeight === 0) {
+            console.warn("⚠️ [Scanner] Video dimensions are zero. Likely black frame. Skipping.");
+            return;
+        }
+
+        setIsProcessing(true);
+        setMessage('Face detected...');
+        try {
+            const canvas = canvasRef.current;
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0);
+            
+            const blob = await new Promise(res => canvas.toBlob(res, 'image/jpeg', 0.95));
+            if (!blob) throw new Error("Capture failed: Blob is null");
+
+            console.log(`📦 [Scanner] Request: format=image/jpeg, size=${(blob.size / 1024).toFixed(1)}KB, res=${canvas.width}x${canvas.height}`);
+
             const form = new FormData();
-            form.append('file', blob, 'face.jpg');
+            form.append('file', blob, 'terminal_face.jpg');
 
-            const res = await axios.post(`${API_BASE}/api/biometrics/face/verify`, form, {
-                headers: { 'Content-Type': 'multipart/form-data' },
-            });
+            console.log(`📡 [Scanner] Sending to: ${API_BASE}/api/biometrics/face/verify`);
+            const res = await axios.post(`${API_BASE}/api/biometrics/face/verify`, form);
+            
+            // MANDATORY LOGGING
+            console.log("📥 [Scanner] RAW RESPONSE:", JSON.stringify(res.data, null, 2));
 
             if (res.data.success) {
                 const isCheckout = !!(res.data.check_out || res.data.checkout);
                 const now = new Date();
+                const empName = res.data.employeeName || res.data.user?.name || res.data.name || res.data.employee_name || 'Employee';
+                
+                console.log(`✅ [Scanner] Authorized: ${empName}`);
+                
                 setResult({
-                    name: res.data.user?.name || res.data.name || res.data.employee_name || 'Employee',
+                    name: empName,
                     time: res.data.check_in
                         ? new Date(res.data.check_in).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
                         : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
@@ -143,39 +247,58 @@ export default function Scanner() {
                     workingHours: res.data.working_hours != null ? formatWorkHours(res.data.working_hours) : null,
                     isCheckout,
                 });
+                setMessage(`Access Granted – Welcome ${empName}`);
                 setView(isCheckout ? 'checkout' : 'checkin');
             } else {
-                throw new Error(res.data.message || 'Face not recognized');
+                console.warn("❌ [Scanner] Recognition Failed:", res.data.message);
+                setMessage(res.data.message || 'Unknown Person – Access Denied');
+                setView('error');
             }
         } catch (err) {
-            console.error(err);
-            setMessage(err.response?.data?.message || err.message || 'Recognition failed');
-            setView('error');
+            console.error("🚨 [Scanner] API Error:", err);
+            const backendMsg = err.response?.data?.message || err.message;
+            if (err.response?.status === 404 || err.response?.status === 401 || err.response?.status === 403) {
+                setMessage(backendMsg || 'Unknown Person – Access Denied');
+                setView('error');
+            } else {
+                console.debug("Scan loop error:", err.message);
+                setMessage('Looking for face...');
+            }
         } finally {
-            setLoading(false);
-            setTimeout(() => setIsScanning(false), 2000);
+            setIsProcessing(false);
         }
     };
 
-    // ── Fingerprint ───────────────────────────────────────────────────────────
-    const handleFingerprintScan = async () => {
-        try {
-            if (!NativeBiometric) throw new Error("Biometric plugin not available");
-            const avail = await NativeBiometric.isAvailable();
-            if (!avail.isAvailable) throw new Error('Sensor not available');
-            await NativeBiometric.verify({
-                reason: 'Authenticate for attendance',
-                title: 'Terminal Security',
-                subtitle: 'Place your finger on the sensor',
-                negativeButtonText: 'Cancel',
-            });
-            setView('fingerprint');
-        } catch (err) {
-            console.warn('Biometric fallback:', err.message);
-            // On web or without sensor, show warning but allow selection for demo
-            setView('fingerprint');
-        }
-    };
+    // ── Continuous Fingerprint Listener ──────────────────────────────────────
+    useEffect(() => {
+        let active = true;
+        const fingerprintLoop = async () => {
+            if (!active) return;
+            try {
+                if (NativeBiometric) {
+                    const avail = await NativeBiometric.isAvailable();
+                    if (avail.isAvailable) {
+                        await NativeBiometric.verify({
+                            reason: 'Automatic authentication',
+                            title: 'Fingerprint Sensor Active',
+                            subtitle: 'Touch sensor for instant access',
+                            negativeButtonText: 'Cancel'
+                        });
+                        // If verified, we still need to identify WHICH user. 
+                        // Since fingerprint usually just verifies "owner" on mobile,
+                        // and user wants it as a fallback, we'll open the picker or show instruction.
+                        setView('fingerprint');
+                    }
+                }
+            } catch (err) {
+                // If cancelled or failed, just restart the listener
+                if (active) setTimeout(fingerprintLoop, 2000);
+            }
+        };
+
+        fingerprintLoop();
+        return () => { active = false; };
+    }, []);
 
     const markManualAttendance = async (employee) => {
         setLoading(true);
@@ -184,9 +307,9 @@ export default function Scanner() {
                 id: employee.employee_id || employee.id,
                 method: 'fingerprint',
                 status: 'success',
-                message: 'Unlock via Mobile App',
+                message: 'Unlock via Terminal Touch',
                 timestamp: Math.floor(Date.now() / 1000),
-                signature: 'internal_request' // Backend may need to skip signature check for app
+                signature: 'internal_request'
             });
             const data = res.data || {};
             const isCheckout = !!(data.check_out);
@@ -243,51 +366,54 @@ export default function Scanner() {
                 </div>
             </div>
 
+            {/* Hidden canvas for capturing frames */}
+            <canvas ref={canvasRef} className="hidden" />
+
             <AnimatePresence mode="wait">
 
-                {/* ── HOME ── */}
-                {view === 'home' && (
-                    <motion.div key="home"
-                        initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.02 }}
-                        className="flex flex-col items-center gap-16 w-full max-w-4xl z-10">
-
+                {/* ── TERMINAL VIEW (Unified Face Scan) ── */}
+                {view === 'face' && (
+                    <motion.div key="face"
+                        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        className="flex flex-col items-center gap-12 text-center z-10 w-full max-w-4xl">
+                        
                         <LiveClock />
 
-                        <div className="w-full">
-                            <p className="text-center text-slate-600 text-[10px] font-black uppercase tracking-[0.4em] mb-10">
-                                Scan Identity
-                            </p>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-                                {/* Face Scan */}
-                                <motion.button
-                                    whileHover={{ scale: 1.02, y: -4 }} whileTap={{ scale: 0.98 }}
-                                    onClick={handleFaceScan}
-                                    className="p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/[0.06] hover:border-blue-500/40 hover:bg-blue-500/[0.02] transition-all flex flex-col items-center gap-6 group relative overflow-hidden backdrop-blur-sm">
-                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    <div className="p-6 rounded-3xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors border border-blue-500/20 shadow-inner">
-                                        <Camera size={64} className="text-blue-400" />
-                                    </div>
-                                    <div className="text-center">
-                                        <h2 className="text-2xl font-black tracking-tight text-white/90">Face Scan</h2>
-                                        <p className="text-slate-500 mt-2 text-xs font-semibold uppercase tracking-widest">Visual Recognition</p>
-                                    </div>
-                                </motion.button>
+                        <div className="relative w-80 h-80 md:w-[400px] md:h-[400px]">
+                            {/* Scanning UI Brackets */}
+                            {[['top-0 left-0', 'border-t-4 border-l-4'], ['top-0 right-0', 'border-t-4 border-r-4'],
+                            ['bottom-0 left-0', 'border-b-4 border-l-4'], ['bottom-0 right-0', 'border-b-4 border-r-4']].map(([pos, br], i) => (
+                                <div key={i} className={`absolute w-16 h-16 ${pos} ${br} border-blue-500 rounded-2xl z-20`} />
+                            ))}
 
-                                {/* Fingerprint */}
-                                <motion.button
-                                    whileHover={{ scale: 1.02, y: -4 }} whileTap={{ scale: 0.98 }}
-                                    onClick={handleFingerprintScan}
-                                    className="p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/[0.06] hover:border-emerald-500/40 hover:bg-emerald-500/[0.02] transition-all flex flex-col items-center gap-6 group relative overflow-hidden backdrop-blur-sm">
-                                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    <div className="p-6 rounded-3xl bg-emerald-500/10 group-hover:bg-emerald-500/20 transition-colors border border-emerald-500/20 shadow-inner">
-                                        <Fingerprint size={64} className="text-emerald-400" />
-                                    </div>
-                                    <div className="text-center">
-                                        <h2 className="text-2xl font-black tracking-tight text-white/90">Fingerprint</h2>
-                                        <p className="text-slate-500 mt-2 text-xs font-semibold uppercase tracking-widest">Touch Sensor</p>
-                                    </div>
-                                </motion.button>
+                            {/* Live Video Feed */}
+                            <div className="w-full h-full rounded-[2.5rem] overflow-hidden bg-black border-2 border-white/5 shadow-2xl relative">
+                                <video 
+                                    ref={videoRef} 
+                                    autoPlay 
+                                    playsInline 
+                                    muted 
+                                    className="w-full h-full object-cover scale-x-[-1]" 
+                                />
+                                
+                                {/* Overlay Gradient */}
+                                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
+
+                                {/* Scanning Line Animation */}
+                                <motion.div
+                                    animate={{ y: ['0%', '100%', '0%'] }}
+                                    transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                                    className="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent z-10 opacity-60"
+                                />
                             </div>
+                        </div>
+
+                        <div className="flex flex-col items-center gap-4">
+                            <div className="px-6 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center gap-3">
+                                <div className={`w-2 h-2 rounded-full ${isProcessing ? 'bg-blue-400 animate-ping' : view === 'face' ? 'bg-blue-400' : 'bg-emerald-400'}`} />
+                                <span className="text-xl font-black text-blue-200 uppercase tracking-widest">{message}</span>
+                            </div>
+                            <p className="text-slate-500 text-[10px] font-bold uppercase tracking-[0.4em]">Biometric Terminal Active</p>
                         </div>
                     </motion.div>
                 )}
@@ -295,61 +421,33 @@ export default function Scanner() {
                 {/* ── FINGERPRINT EMPLOYEE PICKER ── */}
                 {view === 'fingerprint' && (
                     <motion.div key="fingerprint"
-                        initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
-                        className="bg-slate-900/80 backdrop-blur-xl border border-white/10 p-8 rounded-[2rem] w-full max-w-2xl flex flex-col gap-6 shadow-2xl z-10">
-                        <div className="flex items-center justify-between border-b border-white/[0.05] pb-4">
+                        initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }}
+                        className="bg-slate-900/90 backdrop-blur-2xl border border-white/10 p-10 rounded-[3rem] w-full max-w-2xl flex flex-col gap-8 shadow-2xl z-10">
+                        <div className="flex items-center justify-between border-b border-white/[0.05] pb-6">
                             <div>
-                                <h2 className="text-xl font-black">Identify User</h2>
-                                <p className="text-slate-500 text-[10px] font-bold uppercase tracking-widest mt-0.5 italic">Search and select record</p>
+                                <h1 className="text-3xl font-black text-white">Select Identity</h1>
+                                <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mt-1 italic">Fingerprint Verified • Manual Override</p>
                             </div>
-                            <button onClick={reset} className="p-2 hover:bg-white/10 rounded-full transition-colors text-slate-500"><X size={20} /></button>
+                            <button onClick={reset} className="p-3 hover:bg-white/10 rounded-full transition-colors text-slate-500"><X size={24} /></button>
                         </div>
-                        <input type="text" placeholder="Start typing employee name…"
-                            className="w-full bg-white/[0.03] border border-white/[0.07] rounded-2xl p-4 text-base focus:outline-none focus:border-emerald-500/50 placeholder:text-slate-700 transition-colors"
+                        <input type="text" placeholder="Search by name..."
+                            className="w-full bg-white/[0.05] border border-white/[0.1] rounded-2xl p-6 text-xl focus:outline-none focus:border-emerald-500/50 placeholder:text-slate-700 transition-colors"
                             value={searchTerm} onChange={e => setSearchTerm(e.target.value)} autoFocus />
                         <div className="grid grid-cols-2 gap-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
                             {employees.filter(e => e.name.toLowerCase().includes(searchTerm.toLowerCase()))
                                 .map(emp => (
                                     <button key={emp.id} onClick={() => markManualAttendance(emp)} disabled={loading}
-                                        className="flex items-center gap-4 p-4 bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.05] rounded-[1.5rem] transition-all text-left group">
-                                        <div className="w-12 h-12 rounded-2xl bg-slate-800/50 border border-white/[0.05] overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
-                                            <img src={emp.image_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(emp.name)}&background=1e293b&color=94a3b8`}
+                                        className="flex items-center gap-4 p-5 bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.05] rounded-[2rem] transition-all text-left group">
+                                        <div className="w-14 h-14 rounded-2xl bg-slate-800/50 border border-white/[0.05] overflow-hidden shrink-0 group-hover:scale-105 transition-transform">
+                                            <img src={emp.image_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(emp.name)}&background=334155&color=cbd5e1`}
                                                 alt="" className="w-full h-full object-cover" />
                                         </div>
                                         <div className="overflow-hidden">
-                                            <div className="font-bold text-sm truncate text-white/90">{emp.name}</div>
-                                            <div className="text-slate-600 text-[9px] font-black uppercase tracking-widest truncate">{emp.department || 'General'}</div>
+                                            <div className="font-bold text-lg truncate text-white/90">{emp.name}</div>
+                                            <div className="text-slate-600 text-[10px] font-black uppercase tracking-widest truncate">{emp.department || 'General'}</div>
                                         </div>
                                     </button>
                                 ))}
-                        </div>
-                    </motion.div>
-                )}
-
-                {/* ── FACE SCANNING ── */}
-                {view === 'face' && (
-                    <motion.div key="face"
-                        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-                        className="flex flex-col items-center gap-12 text-center z-10">
-                        <div className="relative w-80 h-80">
-                            {/* Corner brackets */}
-                            {[['top-0 left-0', 'border-t-4 border-l-4'], ['top-0 right-0', 'border-t-4 border-r-4'],
-                            ['bottom-0 left-0', 'border-b-4 border-l-4'], ['bottom-0 right-0', 'border-b-4 border-r-4']].map(([pos, br], i) => (
-                                <div key={i} className={`absolute w-12 h-12 ${pos} ${br} border-blue-500 rounded-sm`} />
-                            ))}
-                            <div className="w-full h-full rounded-3xl flex items-center justify-center bg-blue-500/[0.03] border border-blue-500/10 shadow-[inner_0_0_40px_rgba(59,130,246,0.05)]">
-                                <Camera size={96} className="text-blue-500/20" />
-                            </div>
-                            {/* Scanning line */}
-                            <motion.div
-                                animate={{ y: ['0%', '100%', '0%'] }}
-                                transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-                                className="absolute left-4 right-4 h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent top-0 shadow-[0_0_15px_rgba(59,130,246,0.3)]"
-                            />
-                        </div>
-                        <div className="max-w-xs">
-                            <p className="text-2xl font-black text-blue-200 tracking-tight">{message}</p>
-                            <p className="text-slate-600 text-[10px] mt-3 font-bold uppercase tracking-[0.5em] animate-pulse">Stay Positioned</p>
                         </div>
                     </motion.div>
                 )}
@@ -366,10 +464,10 @@ export default function Scanner() {
                             </div>
                         </div>
                         <div className="space-y-4">
-                            <p className="text-[10px] font-black uppercase tracking-[0.6em] text-emerald-400">Identity Verified</p>
-                            <h2 className="text-6xl font-black text-white tracking-tighter">{result?.name}</h2>
+                            <p className="text-[10px] font-black uppercase tracking-[0.6em] text-emerald-400">Access Granted</p>
+                            <h2 className="text-6xl font-black text-white tracking-tighter">Welcome {result?.name}</h2>
                             <div className="flex flex-col items-center gap-2 pt-2">
-                                <p className="text-emerald-500 font-black text-xl uppercase tracking-widest translate-y-1">Check In Success</p>
+                                <p className="text-emerald-500 font-black text-xl uppercase tracking-widest translate-y-1">Verification Success</p>
                                 <p className="text-slate-500 text-3xl font-black tabular-nums">{result?.time}</p>
                             </div>
                         </div>
@@ -393,9 +491,9 @@ export default function Scanner() {
                         </div>
                         <div className="space-y-4">
                             <p className="text-[10px] font-black uppercase tracking-[0.6em] text-indigo-400">Shift Ended</p>
-                            <h2 className="text-6xl font-black text-white tracking-tighter">{result?.name}</h2>
+                            <h2 className="text-6xl font-black text-white tracking-tighter">Goodbye {result?.name}</h2>
                             <div className="flex flex-col items-center gap-2 pt-2">
-                                <p className="text-indigo-400 font-black text-xl uppercase tracking-widest">Check Out Success</p>
+                                <p className="text-indigo-400 font-black text-xl uppercase tracking-widest">Access Granted</p>
                                 <p className="text-slate-400 text-2xl font-black tabular-nums">{result?.checkoutTime}</p>
                                 {result?.workingHours && (
                                     <div className="mt-4 px-8 py-2 rounded-full bg-indigo-500/5 border border-indigo-500/20">
@@ -425,15 +523,10 @@ export default function Scanner() {
                         </div>
                         <div className="space-y-4">
                             <p className="text-[10px] font-black uppercase tracking-[0.6em] text-red-500">Security Warning</p>
-                            <h2 className="text-5xl font-black text-white tracking-tighter">Identity Mismatch</h2>
-                            <p className="text-slate-500 text-sm font-medium italic opacity-70">"{message}"</p>
+                            <h2 className="text-5xl font-black text-white tracking-tighter">Access Denied</h2>
+                            <p className="text-red-400 text-xl font-black uppercase tracking-widest">{message}</p>
+                            <p className="text-slate-500 text-sm font-medium italic opacity-70">Please use fingerprint fallback</p>
                         </div>
-                        <motion.button
-                            whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-                            onClick={reset}
-                            className="px-10 py-4 bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 rounded-2xl font-black text-xs uppercase tracking-[0.2em] transition-all text-red-400">
-                            Attempt Retry
-                        </motion.button>
                         <div className="flex items-center gap-4 opacity-30">
                             <CountdownRing seconds={countdown} color="#ef4444" />
                             <span className="text-[10px] font-black uppercase tracking-widest">Back: {countdown}s</span>

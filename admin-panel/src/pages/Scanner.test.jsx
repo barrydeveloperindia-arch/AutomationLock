@@ -20,66 +20,35 @@ const renderWithRouter = (ui) => {
     return render(ui, { wrapper: BrowserRouter });
 };
 
-describe('Scanner Component', () => {
+describe('Scanner Component (Automated Terminal)', () => {
     beforeEach(() => {
         vi.clearAllMocks();
         axios.get.mockResolvedValue({ data: [] });
+        
+        // Mocking navigator.mediaDevices
+        global.navigator.mediaDevices = {
+            getUserMedia: vi.fn().mockResolvedValue({
+                getTracks: () => [{ stop: vi.fn() }]
+            })
+        };
     });
 
-    it('renders the main screen with Face Scan and Fingerprint options', async () => {
+    it('renders the automated terminal with live camera and status', async () => {
         renderWithRouter(<Scanner />);
         
-        expect(screen.getByText(/Face Scan/i)).toBeDefined();
-        expect(screen.getByText(/Fingerprint/i)).toBeDefined();
-        expect(screen.getByText(/AuraLock Terminal/i)).toBeDefined();
+        expect(await screen.findByText(/AuraLock Terminal/i)).toBeInTheDocument();
+        expect(await screen.findByText(/Looking for face/i)).toBeInTheDocument();
     });
 
-    it('switches to employee picker when Fingerprint is clicked', async () => {
-        const mockEmployees = [
-            { id: 1, employee_id: 'E001', name: 'John Doe', department: 'Engineering' }
-        ];
-        axios.get.mockResolvedValue({ data: mockEmployees });
-
+    it('displays terminal status information', async () => {
         renderWithRouter(<Scanner />);
-        
-        const fingerprintBtn = screen.getByText(/Fingerprint/i);
-        fireEvent.click(fingerprintBtn);
-
-        await waitFor(() => {
-            expect(screen.getByPlaceholderText(/Start typing employee name/i)).toBeDefined();
-            expect(screen.getByText('John Doe')).toBeDefined();
-        });
-    });
-
-    it('handles manual attendance marking correctly', async () => {
-        const mockEmployees = [
-            { id: 1, employee_id: 'E001', name: 'John Doe', department: 'Engineering' }
-        ];
-        axios.get.mockResolvedValue({ data: mockEmployees });
-        axios.post.mockResolvedValue({ data: { success: true } });
-
-        renderWithRouter(<Scanner />);
-        
-        fireEvent.click(screen.getByText(/Fingerprint/i));
-        
-        await waitFor(() => {
-            const employeeBtn = screen.getByText('John Doe');
-            fireEvent.click(employeeBtn);
-        });
-
-        await waitFor(() => {
-            expect(screen.getByText(/Check In Success/i)).toBeDefined();
-            expect(screen.getByText('John Doe')).toBeDefined();
-        });
+        expect(await screen.findByText(/Biometric Terminal Active/i)).toBeInTheDocument();
     });
 
     it('returns to home screen when Back to Home is clicked', async () => {
         renderWithRouter(<Scanner />);
-        
-        const backBtn = screen.getByText(/Back to Home/i);
+        const backBtn = await screen.findByText(/Back to Home/i);
         fireEvent.click(backBtn);
-        
-        // This would normally navigate away, we just check it was clickable
-        expect(backBtn).toBeDefined();
+        expect(backBtn).toBeInTheDocument();
     });
 });
