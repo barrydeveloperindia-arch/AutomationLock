@@ -1,38 +1,476 @@
-import React from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { Camera, Fingerprint, X, CheckCircle2, LogOut, AlertTriangle, Clock } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import axios from 'axios';
+import { NativeBiometric } from 'capacitor-native-biometric';
+import { Camera as CapCamera, CameraResultType, CameraSource } from '@capacitor/camera';
 
-// Simplified identity for terminal identification
-const getTerminalId = () => {
-    let id = localStorage.getItem('terminal_id');
-    if (!id) {
-        id = `TERM-${Math.random().toString(36).substring(2, 9).toUpperCase()}`;
-        localStorage.setItem('terminal_id', id);
-    }
-    return id;
-};
-const TERMINAL_ID = getTerminalId();
+// LAN IP of the backend server — phone and PC must be on the same WiFi network.
+// Change this if your router assigns a new IP to the PC.
+const API_BASE = 'http://192.168.2.165:8000';
+const RESET_DELAY = 5; // seconds
+
+// ── Animated countdown ring ───────────────────────────────────────────────────
+function CountdownRing({ seconds, total = RESET_DELAY, color = '#10b981' }) {
+    const R = 22, C = 2 * Math.PI * R;
+    const pct = seconds / total;
+    return (
+        <svg width={56} height={56} className="rotate-[-90deg]">
+            <circle cx={28} cy={28} r={R} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth={4} />
+            <circle cx={28} cy={28} r={R} fill="none" stroke={color} strokeWidth={4}
+                strokeDasharray={C} strokeDashoffset={C * (1 - pct)}
+                strokeLinecap="round" style={{ transition: 'stroke-dashoffset 1s linear' }} />
+        </svg>
+    );
+}
+
+// ── Live clock ────────────────────────────────────────────────────────────────
+function LiveClock() {
+    const [time, setTime] = useState(new Date());
+    useEffect(() => {
+        const t = setInterval(() => setTime(new Date()), 1000);
+        return () => clearInterval(t);
+    }, []);
+    return (
+        <div className="text-center">
+            <div className="text-7xl font-black tabular-nums tracking-tight text-white">
+                {time.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })}
+            </div>
+            <div className="text-slate-400 text-base font-medium mt-1 uppercase tracking-[0.2em]">
+                {time.toLocaleDateString('en-IN', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' })}
+            </div>
+        </div>
+    );
+}
 
 export default function App() {
+    // view: 'home' | 'face' | 'fingerprint' | 'checkin' | 'checkout' | 'error'
+    const [view, setView] = useState('home');
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState('');
+    const [employees, setEmployees] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [result, setResult] = useState(null);
+    const [countdown, setCountdown] = useState(RESET_DELAY);
+
+    useEffect(() => {
+        const fetchEmployees = async () => {
+            try {
+                const res = await axios.get(`${API_BASE}/api/users`);
+                setEmployees(res.data.filter(u => u.status !== 'Deleted'));
+            } catch (err) { console.error('Failed to fetch employees:', err); }
+        };
+        fetchEmployees();
+    }, []);
+
+    // ── Auto-reset countdown ──────────────────────────────────────────────────
+    useEffect(() => {
+        const resultViews = ['checkin', 'checkout', 'error'];
+        if (!resultViews.includes(view)) return;
+
+        setCountdown(RESET_DELAY);
+        const tick = setInterval(() => setCountdown(c => c - 1), 1000);
+        const done = setTimeout(reset, RESET_DELAY * 1000);
+        return () => { clearInterval(tick); clearTimeout(done); };
+    }, [view]);
+
+    const reset = () => {
+        setView('home');
+        setLoading(false);
+        setMessage('');
+        setResult(null);
+        setSearchTerm('');
+        setCountdown(RESET_DELAY);
+    };
+
+    // ── Face scan ─────────────────────────────────────────────────────────────
+    const handleFaceScan = async () => {
+        setView('face');
+        setLoading(true);
+        setMessage('Initializing biometric camera…');
+        try {
+            const image = await CapCamera.getPhoto({
+                quality: 90,
+                allowEditing: false,
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera,
+            });
+            setMessage('Processing biometric identity…');
+
+            const rawRes = await fetch(`data:image/jpeg;base64,${image.base64String}`);
+            const blob = await rawRes.blob();
+            const form = new FormData();
+            form.append('file', blob, 'face.jpg');
+
+            const res = await axios.post(`${API_BASE}/api/biometrics/face/verify`, form, {
+                headers: { 'Content-Type': 'multipart/form-data' },
+            });
+
+            if (res.data.success) {
+                const isCheckout = !!(res.data.check_out || res.data.checkout);
+                const now = new Date();
+                setResult({
+                    name: res.data.user?.name || res.data.name || res.data.employee_name || 'Employee',
+                    time: res.data.check_in
+                        ? new Date(res.data.check_in).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
+                        : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
+                    checkoutTime: res.data.check_out
+                        ? new Date(res.data.check_out).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
+                        : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
+                    workingHours: res.data.working_hours != null ? formatWorkHours(res.data.working_hours) : null,
+                    isCheckout,
+                });
+                setView(isCheckout ? 'checkout' : 'checkin');
+            } else {
+                throw new Error(res.data.message || 'Face not recognized');
+            }
+        } catch (err) {
+            console.error(err);
+            setMessage(err.response?.data?.message || err.message || 'Recognition failed');
+            setView('error');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // ── Fingerprint ───────────────────────────────────────────────────────────
+    const handleFingerprintScan = async () => {
+        try {
+            const avail = await NativeBiometric.isAvailable();
+            if (!avail.isAvailable) throw new Error('Sensor not available');
+            await NativeBiometric.verify({
+                reason: 'Authenticate for attendance',
+                title: 'Terminal Security',
+                subtitle: 'Place your finger on the sensor',
+                negativeButtonText: 'Cancel',
+            });
+            setView('fingerprint');
+        } catch (err) {
+            console.warn('Biometric fallback:', err.message);
+            setView('fingerprint');
+        }
+    };
+
+    const markManualAttendance = async (employee) => {
+        setLoading(true);
+        try {
+            const res = await axios.post(`${API_BASE}/api/attendance/mark`, {
+                employee_id: employee.id,
+                method: 'fingerprint',
+                device_id: 'office_terminal',
+            });
+            const data = res.data || {};
+            const isCheckout = !!(data.check_out);
+            const now = new Date();
+            setResult({
+                name: employee.name,
+                time: data.check_in
+                    ? new Date(data.check_in).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
+                    : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
+                checkoutTime: data.check_out
+                    ? new Date(data.check_out).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
+                    : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
+                workingHours: data.working_hours != null ? formatWorkHours(data.working_hours) : null,
+                isCheckout,
+            });
+            setView(isCheckout ? 'checkout' : 'checkin');
+        } catch (err) {
+            setMessage(err.response?.data?.error || 'Connection failure');
+            setView('error');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // ── Helper ────────────────────────────────────────────────────────────────
+    const formatWorkHours = (wh) => {
+        const h = Math.floor(wh);
+        const m = Math.round((wh - h) * 60);
+        return `${h}h ${String(m).padStart(2, '0')}m`;
+    };
+
+    // ─────────────────────────────────────────────────────────────────────────
     return (
-        <div style={{ 
-            height: '100vh', 
-            display: 'flex', 
-            flexDirection: 'column', 
-            alignItems: 'center', 
-            justifyContent: 'center', 
-            backgroundColor: '#0a0f1e', 
-            color: 'white',
-            fontFamily: 'sans-serif'
-        }}>
-            <h1 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Smart Lock Terminal</h1>
-            <p style={{ fontSize: '1.2rem', color: '#10b981' }}>Test Build Running Successfully</p>
-            <div style={{ marginTop: '2rem', padding: '1rem', border: '1px solid #1e293b', borderRadius: '8px' }}>
-                <p>Terminal ID: {TERMINAL_ID}</p>
-                <p>Device Scheme: https</p>
-                <p>Status: UI Loaded</p>
+        <div className="w-screen h-screen kiosk-gradient flex flex-col items-center justify-center p-8 text-white relative overflow-hidden">
+
+            {/* Top bar */}
+            <div className="absolute top-0 left-0 right-0 px-8 py-5 flex items-center justify-between border-b border-white/[0.04]">
+                <div>
+                    <div className="text-xs font-black uppercase tracking-[0.3em] text-blue-400">AuraLock</div>
+                    <div className="text-[10px] text-slate-600 font-medium uppercase tracking-widest">Smart Biometric Terminal</div>
+                </div>
+                <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-[10px] font-black text-emerald-500 uppercase tracking-widest">System Online</span>
+                </div>
+                <div className="text-slate-600 text-[10px] font-medium uppercase tracking-widest">Terminal ID: TX-082</div>
             </div>
-            <p style={{ marginTop: '2rem', fontSize: '0.8rem', color: '#64748b' }}>
-                Note: BLE and Supabase are temporarily disabled for this test.
-            </p>
+
+            <AnimatePresence mode="wait">
+
+                {/* ── HOME ── */}
+                {view === 'home' && (
+                    <motion.div key="home"
+                        initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.04 }}
+                        className="flex flex-col items-center gap-14 w-full max-w-3xl">
+
+                        <LiveClock />
+
+                        <div className="w-full">
+                            <p className="text-center text-slate-500 text-xs font-black uppercase tracking-[0.3em] mb-6">
+                                Select Verification Method
+                            </p>
+                            <div className="grid grid-cols-2 gap-6">
+                                {/* Face Scan */}
+                                <motion.button
+                                    whileHover={{ scale: 1.02, y: -2 }} whileTap={{ scale: 0.98 }}
+                                    onClick={handleFaceScan}
+                                    className="glass p-10 rounded-3xl flex flex-col items-center gap-5 group relative overflow-hidden">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    <div className="p-5 rounded-2xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors border border-blue-500/20">
+                                        <Camera size={56} className="text-blue-400" />
+                                    </div>
+                                    <div className="text-center">
+                                        <h2 className="text-xl font-black tracking-tight">Face Scan</h2>
+                                        <p className="text-slate-500 mt-1 text-xs font-medium">Automated recognition</p>
+                                    </div>
+                                </motion.button>
+
+                                {/* Fingerprint */}
+                                <motion.button
+                                    whileHover={{ scale: 1.02, y: -2 }} whileTap={{ scale: 0.98 }}
+                                    onClick={handleFingerprintScan}
+                                    className="glass p-10 rounded-3xl flex flex-col items-center gap-5 group relative overflow-hidden">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    <div className="p-5 rounded-2xl bg-emerald-500/10 group-hover:bg-emerald-500/20 transition-colors border border-emerald-500/20">
+                                        <Fingerprint size={56} className="text-emerald-400" />
+                                    </div>
+                                    <div className="text-center">
+                                        <h2 className="text-xl font-black tracking-tight">Fingerprint</h2>
+                                        <p className="text-slate-500 mt-1 text-xs font-medium">Native biometric verify</p>
+                                    </div>
+                                </motion.button>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+
+                {/* ── FINGERPRINT EMPLOYEE PICKER ── */}
+                {view === 'fingerprint' && (
+                    <motion.div key="fingerprint"
+                        initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
+                        className="glass p-8 rounded-3xl w-full max-w-2xl flex flex-col gap-5">
+                        <div className="flex items-center justify-between border-b border-white/[0.06] pb-4">
+                            <h2 className="text-lg font-black">Select Employee</h2>
+                            <button onClick={reset} className="p-2 hover:bg-white/10 rounded-full transition-colors"><X size={20} /></button>
+                        </div>
+                        <input type="text" placeholder="Search by name…"
+                            className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl p-4 text-base focus:outline-none focus:border-emerald-500/50 placeholder:text-slate-600 transition-colors"
+                            value={searchTerm} onChange={e => setSearchTerm(e.target.value)} autoFocus />
+                        <div className="grid grid-cols-2 gap-3 max-h-[380px] overflow-y-auto pr-1 custom-scrollbar">
+                            {employees.filter(e => e.name.toLowerCase().includes(searchTerm.toLowerCase()))
+                                .map(emp => (
+                                    <button key={emp.id} onClick={() => markManualAttendance(emp)} disabled={loading}
+                                        className="flex items-center gap-3 p-4 glass hover:glass-active rounded-2xl transition-all text-left">
+                                        <div className="w-10 h-10 rounded-full bg-slate-800 overflow-hidden shrink-0">
+                                            <img src={emp.image_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(emp.name)}&background=1e293b&color=94a3b8`}
+                                                alt="" className="w-full h-full object-cover" />
+                                        </div>
+                                        <div>
+                                            <div className="font-bold text-sm truncate">{emp.name}</div>
+                                            <div className="text-slate-500 text-[10px]">{emp.department || 'General'}</div>
+                                        </div>
+                                    </button>
+                                ))}
+                        </div>
+                    </motion.div>
+                )}
+
+                {/* ── FACE SCANNING ── */}
+                {view === 'face' && (
+                    <motion.div key="face"
+                        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+                        className="flex flex-col items-center gap-10">
+                        <div className="relative w-64 h-64">
+                            {/* Corner brackets */}
+                            {[['top-0 left-0', 'border-t-2 border-l-2'], ['top-0 right-0', 'border-t-2 border-r-2'],
+                            ['bottom-0 left-0', 'border-b-2 border-l-2'], ['bottom-0 right-0', 'border-b-2 border-r-2']].map(([pos, br], i) => (
+                                <div key={i} className={`absolute w-8 h-8 ${pos} ${br} border-blue-400 rounded-sm`} />
+                            ))}
+                            <div className="w-full h-full rounded-2xl flex items-center justify-center bg-blue-500/5 border border-blue-500/10">
+                                <Camera size={80} className="text-blue-400/30" />
+                            </div>
+                            {/* Scanning line */}
+                            <motion.div
+                                animate={{ y: ['0%', '100%', '0%'] }}
+                                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                                className="absolute left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent top-0"
+                            />
+                        </div>
+                        <div className="text-center">
+                            <p className="text-xl font-bold text-blue-300">{message}</p>
+                            <p className="text-slate-600 text-xs mt-2 font-medium uppercase tracking-widest">Do not move</p>
+                        </div>
+                    </motion.div>
+                )}
+
+                {/* ── CHECK-IN SUCCESS (WELCOME) ── */}
+                {view === 'checkin' && (
+                    <motion.div key="checkin"
+                        initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
+                        transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+                        className="flex flex-col items-center gap-8 text-center">
+
+                        {/* Pulsing ring + icon */}
+                        <div className="relative">
+                            <motion.div
+                                animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0, 0.3] }}
+                                transition={{ duration: 2, repeat: Infinity }}
+                                className="absolute inset-0 rounded-full bg-emerald-500/30"
+                            />
+                            <div className="w-36 h-36 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center relative">
+                                <CheckCircle2 size={72} className="text-emerald-400" />
+                            </div>
+                        </div>
+
+                        {/* Text */}
+                        <div>
+                            <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
+                                className="text-[11px] font-black uppercase tracking-[0.4em] text-emerald-400 mb-3">
+                                ✦ WELCOME ✦
+                            </motion.p>
+                            <motion.h2 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
+                                className="text-5xl font-black text-white tracking-tight mb-2">
+                                {result?.name}
+                            </motion.h2>
+                            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
+                                className="text-emerald-400 font-black text-lg uppercase tracking-widest mb-1">
+                                Check In Successful
+                            </motion.p>
+                            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.45 }}
+                                className="text-slate-400 text-2xl font-bold tabular-nums flex items-center justify-center gap-2">
+                                <Clock size={18} className="text-slate-500" />
+                                {result?.time}
+                            </motion.p>
+                        </div>
+
+                        {/* Countdown */}
+                        <div className="flex items-center gap-3 opacity-60">
+                            <CountdownRing seconds={countdown} color="#10b981" />
+                            <span className="text-xs text-slate-500 font-bold">Resetting in {countdown}s</span>
+                        </div>
+                    </motion.div>
+                )}
+
+                {/* ── CHECK-OUT SUCCESS (GOODBYE) ── */}
+                {view === 'checkout' && (
+                    <motion.div key="checkout"
+                        initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
+                        transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+                        className="flex flex-col items-center gap-8 text-center">
+
+                        <div className="relative">
+                            <motion.div
+                                animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0, 0.3] }}
+                                transition={{ duration: 2, repeat: Infinity }}
+                                className="absolute inset-0 rounded-full bg-indigo-500/30"
+                            />
+                            <div className="w-36 h-36 rounded-full bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center relative">
+                                <LogOut size={72} className="text-indigo-400" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
+                                className="text-[11px] font-black uppercase tracking-[0.4em] text-indigo-400 mb-3">
+                                ✦ GOODBYE ✦
+                            </motion.p>
+                            <motion.h2 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
+                                className="text-5xl font-black text-white tracking-tight mb-2">
+                                {result?.name}
+                            </motion.h2>
+                            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
+                                className="text-indigo-400 font-black text-lg uppercase tracking-widest mb-1">
+                                Check Out Successful
+                            </motion.p>
+                            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.45 }}
+                                className="flex flex-col items-center gap-1 mt-2">
+                                <p className="text-slate-400 text-xl font-bold tabular-nums flex items-center gap-2">
+                                    <Clock size={18} className="text-slate-500" />
+                                    {result?.checkoutTime}
+                                </p>
+                                {result?.workingHours && (
+                                    <div className="mt-2 px-6 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20">
+                                        <span className="text-indigo-300 font-black text-base tracking-widest">
+                                            {result.workingHours} worked today
+                                        </span>
+                                    </div>
+                                )}
+                            </motion.div>
+                        </div>
+
+                        <div className="flex items-center gap-3 opacity-60">
+                            <CountdownRing seconds={countdown} color="#818cf8" />
+                            <span className="text-xs text-slate-500 font-bold">Resetting in {countdown}s</span>
+                        </div>
+                    </motion.div>
+                )}
+
+                {/* ── ERROR / NOT RECOGNIZED ── */}
+                {view === 'error' && (
+                    <motion.div key="error"
+                        initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
+                        transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+                        className="flex flex-col items-center gap-8 text-center">
+
+                        <div className="relative">
+                            <motion.div
+                                animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0, 0.3] }}
+                                transition={{ duration: 1.5, repeat: Infinity }}
+                                className="absolute inset-0 rounded-full bg-red-500/30"
+                            />
+                            <motion.div
+                                animate={{ rotate: [-4, 4, -4, 4, 0] }}
+                                transition={{ delay: 0.1, duration: 0.5 }}
+                                className="w-36 h-36 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center relative">
+                                <AlertTriangle size={72} className="text-red-400" />
+                            </motion.div>
+                        </div>
+
+                        <div>
+                            <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
+                                className="text-[11px] font-black uppercase tracking-[0.4em] text-red-400 mb-3">
+                                ✦ ACCESS DENIED ✦
+                            </motion.p>
+                            <motion.h2 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
+                                className="text-5xl font-black text-white tracking-tight mb-2">
+                                Face Not Recognized
+                            </motion.h2>
+                            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
+                                className="text-red-400/80 text-lg font-bold uppercase tracking-widest mb-1">
+                                Please Try Again
+                            </motion.p>
+                            {message && message !== 'Face not recognized' && (
+                                <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.45 }}
+                                    className="text-slate-600 text-sm mt-1">{message}</motion.p>
+                            )}
+                        </div>
+
+                        <motion.button
+                            whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
+                            onClick={reset}
+                            className="px-8 py-3 bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.08] rounded-2xl font-black text-sm uppercase tracking-widest transition-all">
+                            Try Again
+                        </motion.button>
+
+                        <div className="flex items-center gap-3 opacity-60">
+                            <CountdownRing seconds={countdown} color="#f87171" />
+                            <span className="text-xs text-slate-500 font-bold">Auto-reset in {countdown}s</span>
+                        </div>
+                    </motion.div>
+                )}
+
+            </AnimatePresence>
         </div>
     );
 }
