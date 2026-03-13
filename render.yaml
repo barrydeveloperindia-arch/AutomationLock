@@ -1,0 +1,46 @@
+services:
+  # Node.js Backend Service
+  - type: web
+    name: smart-door-backend
+    env: docker
+    dockerFilePath: ./backend/Dockerfile
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: JWT_SECRET
+        sync: false
+      - key: ADMIN_EMAIL
+        value: 5089shivkumar@gmail.com
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SUPABASE_URL
+        value: https://wdtizlzfsijikcejerwq.supabase.co
+      - key: SUPABASE_KEY
+        sync: false
+      - key: PYTHON_ENGINE_URL
+        fromService:
+          name: smart-door-edge
+          type: web
+          property: host
+
+  # Python Biometric Engine Service
+  - type: web
+    name: smart-door-edge
+    env: docker
+    dockerFilePath: ./edge/Dockerfile
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8001
+      - key: BACKEND_URL
+        fromService:
+          name: smart-door-backend
+          type: web
+          property: host
+      - key: SUPABASE_URL
+        value: https://wdtizlzfsijikcejerwq.supabase.co
+      - key: SUPABASE_KEY
+        sync: false
