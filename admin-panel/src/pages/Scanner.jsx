@@ -20,7 +20,8 @@ try {
 
 // LAN IP of the backend server — phone and PC must be on the same WiFi network.
 // In the integrated app, we prefer using the same proxy or a shared config.
-const API_BASE = window.location.origin === 'http://localhost:5181' ? '' : 'http://192.168.2.165:8000';
+// Use environment variable if provided (e.g., on Vercel), otherwise retain original logic
+const API_BASE = import.meta.env.VITE_API_BASE_URL || (window.location.origin === 'http://localhost:5181' ? '' : 'http://192.168.2.165:8000');
 const RESET_DELAY = 3; // seconds
 
 // ── Animated countdown ring ───────────────────────────────────────────────────
