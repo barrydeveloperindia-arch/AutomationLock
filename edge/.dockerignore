@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.git
+.idea
+.venv
+venv/
+face_cache.json
+match_debug.log
+debug_verify.jpg
+Dockerfile*
+docker-compose*
