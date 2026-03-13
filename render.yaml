@@ -23,7 +23,7 @@ services:
         fromService:
           name: smart-door-edge
           type: web
-          property: host
+          property: url
 
   # Python Biometric Engine Service
   - type: web
@@ -39,7 +39,7 @@ services:
         fromService:
           name: smart-door-backend
           type: web
-          property: host
+          property: url
       - key: SUPABASE_URL
         value: https://wdtizlzfsijikcejerwq.supabase.co
       - key: SUPABASE_KEY
