@@ -122,6 +122,9 @@ def queue_pending_log(log_data):
 async def mark_attendance_async(employee_id: str):
     """Notify the attendance service about a successful scan."""
     backend_url = os.getenv("BACKEND_URL", "http://localhost:8000")
+    if not backend_url.startswith("http://") and not backend_url.startswith("https://"):
+        backend_url = f"http://{backend_url}"
+    
     try:
         async with httpx.AsyncClient() as client:
             print(f"[Attendance] Sending mark request for {employee_id} to {backend_url}...")

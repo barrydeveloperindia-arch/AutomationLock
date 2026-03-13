@@ -11,7 +11,12 @@ const BLE_MAC = process.env.ESP32_BLE_MAC;
 async function runBleCommand(endpoint) {
     try {
         const url = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
-        const response = await axios.post(`${PYTHON_ENGINE_URL}${url}`, {}, { timeout: 15000 });
+        // Normalize base URL: ensure protocol is present for cloud/internal hostnames
+        let baseUrl = PYTHON_ENGINE_URL;
+        if (!baseUrl.startsWith('http://') && !baseUrl.startsWith('https://')) {
+            baseUrl = `http://${baseUrl}`; // Internal Render networking uses http
+        }
+        const response = await axios.post(`${baseUrl}${url}`, {}, { timeout: 15000 });
         return response.data;
     } catch (error) {
         console.error(`❌ Door Engine Error (${endpoint}):`, error.message);
@@ -59,7 +64,11 @@ async function lockDoor() {
  */
 async function checkStatus() {
     try {
-        const response = await axios.get(`${PYTHON_ENGINE_URL}/api/door/status`, { timeout: 5000 });
+        let baseUrl = PYTHON_ENGINE_URL;
+        if (!baseUrl.startsWith('http://') && !baseUrl.startsWith('https://')) {
+            baseUrl = `http://${baseUrl}`;
+        }
+        const response = await axios.get(`${baseUrl}/api/door/status`, { timeout: 5000 });
         return {
             ...response.data,
             // Ensure consistency between layers
