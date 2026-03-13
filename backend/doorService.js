@@ -2,7 +2,7 @@ const axios = require('axios');
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 
-const PYTHON_ENGINE_URL = 'http://localhost:8001';
+const PYTHON_ENGINE_URL = process.env.PYTHON_ENGINE_URL || 'http://localhost:8001';
 const BLE_MAC = process.env.ESP32_BLE_MAC;
 
 /**
