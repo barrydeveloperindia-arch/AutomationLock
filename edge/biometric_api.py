@@ -355,7 +355,7 @@ async def scan_compatibility_endpoint():
 
 @app.get("/health")
 async def health_check():
-    return {"status": "online", "engine": "face-recognition", "model": "HOG/CNN", "timestamp": datetime.utcnow()}
+    return {"status": "ready", "engine": "face-recognition", "model": "HOG/CNN", "timestamp": datetime.utcnow()}
 
 @app.post("/api/biometrics/face/register")
 async def register_face(
