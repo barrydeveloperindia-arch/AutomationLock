@@ -24,7 +24,11 @@ const EDGE_SERVICE_NAME = RENDER_HOST.replace('backend', 'edge');
 let PYTHON_ENGINE_URL = process.env.PYTHON_ENGINE_URL;
 if (!PYTHON_ENGINE_URL) {
     if (process.env.RENDER) {
-        PYTHON_ENGINE_URL = `http://${EDGE_SERVICE_NAME}:8001`;
+        // Render Internal Networking: use the service name directly
+        // Usually, if the backend service name is 'smart-door-backend', 
+        // the edge service name is 'smart-door-edge'
+        PYTHON_ENGINE_URL = 'http://smart-door-edge:8001';
+        console.log('🌐 [Discovery] Running on Render. Target: http://smart-door-edge:8001');
     } else {
         PYTHON_ENGINE_URL = 'http://localhost:8001';
     }
@@ -2147,13 +2151,22 @@ app.post('/api/biometrics/face/register', upload.single('file'), validateIdentit
 
         // --- Hybrid Registration Flow (Hardened) ---
         try {
+            if (req.file) {
+                const FormData = require('form-data');
+                const form = new FormData();
+                form.append('file', req.file.buffer, {
+                    filename: 'register.jpg',
+                    contentType: 'image/jpeg'
+                });
+                form.append('employeeId', employeeId);
+                form.append('email', email || `${employeeId}@internal.com`);
                 if (name) form.append('name', name);
-                if (req.body.re_enroll) form.append('re_enroll', req.body.re_enroll); // forward re-enroll flag
+                if (req.body.re_enroll) form.append('re_enroll', req.body.re_enroll);
 
                 console.log("📡 Forwarding to Biometric Engine (Port 8001)...");
                 const response = await axios.post(`${PYTHON_ENGINE_URL}/api/biometrics/face/register`, form, {
                     headers: form.getHeaders(),
-                    timeout: 30000
+                    timeout: 45000 // Increased timeout for cloud
                 });
 
                 if (response.data.success) {

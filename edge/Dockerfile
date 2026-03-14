@@ -24,6 +24,9 @@ RUN MAKEFLAGS="-j1" pip install --no-cache-dir dlib==19.24.1 && \
     pip install --no-cache-dir opencv-python-headless && \
     pip install --no-cache-dir -r requirements.txt
 
+# Pre-download face-recognition models to prevent runtime timeouts
+RUN python3 -c "import face_recognition; face_recognition.face_encodings(face_recognition.load_image_file('/app/requirements.txt'))" || true
+
 # Copy application code
 COPY edge/ .
 

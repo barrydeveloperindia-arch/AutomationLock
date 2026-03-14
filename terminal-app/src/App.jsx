@@ -102,21 +102,68 @@ export default function App() {
         }
     };
 
+    const [biometricStatus, setBiometricStatus] = useState('checking'); // 'online', 'offline', 'checking'
+
     useEffect(() => {
         let statusInterval;
         const checkBle = async () => {
             try {
-                await BleClient.initialize();
+                // If we are not currently connecting/unlocking, just check if device is in range
+                const result = await BleClient.isEnabled();
+                if (!result) {
+                    setBleStatus('disabled');
+                    return;
+                }
+                
+                // Use scanning to determine "Ready" state instead of just "Connected"
+                // Most BLE locks don't stay connected 24/7
+                setBleStatus('searching');
                 const devices = await BleClient.getConnectedDevices([DOOR_SERVICE_UUID]);
                 const isConnected = devices.some(d => d.deviceId === BLE_MAC);
-                setBleStatus(isConnected ? 'connected' : 'disconnected');
+                
+                if (isConnected) {
+                    setBleStatus('connected');
+                } else {
+                    // Start a very short scan to see if it's nearby
+                    await BleClient.requestLEScan(
+                        { services: [DOOR_SERVICE_UUID] },
+                        (result) => {
+                            if (result.device.deviceId === BLE_MAC) {
+                                setBleStatus('ready');
+                                BleClient.stopLEScan();
+                            }
+                        }
+                    );
+                    // Stop scan after 3s if not found
+                    setTimeout(() => BleClient.stopLEScan(), 3000);
+                }
             } catch (e) {
                 console.warn('BLE Status Check error:', e);
+                setBleStatus('disconnected');
+            }
+        };
+
+        const checkBiometricHealth = async () => {
+            try {
+                const res = await axios.get(`${API_BASE}/api/biometrics/health`, { timeout: 3000 });
+                if (res.data.status === 'online' || res.data.status === 'connected') {
+                    setBiometricStatus('online');
+                } else {
+                    setBiometricStatus('offline');
+                }
+            } catch (e) {
+                setBiometricStatus('offline');
             }
         };
 
         checkBle();
-        statusInterval = setInterval(checkBle, 10000); // Check status every 10s
+        checkBiometricHealth();
+        
+        statusInterval = setInterval(() => {
+            checkBle();
+            checkBiometricHealth();
+        }, 15000); // Check every 15s to save battery/bandwidth
+        
         return () => clearInterval(statusInterval);
     }, []);
 
@@ -431,15 +478,31 @@ export default function App() {
 
                     <LiveClock />
 
-                    {/* ── BLE STATUS INDICATOR ── */}
-                    <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.03] border border-white/[0.08] rounded-full mt-4">
-                        {bleStatus === 'connected' ? (
-                            <><BluetoothConnected size={16} className="text-emerald-400" /><span className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest">Door Link Active</span></>
-                        ) : bleStatus === 'connecting' ? (
-                            <><Bluetooth size={16} className="text-blue-400 animate-pulse" /><span className="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Linking Door...</span></>
-                        ) : (
-                            <><BluetoothOff size={16} className="text-slate-500" /><span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Door Offline (BLE)</span></>
-                        )}
+                    {/* ── STATUS INDICATORS ── */}
+                    <div className="flex flex-wrap items-center justify-center gap-3 mt-4">
+                        {/* BLE Indicator */}
+                        <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.03] border border-white/[0.08] rounded-full">
+                            {bleStatus === 'connected' ? (
+                                <><BluetoothConnected size={14} className="text-emerald-400" /><span className="text-[9px] font-black text-emerald-400 uppercase tracking-widest">Door Linked</span></>
+                            ) : bleStatus === 'ready' ? (
+                                <><Bluetooth size={14} className="text-blue-400 animate-pulse" /><span className="text-[9px] font-black text-blue-400 uppercase tracking-widest">Door Ready</span></>
+                            ) : bleStatus === 'searching' ? (
+                                <><Search size={14} className="text-blue-400/50 animate-spin" /><span className="text-[9px] font-black text-blue-400/50 uppercase tracking-widest">Searching Lock...</span></>
+                            ) : (
+                                <><BluetoothOff size={14} className="text-slate-500" /><span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Door Offline</span></>
+                            )}
+                        </div>
+
+                        {/* Biometric Health Indicator */}
+                        <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.03] border border-white/[0.08] rounded-full">
+                            {biometricStatus === 'online' ? (
+                                <><Cpu size={14} className="text-blue-400" /><span className="text-[9px] font-black text-blue-400 uppercase tracking-widest">AI Engine Online</span></>
+                            ) : biometricStatus === 'checking' ? (
+                                <><RefreshCw size={14} className="text-slate-500 animate-spin" /><span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Loading AI...</span></>
+                            ) : (
+                                <><AlertCircle size={14} className="text-red-400" /><span className="text-[9px] font-black text-red-400 uppercase tracking-widest">AI Engine Offline</span></>
+                            )}
+                        </div>
                     </div>
 
                         <div className="w-full">
@@ -538,7 +601,14 @@ export default function App() {
                             />
                         </div>
                         <div className="text-center">
-                            <p className="text-xl font-bold text-blue-300">{message}</p>
+                            {biometricStatus !== 'online' ? (
+                                <p className="text-xl font-bold text-red-400 animate-pulse">
+                                    <AlertCircle size={20} className="inline mr-2" />
+                                    AI Engine Offline
+                                </p>
+                            ) : (
+                                <p className="text-xl font-bold text-blue-300">{message || 'Analyzing...'}</p>
+                            )}
                             <p className="text-slate-600 text-xs mt-2 font-medium uppercase tracking-widest">Do not move</p>
                         </div>
                         <button onClick={reset} className="px-6 py-2 bg-slate-800 rounded-xl font-bold text-white uppercase text-[10px] tracking-widest hover:bg-slate-700 transition-colors">Cancel</button>
