@@ -51,7 +51,7 @@ async def startup_event():
     
     # 2. Start background synchronization tasks
     asyncio.create_task(sync_task())
-    asyncio.create_task(ble_status_updater())
+    # asyncio.create_task(ble_status_updater()) # Disabled in cloud - handled by Mobile App
     print("[STARTUP] System ready.")
 
 CACHE_FILE = "face_cache.json"
