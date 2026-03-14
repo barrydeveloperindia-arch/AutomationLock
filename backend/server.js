@@ -2207,7 +2207,7 @@ app.post('/api/biometrics/face/register', upload.single('file'), validateIdentit
 app.get('/api/biometrics/health', async (req, res) => {
     try {
         const response = await axios.get(`${PYTHON_ENGINE_URL}/health`, { timeout: 2000 });
-        res.json({ status: "online", engine: response.data });
+        res.json({ status: 'ready', engine: 'face-recognition' });
     } catch (err) {
         res.status(503).json({ status: "offline", message: "Biometric Engine unreachable" });
     }
