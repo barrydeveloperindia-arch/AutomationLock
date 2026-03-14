@@ -17,7 +17,12 @@ const doorService = require('./doorService');
 
 const app = express();
 const PORT = process.env.PORT || 8000;
-const PYTHON_ENGINE_URL = process.env.PYTHON_ENGINE_URL || 'http://localhost:8001';
+let PYTHON_ENGINE_URL = process.env.PYTHON_ENGINE_URL || 'http://localhost:8001';
+
+// Normalize protocol for internal service networking
+if (PYTHON_ENGINE_URL && !PYTHON_ENGINE_URL.startsWith('http')) {
+    PYTHON_ENGINE_URL = `http://${PYTHON_ENGINE_URL}`;
+}
 
 console.log('🚀 [Config] ADMIN_EMAIL:', process.env.ADMIN_EMAIL);
 console.log('🚀 [Config] ADMIN_PASSWORD:', process.env.ADMIN_PASSWORD ? 'SET' : 'MISSING');
