@@ -7,7 +7,13 @@ import socket
 import time
 import os
 import numpy as np
-from bleak import BleakClient, BleakScanner
+try:
+    from bleak import BleakClient, BleakScanner
+    HAS_BLE = True
+except ImportError:
+    HAS_BLE = False
+    print("[WARNING] Bleak not found. BLE features will be disabled.")
+
 from fastapi import FastAPI, File, UploadFile, HTTPException, Form
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
@@ -251,6 +257,9 @@ _last_ble_status = {
 
 async def ble_status_updater():
     """Background task to keep device status alive with a grace period."""
+    if not HAS_BLE:
+        print("[BLE] Bluetooth hardware not available in this environment. Status updater disabled.")
+        return
     global _last_ble_status
     while True:
         try:
@@ -275,6 +284,8 @@ async def ble_status_updater():
 
 async def run_ble_op(command: str):
     """Internal helper to send a command to the ESP32."""
+    if not HAS_BLE:
+        return {"success": False, "message": "Bluetooth features are disabled in this environment."}
     async with ble_lock:
         try:
             async with BleakClient(BLE_MAC, timeout=10.0) as client:
@@ -326,6 +337,8 @@ async def door_status_endpoint():
 
 @app.get("/api/door/scan")
 async def door_scan_endpoint():
+    if not HAS_BLE:
+        return {"success": False, "message": "Bluetooth scanning disabled."}
     async with ble_lock: # Prevent conflict with other BLE operations
         devices = await BleakScanner.discover(timeout=5.0)
         return [{
