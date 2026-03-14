@@ -17,7 +17,15 @@ const doorService = require('./doorService');
 
 const app = express();
 const PORT = process.env.PORT || 8000;
-let PYTHON_ENGINE_URL = process.env.PYTHON_ENGINE_URL || 'http://localhost:8001';
+let PYTHON_ENGINE_URL = process.env.PYTHON_ENGINE_URL;
+
+// --- Render Internal Auto-Discovery ---
+if (!PYTHON_ENGINE_URL && process.env.RENDER) {
+    PYTHON_ENGINE_URL = 'http://smart-door-edge:8001';
+    console.log('🌐 [Discovery] Running on Render. Defaulting to internal engine: smart-door-edge:8001');
+} else if (!PYTHON_ENGINE_URL) {
+    PYTHON_ENGINE_URL = 'http://localhost:8001';
+}
 
 // Normalize protocol and port for internal service networking
 if (PYTHON_ENGINE_URL) {
