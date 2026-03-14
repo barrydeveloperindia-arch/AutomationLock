@@ -76,6 +76,7 @@ app.get('/', (req, res) => {
     res.json({
         status: 'Online',
         service: 'Smart Door Lock API',
+        engine_url: PYTHON_ENGINE_URL,
         endpoints: ['/api/stats', '/api/logs', '/api/users', '/auth/login']
     });
 });
