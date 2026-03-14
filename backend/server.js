@@ -17,28 +17,30 @@ const doorService = require('./doorService');
 
 const app = express();
 const PORT = process.env.PORT || 8000;
+// --- Configuration & Initialization ---
+const RENDER_HOST = process.env.RENDER_SERVICE_NAME || 'smart-door-backend';
+const EDGE_SERVICE_NAME = RENDER_HOST.replace('backend', 'edge');
+
 let PYTHON_ENGINE_URL = process.env.PYTHON_ENGINE_URL;
-
-// --- Render Internal Auto-Discovery ---
-if (!PYTHON_ENGINE_URL && process.env.RENDER) {
-    PYTHON_ENGINE_URL = 'http://smart-door-edge:8001';
-    console.log('🌐 [Discovery] Running on Render. Defaulting to internal engine: smart-door-edge:8001');
-} else if (!PYTHON_ENGINE_URL) {
-    PYTHON_ENGINE_URL = 'http://localhost:8001';
-}
-
-// Normalize protocol and port for internal service networking
-if (PYTHON_ENGINE_URL) {
-    if (!PYTHON_ENGINE_URL.startsWith('http')) {
-        PYTHON_ENGINE_URL = `http://${PYTHON_ENGINE_URL}`;
-    }
-    // If it's a Render internal host (no colon/port), append the default biometric port 8001
-    const urlParts = PYTHON_ENGINE_URL.split(':');
-    if (urlParts.length === 2 && !PYTHON_ENGINE_URL.includes('localhost')) { 
-        // e.g., http://smart-door-edge -> has only one colon after http
-        PYTHON_ENGINE_URL = `${PYTHON_ENGINE_URL}:8001`;
+if (!PYTHON_ENGINE_URL) {
+    if (process.env.RENDER) {
+        PYTHON_ENGINE_URL = `http://${EDGE_SERVICE_NAME}:8001`;
+    } else {
+        PYTHON_ENGINE_URL = 'http://localhost:8001';
     }
 }
+
+// Ensure protocol and port for internal service networking
+if (!PYTHON_ENGINE_URL.startsWith('http')) {
+    PYTHON_ENGINE_URL = `http://${PYTHON_ENGINE_URL}`;
+}
+
+// Add port 8001 if missing for Render internal hostname (no dots, no colon)
+const urlObj = new URL(PYTHON_ENGINE_URL);
+if (!urlObj.port && !urlObj.hostname.includes('.') && urlObj.hostname !== 'localhost') {
+    PYTHON_ENGINE_URL = `${PYTHON_ENGINE_URL}:8001`;
+}
+
 console.log('🧬 [Biometrics] Target Engine:', PYTHON_ENGINE_URL);
 
 console.log('🚀 [Config] ADMIN_EMAIL:', process.env.ADMIN_EMAIL);
@@ -2145,16 +2147,6 @@ app.post('/api/biometrics/face/register', upload.single('file'), validateIdentit
 
         // --- Hybrid Registration Flow (Hardened) ---
         try {
-            if (req.file) {
-                const FormData = require('form-data');
-
-                const form = new FormData();
-                form.append('file', req.file.buffer, {
-                    filename: 'register.jpg',
-                    contentType: 'image/jpeg'
-                });
-                form.append('employeeId', employeeId);
-                form.append('email', email || `${employeeId}@internal.com`);
                 if (name) form.append('name', name);
                 if (req.body.re_enroll) form.append('re_enroll', req.body.re_enroll); // forward re-enroll flag
 
