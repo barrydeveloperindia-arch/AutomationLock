@@ -19,10 +19,19 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 let PYTHON_ENGINE_URL = process.env.PYTHON_ENGINE_URL || 'http://localhost:8001';
 
-// Normalize protocol for internal service networking
-if (PYTHON_ENGINE_URL && !PYTHON_ENGINE_URL.startsWith('http')) {
-    PYTHON_ENGINE_URL = `http://${PYTHON_ENGINE_URL}`;
+// Normalize protocol and port for internal service networking
+if (PYTHON_ENGINE_URL) {
+    if (!PYTHON_ENGINE_URL.startsWith('http')) {
+        PYTHON_ENGINE_URL = `http://${PYTHON_ENGINE_URL}`;
+    }
+    // If it's a Render internal host (no colon/port), append the default biometric port 8001
+    const urlParts = PYTHON_ENGINE_URL.split(':');
+    if (urlParts.length === 2 && !PYTHON_ENGINE_URL.includes('localhost')) { 
+        // e.g., http://smart-door-edge -> has only one colon after http
+        PYTHON_ENGINE_URL = `${PYTHON_ENGINE_URL}:8001`;
+    }
 }
+console.log('🧬 [Biometrics] Target Engine:', PYTHON_ENGINE_URL);
 
 console.log('🚀 [Config] ADMIN_EMAIL:', process.env.ADMIN_EMAIL);
 console.log('🚀 [Config] ADMIN_PASSWORD:', process.env.ADMIN_PASSWORD ? 'SET' : 'MISSING');
@@ -2216,7 +2225,7 @@ app.post('/api/biometrics/face/verify', biometricLimiter, upload.single('file'),
             let engineReady = false;
             for (let attempt = 0; attempt < 12; attempt++) {
                 try {
-                    await axios.get('http://localhost:8001/health', { timeout: 5000 });
+                    await axios.get(`${PYTHON_ENGINE_URL}/health`, { timeout: 5000 });
                     engineReady = true;
                     break;
                 } catch (_) {
@@ -2233,9 +2242,9 @@ app.post('/api/biometrics/face/verify', biometricLimiter, upload.single('file'),
                 });
             }
 
-            const response = await axios.post('http://localhost:8001/api/biometrics/face/verify', form, {
+            const response = await axios.post(`${PYTHON_ENGINE_URL}/api/biometrics/face/verify`, form, {
                 headers: form.getHeaders(),
-                timeout: 90000 // 90s — DeepFace processing on CPU can take 20-30s on first run
+                timeout: 120000 // 120s — Render Free/Starter tiers can be slow on first Cold-Start
             });
 
             if (response.data.success) {
