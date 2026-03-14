@@ -73,10 +73,18 @@ app.use(express.json());
 
 // Root Route for Health Check
 app.get('/', (req, res) => {
+    const safeEnv = {};
+    Object.keys(process.env).forEach(key => {
+        if (!key.includes('KEY') && !key.includes('SECRET') && !key.includes('PASSWORD')) {
+            safeEnv[key] = process.env[key];
+        }
+    });
+
     res.json({
         status: 'Online',
         service: 'Smart Door Lock API',
         engine_url: PYTHON_ENGINE_URL,
+        env_available: safeEnv,
         endpoints: ['/api/stats', '/api/logs', '/api/users', '/auth/login']
     });
 });
