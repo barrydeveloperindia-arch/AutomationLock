@@ -152,7 +152,7 @@ export default function App() {
         const checkBiometricHealth = async () => {
             try {
                 const res = await axios.get(`${API_BASE}/api/biometrics/health`, { timeout: 3000 });
-                if (res.data.status === 'online' || res.data.status === 'connected') {
+                if (res.data.status === 'online' || res.data.status === 'connected' || res.data.status === 'ready') {
                     setBiometricStatus('online');
                 } else {
                     setBiometricStatus('offline');

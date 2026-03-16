@@ -21,16 +21,19 @@ const PORT = process.env.PORT || 8000;
 const RENDER_HOST = process.env.RENDER_SERVICE_NAME || 'smart-door-backend';
 
 let PYTHON_ENGINE_URL = process.env.PYTHON_ENGINE_URL;
+const ORIGINAL_URL = PYTHON_ENGINE_URL;
 
-// On Render, we force re-calculation if it looks like a standard internal name
-// to ensure we get the correct '-957b' (or other) suffix.
+// On Render, we prefer the environment variable if provided by Render via 'fromService'
 if (process.env.RENDER) {
     const baseName = process.env.RENDER_SERVICE_NAME || 'smart-door-backend';
     const suffix = baseName.includes('-') ? `-${baseName.split('-').pop()}` : '-957b';
     const targetName = baseName.includes('-957b') ? baseName.replace('backend', 'edge') : `smart-door-edge${suffix}`;
+    const calculatedUrl = `http://${targetName}:8001`;
     
-    PYTHON_ENGINE_URL = `http://${targetName}:8001`;
-    console.log(`🌐 [Discovery] Forced Render Internal Target: ${PYTHON_ENGINE_URL}`);
+    if (!PYTHON_ENGINE_URL) {
+        PYTHON_ENGINE_URL = calculatedUrl;
+    }
+    console.log(`🌐 [Discovery] Original: ${ORIGINAL_URL} | Calculated: ${calculatedUrl} | Final: ${PYTHON_ENGINE_URL}`);
 } else if (!PYTHON_ENGINE_URL) {
     PYTHON_ENGINE_URL = 'http://localhost:8001';
 }
@@ -99,6 +102,8 @@ app.get('/', (req, res) => {
         status: 'Online',
         service: 'Smart Door Lock API',
         engine_url: PYTHON_ENGINE_URL,
+        original_env_url: ORIGINAL_URL || 'NONE',
+        calculated_engine_url: `http://${RENDER_HOST.replace('backend', 'edge')}:8001`,
         env_available: safeEnv,
         endpoints: ['/api/stats', '/api/logs', '/api/users', '/auth/login']
     });
@@ -1853,7 +1858,7 @@ app.get('/api/users', authenticateToken, isAdmin, async (req, res) => {
         const transformedUsers = (users || []).map(u => ({
             ...u,
             face_registered: u.face_templates && u.face_templates.length > 0,
-            fingerprint_registered: u.fingerprint_templates && u.finger_templates.length > 0,
+            fingerprint_registered: u.fingerprint_templates && u.fingerprint_templates.length > 0,
             // Strip the internal objects to keep frontend data clean
             face_templates: undefined,
             fingerprint_templates: undefined,
