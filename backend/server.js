@@ -24,16 +24,20 @@ let PYTHON_ENGINE_URL = process.env.PYTHON_ENGINE_URL;
 const ORIGINAL_URL = PYTHON_ENGINE_URL;
 
 // On Render, we prefer the environment variable if provided by Render via 'fromService'
+// On Render, we prefer the internal hostname defined in render.yaml
 if (process.env.RENDER) {
     const baseName = process.env.RENDER_SERVICE_NAME || 'smart-door-backend';
-    const suffix = baseName.includes('-') ? `-${baseName.split('-').pop()}` : '-957b';
-    const targetName = baseName.includes('-957b') ? baseName.replace('backend', 'edge') : `smart-door-edge${suffix}`;
-    const calculatedUrl = `http://${targetName}:8001`;
+    // Internal discovery name is just the 'name' from render.yaml
+    const internalName = 'smart-door-edge'; 
+    const fallbackName = baseName.includes('-957b') ? baseName.replace('backend', 'edge') : `smart-door-edge-957b`;
+    
+    // We try internalName first
+    const calculatedUrl = `http://${internalName}:8001`;
     
     if (!PYTHON_ENGINE_URL) {
         PYTHON_ENGINE_URL = calculatedUrl;
     }
-    console.log(`🌐 [Discovery] Original: ${ORIGINAL_URL} | Calculated: ${calculatedUrl} | Final: ${PYTHON_ENGINE_URL}`);
+    console.log(`🌐 [Discovery] RENDER_SERVICE_NAME: ${baseName} | Internal: ${internalName} | Fallback: ${fallbackName} | Final: ${PYTHON_ENGINE_URL}`);
 } else if (!PYTHON_ENGINE_URL) {
     PYTHON_ENGINE_URL = 'http://localhost:8001';
 }
@@ -134,15 +138,24 @@ app.get('/api/diag', async (req, res) => {
     for (const host of hosts) {
         try {
             const lookup = await dns.lookup(host);
-            results.lookups[host] = lookup;
-            try {
-                const axios = require('axios');
-                const testUrl = `http://${lookup.address}:8001/health`;
-                const start = Date.now();
-                await axios.get(testUrl, { timeout: 2000 });
-                results.lookups[host].health = { status: 'OK', latency: Date.now() - start };
-            } catch (err) {
-                results.lookups[host].health = { error: err.message, test_url: `http://${lookup.address}:8001/health` };
+            results.lookups[host] = { address: lookup.address, family: lookup.family, health: {} };
+            
+            const axios = require('axios');
+            const ports = [8001, 10000, 8000, 80];
+            
+            for (const port of ports) {
+                try {
+                    const testUrl = `http://${lookup.address}:${port}/health`;
+                    const start = Date.now();
+                    const resp = await axios.get(testUrl, { timeout: 1200 });
+                    results.lookups[host].health[port] = { 
+                        status: 'OK', 
+                        latency: Date.now() - start,
+                        data: resp.data 
+                    };
+                } catch (err) {
+                    results.lookups[host].health[port] = { error: err.message };
+                }
             }
         } catch (e) {
             results.lookups[host] = { error: e.message };
