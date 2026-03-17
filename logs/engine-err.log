@@ -13064,3 +13064,1433 @@
 2026-03-17T17:59:09:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
 2026-03-17T17:59:09:     import google.generativeai as genai
 2026-03-17T17:59:09: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T17:59:16: Traceback (most recent call last):
+2026-03-17T17:59:16:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T17:59:16:     
+2026-03-17T17:59:16: import google.generativeai as genai
+2026-03-17T17:59:16: 
+2026-03-17T17:59:16: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T17:59:23: Traceback (most recent call last):
+2026-03-17T17:59:23:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T17:59:23:     import google.generativeai as genai
+2026-03-17T17:59:23: 
+2026-03-17T17:59:27: Traceback (most recent call last):
+2026-03-17T17:59:27:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T17:59:27:     
+2026-03-17T17:59:27: import google.generativeai as genai
+2026-03-17T17:59:27: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T17:59:33: Traceback (most recent call last):
+2026-03-17T17:59:33:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T17:59:33:     
+2026-03-17T17:59:33: import google.generativeai as genai
+2026-03-17T17:59:33: 
+2026-03-17T17:59:33: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T17:59:38: Traceback (most recent call last):
+2026-03-17T17:59:38:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T17:59:38:     
+2026-03-17T17:59:38: import google.generativeai as genai
+2026-03-17T17:59:38: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T17:59:44: Traceback (most recent call last):
+2026-03-17T17:59:44:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T17:59:44:     import google.generativeai as genai
+2026-03-17T17:59:44: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T17:59:49: Traceback (most recent call last):
+2026-03-17T17:59:49:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T17:59:49:     import google.generativeai as genai
+2026-03-17T17:59:49: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T17:59:54: Traceback (most recent call last):
+2026-03-17T17:59:54:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T17:59:54:     import google.generativeai as genai
+2026-03-17T17:59:54: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T17:59:59: Traceback (most recent call last):
+2026-03-17T17:59:59:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T17:59:59:     import google.generativeai as genai
+2026-03-17T17:59:59: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:00:04: Traceback (most recent call last):
+2026-03-17T18:00:04:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:00:04:     
+2026-03-17T18:00:04: import google.generativeai as genai
+2026-03-17T18:00:04: 
+2026-03-17T18:00:04: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:00:10: Traceback (most recent call last):
+2026-03-17T18:00:10:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:00:10:     import google.generativeai as genai
+2026-03-17T18:00:10: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:00:15: Traceback (most recent call last):
+2026-03-17T18:00:15:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:00:15:     import google.generativeai as genai
+2026-03-17T18:00:15: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:00:20: Traceback (most recent call last):
+2026-03-17T18:00:20:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:00:20:     
+2026-03-17T18:00:20: import google.generativeai as genai
+2026-03-17T18:00:20: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:00:24: Traceback (most recent call last):
+2026-03-17T18:00:24:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:00:24:     import google.generativeai as genai
+2026-03-17T18:00:24: : No module named 'google.generativeai'
+2026-03-17T18:00:29: Traceback (most recent call last):
+2026-03-17T18:00:29:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:00:29:     
+2026-03-17T18:00:29: import google.generativeai as genai
+2026-03-17T18:00:29: ModuleNotFoundError
+2026-03-17T18:00:29: : No module named 'google.generativeai'
+2026-03-17T18:00:35: Traceback (most recent call last):
+2026-03-17T18:00:35:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:00:35:     import google.generativeai as genai
+2026-03-17T18:00:35: : No module named 'google.generativeai'
+2026-03-17T18:00:40: Traceback (most recent call last):
+2026-03-17T18:00:40:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:00:40:     
+2026-03-17T18:00:40: import google.generativeai as genai
+2026-03-17T18:00:40: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:00:46: Traceback (most recent call last):
+2026-03-17T18:00:46:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:00:46:     import google.generativeai as genai
+2026-03-17T18:00:46: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:00:51: Traceback (most recent call last):
+2026-03-17T18:00:51:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:00:51:     import google.generativeai as genai
+2026-03-17T18:00:51: : No module named 'google.generativeai'
+2026-03-17T18:00:56: Traceback (most recent call last):
+2026-03-17T18:00:56:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:00:56:     import google.generativeai as genai
+2026-03-17T18:00:56: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:01:01: Traceback (most recent call last):
+2026-03-17T18:01:01:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:01:01:     import google.generativeai as genai
+2026-03-17T18:01:01: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:01:07: Traceback (most recent call last):
+2026-03-17T18:01:07:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:01:07:     import google.generativeai as genai
+2026-03-17T18:01:07: : No module named 'google.generativeai'
+2026-03-17T18:01:12: Traceback (most recent call last):
+2026-03-17T18:01:12:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:01:12:     
+2026-03-17T18:01:12: import google.generativeai as genai
+2026-03-17T18:01:12: 
+2026-03-17T18:01:12: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:01:17: Traceback (most recent call last):
+2026-03-17T18:01:17:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:01:17:     import google.generativeai as genai
+2026-03-17T18:01:17: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:01:21: Traceback (most recent call last):
+2026-03-17T18:01:21:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:01:21:     import google.generativeai as genai
+2026-03-17T18:01:21: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:01:27: Traceback (most recent call last):
+2026-03-17T18:01:27:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:01:27:     import google.generativeai as genai
+2026-03-17T18:01:27: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:01:33: Traceback (most recent call last):
+2026-03-17T18:01:33:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:01:33:     import google.generativeai as genai
+2026-03-17T18:01:33: 
+2026-03-17T18:01:38: Traceback (most recent call last):
+2026-03-17T18:01:38:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:01:38:     import google.generativeai as genai
+2026-03-17T18:01:38: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:01:43: Traceback (most recent call last):
+2026-03-17T18:01:43:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:01:43:     import google.generativeai as genai
+2026-03-17T18:01:43: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:01:49: Traceback (most recent call last):
+2026-03-17T18:01:49:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:01:49:     
+2026-03-17T18:01:49: import google.generativeai as genai
+2026-03-17T18:01:49: 
+2026-03-17T18:01:49: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:01:55: Traceback (most recent call last):
+2026-03-17T18:01:55:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:01:55:     import google.generativeai as genai
+2026-03-17T18:01:55: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:02:00: Traceback (most recent call last):
+2026-03-17T18:02:00:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:02:00:     import google.generativeai as genai
+2026-03-17T18:02:00: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:02:07: Traceback (most recent call last):
+2026-03-17T18:02:07:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:02:07:     import google.generativeai as genai
+2026-03-17T18:02:07: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:02:14: Traceback (most recent call last):
+2026-03-17T18:02:14:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:02:14:     import google.generativeai as genai
+2026-03-17T18:02:14: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:02:21: Traceback (most recent call last):
+2026-03-17T18:02:21:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:02:21:     import google.generativeai as genai
+2026-03-17T18:02:21: 
+2026-03-17T18:02:21: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:02:28: Traceback (most recent call last):
+2026-03-17T18:02:28:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:02:28:     import google.generativeai as genai
+2026-03-17T18:02:28: 
+2026-03-17T18:02:28: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:02:35: Traceback (most recent call last):
+2026-03-17T18:02:35:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:02:35:     import google.generativeai as genai
+2026-03-17T18:02:35: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:02:42: Traceback (most recent call last):
+2026-03-17T18:02:42:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:02:42:     import google.generativeai as genai
+2026-03-17T18:02:42: 
+2026-03-17T18:02:50: Traceback (most recent call last):
+2026-03-17T18:02:50:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:02:50:     
+2026-03-17T18:02:50: import google.generativeai as genai
+2026-03-17T18:02:50: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:02:55: Traceback (most recent call last):
+2026-03-17T18:02:55:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:02:55:     
+2026-03-17T18:02:55: import google.generativeai as genai
+2026-03-17T18:02:55: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:03:01: Traceback (most recent call last):
+2026-03-17T18:03:01:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:03:01:     import google.generativeai as genai
+2026-03-17T18:03:01: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:03:07: Traceback (most recent call last):
+2026-03-17T18:03:07:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:03:07:     import google.generativeai as genai
+2026-03-17T18:03:07: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:03:15: Traceback (most recent call last):
+2026-03-17T18:03:15:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:03:15:     import google.generativeai as genai
+2026-03-17T18:03:15: 
+2026-03-17T18:03:15: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:03:23: Traceback (most recent call last):
+2026-03-17T18:03:23:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:03:23:     import google.generativeai as genai
+2026-03-17T18:03:23: 
+2026-03-17T18:03:30: Traceback (most recent call last):
+2026-03-17T18:03:30:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:03:30:     
+2026-03-17T18:03:30: import google.generativeai as genai
+2026-03-17T18:03:30: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:03:38: Traceback (most recent call last):
+2026-03-17T18:03:38:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:03:38:     
+2026-03-17T18:03:38: import google.generativeai as genai
+2026-03-17T18:03:38: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:03:47: Traceback (most recent call last):
+2026-03-17T18:03:47:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:03:47:     import google.generativeai as genai
+2026-03-17T18:03:47: 
+2026-03-17T18:03:47: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:03:53: Traceback (most recent call last):
+2026-03-17T18:03:53:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:03:53:     import google.generativeai as genai
+2026-03-17T18:03:53: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:04:00: Traceback (most recent call last):
+2026-03-17T18:04:00:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:04:00:     import google.generativeai as genai
+2026-03-17T18:04:00: 
+2026-03-17T18:04:07: Traceback (most recent call last):
+2026-03-17T18:04:07:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:04:07:     
+2026-03-17T18:04:07: import google.generativeai as genai
+2026-03-17T18:04:07: 
+2026-03-17T18:04:07: : No module named 'google.generativeai'
+2026-03-17T18:04:13: Traceback (most recent call last):
+2026-03-17T18:04:13:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:04:13:     import google.generativeai as genai
+2026-03-17T18:04:13: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:04:23: Traceback (most recent call last):
+2026-03-17T18:04:23:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:04:23:     
+2026-03-17T18:04:23: import google.generativeai as genai
+2026-03-17T18:04:23: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:04:34: Traceback (most recent call last):
+2026-03-17T18:04:34:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:04:34:     import google.generativeai as genai
+2026-03-17T18:04:34: 
+2026-03-17T18:04:34: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:04:40: Traceback (most recent call last):
+2026-03-17T18:04:40:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:04:40:     import google.generativeai as genai
+2026-03-17T18:04:40: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:04:47: Traceback (most recent call last):
+2026-03-17T18:04:47:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:04:47:     import google.generativeai as genai
+2026-03-17T18:04:47: 
+2026-03-17T18:04:47: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:04:53: Traceback (most recent call last):
+2026-03-17T18:04:53:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:04:53:     import google.generativeai as genai
+2026-03-17T18:04:53: 
+2026-03-17T18:04:53: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:04:59: Traceback (most recent call last):
+2026-03-17T18:04:59:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:04:59:     import google.generativeai as genai
+2026-03-17T18:04:59: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:05:06: Traceback (most recent call last):
+2026-03-17T18:05:06:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:05:06:     import google.generativeai as genai
+2026-03-17T18:05:06: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:05:12: Traceback (most recent call last):
+2026-03-17T18:05:12:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:05:12:     import google.generativeai as genai
+2026-03-17T18:05:12: No module named 'google.generativeai'
+2026-03-17T18:05:18: Traceback (most recent call last):
+2026-03-17T18:05:18:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:05:18:     import google.generativeai as genai
+2026-03-17T18:05:18: 
+2026-03-17T18:05:24: Traceback (most recent call last):
+2026-03-17T18:05:24:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:05:24:     import google.generativeai as genai
+2026-03-17T18:05:24: 
+2026-03-17T18:05:24: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:05:30: Traceback (most recent call last):
+2026-03-17T18:05:30:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:05:30:     import google.generativeai as genai
+2026-03-17T18:05:30: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:05:37: Traceback (most recent call last):
+2026-03-17T18:05:37:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:05:37:     
+2026-03-17T18:05:37: import google.generativeai as genai
+2026-03-17T18:05:37: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:05:43: Traceback (most recent call last):
+2026-03-17T18:05:43:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:05:43:     import google.generativeai as genai
+2026-03-17T18:05:43: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:05:52: Traceback (most recent call last):
+2026-03-17T18:05:52:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:05:52:     
+2026-03-17T18:05:52: import google.generativeai as genai
+2026-03-17T18:05:52: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:06:02: Traceback (most recent call last):
+2026-03-17T18:06:02:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:06:02:     import google.generativeai as genai
+2026-03-17T18:06:02: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:06:13: Traceback (most recent call last):
+2026-03-17T18:06:13:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:06:13:     import google.generativeai as genai
+2026-03-17T18:06:13: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:06:26: Traceback (most recent call last):
+2026-03-17T18:06:26:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:06:26:     
+2026-03-17T18:06:26: import google.generativeai as genai
+2026-03-17T18:06:26: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:06:35: Traceback (most recent call last):
+2026-03-17T18:06:35:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:06:35:     import google.generativeai as genai
+2026-03-17T18:06:35: 
+2026-03-17T18:06:35: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:06:41: Traceback (most recent call last):
+2026-03-17T18:06:41:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:06:41:     import google.generativeai as genai
+2026-03-17T18:06:41: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:06:48: Traceback (most recent call last):
+2026-03-17T18:06:48:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:06:48:     
+2026-03-17T18:06:48: import google.generativeai as genai
+2026-03-17T18:06:48: 
+2026-03-17T18:06:48: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:06:57: Traceback (most recent call last):
+2026-03-17T18:06:57:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:06:57:     import google.generativeai as genai
+2026-03-17T18:06:57: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:07:07: Traceback (most recent call last):
+2026-03-17T18:07:07:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:07:07:     
+2026-03-17T18:07:07: import google.generativeai as genai
+2026-03-17T18:07:07: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:07:15: Traceback (most recent call last):
+2026-03-17T18:07:15:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:07:15:     import google.generativeai as genai
+2026-03-17T18:07:15: 
+2026-03-17T18:07:15: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:07:28: Traceback (most recent call last):
+2026-03-17T18:07:28:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:07:28:     
+2026-03-17T18:07:28: import google.generativeai as genai
+2026-03-17T18:07:28: 
+2026-03-17T18:07:28: : No module named 'google.generativeai'
+2026-03-17T18:07:38: Traceback (most recent call last):
+2026-03-17T18:07:38:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:07:38:     import google.generativeai as genai
+2026-03-17T18:07:38: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:07:46: Traceback (most recent call last):
+2026-03-17T18:07:46:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:07:46:     import google.generativeai as genai
+2026-03-17T18:07:46: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:07:56: Traceback (most recent call last):
+2026-03-17T18:07:56:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:07:56:     import google.generativeai as genai
+2026-03-17T18:07:56: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:08:13: Traceback (most recent call last):
+2026-03-17T18:08:13:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:08:13:     import google.generativeai as genai
+2026-03-17T18:08:13: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:08:18: Traceback (most recent call last):
+2026-03-17T18:08:18:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:08:18:     import google.generativeai as genai
+2026-03-17T18:08:18: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:08:24: Traceback (most recent call last):
+2026-03-17T18:08:24:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:08:24:     import google.generativeai as genai
+2026-03-17T18:08:24: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:08:30: Traceback (most recent call last):
+2026-03-17T18:08:30:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:08:30:     
+2026-03-17T18:08:30: import google.generativeai as genai
+2026-03-17T18:08:30: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:08:39: Traceback (most recent call last):
+2026-03-17T18:08:39:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:08:39:     
+2026-03-17T18:08:39: import google.generativeai as genai
+2026-03-17T18:08:39: 
+2026-03-17T18:08:39: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:08:53: Traceback (most recent call last):
+2026-03-17T18:08:53:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:08:53:     
+2026-03-17T18:08:53: import google.generativeai as genai
+2026-03-17T18:08:53: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:08:59: Traceback (most recent call last):
+2026-03-17T18:08:59:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:08:59:     
+2026-03-17T18:08:59: import google.generativeai as genai
+2026-03-17T18:08:59: 
+2026-03-17T18:08:59: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:09:05: Traceback (most recent call last):
+2026-03-17T18:09:05:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:09:05:     import google.generativeai as genai
+2026-03-17T18:09:05: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:09:14: Traceback (most recent call last):
+2026-03-17T18:09:14:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:09:14:     import google.generativeai as genai
+2026-03-17T18:09:14: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:09:22: Traceback (most recent call last):
+2026-03-17T18:09:22:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:09:22:     
+2026-03-17T18:09:22: import google.generativeai as genai
+2026-03-17T18:09:22: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:09:30: Traceback (most recent call last):
+2026-03-17T18:09:30:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:09:30:     
+2026-03-17T18:09:30: import google.generativeai as genai
+2026-03-17T18:09:30: : No module named 'google.generativeai'
+2026-03-17T18:09:37: Traceback (most recent call last):
+2026-03-17T18:09:37:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:09:37:     
+2026-03-17T18:09:37: import google.generativeai as genai
+2026-03-17T18:09:37: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:09:43: Traceback (most recent call last):
+2026-03-17T18:09:43:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:09:43:     import google.generativeai as genai
+2026-03-17T18:09:43: 
+2026-03-17T18:09:43: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:09:49: Traceback (most recent call last):
+2026-03-17T18:09:49:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:09:49:     import google.generativeai as genai
+2026-03-17T18:09:49: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:09:59: Traceback (most recent call last):
+2026-03-17T18:09:59:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:09:59:     
+2026-03-17T18:09:59: import google.generativeai as genai
+2026-03-17T18:09:59: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:10:05: Traceback (most recent call last):
+2026-03-17T18:10:05:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:10:05:     import google.generativeai as genai
+2026-03-17T18:10:05: 
+2026-03-17T18:10:05: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:10:10: Traceback (most recent call last):
+2026-03-17T18:10:10:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:10:10:     
+2026-03-17T18:10:10: import google.generativeai as genai
+2026-03-17T18:10:10: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:10:18: Traceback (most recent call last):
+2026-03-17T18:10:18:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:10:18:     import google.generativeai as genai
+2026-03-17T18:10:18: 
+2026-03-17T18:10:18: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:10:23: Traceback (most recent call last):
+2026-03-17T18:10:23:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:10:23:     
+2026-03-17T18:10:23: import google.generativeai as genai
+2026-03-17T18:10:23: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:10:28: Traceback (most recent call last):
+2026-03-17T18:10:28:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:10:28:     import google.generativeai as genai
+2026-03-17T18:10:28: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:10:34: Traceback (most recent call last):
+2026-03-17T18:10:34:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:10:34:     import google.generativeai as genai
+2026-03-17T18:10:34: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:10:38: Traceback (most recent call last):
+2026-03-17T18:10:38:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:10:38:     import google.generativeai as genai
+2026-03-17T18:10:38: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:10:43: Traceback (most recent call last):
+2026-03-17T18:10:43:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:10:43:     import google.generativeai as genai
+2026-03-17T18:10:43: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:10:49: Traceback (most recent call last):
+2026-03-17T18:10:49:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:10:49:     import google.generativeai as genai
+2026-03-17T18:10:49: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:10:55: Traceback (most recent call last):
+2026-03-17T18:10:55:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:10:55:     
+2026-03-17T18:10:55: import google.generativeai as genai
+2026-03-17T18:10:55: 
+2026-03-17T18:10:55: : No module named 'google.generativeai'
+2026-03-17T18:11:00: Traceback (most recent call last):
+2026-03-17T18:11:00:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:11:00:     
+2026-03-17T18:11:00: import google.generativeai as genai
+2026-03-17T18:11:00: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:11:06: Traceback (most recent call last):
+2026-03-17T18:11:06:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:11:06:     
+2026-03-17T18:11:06: import google.generativeai as genai
+2026-03-17T18:11:06: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:11:11: Traceback (most recent call last):
+2026-03-17T18:11:11:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:11:11:     
+2026-03-17T18:11:11: import google.generativeai as genai
+2026-03-17T18:11:11: No module named 'google.generativeai'
+2026-03-17T18:11:19: Traceback (most recent call last):
+2026-03-17T18:11:19:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:11:19:     
+2026-03-17T18:11:19: import google.generativeai as genai
+2026-03-17T18:11:19: 
+2026-03-17T18:11:19: : No module named 'google.generativeai'
+2026-03-17T18:11:25: Traceback (most recent call last):
+2026-03-17T18:11:25:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:11:25:     
+2026-03-17T18:11:25: import google.generativeai as genai
+2026-03-17T18:11:25: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:11:34: Traceback (most recent call last):
+2026-03-17T18:11:34:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:11:34:     
+2026-03-17T18:11:34: import google.generativeai as genai
+2026-03-17T18:11:34: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:11:40: Traceback (most recent call last):
+2026-03-17T18:11:40:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:11:40:     import google.generativeai as genai
+2026-03-17T18:11:40: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:11:52: Traceback (most recent call last):
+2026-03-17T18:11:52:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:11:52:     
+2026-03-17T18:11:52: import google.generativeai as genai
+2026-03-17T18:11:52: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:11:58: Traceback (most recent call last):
+2026-03-17T18:11:58:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:11:58:     import google.generativeai as genai
+2026-03-17T18:11:58: 
+2026-03-17T18:11:58: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:12:06: Traceback (most recent call last):
+2026-03-17T18:12:06:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:12:06:     import google.generativeai as genai
+2026-03-17T18:12:06: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:12:17: Traceback (most recent call last):
+2026-03-17T18:12:17:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:12:17:     import google.generativeai as genai
+2026-03-17T18:12:17: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:12:28: Traceback (most recent call last):
+2026-03-17T18:12:28:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:12:28:     import google.generativeai as genai
+2026-03-17T18:12:28: 
+2026-03-17T18:12:28: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:12:38: Traceback (most recent call last):
+2026-03-17T18:12:38:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:12:38:     
+2026-03-17T18:12:38: import google.generativeai as genai
+2026-03-17T18:12:38: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:12:47: Traceback (most recent call last):
+2026-03-17T18:12:47:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:12:47:     
+2026-03-17T18:12:47: import google.generativeai as genai
+2026-03-17T18:12:47: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:12:55: Traceback (most recent call last):
+2026-03-17T18:12:55:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:12:55:     
+2026-03-17T18:12:55: import google.generativeai as genai
+2026-03-17T18:12:55: 
+2026-03-17T18:12:55: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:12:55: 
+2026-03-17T18:13:13: Traceback (most recent call last):
+2026-03-17T18:13:13:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:13:13:     
+2026-03-17T18:13:13: import google.generativeai as genai
+2026-03-17T18:13:13: 
+2026-03-17T18:13:13: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:13:22: Traceback (most recent call last):
+2026-03-17T18:13:22:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:13:22:     import google.generativeai as genai
+2026-03-17T18:13:22: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:13:29: Traceback (most recent call last):
+2026-03-17T18:13:29:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:13:29:     import google.generativeai as genai
+2026-03-17T18:13:29: : No module named 'google.generativeai'
+2026-03-17T18:13:39: Traceback (most recent call last):
+2026-03-17T18:13:39:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:13:39:     
+2026-03-17T18:13:39: import google.generativeai as genai
+2026-03-17T18:13:39: 
+2026-03-17T18:13:39: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:13:49: Traceback (most recent call last):
+2026-03-17T18:13:49:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:13:49:     import google.generativeai as genai
+2026-03-17T18:13:49: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:13:55: Traceback (most recent call last):
+2026-03-17T18:13:55:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:13:55:     import google.generativeai as genai
+2026-03-17T18:13:55: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:14:01: Traceback (most recent call last):
+2026-03-17T18:14:01:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:14:01:     import google.generativeai as genai
+2026-03-17T18:14:01: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:14:06: Traceback (most recent call last):
+2026-03-17T18:14:06:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:14:06:     
+2026-03-17T18:14:06: import google.generativeai as genai
+2026-03-17T18:14:06: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:14:16: Traceback (most recent call last):
+2026-03-17T18:14:16:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:14:16:     import google.generativeai as genai
+2026-03-17T18:14:16: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:14:23: Traceback (most recent call last):
+2026-03-17T18:14:23:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:14:23:     
+2026-03-17T18:14:23: import google.generativeai as genai
+2026-03-17T18:14:23: 
+2026-03-17T18:14:23: No module named 'google.generativeai'
+2026-03-17T18:14:28: Traceback (most recent call last):
+2026-03-17T18:14:28:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:14:28:     
+2026-03-17T18:14:28: import google.generativeai as genai
+2026-03-17T18:14:28: 
+2026-03-17T18:14:28: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:14:34: Traceback (most recent call last):
+2026-03-17T18:14:34:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:14:34:     import google.generativeai as genai
+2026-03-17T18:14:34: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:14:39: Traceback (most recent call last):
+2026-03-17T18:14:39:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:14:39:     
+2026-03-17T18:14:39: import google.generativeai as genai
+2026-03-17T18:14:39: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:14:46: Traceback (most recent call last):
+2026-03-17T18:14:46:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:14:46:     import google.generativeai as genai
+2026-03-17T18:14:46: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:14:54: Traceback (most recent call last):
+2026-03-17T18:14:54:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:14:54:     
+2026-03-17T18:14:54: import google.generativeai as genai
+2026-03-17T18:14:54: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:15:00: Traceback (most recent call last):
+2026-03-17T18:15:00:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:15:00:     import google.generativeai as genai
+2026-03-17T18:15:00: 
+2026-03-17T18:15:00: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:15:05: Traceback (most recent call last):
+2026-03-17T18:15:05:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:15:05:     import google.generativeai as genai
+2026-03-17T18:15:05: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:15:10: Traceback (most recent call last):
+2026-03-17T18:15:10:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:15:10:     import google.generativeai as genai
+2026-03-17T18:15:10: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:15:16: Traceback (most recent call last):
+2026-03-17T18:15:16:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:15:16:     
+2026-03-17T18:15:16: import google.generativeai as genai
+2026-03-17T18:15:16: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:15:23: Traceback (most recent call last):
+2026-03-17T18:15:23:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:15:23:     import google.generativeai as genai
+2026-03-17T18:15:23: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:15:28: Traceback (most recent call last):
+2026-03-17T18:15:28:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:15:28:     import google.generativeai as genai
+2026-03-17T18:15:28: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:15:35: Traceback (most recent call last):
+2026-03-17T18:15:35:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:15:35:     import google.generativeai as genai
+2026-03-17T18:15:35: 
+2026-03-17T18:15:35: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:15:42: Traceback (most recent call last):
+2026-03-17T18:15:42:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:15:42:     import google.generativeai as genai
+2026-03-17T18:15:42: 
+2026-03-17T18:15:42: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:15:49: Traceback (most recent call last):
+2026-03-17T18:15:49:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:15:49:     import google.generativeai as genai
+2026-03-17T18:15:49: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:15:55: Traceback (most recent call last):
+2026-03-17T18:15:55:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:15:55:     
+2026-03-17T18:15:55: import google.generativeai as genai
+2026-03-17T18:15:55: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:16:02: Traceback (most recent call last):
+2026-03-17T18:16:02:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:16:02:     import google.generativeai as genai
+2026-03-17T18:16:02: No module named 'google.generativeai'
+2026-03-17T18:16:10: Traceback (most recent call last):
+2026-03-17T18:16:10:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:16:10:     
+2026-03-17T18:16:10: import google.generativeai as genai
+2026-03-17T18:16:10: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:16:18: Traceback (most recent call last):
+2026-03-17T18:16:18:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:16:18:     
+2026-03-17T18:16:18: import google.generativeai as genai
+2026-03-17T18:16:18: 
+2026-03-17T18:16:18: ModuleNotFoundError
+2026-03-17T18:16:18: : No module named 'google.generativeai'
+2026-03-17T18:16:23: Traceback (most recent call last):
+2026-03-17T18:16:23:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:16:23:     import google.generativeai as genai
+2026-03-17T18:16:23: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:16:29: Traceback (most recent call last):
+2026-03-17T18:16:29:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:16:29:     import google.generativeai as genai
+2026-03-17T18:16:29: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:16:34: Traceback (most recent call last):
+2026-03-17T18:16:34:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:16:34:     import google.generativeai as genai
+2026-03-17T18:16:34: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:16:39: Traceback (most recent call last):
+2026-03-17T18:16:39:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:16:39:     import google.generativeai as genai
+2026-03-17T18:16:39: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:16:44: Traceback (most recent call last):
+2026-03-17T18:16:44:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:16:44:     import google.generativeai as genai
+2026-03-17T18:16:44: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:16:49: Traceback (most recent call last):
+2026-03-17T18:16:49:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:16:49:     import google.generativeai as genai
+2026-03-17T18:16:49: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:16:55: Traceback (most recent call last):
+2026-03-17T18:16:55:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:16:55:     import google.generativeai as genai
+2026-03-17T18:16:55: : No module named 'google.generativeai'
+2026-03-17T18:17:02: Traceback (most recent call last):
+2026-03-17T18:17:02:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:17:02:     import google.generativeai as genai
+2026-03-17T18:17:02: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:17:07: Traceback (most recent call last):
+2026-03-17T18:17:07:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:17:07:     import google.generativeai as genai
+2026-03-17T18:17:07: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:17:17: Traceback (most recent call last):
+2026-03-17T18:17:17:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:17:17:     import google.generativeai as genai
+2026-03-17T18:17:17: 
+2026-03-17T18:17:25: Traceback (most recent call last):
+2026-03-17T18:17:25:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:17:25:     
+2026-03-17T18:17:25: import google.generativeai as genai
+2026-03-17T18:17:25: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:17:33: Traceback (most recent call last):
+2026-03-17T18:17:33:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:17:33:     
+2026-03-17T18:17:33: import google.generativeai as genai
+2026-03-17T18:17:33: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:17:50: Traceback (most recent call last):
+2026-03-17T18:17:50:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:17:50:     import google.generativeai as genai
+2026-03-17T18:17:50: 
+2026-03-17T18:17:50: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:18:01: Traceback (most recent call last):
+2026-03-17T18:18:01:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:18:01:     import google.generativeai as genai
+2026-03-17T18:18:01: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:18:13: Traceback (most recent call last):
+2026-03-17T18:18:13:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:18:13:     import google.generativeai as genai
+2026-03-17T18:18:13: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:18:21: Traceback (most recent call last):
+2026-03-17T18:18:21:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:18:21:     
+2026-03-17T18:18:21: import google.generativeai as genai
+2026-03-17T18:18:21: 
+2026-03-17T18:18:21: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:18:29: Traceback (most recent call last):
+2026-03-17T18:18:29:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:18:29:     import google.generativeai as genai
+2026-03-17T18:18:29: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:18:34: Traceback (most recent call last):
+2026-03-17T18:18:34:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:18:34:     import google.generativeai as genai
+2026-03-17T18:18:34: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:18:40: Traceback (most recent call last):
+2026-03-17T18:18:40:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:18:40:     import google.generativeai as genai
+2026-03-17T18:18:40: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:18:46: Traceback (most recent call last):
+2026-03-17T18:18:46:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:18:46:     
+2026-03-17T18:18:46: import google.generativeai as genai
+2026-03-17T18:18:46: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:18:52: Traceback (most recent call last):
+2026-03-17T18:18:52:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:18:52:     import google.generativeai as genai
+2026-03-17T18:18:52: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:19:05: Traceback (most recent call last):
+2026-03-17T18:19:05:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:19:05:     import google.generativeai as genai
+2026-03-17T18:19:05: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:19:12: Traceback (most recent call last):
+2026-03-17T18:19:12:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:19:12:     
+2026-03-17T18:19:12: import google.generativeai as genai
+2026-03-17T18:19:12: 
+2026-03-17T18:19:12: ModuleNotFoundError
+2026-03-17T18:19:12: : No module named 'google.generativeai'
+2026-03-17T18:19:18: Traceback (most recent call last):
+2026-03-17T18:19:18:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:19:18:     
+2026-03-17T18:19:18: import google.generativeai as genai
+2026-03-17T18:19:18: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:19:27: Traceback (most recent call last):
+2026-03-17T18:19:27:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:19:27:     
+2026-03-17T18:19:27: import google.generativeai as genai
+2026-03-17T18:19:27: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:19:34: Traceback (most recent call last):
+2026-03-17T18:19:34:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:19:34:     
+2026-03-17T18:19:34: import google.generativeai as genai
+2026-03-17T18:19:34: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:19:40: Traceback (most recent call last):
+2026-03-17T18:19:40:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:19:40:     
+2026-03-17T18:19:40: import google.generativeai as genai
+2026-03-17T18:19:40: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:19:46: Traceback (most recent call last):
+2026-03-17T18:19:46:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:19:46:     import google.generativeai as genai
+2026-03-17T18:19:46: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:19:52: Traceback (most recent call last):
+2026-03-17T18:19:52:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:19:52:     import google.generativeai as genai
+2026-03-17T18:19:52: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:19:59: Traceback (most recent call last):
+2026-03-17T18:19:59:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:19:59:     
+2026-03-17T18:19:59: import google.generativeai as genai
+2026-03-17T18:19:59: 
+2026-03-17T18:19:59: ModuleNotFoundError: 
+2026-03-17T18:19:59: No module named 'google.generativeai'
+2026-03-17T18:20:06: Traceback (most recent call last):
+2026-03-17T18:20:06:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:20:06:     
+2026-03-17T18:20:06: import google.generativeai as genai
+2026-03-17T18:20:06: : No module named 'google.generativeai'
+2026-03-17T18:20:11: Traceback (most recent call last):
+2026-03-17T18:20:11:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:20:12:     
+2026-03-17T18:20:12: import google.generativeai as genai
+2026-03-17T18:20:12: : No module named 'google.generativeai'
+2026-03-17T18:20:18: Traceback (most recent call last):
+2026-03-17T18:20:18:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:20:18:     import google.generativeai as genai
+2026-03-17T18:20:18: 
+2026-03-17T18:20:18: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:20:29: Traceback (most recent call last):
+2026-03-17T18:20:29:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:20:29:     import google.generativeai as genai
+2026-03-17T18:20:29: : No module named 'google.generativeai'
+2026-03-17T18:20:41: Traceback (most recent call last):
+2026-03-17T18:20:41:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:20:41:     import google.generativeai as genai
+2026-03-17T18:20:41: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:20:46: Traceback (most recent call last):
+2026-03-17T18:20:46:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:20:46:     
+2026-03-17T18:20:46: import google.generativeai as genai
+2026-03-17T18:20:46: : No module named 'google.generativeai'
+2026-03-17T18:20:51: Traceback (most recent call last):
+2026-03-17T18:20:51:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:20:51:     
+2026-03-17T18:20:51: import google.generativeai as genai
+2026-03-17T18:20:51: 
+2026-03-17T18:20:51: ModuleNotFoundError
+2026-03-17T18:20:51: : 
+2026-03-17T18:20:51: No module named 'google.generativeai'
+2026-03-17T18:20:51: 
+2026-03-17T18:20:56: Traceback (most recent call last):
+2026-03-17T18:20:56:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:20:56:     
+2026-03-17T18:20:56: import google.generativeai as genai
+2026-03-17T18:20:56: 
+2026-03-17T18:20:56: ModuleNotFoundError
+2026-03-17T18:20:56: : 
+2026-03-17T18:20:56: No module named 'google.generativeai'
+2026-03-17T18:20:56: 
+2026-03-17T18:21:01: Traceback (most recent call last):
+2026-03-17T18:21:01:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:21:01:     import google.generativeai as genai
+2026-03-17T18:21:01: : No module named 'google.generativeai'
+2026-03-17T18:21:06: Traceback (most recent call last):
+2026-03-17T18:21:06:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:21:06:     import google.generativeai as genai
+2026-03-17T18:21:06: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:21:12: Traceback (most recent call last):
+2026-03-17T18:21:12:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:21:12:     import google.generativeai as genai
+2026-03-17T18:21:12: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:21:17: Traceback (most recent call last):
+2026-03-17T18:21:17:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:21:17:     
+2026-03-17T18:21:17: import google.generativeai as genai
+2026-03-17T18:21:17: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:21:24: Traceback (most recent call last):
+2026-03-17T18:21:24:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:21:24:     import google.generativeai as genai
+2026-03-17T18:21:24: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:21:30: Traceback (most recent call last):
+2026-03-17T18:21:30:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:21:30:     
+2026-03-17T18:21:30: import google.generativeai as genai
+2026-03-17T18:21:30: 
+2026-03-17T18:21:30: : No module named 'google.generativeai'
+2026-03-17T18:21:37: Traceback (most recent call last):
+2026-03-17T18:21:37:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:21:37:     import google.generativeai as genai
+2026-03-17T18:21:37: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:21:43: Traceback (most recent call last):
+2026-03-17T18:21:43:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:21:43:     import google.generativeai as genai
+2026-03-17T18:21:43: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:21:51: Traceback (most recent call last):
+2026-03-17T18:21:51:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:21:51:     
+2026-03-17T18:21:51: import google.generativeai as genai
+2026-03-17T18:21:51: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:21:57: Traceback (most recent call last):
+2026-03-17T18:21:57:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:21:57:     import google.generativeai as genai
+2026-03-17T18:21:57: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:22:03: Traceback (most recent call last):
+2026-03-17T18:22:03:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:22:03:     import google.generativeai as genai
+2026-03-17T18:22:03: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:22:10: Traceback (most recent call last):
+2026-03-17T18:22:10:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:22:10:     import google.generativeai as genai
+2026-03-17T18:22:10: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:22:18: Traceback (most recent call last):
+2026-03-17T18:22:18:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:22:18:     import google.generativeai as genai
+2026-03-17T18:22:18: 
+2026-03-17T18:22:23: Traceback (most recent call last):
+2026-03-17T18:22:23:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:22:23:     
+2026-03-17T18:22:23: import google.generativeai as genai
+2026-03-17T18:22:23: 
+2026-03-17T18:22:23: ModuleNotFoundError
+2026-03-17T18:22:23: : 
+2026-03-17T18:22:23: No module named 'google.generativeai'
+2026-03-17T18:22:23: 
+2026-03-17T18:22:30: Traceback (most recent call last):
+2026-03-17T18:22:30:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:22:30:     import google.generativeai as genai
+2026-03-17T18:22:30: 
+2026-03-17T18:22:30: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:22:35: Traceback (most recent call last):
+2026-03-17T18:22:35:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:22:35:     import google.generativeai as genai
+2026-03-17T18:22:35: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:22:41: Traceback (most recent call last):
+2026-03-17T18:22:41:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:22:41:     import google.generativeai as genai
+2026-03-17T18:22:41: No module named 'google.generativeai'
+2026-03-17T18:22:53: Traceback (most recent call last):
+2026-03-17T18:22:53:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:22:53:     
+2026-03-17T18:22:53: import google.generativeai as genai
+2026-03-17T18:22:53: 
+2026-03-17T18:22:53: ModuleNotFoundError
+2026-03-17T18:22:53: : 
+2026-03-17T18:22:53: No module named 'google.generativeai'
+2026-03-17T18:22:53: 
+2026-03-17T18:22:59: Traceback (most recent call last):
+2026-03-17T18:22:59:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:22:59:     
+2026-03-17T18:22:59: import google.generativeai as genai
+2026-03-17T18:22:59: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:23:05: Traceback (most recent call last):
+2026-03-17T18:23:05:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:23:05:     import google.generativeai as genai
+2026-03-17T18:23:05: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:23:12: Traceback (most recent call last):
+2026-03-17T18:23:12:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:23:12:     import google.generativeai as genai
+2026-03-17T18:23:12: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:23:18: Traceback (most recent call last):
+2026-03-17T18:23:18:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:23:18:     import google.generativeai as genai
+2026-03-17T18:23:18: 
+2026-03-17T18:23:18: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:23:25: Traceback (most recent call last):
+2026-03-17T18:23:25:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:23:25:     import google.generativeai as genai
+2026-03-17T18:23:25: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:23:32: Traceback (most recent call last):
+2026-03-17T18:23:32:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:23:32:     
+2026-03-17T18:23:32: import google.generativeai as genai
+2026-03-17T18:23:32: 
+2026-03-17T18:23:32: No module named 'google.generativeai'
+2026-03-17T18:23:37: Traceback (most recent call last):
+2026-03-17T18:23:37:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:23:37:     
+2026-03-17T18:23:37: import google.generativeai as genai
+2026-03-17T18:23:37: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:23:43: Traceback (most recent call last):
+2026-03-17T18:23:43:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:23:43:     
+2026-03-17T18:23:43: import google.generativeai as genai
+2026-03-17T18:23:43: 
+2026-03-17T18:23:43: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:23:48: Traceback (most recent call last):
+2026-03-17T18:23:48:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:23:48:     
+2026-03-17T18:23:48: import google.generativeai as genai
+2026-03-17T18:23:48: 
+2026-03-17T18:23:48: ModuleNotFoundError
+2026-03-17T18:23:48: : No module named 'google.generativeai'
+2026-03-17T18:23:54: Traceback (most recent call last):
+2026-03-17T18:23:54:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:23:54:     
+2026-03-17T18:23:54: import google.generativeai as genai
+2026-03-17T18:23:54: 
+2026-03-17T18:23:54: No module named 'google.generativeai'
+2026-03-17T18:24:00: Traceback (most recent call last):
+2026-03-17T18:24:00:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:24:00:     import google.generativeai as genai
+2026-03-17T18:24:00: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:24:08: Traceback (most recent call last):
+2026-03-17T18:24:08:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:24:08:     import google.generativeai as genai
+2026-03-17T18:24:08: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:24:16: Traceback (most recent call last):
+2026-03-17T18:24:16:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:24:16:     import google.generativeai as genai
+2026-03-17T18:24:16: : No module named 'google.generativeai'
+2026-03-17T18:24:24: Traceback (most recent call last):
+2026-03-17T18:24:24:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:24:24:     import google.generativeai as genai
+2026-03-17T18:24:24: 
+2026-03-17T18:24:24: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:24:31: Traceback (most recent call last):
+2026-03-17T18:24:31:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:24:31:     import google.generativeai as genai
+2026-03-17T18:24:31: : No module named 'google.generativeai'
+2026-03-17T18:24:40: Traceback (most recent call last):
+2026-03-17T18:24:40:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:24:40:     import google.generativeai as genai
+2026-03-17T18:24:40: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:24:47: Traceback (most recent call last):
+2026-03-17T18:24:47:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:24:47:     import google.generativeai as genai
+2026-03-17T18:24:47: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:24:54: Traceback (most recent call last):
+2026-03-17T18:24:54:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:24:54:     
+2026-03-17T18:24:54: import google.generativeai as genai
+2026-03-17T18:24:54: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:25:01: Traceback (most recent call last):
+2026-03-17T18:25:01:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:25:01:     import google.generativeai as genai
+2026-03-17T18:25:01: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:25:08: Traceback (most recent call last):
+2026-03-17T18:25:08:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:25:08:     import google.generativeai as genai
+2026-03-17T18:25:08: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:25:15: Traceback (most recent call last):
+2026-03-17T18:25:15:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:25:15:     
+2026-03-17T18:25:15: import google.generativeai as genai
+2026-03-17T18:25:15: 
+2026-03-17T18:25:15: ModuleNotFoundError
+2026-03-17T18:25:15: : 
+2026-03-17T18:25:15: No module named 'google.generativeai'
+2026-03-17T18:25:15: 
+2026-03-17T18:25:21: Traceback (most recent call last):
+2026-03-17T18:25:21:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:25:21:     import google.generativeai as genai
+2026-03-17T18:25:21: 
+2026-03-17T18:25:21: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:25:27: Traceback (most recent call last):
+2026-03-17T18:25:27:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:25:27:     import google.generativeai as genai
+2026-03-17T18:25:27: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:25:34: Traceback (most recent call last):
+2026-03-17T18:25:34:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:25:34:     
+2026-03-17T18:25:34: import google.generativeai as genai
+2026-03-17T18:25:34: 
+2026-03-17T18:25:34: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:25:41: Traceback (most recent call last):
+2026-03-17T18:25:41:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:25:41:     import google.generativeai as genai
+2026-03-17T18:25:41: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:25:47: Traceback (most recent call last):
+2026-03-17T18:25:47:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:25:47:     import google.generativeai as genai
+2026-03-17T18:25:47: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:25:54: Traceback (most recent call last):
+2026-03-17T18:25:54:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:25:54:     import google.generativeai as genai
+2026-03-17T18:25:54: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:26:02: Traceback (most recent call last):
+2026-03-17T18:26:02:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:26:02:     
+2026-03-17T18:26:02: import google.generativeai as genai
+2026-03-17T18:26:02: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:26:10: Traceback (most recent call last):
+2026-03-17T18:26:10:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:26:10:     
+2026-03-17T18:26:10: import google.generativeai as genai
+2026-03-17T18:26:10: 
+2026-03-17T18:26:10: : No module named 'google.generativeai'
+2026-03-17T18:26:19: Traceback (most recent call last):
+2026-03-17T18:26:19:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:26:19:     import google.generativeai as genai
+2026-03-17T18:26:19: 
+2026-03-17T18:26:19: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:26:28: Traceback (most recent call last):
+2026-03-17T18:26:28:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:26:28:     import google.generativeai as genai
+2026-03-17T18:26:28: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:26:36: Traceback (most recent call last):
+2026-03-17T18:26:36:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:26:36:     
+2026-03-17T18:26:36: import google.generativeai as genai
+2026-03-17T18:26:36: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:26:44: Traceback (most recent call last):
+2026-03-17T18:26:44:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:26:44:     
+2026-03-17T18:26:44: import google.generativeai as genai
+2026-03-17T18:26:44: 
+2026-03-17T18:26:44: : No module named 'google.generativeai'
+2026-03-17T18:26:53: Traceback (most recent call last):
+2026-03-17T18:26:53:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:26:53:     
+2026-03-17T18:26:53: import google.generativeai as genai
+2026-03-17T18:26:53: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:27:00: Traceback (most recent call last):
+2026-03-17T18:27:00:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:27:00:     import google.generativeai as genai
+2026-03-17T18:27:00: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:27:07: Traceback (most recent call last):
+2026-03-17T18:27:07:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:27:07:     import google.generativeai as genai
+2026-03-17T18:27:07: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:27:14: Traceback (most recent call last):
+2026-03-17T18:27:14:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:27:14:     
+2026-03-17T18:27:14: import google.generativeai as genai
+2026-03-17T18:27:14: 
+2026-03-17T18:27:14: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:27:19: Traceback (most recent call last):
+2026-03-17T18:27:19:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:27:19:     import google.generativeai as genai
+2026-03-17T18:27:19: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:27:25: Traceback (most recent call last):
+2026-03-17T18:27:25:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:27:25:     import google.generativeai as genai
+2026-03-17T18:27:25: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:27:33: Traceback (most recent call last):
+2026-03-17T18:27:33:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:27:33:     
+2026-03-17T18:27:33: import google.generativeai as genai
+2026-03-17T18:27:33: 
+2026-03-17T18:27:33: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:27:39: Traceback (most recent call last):
+2026-03-17T18:27:39:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:27:39:     import google.generativeai as genai
+2026-03-17T18:27:39: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:27:46: Traceback (most recent call last):
+2026-03-17T18:27:46:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:27:46:     
+2026-03-17T18:27:46: import google.generativeai as genai
+2026-03-17T18:27:46: 
+2026-03-17T18:27:46: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:27:53: Traceback (most recent call last):
+2026-03-17T18:27:53:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:27:53:     import google.generativeai as genai
+2026-03-17T18:27:53: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:28:00: Traceback (most recent call last):
+2026-03-17T18:28:00:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:28:00:     import google.generativeai as genai
+2026-03-17T18:28:00: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:28:06: Traceback (most recent call last):
+2026-03-17T18:28:06:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:28:06:     import google.generativeai as genai
+2026-03-17T18:28:06: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:28:12: Traceback (most recent call last):
+2026-03-17T18:28:12:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:28:12:     import google.generativeai as genai
+2026-03-17T18:28:12: : No module named 'google.generativeai'
+2026-03-17T18:28:19: Traceback (most recent call last):
+2026-03-17T18:28:19:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:28:19:     import google.generativeai as genai
+2026-03-17T18:28:19: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:28:26: Traceback (most recent call last):
+2026-03-17T18:28:26:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:28:26:     
+2026-03-17T18:28:26: import google.generativeai as genai
+2026-03-17T18:28:26: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:28:32: Traceback (most recent call last):
+2026-03-17T18:28:32:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:28:32:     
+2026-03-17T18:28:32: import google.generativeai as genai
+2026-03-17T18:28:32: 
+2026-03-17T18:28:32: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:28:37: Traceback (most recent call last):
+2026-03-17T18:28:37:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:28:37:     import google.generativeai as genai
+2026-03-17T18:28:37: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:28:43: Traceback (most recent call last):
+2026-03-17T18:28:43:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:28:43:     
+2026-03-17T18:28:43: import google.generativeai as genai
+2026-03-17T18:28:43: 
+2026-03-17T18:28:43: ModuleNotFoundError
+2026-03-17T18:28:43: : 
+2026-03-17T18:28:43: No module named 'google.generativeai'
+2026-03-17T18:28:43: 
+2026-03-17T18:28:49: Traceback (most recent call last):
+2026-03-17T18:28:49:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:28:49:     import google.generativeai as genai
+2026-03-17T18:28:49: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:28:55: Traceback (most recent call last):
+2026-03-17T18:28:55:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:28:55:     import google.generativeai as genai
+2026-03-17T18:28:55: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:29:03: Traceback (most recent call last):
+2026-03-17T18:29:03:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:29:03:     
+2026-03-17T18:29:03: import google.generativeai as genai
+2026-03-17T18:29:03: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:29:09: Traceback (most recent call last):
+2026-03-17T18:29:09:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:29:09:     import google.generativeai as genai
+2026-03-17T18:29:09: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:29:15: Traceback (most recent call last):
+2026-03-17T18:29:15:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:29:15:     import google.generativeai as genai
+2026-03-17T18:29:15: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:29:22: Traceback (most recent call last):
+2026-03-17T18:29:22:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:29:22:     
+2026-03-17T18:29:22: import google.generativeai as genai
+2026-03-17T18:29:22: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:29:27: Traceback (most recent call last):
+2026-03-17T18:29:27:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:29:27:     import google.generativeai as genai
+2026-03-17T18:29:27: : No module named 'google.generativeai'
+2026-03-17T18:29:34: Traceback (most recent call last):
+2026-03-17T18:29:34:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:29:34:     import google.generativeai as genai
+2026-03-17T18:29:34: 
+2026-03-17T18:29:34: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:29:40: Traceback (most recent call last):
+2026-03-17T18:29:40:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:29:40:     import google.generativeai as genai
+2026-03-17T18:29:40: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:29:45: Traceback (most recent call last):
+2026-03-17T18:29:45:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:29:45:     import google.generativeai as genai
+2026-03-17T18:29:45: : No module named 'google.generativeai'
+2026-03-17T18:29:51: Traceback (most recent call last):
+2026-03-17T18:29:51:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:29:51:     import google.generativeai as genai
+2026-03-17T18:29:51: 
+2026-03-17T18:29:51: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:29:57: Traceback (most recent call last):
+2026-03-17T18:29:57:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:29:57:     import google.generativeai as genai
+2026-03-17T18:29:57: No module named 'google.generativeai'
+2026-03-17T18:30:02: Traceback (most recent call last):
+2026-03-17T18:30:02:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:30:02:     import google.generativeai as genai
+2026-03-17T18:30:02: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:30:08: Traceback (most recent call last):
+2026-03-17T18:30:08:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:30:08:     import google.generativeai as genai
+2026-03-17T18:30:08: : No module named 'google.generativeai'
+2026-03-17T18:30:13: Traceback (most recent call last):
+2026-03-17T18:30:13:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:30:13:     import google.generativeai as genai
+2026-03-17T18:30:13: : No module named 'google.generativeai'
+2026-03-17T18:30:19: Traceback (most recent call last):
+2026-03-17T18:30:19:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:30:19:     
+2026-03-17T18:30:19: import google.generativeai as genai
+2026-03-17T18:30:19: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:30:24: Traceback (most recent call last):
+2026-03-17T18:30:24:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:30:24:     import google.generativeai as genai
+2026-03-17T18:30:24: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:30:30: Traceback (most recent call last):
+2026-03-17T18:30:30:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:30:30:     import google.generativeai as genai
+2026-03-17T18:30:30: 
+2026-03-17T18:30:30: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:30:37: Traceback (most recent call last):
+2026-03-17T18:30:37:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:30:37:     import google.generativeai as genai
+2026-03-17T18:30:37: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:30:44: Traceback (most recent call last):
+2026-03-17T18:30:44:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:30:44:     import google.generativeai as genai
+2026-03-17T18:30:44: : No module named 'google.generativeai'
+2026-03-17T18:30:51: Traceback (most recent call last):
+2026-03-17T18:30:51:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:30:51:     import google.generativeai as genai
+2026-03-17T18:30:51: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:30:57: Traceback (most recent call last):
+2026-03-17T18:30:57:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:30:57:     
+2026-03-17T18:30:57: import google.generativeai as genai
+2026-03-17T18:30:57: 
+2026-03-17T18:30:57: ModuleNotFoundError
+2026-03-17T18:30:57: : 
+2026-03-17T18:30:57: No module named 'google.generativeai'
+2026-03-17T18:30:57: 
+2026-03-17T18:31:04: Traceback (most recent call last):
+2026-03-17T18:31:04:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:31:04:     import google.generativeai as genai
+2026-03-17T18:31:04: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:31:10: Traceback (most recent call last):
+2026-03-17T18:31:10:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:31:10:     import google.generativeai as genai
+2026-03-17T18:31:10: : No module named 'google.generativeai'
+2026-03-17T18:31:17: Traceback (most recent call last):
+2026-03-17T18:31:17:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:31:17:     import google.generativeai as genai
+2026-03-17T18:31:17: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:31:22: Traceback (most recent call last):
+2026-03-17T18:31:22:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:31:22:     import google.generativeai as genai
+2026-03-17T18:31:22: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:31:28: Traceback (most recent call last):
+2026-03-17T18:31:28:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:31:28:     
+2026-03-17T18:31:28: import google.generativeai as genai
+2026-03-17T18:31:28: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:31:33: Traceback (most recent call last):
+2026-03-17T18:31:33:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:31:33:     import google.generativeai as genai
+2026-03-17T18:31:33: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:31:39: Traceback (most recent call last):
+2026-03-17T18:31:39:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:31:39:     import google.generativeai as genai
+2026-03-17T18:31:39: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:31:46: Traceback (most recent call last):
+2026-03-17T18:31:46:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:31:46:     
+2026-03-17T18:31:46: import google.generativeai as genai
+2026-03-17T18:31:46: 
+2026-03-17T18:31:46: ModuleNotFoundError
+2026-03-17T18:31:46: : 
+2026-03-17T18:31:46: No module named 'google.generativeai'
+2026-03-17T18:31:46: 
+2026-03-17T18:31:52: Traceback (most recent call last):
+2026-03-17T18:31:52:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:31:52:     
+2026-03-17T18:31:52: import google.generativeai as genai
+2026-03-17T18:31:52: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:31:59: Traceback (most recent call last):
+2026-03-17T18:31:59:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:31:59:     import google.generativeai as genai
+2026-03-17T18:31:59: : No module named 'google.generativeai'
+2026-03-17T18:32:06: Traceback (most recent call last):
+2026-03-17T18:32:06:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:32:06:     import google.generativeai as genai
+2026-03-17T18:32:06: 
+2026-03-17T18:32:06: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:32:12: Traceback (most recent call last):
+2026-03-17T18:32:12:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:32:12:     import google.generativeai as genai
+2026-03-17T18:32:12: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:32:18: Traceback (most recent call last):
+2026-03-17T18:32:18:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:32:18:     import google.generativeai as genai
+2026-03-17T18:32:18: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:32:22: Traceback (most recent call last):
+2026-03-17T18:32:22:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:32:22:     
+2026-03-17T18:32:22: import google.generativeai as genai
+2026-03-17T18:32:22: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:32:27: Traceback (most recent call last):
+2026-03-17T18:32:27:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:32:27:     
+2026-03-17T18:32:27: import google.generativeai as genai
+2026-03-17T18:32:27: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:32:33: Traceback (most recent call last):
+2026-03-17T18:32:33:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:32:33:     
+2026-03-17T18:32:33: import google.generativeai as genai
+2026-03-17T18:32:33: 
+2026-03-17T18:32:33: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:32:33: 
+2026-03-17T18:32:38: Traceback (most recent call last):
+2026-03-17T18:32:38:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:32:38:     import google.generativeai as genai
+2026-03-17T18:32:38: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:32:43: Traceback (most recent call last):
+2026-03-17T18:32:43:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:32:43:     import google.generativeai as genai
+2026-03-17T18:32:43: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:32:47: Traceback (most recent call last):
+2026-03-17T18:32:47:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:32:47:     import google.generativeai as genai
+2026-03-17T18:32:47: 
+2026-03-17T18:32:47: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:32:52: Traceback (most recent call last):
+2026-03-17T18:32:52:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:32:52:     
+2026-03-17T18:32:52: import google.generativeai as genai
+2026-03-17T18:32:52: 
+2026-03-17T18:32:52: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:32:52: 
+2026-03-17T18:32:57: Traceback (most recent call last):
+2026-03-17T18:32:57:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:32:57:     import google.generativeai as genai
+2026-03-17T18:32:57: 
+2026-03-17T18:32:57: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:33:02: Traceback (most recent call last):
+2026-03-17T18:33:02:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:33:02:     import google.generativeai as genai
+2026-03-17T18:33:02: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:33:07: Traceback (most recent call last):
+2026-03-17T18:33:07:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:33:07:     import google.generativeai as genai
+2026-03-17T18:33:07: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:33:12: Traceback (most recent call last):
+2026-03-17T18:33:12:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:33:12:     import google.generativeai as genai
+2026-03-17T18:33:12: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:33:16: Traceback (most recent call last):
+2026-03-17T18:33:16:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:33:16:     
+2026-03-17T18:33:16: import google.generativeai as genai
+2026-03-17T18:33:16: : No module named 'google.generativeai'
+2026-03-17T18:33:21: Traceback (most recent call last):
+2026-03-17T18:33:21:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:33:21:     import google.generativeai as genai
+2026-03-17T18:33:21: 
+2026-03-17T18:33:21: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:33:26: Traceback (most recent call last):
+2026-03-17T18:33:26:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:33:26:     
+2026-03-17T18:33:26: import google.generativeai as genai
+2026-03-17T18:33:26: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:33:30: Traceback (most recent call last):
+2026-03-17T18:33:30:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:33:30:     import google.generativeai as genai
+2026-03-17T18:33:30: ModuleNotFoundError: No module named 'google.generativeai'
+2026-03-17T18:33:35: Traceback (most recent call last):
+2026-03-17T18:33:35:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T18:33:35:     import google.generativeai as genai
+2026-03-17T18:33:35: ModuleNotFoundError: No module named 'google.generativeai'

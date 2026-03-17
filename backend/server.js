@@ -97,22 +97,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // --- Routes ---
 // doorRoute removed (declared at line 263 with authentication)
 
-// Root Route for Health Check
+/*
 app.get('/', (req, res) => {
-    const safeEnv = {};
-    Object.keys(process.env).forEach(key => {
-        if (!key.includes('KEY') && !key.includes('SECRET') && !key.includes('PASSWORD')) {
-            safeEnv[key] = process.env[key];
-        }
-    });
-
-    res.json({
-        status: 'Online',
-        service: 'Smart Door Lock API',
-        engine_url: PYTHON_ENGINE_URL,
-        endpoints: ['/api/stats', '/api/logs', '/api/users', '/auth/login', '/api/diag']
-    });
+    ...
 });
+*/
 
 app.get('/api/diag', async (req, res) => {
     const dns = require('dns').promises;
@@ -2468,7 +2457,8 @@ app.post('/api/biometrics/face/verify', biometricLimiter, upload.single('file'),
 
 
 // Final fallback for SPA (Admin Dashboard)
-app.get('*', (req, res, next) => {
+app.use((req, res, next) => {
+    if (req.method !== 'GET') return next();
     if (req.url.startsWith('/api') || req.url.startsWith('/auth')) {
         return next();
     }
