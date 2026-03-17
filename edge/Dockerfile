@@ -30,8 +30,5 @@ RUN python3 -c "import face_recognition; face_recognition.face_encodings(face_re
 # Copy application code
 COPY . .
 
-# Expose port
-EXPOSE 8001
-
-# Start application using uvicorn
-CMD ["uvicorn", "biometric_api:app", "--host", "0.0.0.0", "--port", "8001"]
+# Start application. Cloud Run provides PORT env var, we fallback to 8080
+CMD uvicorn biometric_api:app --host 0.0.0.0 --port ${PORT:-8080}
