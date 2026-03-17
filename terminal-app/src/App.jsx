@@ -7,7 +7,7 @@ import { Camera as CapCamera, CameraResultType, CameraSource } from '@capacitor/
 import { BleClient } from '@capacitor-community/bluetooth-le';
 
 // Production API Configuration
-const API_BASE = import.meta.env?.VITE_API_BASE_URL || 'https://smart-door-backend-957b.onrender.com';
+const API_BASE = import.meta.env?.VITE_API_BASE_URL || 'https://smart-door-backend-50851729985.asia-south1.run.app';
 const RESET_DELAY = 5; // seconds
 
 const BLE_MAC = '58:8C:81:CC:65:29';
@@ -48,7 +48,9 @@ function LiveClock() {
 }
 
 export default function App() {
-    console.log('🚀 [Init] App Starting. API_BASE:', API_BASE);
+    useEffect(() => {
+        console.log('🚀 [Init] App Mounted. Time:', new Date().toISOString(), 'API_BASE:', API_BASE);
+    }, []);
     // view: 'home' | 'face' | 'fingerprint' | 'checkin' | 'checkout' | 'error'
     const [view, setView] = useState('home');
     const [loading, setLoading] = useState(false);
@@ -151,26 +153,35 @@ export default function App() {
 
         const checkBiometricHealth = async () => {
             try {
-                const res = await axios.get(`${API_BASE}/api/biometrics/health`, { timeout: 3000 });
+                const res = await axios.get(`${API_BASE}/api/biometrics/health`, { timeout: 15000 });
+                console.log('🧬 [Health] Status:', res.data.status, 'Backend URL:', API_BASE);
                 if (res.data.status === 'online' || res.data.status === 'connected' || res.data.status === 'ready') {
                     setBiometricStatus('online');
                 } else {
+                    console.warn('⚠️ [Health] Unexpected status:', res.data);
                     setBiometricStatus('offline');
                 }
             } catch (e) {
+                console.error('❌ [Health] Connection Failed:', e.message, 'URL:', `${API_BASE}/api/biometrics/health`);
                 setBiometricStatus('offline');
             }
         };
 
-        checkBle();
-        checkBiometricHealth();
+        const initSystem = async () => {
+            await checkBle();
+            await checkBiometricHealth();
+        };
+
+        initSystem();
         
         statusInterval = setInterval(() => {
-            checkBle();
             checkBiometricHealth();
-        }, 15000); // Check every 15s to save battery/bandwidth
+        }, 60000); // Check every 1 min
         
-        return () => clearInterval(statusInterval);
+        return () => {
+            clearInterval(statusInterval);
+            BleClient.stopLEScan().catch(() => {});
+        };
     }, []);
 
     useEffect(() => {
@@ -295,11 +306,13 @@ export default function App() {
                     setMessage(err.response.data.message || 'Face Not Identified');
                     setTimeout(() => { if (view === 'face') setMessage('Analyzing...') }, 1200);
                 } else if (err.response?.status === 503) {
+                    console.error('❌ [Face] Engine Offline (503):', err.response.data);
                     setMessage('Biometric Engine Offline');
                 } else if (err.code === 'ERR_NETWORK') {
+                    console.error('❌ [Face] Network Error:', err.message, 'Details:', err.config?.url);
                     setMessage(`Network error: Cannot reach server`);
-                    console.error('Network Error Detail:', err);
                 } else {
+                    console.error('❌ [Face] Unexpected Error:', err.message, 'Status:', err.response?.status);
                     setMessage('System Error');
                 }
             }
@@ -346,35 +359,41 @@ export default function App() {
         }, 'image/jpeg', 0.9);
     };
 
-    // ── Fingerprint ───────────────────────────────────────────────────────────
-    const handleFingerprintScan = async () => {
-        try {
-            const avail = await NativeBiometric.isAvailable();
-            if (!avail.isAvailable) throw new Error('Sensor not available');
-            await NativeBiometric.verify({
-                reason: 'Authenticate for attendance',
-                title: 'Terminal Security',
-                subtitle: 'Place your finger on the sensor',
-                negativeButtonText: 'Cancel',
-            });
-            setView('fingerprint');
-        } catch (err) {
-            console.warn('Biometric fallback:', err.message);
-            setView('fingerprint');
-        }
+    // ── Fingerprint Flow ─────────────────────────────────────────────────────
+    const handleFingerprintScan = () => {
+        // Step 1: Just go to employee selection
+        setView('fingerprint');
     };
 
     const markManualAttendance = async (employee) => {
-        setLoading(true);
         try {
+            // Step 2: Now verify fingerprint on the device
+            const avail = await NativeBiometric.isAvailable();
+            if (!avail.isAvailable) {
+                // If no sensor, we might want to ask for a PIN or just allow it 
+                // but for security we should at least try.
+                console.warn('Sensor not available, falling back to instant access (Not recommended)');
+            } else {
+                await NativeBiometric.verify({
+                    reason: 'Authenticate for attendance',
+                    title: 'Terminal Security',
+                    subtitle: `Confirm identity for ${employee.name}`,
+                    negativeButtonText: 'Cancel',
+                });
+            }
+
+            // Step 3: Record in DB
+            setLoading(true);
             const res = await axios.post(`${API_BASE}/api/attendance/mark`, {
-                employee_id: employee.id,
+                employee_id: employee.employee_id || employee.id,
                 method: 'fingerprint',
                 device_id: 'office_terminal',
             });
+            
             const data = res.data || {};
             const isCheckout = !!(data.check_out);
             const now = new Date();
+            
             setResult({
                 name: employee.name,
                 time: data.check_in
@@ -386,11 +405,16 @@ export default function App() {
                 workingHours: data.working_hours != null ? formatWorkHours(data.working_hours) : null,
                 isCheckout,
             });
+            
             setView(isCheckout ? 'checkout' : 'checkin');
             triggerDoorUnlock();
+
         } catch (err) {
-            setMessage(err.response?.data?.error || 'Connection failure');
-            setView('error');
+            console.error('Fingerprint Error:', err);
+            if (err.message !== 'User canceled') {
+                setMessage(err.response?.data?.error || 'Verification Failed');
+                setView('error');
+            }
         } finally {
             setLoading(false);
         }

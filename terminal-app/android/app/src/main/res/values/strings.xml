@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">AuraLock Terminal</string>
-    <string name="title_activity_main">AuraLock Terminal</string>
+    <string name="app_name">Englabs Attendance</string>
+    <string name="title_activity_main">Englabs Attendance</string>
     <string name="package_name">com.smartdoor.terminal</string>
     <string name="custom_url_scheme">com.smartdoor.terminal</string>
 </resources>

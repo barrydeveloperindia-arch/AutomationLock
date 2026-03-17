@@ -19,40 +19,8 @@ const doorService = require('./doorService');
 const app = express();
 const PORT = process.env.PORT || 8000;
 // --- Configuration & Initialization ---
-const RENDER_HOST = process.env.RENDER_SERVICE_NAME || 'smart-door-backend';
-
-let PYTHON_ENGINE_URL = process.env.PYTHON_ENGINE_URL;
-const ORIGINAL_URL = PYTHON_ENGINE_URL;
-
-// On Render, we prefer the environment variable if provided by Render via 'fromService'
-// On Render, we prefer the internal hostname defined in render.yaml
-if (process.env.RENDER) {
-    const baseName = process.env.RENDER_SERVICE_NAME || 'smart-door-backend';
-    // Internal discovery name is just the 'name' from render.yaml
-    const internalName = 'smart-door-edge'; 
-    const fallbackName = baseName.includes('-957b') ? baseName.replace('backend', 'edge') : `smart-door-edge-957b`;
-    
-    // We try internalName first
-    const calculatedUrl = `http://${internalName}:8001`;
-    
-    if (!PYTHON_ENGINE_URL) {
-        PYTHON_ENGINE_URL = calculatedUrl;
-    }
-    console.log(`🌐 [Discovery] RENDER_SERVICE_NAME: ${baseName} | Internal: ${internalName} | Fallback: ${fallbackName} | Final: ${PYTHON_ENGINE_URL}`);
-} else if (!PYTHON_ENGINE_URL) {
-    PYTHON_ENGINE_URL = 'http://localhost:8001';
-}
-
-// Ensure protocol and port for internal service networking
-if (!PYTHON_ENGINE_URL.startsWith('http')) {
-    PYTHON_ENGINE_URL = `http://${PYTHON_ENGINE_URL}`;
-}
-
-// Add port 8001 if missing for Render internal hostname (no dots, no colon)
-const urlObj = new URL(PYTHON_ENGINE_URL);
-if (!urlObj.port && !urlObj.hostname.includes('.') && urlObj.hostname !== 'localhost') {
-    PYTHON_ENGINE_URL = `${PYTHON_ENGINE_URL}:8001`;
-}
+// ── Service Discovery ──
+let PYTHON_ENGINE_URL = process.env.PYTHON_ENGINE_URL || 'http://localhost:8001';
 
 console.log('🧬 [Biometrics] Target Engine:', PYTHON_ENGINE_URL);
 
@@ -2258,7 +2226,6 @@ app.post('/api/biometrics/face/register', upload.single('file'), validateIdentit
 app.get('/api/biometrics/health', async (req, res) => {
     const fallbacks = [
         PYTHON_ENGINE_URL,
-        `http://${RENDER_HOST.replace('backend', 'edge')}:8001`,
         'http://smart-door-edge:8001',
         'http://localhost:8001'
     ].filter(Boolean);

@@ -655,10 +655,11 @@ async def verify_face(file: UploadFile = File(...)):
         }
 
     except Exception as e:
-        print(f"[ERROR] Verification Error: {str(e)}")
         import traceback
+        error_msg = f"Engine Error: {str(e)}"
+        print(f"❌ {error_msg}")
         traceback.print_exc()
-        raise HTTPException(status_code=500, detail=str(e))
+        return {"success": False, "message": error_msg, "error_code": "ENGINE_ERROR"}
 
 
 # ── Biometric Cache Management ─────────────────────────────────────────────────
