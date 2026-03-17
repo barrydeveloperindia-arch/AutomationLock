@@ -231,11 +231,30 @@ export default function App() {
                 }
                 setMessage('Analyzing...');
 
-                // Interval captures frame every 2s and sends to backend silently
                 if (view === 'face') {
-                    interval = setInterval(captureAndVerify, 2000);
-                } else if (view === 'admin_scan') {
-                    // admin registration handles its own capture
+                    let failCount = 0;
+                    let isProcessing = false;
+                    
+                    interval = setInterval(async () => {
+                        if (isProcessing) return;
+                        isProcessing = true;
+                        try {
+                            const success = await captureAndVerify();
+                            if (success) {
+                                clearInterval(interval);
+                            } else {
+                                failCount++;
+                                if (failCount > 15) {
+                                    setMessage('Scanner timed out. Try again?');
+                                    clearInterval(interval);
+                                }
+                            }
+                        } catch (e) {
+                            console.error('Loop Error:', e);
+                        } finally {
+                            isProcessing = false;
+                        }
+                    }, 3000);
                 }
             } catch (err) {
                 console.error(err);
@@ -258,65 +277,68 @@ export default function App() {
             if (interval) clearInterval(interval);
             if (streamRef.current) {
                 streamRef.current.getTracks().forEach(t => t.stop());
+                streamRef.current = null;
             }
         };
     }, [view]);
 
     const captureAndVerify = () => {
-        if (!videoRef.current || view !== 'face') return;
+        return new Promise((resolve) => {
+            if (!videoRef.current || view !== 'face') return resolve(false);
 
-        const canvas = document.createElement('canvas');
-        canvas.width = videoRef.current.videoWidth || 640;
-        canvas.height = videoRef.current.videoHeight || 480;
-        if (canvas.width === 0) return; // Video not playing yet
+            const canvas = document.createElement('canvas');
+            canvas.width = videoRef.current.videoWidth || 640;
+            canvas.height = videoRef.current.videoHeight || 480;
+            if (canvas.width === 0) return resolve(false);
 
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
 
-        canvas.toBlob(async (blob) => {
-            if (!blob) return;
-            try {
-                const form = new FormData();
-                form.append('file', blob, 'face.jpg');
+            canvas.toBlob(async (blob) => {
+                if (!blob) return resolve(false);
+                try {
+                    const form = new FormData();
+                    form.append('file', blob, 'face.jpg');
 
-                const res = await axios.post(`${API_BASE}/api/biometrics/face/verify`, form, {
-                    headers: { 'Content-Type': 'multipart/form-data' },
-                });
-
-                if (res.data.success && view === 'face') {
-                    // Success!
-                    const isCheckout = !!(res.data.check_out || res.data.checkout);
-                    const now = new Date();
-                    setResult({
-                        name: res.data.user?.name || res.data.name || res.data.employee_name || 'Employee',
-                        time: res.data.check_in
-                            ? new Date(res.data.check_in).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
-                            : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
-                        checkoutTime: res.data.check_out
-                            ? new Date(res.data.check_out).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
-                            : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
-                        workingHours: res.data.working_hours != null ? formatWorkHours(res.data.working_hours) : null,
-                        isCheckout,
+                    const res = await axios.post(`${API_BASE}/api/biometrics/face/verify`, form, {
+                        headers: { 'Content-Type': 'multipart/form-data' },
+                        timeout: 30000,
                     });
-                    setView(isCheckout ? 'checkout' : 'checkin');
-                    triggerDoorUnlock();
+
+                    if (res.data.success && view === 'face') {
+                        const isCheckout = !!(res.data.check_out || res.data.checkout);
+                        const now = new Date();
+                        setResult({
+                            name: res.data.user?.name || res.data.name || res.data.employee_name || 'Employee',
+                            time: res.data.check_in
+                                ? new Date(res.data.check_in).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
+                                : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
+                            checkoutTime: res.data.check_out
+                                ? new Date(res.data.check_out).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
+                                : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
+                            workingHours: res.data.working_hours != null ? formatWorkHours(res.data.working_hours) : null,
+                            isCheckout,
+                        });
+                        setView(isCheckout ? 'checkout' : 'checkin');
+                        triggerDoorUnlock();
+                        resolve(true);
+                    } else {
+                        resolve(false);
+                    }
+                } catch (err) {
+                    console.error('Scan Request Error:', err.message);
+                    if (err.response?.status === 401 || err.response?.status === 403) {
+                        setMessage(err.response.data.message || 'Face Not Identified');
+                        setTimeout(() => { if (view === 'face') setMessage('Analyzing...') }, 1200);
+                    } else if (err.response?.status === 503) {
+                        setMessage('Biometric Engine Busy (Cold Start)');
+                    } else {
+                        setMessage(`Engine Error: ${err.message}`);
+                    }
+                    resolve(false);
                 }
-            } catch (err) {
-                if (err.response?.status === 401 || err.response?.status === 403) {
-                    setMessage(err.response.data.message || 'Face Not Identified');
-                    setTimeout(() => { if (view === 'face') setMessage('Analyzing...') }, 1200);
-                } else if (err.response?.status === 503) {
-                    console.error('❌ [Face] Engine Offline (503):', err.response.data);
-                    setMessage('Biometric Engine Offline');
-                } else if (err.code === 'ERR_NETWORK') {
-                    console.error('❌ [Face] Network Error:', err.message, 'Details:', err.config?.url);
-                    setMessage(`Network error: Cannot reach server`);
-                } else {
-                    console.error('❌ [Face] Unexpected Error:', err.message, 'Status:', err.response?.status);
-                    setMessage('System Error');
-                }
-            }
-        }, 'image/jpeg', 0.8);
+            }, 'image/jpeg', 0.8);
+        });
     };
 
     const captureAndRegister = () => {
@@ -370,17 +392,15 @@ export default function App() {
             // Step 2: Now verify fingerprint on the device
             const avail = await NativeBiometric.isAvailable();
             if (!avail.isAvailable) {
-                // If no sensor, we might want to ask for a PIN or just allow it 
-                // but for security we should at least try.
-                console.warn('Sensor not available, falling back to instant access (Not recommended)');
-            } else {
-                await NativeBiometric.verify({
-                    reason: 'Authenticate for attendance',
-                    title: 'Terminal Security',
-                    subtitle: `Confirm identity for ${employee.name}`,
-                    negativeButtonText: 'Cancel',
-                });
+                throw new Error('Biometric sensor not available or not configured on this device. Please set up a fingerprint in Android Settings.');
             }
+            
+            await NativeBiometric.verify({
+                reason: 'Authenticate for attendance',
+                title: 'Terminal Security',
+                subtitle: `Confirm identity for ${employee.name}`,
+                negativeButtonText: 'Cancel',
+            });
 
             // Step 3: Record in DB
             setLoading(true);
