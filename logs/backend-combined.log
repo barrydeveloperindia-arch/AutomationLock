@@ -20970,3 +20970,12 @@
 2026-03-13T17:23:20: 📊 [Stats] todayIST=2026-03-13 | employees=6 | present=99 | late=79 | scans=66
 2026-03-13T17:23:21: 📡 [5:23:21 pm] GET /api/door/status
 2026-03-13T17:23:21: 🔓 Authenticated User: 5089shivkumar@gmail.com
+2026-03-17T13:37:03: [dotenv@17.3.1] injecting env (6) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-03-17T13:37:07: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-03-17T13:37:17: [dotenv@17.3.1] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+2026-03-17T13:37:17: 🧬 [Biometrics] Target Engine: http://localhost:8001
+2026-03-17T13:37:17: 🚀 [Config] ADMIN_EMAIL: 5089shivkumar@gmail.com
+2026-03-17T13:37:17: 🚀 [Config] ADMIN_PASSWORD: SET
+2026-03-17T13:37:17: 🚀 [Config] JWT_SECRET: SET
+2026-03-17T13:37:17: 🚀 [Config] SUPABASE_URL: https://wdtizlzfsijikcejerwq.supabase.co
+2026-03-17T13:37:17: Backend running on http://localhost:8000

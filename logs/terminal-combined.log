@@ -592,3 +592,9 @@
 2026-03-13T17:16:47: [2m5:16:47 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mandroid/app/build/intermediates/assets/debug/public/index.html[22m
 2026-03-13T17:17:38: [2m5:17:38 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mandroid/app/src/main/assets/public/index.html[22m
 2026-03-13T17:17:38: [2m5:17:38 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mandroid/app/src/main/assets/public/index.html[22m
+2026-03-17T13:37:14: 
+2026-03-17T13:37:14:   [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m10014[22m[2m[0m ms[22m
+2026-03-17T13:37:14: 
+2026-03-17T13:37:14:   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m3001[22m/[39m
+2026-03-17T13:37:14:   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.2.139:[1m3001[22m/[39m
+2026-03-17T13:37:14:   [32m➜[39m  [1mNetwork[22m: [36mhttp://172.21.64.1:[1m3001[22m/[39m

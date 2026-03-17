@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Optimized installation for memory-constrained environments
-COPY edge/requirements.txt .
+COPY requirements.txt .
 
 # 1. Install dlib with STRICT single-threaded build to prevent OOM (8GB limit)
 # 2. Install opencv-python-headless to avoid heavy GUI dependencies
@@ -28,7 +28,7 @@ RUN CMAKE_BUILD_PARALLEL_LEVEL=1 pip install --no-cache-dir dlib==19.24.1 && \
 RUN python3 -c "import face_recognition; face_recognition.face_encodings(face_recognition.load_image_file('/app/requirements.txt'))" || true
 
 # Copy application code
-COPY edge/ .
+COPY . .
 
 # Expose port
 EXPOSE 8001
