@@ -13060,3 +13060,7 @@
 2026-03-17T17:57:33:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
 2026-03-17T17:57:33:     import google.generativeai as genai
 2026-03-17T17:57:33: : No module named 'google.generativeai'
+2026-03-17T17:59:09: Traceback (most recent call last):
+2026-03-17T17:59:09:   File "c:\Users\abrbh\Documents\Antigravity\LockingMech\edge\biometric_api.py", line 10, in <module>
+2026-03-17T17:59:09:     import google.generativeai as genai
+2026-03-17T17:59:09: ModuleNotFoundError: No module named 'google.generativeai'
