@@ -17,10 +17,10 @@ WORKDIR /app
 # Optimized installation for memory-constrained environments
 COPY edge/requirements.txt .
 
-# 1. Install dlib first with limited parallelism to prevent OOM (8GB limit)
+# 1. Install dlib with STRICT single-threaded build to prevent OOM (8GB limit)
 # 2. Install opencv-python-headless to avoid heavy GUI dependencies
 # 3. Install remaining requirements
-RUN MAKEFLAGS="-j1" pip install --no-cache-dir dlib==19.24.1 && \
+RUN CMAKE_BUILD_PARALLEL_LEVEL=1 pip install --no-cache-dir dlib==19.24.1 && \
     pip install --no-cache-dir opencv-python-headless && \
     pip install --no-cache-dir -r requirements.txt
 
