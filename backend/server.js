@@ -7,6 +7,7 @@ const { createClient } = require('@supabase/supabase-js');
 const multer = require('multer');
 const axios = require('axios');
 const crypto = require('crypto');
+const path = require('path');
 const rateLimit = require('express-rate-limit');
 const upload = multer({ storage: multer.memoryStorage() });
 const validateIdentity = require('./middleware/validateIdentity');
@@ -90,6 +91,9 @@ app.use(cors({
 
 app.use(express.json());
 
+// --- Static File Serving (Admin Dashboard) ---
+app.use(express.static(path.join(__dirname, 'public')));
+
 // --- Routes ---
 // doorRoute removed (declared at line 263 with authentication)
 
@@ -106,9 +110,6 @@ app.get('/', (req, res) => {
         status: 'Online',
         service: 'Smart Door Lock API',
         engine_url: PYTHON_ENGINE_URL,
-        original_env_url: ORIGINAL_URL || 'NONE',
-        calculated_engine_url: `http://${RENDER_HOST.replace('backend', 'edge')}:8001`,
-        env_available: safeEnv,
         endpoints: ['/api/stats', '/api/logs', '/api/users', '/auth/login', '/api/diag']
     });
 });
@@ -2464,6 +2465,15 @@ app.post('/api/biometrics/face/verify', biometricLimiter, upload.single('file'),
 })
 
 // End of Routes
+
+
+// Final fallback for SPA (Admin Dashboard)
+app.get('*', (req, res, next) => {
+    if (req.url.startsWith('/api') || req.url.startsWith('/auth')) {
+        return next();
+    }
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 app.listen(PORT, () => {
     console.log(`Backend running on http://localhost:${PORT}`);
