@@ -563,7 +563,9 @@ async def verify_face(file: UploadFile = File(...)):
                 return {"success": False, "message": "No face detected."}
             live_encoding = live_encodings[0]
         except Exception as e:
-            return {"success": False, "message": "Engine Error"}
+            import traceback
+            traceback.print_exc()
+            return {"success": False, "message": f"Engine Error: {str(e)}"}
         
         t_encode = time.time()
 
