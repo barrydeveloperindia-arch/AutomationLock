@@ -570,7 +570,12 @@ async def verify_face(file: UploadFile = File(...)):
         except Exception as e:
             import traceback
             traceback.print_exc()
-            return {"success": False, "message": f"Engine Error: {str(e)}"}
+            err_msg = str(e)
+            try:
+                debug_info = f"SHAPE: {getattr(frame, 'shape', type(frame))} | DTYPE: {getattr(frame, 'dtype', type(frame))} | TYPE: {type(frame)} | FLAGS: {str(getattr(frame, 'flags', 'none')).replace(chr(10), ' ')}"
+            except Exception as debug_err:
+                debug_info = f"DEBUG FAILED: {str(debug_err)}"
+            return {"success": False, "message": f"Engine Error: {err_msg} | {debug_info}"}
         
         t_encode = time.time()
 
