@@ -413,6 +413,7 @@ async def register_face(
         nparr = np.frombuffer(contents, np.uint8)
         frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        frame = np.ascontiguousarray(frame, dtype=np.uint8)
 
         # 2. Detect and encode using face-recognition
         try:
@@ -557,6 +558,7 @@ async def verify_face(file: UploadFile = File(...)):
         nparr = np.frombuffer(contents, np.uint8)
         frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        frame = np.ascontiguousarray(frame, dtype=np.uint8)
         t_preprocess = time.time()
 
         # 2. Single Embedding Generation
