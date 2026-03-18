@@ -18,6 +18,7 @@ except ImportError:
 from fastapi import FastAPI, File, UploadFile, HTTPException, Form
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
+import cv2
 import face_recognition
 from supabase_client import supabase
 from datetime import datetime
@@ -409,8 +410,9 @@ async def register_face(
     try:
         # 1. Read image
         contents = await file.read()
-        image = Image.open(io.BytesIO(contents)).convert("RGB")
-        frame = np.array(image)
+        nparr = np.frombuffer(contents, np.uint8)
+        frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
         # 2. Detect and encode using face-recognition
         try:
@@ -552,8 +554,9 @@ async def verify_face(file: UploadFile = File(...)):
         contents = await file.read()
         t_read = time.time()
         
-        image = Image.open(io.BytesIO(contents)).convert("RGB")
-        frame = np.array(image)
+        nparr = np.frombuffer(contents, np.uint8)
+        frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         t_preprocess = time.time()
 
         # 2. Single Embedding Generation
