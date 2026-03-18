@@ -16,11 +16,10 @@ WORKDIR /app
 
 # Optimized installation for memory-constrained environments
 COPY requirements.txt .
+COPY dlib-19.24.1-cp310-cp310-linux_x86_64.whl .
 
-# 1. Install dlib with STRICT single-threaded build to prevent OOM (8GB limit)
-# 2. Install opencv-python-headless to avoid heavy GUI dependencies
-# 3. Install remaining requirements
-RUN CMAKE_BUILD_PARALLEL_LEVEL=1 pip install --no-cache-dir dlib==19.24.1 && \
+# Install statically compiled Dlib wheel, bypassing all C++ build steps completely
+RUN pip install --no-cache-dir dlib-19.24.1-cp310-cp310-linux_x86_64.whl && \
     pip install --no-cache-dir opencv-python-headless && \
     pip install --no-cache-dir -r requirements.txt
 
