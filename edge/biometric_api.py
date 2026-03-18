@@ -408,12 +408,19 @@ async def register_face(
     print(f"[INFO] Registering face for: {employeeId}")
     
     try:
-        # 1. Read image
+        # 1. Read image safely avoiding pure OpenCV PyBind11 Memory Rejections
+        import tempfile
         contents = await file.read()
-        nparr = np.frombuffer(contents, np.uint8)
-        frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        frame = np.ascontiguousarray(frame, dtype=np.uint8)
+        
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as tmp:
+            tmp.write(contents)
+            tmp_path = tmp.name
+            
+        try:
+            frame = face_recognition.load_image_file(tmp_path)
+        finally:
+            if os.path.exists(tmp_path):
+                os.unlink(tmp_path)
 
         # 2. Detect and encode using face-recognition
         try:
@@ -551,14 +558,21 @@ async def verify_face(file: UploadFile = File(...)):
     t_start = time.time()
     
     try:
-        # 1. Image Preprocessing
+        # 1. Image Preprocessing via secure PIL Tempfile bypassing cv2/dlib memory bug
+        import tempfile
         contents = await file.read()
         t_read = time.time()
         
-        nparr = np.frombuffer(contents, np.uint8)
-        frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        frame = np.ascontiguousarray(frame, dtype=np.uint8)
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as tmp:
+            tmp.write(contents)
+            tmp_path = tmp.name
+            
+        try:
+            frame = face_recognition.load_image_file(tmp_path)
+        finally:
+            if os.path.exists(tmp_path):
+                os.unlink(tmp_path)
+                
         t_preprocess = time.time()
 
         # 2. Single Embedding Generation
