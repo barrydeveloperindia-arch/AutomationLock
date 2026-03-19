@@ -75,6 +75,7 @@ export default function App() {
     const handleClearIdentity = () => {
         localStorage.removeItem('aura_identity');
         setMyIdentity(null);
+        fetchEmployees(); // CRITICAL: Re-hydrate the identity pool from the Cloud!
         setView('setup');
     };
 
