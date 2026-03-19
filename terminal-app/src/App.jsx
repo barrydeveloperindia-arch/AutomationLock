@@ -510,30 +510,37 @@ export default function App() {
                             {liveScanActive ? (
                                 <motion.div
                                     key="live-scanner"
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    className="relative w-[340px] h-[340px] rounded-full border-4 border-emerald-500/80 shadow-[0_0_80px_rgba(16,185,129,0.4)] overflow-hidden flex items-center justify-center shrink-0"
+                                    initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+                                    animate={{ opacity: 1, backdropFilter: "blur(20px)" }}
+                                    exit={{ opacity: 0 }}
+                                    className="fixed inset-0 w-screen h-screen z-50 bg-slate-900/90 flex flex-col items-center justify-center overflow-hidden"
                                 >
-                                    {/* Scan Line effect */}
-                                    <motion.div
-                                        initial={{ top: '-10%' }}
-                                        animate={{ top: '110%' }}
-                                        transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
-                                        className="absolute left-0 right-0 h-1 bg-emerald-400 z-10 shadow-[0_0_15px_rgba(52,211,153,1)]"
-                                    />
                                     <video
                                         ref={videoRef}
                                         autoPlay
                                         playsInline
                                         muted
-                                        className="w-full h-full object-cover scale-x-[-1] opacity-90 blur-[0.2px] saturate-150"
+                                        className="absolute inset-0 w-full h-full object-cover scale-x-[-1]"
                                     />
                                     <canvas ref={canvasRef} className="hidden" />
-                                    <div className="absolute font-black text-emerald-900 tracking-[0.3em] uppercase drop-shadow-[0_0_10px_rgba(255,255,255,1)] text-[10px] bottom-6 z-10 w-full text-center">
-                                        Active Surveillance
+
+                                    {/* Immersion Overlay */}
+                                    <div className="absolute inset-0 bg-emerald-900/10 mix-blend-color z-10" />
+
+                                    {/* Massive Screen Scan Line effect */}
+                                    <motion.div
+                                        initial={{ top: '-10%' }}
+                                        animate={{ top: '110%' }}
+                                        transition={{ duration: 2.0, repeat: Infinity, ease: 'linear' }}
+                                        className="absolute left-0 right-0 h-1 bg-emerald-400 z-20 shadow-[0_0_30px_rgba(16,185,129,1)]"
+                                    />
+
+                                    <div className="absolute top-16 font-black text-white tracking-[0.5em] uppercase drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)] text-sm z-30 w-full text-center">
+                                        Optical Surveillance
                                     </div>
-                                    <button onClick={() => setLiveScanActive(false)} className="absolute top-2 right-2 text-white/50 hover:text-white z-20">
-                                        <ShieldAlert size={20} />
+
+                                    <button onClick={() => setLiveScanActive(false)} className="absolute bottom-16 px-10 py-4 bg-red-500/20 hover:bg-red-500/40 border border-red-500/50 backdrop-blur-md rounded-full text-white text-xs font-black tracking-[0.2em] transition-all z-30">
+                                        CANCEL SCAN
                                     </button>
                                 </motion.div>
                             ) : (
