@@ -618,7 +618,7 @@ async def verify_face(file: UploadFile = File(...)):
         t_compare = time.time()
 
         # 4. Threshold & Ambiguity Logic
-        STRICT_THRESHOLD = 0.55 # Typical threshold for face_recognition (1 - 0.45 distance), we relax to 0.55 for varying lighting
+        STRICT_THRESHOLD = 0.60 # The Absolute Theoretical Dlib limit for mathematically matching people
         AMBIGUITY_GAP = 0.04
         
         matched_emp = FACE_METADATA[best_match_idx]
@@ -628,16 +628,14 @@ async def verify_face(file: UploadFile = File(...)):
         if len(distances) > 1:
             sorted_distances = np.sort(distances)
             gap = sorted_distances[1] - min_distance # Bigger gap means less ambiguity
-            if gap < AMBIGUITY_GAP and min_distance < 0.60:
+            if gap < AMBIGUITY_GAP and min_distance < 0.65:
                 is_ambiguous = True
-                print(f"[REJECTED] Ambiguity detected! Distance Gap: {gap:.4f} < {AMBIGUITY_GAP}")
 
         if min_distance > STRICT_THRESHOLD: 
-            print(f"[DENIED] Low confidence: {matched_emp['employee_id']} | Dist: {min_distance:.4f} > {STRICT_THRESHOLD}")
             asyncio.create_task(background_log_access(matched_emp["employee_id"], "failed", max_similarity, "terminal_01"))
             return {
                 "success": False, 
-                "message": "Unrecognized face.", 
+                "message": f"Unrecognized face. (Dist: {min_distance:.3f} / {STRICT_THRESHOLD})", 
                 "error_code": "NOT_RECOGNIZED",
                 "confidence": max_similarity
             }
