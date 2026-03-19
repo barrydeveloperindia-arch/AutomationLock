@@ -511,10 +511,10 @@ export default function App() {
                             {liveScanActive ? (
                                 <motion.div
                                     key="live-scanner"
-                                    initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
-                                    animate={{ opacity: 1, backdropFilter: "blur(20px)" }}
-                                    exit={{ opacity: 0 }}
-                                    className="fixed inset-0 w-screen h-screen z-50 bg-slate-900/90 flex flex-col items-center justify-center overflow-hidden"
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.9 }}
+                                    className="relative w-full h-[360px] rounded-[2.5rem] bg-slate-900 border-4 border-white shadow-[0_20px_60px_rgba(16,185,129,0.3)] overflow-hidden flex items-center justify-center shrink-0"
                                 >
                                     <video
                                         ref={videoRef}
@@ -525,23 +525,21 @@ export default function App() {
                                     />
                                     <canvas ref={canvasRef} className="hidden" />
 
-                                    {/* Immersion Overlay */}
-                                    <div className="absolute inset-0 bg-emerald-900/10 mix-blend-color z-10" />
-
-                                    {/* Massive Screen Scan Line effect */}
                                     <motion.div
                                         initial={{ top: '-10%' }}
                                         animate={{ top: '110%' }}
-                                        transition={{ duration: 2.0, repeat: Infinity, ease: 'linear' }}
-                                        className="absolute left-0 right-0 h-1 bg-emerald-400 z-20 shadow-[0_0_30px_rgba(16,185,129,1)]"
+                                        transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
+                                        className="absolute left-0 right-0 h-1 bg-emerald-400 z-20 shadow-[0_0_20px_rgba(16,185,129,1)]"
                                     />
 
-                                    <div className="absolute top-16 font-black text-white tracking-[0.5em] uppercase drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)] text-sm z-30 w-full text-center">
-                                        Optical Surveillance
+                                    <div className="absolute bottom-6 left-0 right-0 flex justify-center z-30">
+                                        <div className="px-6 py-2 bg-slate-900/60 backdrop-blur-md rounded-full text-white tracking-[0.3em] text-[10px] font-black uppercase shadow-lg border border-white/10">
+                                            Scanning Face
+                                        </div>
                                     </div>
 
-                                    <button onClick={() => setLiveScanActive(false)} className="absolute bottom-16 px-10 py-4 bg-red-500/20 hover:bg-red-500/40 border border-red-500/50 backdrop-blur-md rounded-full text-white text-xs font-black tracking-[0.2em] transition-all z-30">
-                                        CANCEL SCAN
+                                    <button onClick={() => setLiveScanActive(false)} className="absolute top-4 right-4 w-10 h-10 bg-slate-900/40 hover:bg-red-500/80 backdrop-blur-md rounded-full flex justify-center items-center text-white transition-colors z-30">
+                                        <X size={18} strokeWidth={3} />
                                     </button>
                                 </motion.div>
                             ) : (
