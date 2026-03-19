@@ -6,8 +6,8 @@
 
 :root {
     font-family: 'Outfit', sans-serif;
-    background-color: #0f172a;
-    color: white;
+    background-color: #f8fafc;
+    color: #0f172a;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -22,17 +22,19 @@ body {
 }
 
 .kiosk-gradient {
-    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    background: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%);
 }
 
 .glass {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
 }
 
 .glass-active {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.1);
 }
