@@ -3,7 +3,7 @@ uvicorn
 supabase
 face-recognition
 pillow
-numpy
+numpy<2.0.0
 python-dotenv
 httpx
 python-multipart
