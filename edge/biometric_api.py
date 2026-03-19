@@ -417,7 +417,10 @@ async def register_face(
             tmp_path = tmp.name
             
         try:
-            frame = face_recognition.load_image_file(tmp_path)
+            from PIL import Image
+            import numpy as np
+            img = Image.open(tmp_path).convert('RGB')
+            frame = np.array(img)
         finally:
             if os.path.exists(tmp_path):
                 os.unlink(tmp_path)
@@ -568,7 +571,10 @@ async def verify_face(file: UploadFile = File(...)):
             tmp_path = tmp.name
             
         try:
-            frame = face_recognition.load_image_file(tmp_path)
+            from PIL import Image
+            import numpy as np
+            img = Image.open(tmp_path).convert('RGB')
+            frame = np.array(img)
         finally:
             if os.path.exists(tmp_path):
                 os.unlink(tmp_path)

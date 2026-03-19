@@ -24,6 +24,10 @@ export default function App() {
     const [message, setMessage] = useState('');
     const [bleStatus, setBleStatus] = useState('disconnected');
     const [result, setResult] = useState(null);
+    const [liveScanActive, setLiveScanActive] = useState(false);
+
+    const videoRef = useRef(null);
+    const canvasRef = useRef(null);
 
     // Initial Identity Check & Background OS Engine
     useEffect(() => {
@@ -139,11 +143,51 @@ export default function App() {
         if (view !== 'dashboard') return;
         if (bleStatus === 'ready' && !autoPromptedRef.current) {
             autoPromptedRef.current = true;
-            executeCameraFaceScan();
+            setLiveScanActive(true); // Engages the native WEBRTC Continuous stream!
         } else if (bleStatus === 'offline' || bleStatus === 'disconnected' || bleStatus === 'searching') {
             autoPromptedRef.current = false; // Reset when they walk away
+            setLiveScanActive(false);
         }
     }, [bleStatus, view]);
+
+    // Live Surveillance Loop (Bypasses manual shutter requirement)
+    useEffect(() => {
+        let stream = null;
+        let interval = null;
+
+        const startLiveCamera = async () => {
+            try {
+                // CRITICAL FIX: The Android OS WebView Sandbox strictly blocks raw HTML5 WebRTC `getUserMedia` calls 
+                // silently with 'Permission Denied' unless the overarching Native App actively forces the OS Permission Prompt beforehand!
+                try { await Camera.requestPermissions(); } catch (pe) { console.error("Permission escalation failed", pe); }
+
+                stream = await navigator.mediaDevices.getUserMedia({
+                    video: { facingMode: 'user', width: 640, height: 480 }
+                });
+                if (videoRef.current) {
+                    videoRef.current.srcObject = stream;
+                }
+
+                // Continuous analysis (1 frame every 1.5 seconds)
+                interval = setInterval(() => {
+                    executeLiveFrameCapture();
+                }, 1500);
+            } catch (err) {
+                console.error("Native OS blocked continuous camera access:", err);
+            }
+        };
+
+        if (liveScanActive && view === 'dashboard') {
+            startLiveCamera();
+        }
+
+        return () => {
+            if (interval) clearInterval(interval);
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+            }
+        };
+    }, [liveScanActive, view]);
 
     // Zero-Biometric Pocket Trust Workflow
     const executeTeslaUnlock = async () => {
@@ -214,68 +258,59 @@ export default function App() {
         }
     };
 
-    // Advanced Cloud Vision Engine (Google Cloud Run / Python Edge)
-    const executeCameraFaceScan = async () => {
+    // Continuous Live AI Optical Engine
+    const executeLiveFrameCapture = async () => {
+        if (!videoRef.current || !canvasRef.current || isUnlockingRef.current) return;
+
         try {
-            isUnlockingRef.current = true;
-            setLoading(true);
-            setMessage('Initializing Front Optical Sensor...');
+            const context = canvasRef.current.getContext('2d');
+            canvasRef.current.width = videoRef.current.videoWidth || 640;
+            canvasRef.current.height = videoRef.current.videoHeight || 480;
+            if (canvasRef.current.width === 0) return; // Camera still booting
 
-            const image = await Camera.getPhoto({
-                quality: 80,
-                allowEditing: false,
-                resultType: CameraResultType.Base64,
-                source: CameraSource.Camera,
-                direction: CameraDirection.Front
-            });
+            context.drawImage(videoRef.current, 0, 0);
 
-            setMessage('Analyzing Facial Vectors via GCP Edge...');
+            canvasRef.current.toBlob(async (blob) => {
+                if (!blob) return;
 
-            try { await Haptics.vibrate({ duration: 100 }); } catch (e) { }
+                try {
+                    isUnlockingRef.current = true; // Lock the BLE thread
+                    const form = new FormData();
+                    form.append('file', blob, 'capture.jpg');
 
-            // SOP: Camera base64 must be strictly converted into a binary Blob to prevent FastAPI Memory/Schema 422 Rejections
-            const byteCharacters = atob(image.base64String);
-            const byteNumbers = new Array(byteCharacters.length);
-            for (let i = 0; i < byteCharacters.length; i++) {
-                byteNumbers[i] = byteCharacters.charCodeAt(i);
-            }
-            const byteArray = new Uint8Array(byteNumbers);
-            const rawBlob = new Blob([byteArray], { type: 'image/jpeg' });
+                    const res = await axios.post(`${API_BASE}/api/biometrics/face/verify`, form, {
+                        headers: { 'Content-Type': 'multipart/form-data' }
+                    });
 
-            const form = new FormData();
-            form.append('file', rawBlob, 'capture.jpg');
+                    if (res.data.success) {
+                        try { await Haptics.vibrate({ duration: 400 }); } catch (e) { }
+                        try { await TextToSpeech.speak({ text: 'Aura Vision Verified', rate: 1.1 }); } catch (e) { }
 
-            const res = await axios.post(`${API_BASE}/api/biometrics/face/verify`, form, {
-                headers: { 'Content-Type': 'multipart/form-data' }
-            });
+                        setLiveScanActive(false); // Kill surveillance explicitly
+                        await triggerDoorUnlock();
 
-            try {
-                await TextToSpeech.speak({ text: 'Aura Vision Verified', rate: 1.1 });
-                await Haptics.vibrate({ duration: 400 });
-            } catch (e) { }
-
-            setMessage('Optical Vector Validated. Disengaging Door...');
-            await triggerDoorUnlock();
-
-            setResult(res.data);
-            setView('success');
-            setTimeout(() => {
-                setView('dashboard');
-                setMessage('');
-                setResult(null);
-                setBleStatus('ready');
-                isUnlockingRef.current = false;
-            }, 6000);
-
-        } catch (err) {
-            setMessage(err.response?.data?.error || err.message || 'Vision Verification Denied');
-            setView('error');
-            setTimeout(() => {
-                setView('dashboard');
-                isUnlockingRef.current = false;
-            }, 3000);
-        } finally {
-            setLoading(false);
+                        setResult(res.data);
+                        setView('success');
+                        setTimeout(() => {
+                            setView('dashboard');
+                            setMessage('');
+                            setResult(null);
+                            setBleStatus('ready');
+                            isUnlockingRef.current = false;
+                        }, 6000);
+                    } else {
+                        isUnlockingRef.current = false; // Not a match, unlock for next frame
+                        setMessage(`Engine: ${res.data.message || 'No match'}`);
+                    }
+                } catch (err) {
+                    isUnlockingRef.current = false; // Verification failed, silently retry next frame
+                    const cloudRejection = err.response?.data?.message || err.message;
+                    setMessage(`Optical: ${cloudRejection}`);
+                }
+            }, 'image/jpeg', 0.8);
+        } catch (e) {
+            console.error("Canvas manipulation failure", e);
+            isUnlockingRef.current = false;
         }
     };
 
@@ -468,36 +503,67 @@ export default function App() {
 
                         {/* DUAL BIOMETRIC GATEWAY UI */}
                         <div className="flex gap-4 w-full justify-center max-w-sm">
-                            {/* Option A: OS Hardware Biometric (Fingerprint/Local FaceID) */}
-                            <motion.button
-                                whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
-                                onClick={executeTeslaUnlock} disabled={loading || bleStatus !== 'ready'}
-                                className={`w-36 h-40 rounded-[2rem] flex flex-col items-center justify-center gap-4 transition-all duration-500 ${bleStatus === 'ready' ? 'bg-gradient-to-br from-blue-600 to-blue-500 shadow-[0_0_40px_rgba(59,130,246,0.4)] border-2 border-white/20' : 'bg-slate-800/50 border-2 border-slate-700/50 opacity-60'}`}>
-                                {loading ? (
-                                    <div className="animate-spin text-white"><AlertCircle size={45} /></div>
-                                ) : (
-                                    <Fingerprint size={50} className="text-white drop-shadow-md" />
-                                )}
-                                <span className="font-black text-xs uppercase tracking-widest text-center leading-tight">
-                                    Local<br />Auth
-                                </span>
-                            </motion.button>
+                            {liveScanActive ? (
+                                <motion.div
+                                    key="live-scanner"
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    className="relative w-[340px] h-[340px] rounded-full border-4 border-emerald-500/80 shadow-[0_0_80px_rgba(16,185,129,0.4)] overflow-hidden flex items-center justify-center shrink-0"
+                                >
+                                    {/* Scan Line effect */}
+                                    <motion.div
+                                        initial={{ top: '-10%' }}
+                                        animate={{ top: '110%' }}
+                                        transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
+                                        className="absolute left-0 right-0 h-1 bg-emerald-400 z-10 shadow-[0_0_15px_rgba(52,211,153,1)]"
+                                    />
+                                    <video
+                                        ref={videoRef}
+                                        autoPlay
+                                        playsInline
+                                        muted
+                                        className="w-full h-full object-cover scale-x-[-1] opacity-70 blur-[0.5px]"
+                                    />
+                                    <canvas ref={canvasRef} className="hidden" />
+                                    <div className="absolute font-black text-white tracking-[0.3em] uppercase drop-shadow-md text-[10px] bottom-6 z-10 w-full text-center">
+                                        Active Surveillance
+                                    </div>
+                                    <button onClick={() => setLiveScanActive(false)} className="absolute top-2 right-2 text-white/50 hover:text-white z-20">
+                                        <ShieldAlert size={20} />
+                                    </button>
+                                </motion.div>
+                            ) : (
+                                <>
+                                    {/* Option A: OS Hardware Biometric (Fingerprint/Local FaceID) */}
+                                    <motion.button
+                                        whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+                                        onClick={executeTeslaUnlock} disabled={loading || bleStatus !== 'ready'}
+                                        className={`w-36 h-40 rounded-[2rem] flex flex-col items-center justify-center gap-4 transition-all duration-500 ${bleStatus === 'ready' ? 'bg-gradient-to-br from-blue-600 to-blue-500 shadow-[0_0_40px_rgba(59,130,246,0.4)] border-2 border-white/20' : 'bg-slate-800/50 border-2 border-slate-700/50 opacity-60'}`}>
+                                        <Fingerprint size={50} className="text-white drop-shadow-md" />
+                                        <span className="font-black text-xs uppercase tracking-widest text-center leading-tight">
+                                            Local<br />Auth
+                                        </span>
+                                    </motion.button>
 
-                            {/* Option B: Cloud Optical Geometry (GCP Vision) */}
-                            <motion.button
-                                whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
-                                onClick={executeCameraFaceScan} disabled={loading || bleStatus !== 'ready'}
-                                className={`w-36 h-40 rounded-[2rem] flex flex-col items-center justify-center gap-4 transition-all duration-500 ${bleStatus === 'ready' ? 'bg-gradient-to-br from-indigo-600 to-purple-500 shadow-[0_0_40px_rgba(99,102,241,0.4)] border-2 border-white/20' : 'bg-slate-800/50 border-2 border-slate-700/50 opacity-60'}`}>
-                                {loading ? (
-                                    <div className="animate-spin text-white"><AlertCircle size={45} /></div>
-                                ) : (
-                                    <ScanFace size={50} className="text-white drop-shadow-md" />
-                                )}
-                                <span className="font-black text-xs uppercase tracking-widest text-center leading-tight">
-                                    Cloud<br />Optical
-                                </span>
-                            </motion.button>
+                                    {/* Option B: Force Manual Camera Backup */}
+                                    <motion.button
+                                        whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+                                        onClick={() => setLiveScanActive(true)} disabled={loading || bleStatus !== 'ready'}
+                                        className={`w-36 h-40 rounded-[2rem] flex flex-col items-center justify-center gap-4 transition-all duration-500 ${bleStatus === 'ready' ? 'bg-gradient-to-br from-indigo-600 to-purple-500 shadow-[0_0_40px_rgba(99,102,241,0.4)] border-2 border-white/20' : 'bg-slate-800/50 border-2 border-slate-700/50 opacity-60'}`}>
+                                        <ScanFace size={50} className="text-white drop-shadow-md" />
+                                        <span className="font-black text-xs uppercase tracking-widest text-center leading-tight">
+                                            Live<br />Optical
+                                        </span>
+                                    </motion.button>
+                                </>
+                            )}
                         </div>
+
+                        {message && (
+                            <p className="mt-6 text-center text-xs font-black tracking-widest uppercase Px-4 py-2 bg-red-500/10 border border-red-500/20 text-red-400 rounded-lg max-w-[300px]">
+                                {message}
+                            </p>
+                        )}
 
                         <p className="mt-8 text-center text-[11px] text-slate-500 uppercase tracking-widest font-black max-w-[280px]">
                             ⚡ TESLA PROXIMITY MODE ACTIVE ⚡<br /><br />
