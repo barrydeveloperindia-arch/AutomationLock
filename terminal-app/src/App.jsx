@@ -569,11 +569,6 @@ export default function App() {
                             </p>
                         )}
 
-                        <p className="mt-8 text-center text-[11px] text-slate-400 uppercase tracking-widest font-black max-w-[280px]">
-                            ⚡ TESLA PROXIMITY MODE ACTIVE ⚡<br /><br />
-                            Background BLE Polling engaged. Keep phone in pocket; Door trusts your device's Enclave Token organically.
-                        </p>
-
                         {myIdentity?.name?.toLowerCase() === 'bharat anand' && (
                             <button onClick={executeAdminOverrideUnlock} disabled={loading || bleStatus !== 'ready'} className="mt-6 px-6 py-2 bg-emerald-50 border border-emerald-200 rounded-full text-[10px] text-emerald-600 font-bold uppercase tracking-widest hover:bg-emerald-100 transition-colors disabled:opacity-30">
                                 Admin Silent Override
