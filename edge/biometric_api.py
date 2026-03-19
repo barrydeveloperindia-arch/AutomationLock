@@ -417,10 +417,11 @@ async def register_face(
             tmp_path = tmp.name
             
         try:
-            from PIL import Image
+            import cv2
             import numpy as np
-            img = Image.open(tmp_path).convert('RGB')
-            frame = np.array(img)
+            cv_img = cv2.imread(tmp_path)
+            cv_rgb = cv2.cvtColor(cv_img, cv2.COLOR_BGR2RGB)
+            frame = np.ascontiguousarray(cv_rgb, dtype=np.uint8)
         finally:
             if os.path.exists(tmp_path):
                 os.unlink(tmp_path)
@@ -571,10 +572,11 @@ async def verify_face(file: UploadFile = File(...)):
             tmp_path = tmp.name
             
         try:
-            from PIL import Image
+            import cv2
             import numpy as np
-            img = Image.open(tmp_path).convert('RGB')
-            frame = np.array(img)
+            cv_img = cv2.imread(tmp_path)
+            cv_rgb = cv2.cvtColor(cv_img, cv2.COLOR_BGR2RGB)
+            frame = np.ascontiguousarray(cv_rgb, dtype=np.uint8)
         finally:
             if os.path.exists(tmp_path):
                 os.unlink(tmp_path)
