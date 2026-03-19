@@ -1,0 +1,113 @@
+﻿
+03-19 12:52:36.786 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 79:D4:21:05:81:C5 | Name: undefined
+03-19 12:52:36.819 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 0C:D1:5D:CB:42:27 | Name: undefined
+03-19 12:52:36.848 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 0E:AF:01:7B:96:6E | Name: undefined
+03-19 12:52:36.849 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 69:CF:98:34:A0:77 | Name: undefined
+03-19 12:52:37.585 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 2C:29:D6:DA:36:15 | Name: undefined
+03-19 12:52:37.586 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 53:8B:6A:43:74:E8 | Name: undefined
+03-19 12:52:37.622 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: D8:78:C9:76:69:2A | Name: JODU51641814306
+03-19 12:52:37.660 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 3F:53:E0:B9:0B:89 | Name: undefined
+03-19 12:52:37.716 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 3A:24:58:E3:66:4C | Name: undefined
+03-19 12:52:37.717 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 2D:A4:44:C4:67:90 | Name: undefined
+03-19 12:52:38.384 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 78:BB:C1:56:E7:00 | Name: JODU51642716268
+03-19 12:52:38.387 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: D4:27:87:94:F4:A7 | Name: AP_3431856326
+03-19 12:52:38.412 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 28:A9:15:56:CC:2F | Name: JODU51643813309
+03-19 12:52:39.206 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: BC:F8:7E:FB:06:9F | Name: JODU52240997432
+03-19 12:52:39.899 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 24:ED:7B:56:A8:35 | Name: undefined
+03-19 12:52:40.644 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 78:BB:C1:BE:F0:18 | Name: JODU51642560412
+03-19 12:52:42.065 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 09:7B:E4:80:09:58 | Name: undefined
+03-19 12:52:42.809 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 02:5E:C7:2C:59:74 | Name: undefined
+03-19 12:52:44.745 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 3F:53:E0:B9:0B:89 | Name: undefined
+03-19 12:52:44.756 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 58:C8:7E:E5:26:5A | Name: undefined
+03-19 12:52:44.767 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 69:CF:98:34:A0:77 | Name: undefined
+03-19 12:52:44.779 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 53:8B:6A:43:74:E8 | Name: undefined
+03-19 12:52:44.790 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 0C:D1:5D:CB:42:27 | Name: undefined
+03-19 12:52:44.790 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 79:D4:21:05:81:C5 | Name: undefined
+03-19 12:52:44.810 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 2C:29:D6:DA:36:15 | Name: undefined
+03-19 12:52:44.856 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 02:5E:C7:2C:59:74 | Name: undefined
+03-19 12:52:44.900 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 2D:A4:44:C4:67:90 | Name: undefined
+03-19 12:52:45.543 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: D8:78:C9:76:69:2A | Name: JODU51641814306
+03-19 12:52:45.631 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: E9:D5:31:4C:84:68 | Name: undefined
+03-19 12:52:45.633 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 32:3E:71:15:2B:C5 | Name: undefined
+03-19 12:52:45.678 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: D4:27:87:94:F4:A7 | Name: AP_3431856326
+03-19 12:52:45.679 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 3A:24:58:E3:66:4C | Name: undefined
+03-19 12:52:45.692 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 0E:AF:01:7B:96:6E | Name: undefined
+03-19 12:52:46.355 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: E2:03:F5:5C:B0:2F | Name: undefined
+03-19 12:52:48.533 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: E6:9F:9F:C7:0D:47 | Name: undefined
+03-19 12:52:50.791 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: F5:E8:5D:FC:56:C1 | Name: undefined
+03-19 12:52:50.826 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 5B:C5:D7:77:A6:52 | Name: undefined
+03-19 12:52:51.090 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 28:A9:15:56:CC:2F | Name: JODU51643813309
+03-19 12:52:52.836 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 0C:D1:5D:CB:42:27 | Name: undefined
+03-19 12:52:52.839 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 3F:53:E0:B9:0B:89 | Name: undefined
+03-19 12:52:52.896 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 2C:29:D6:DA:36:15 | Name: undefined
+03-19 12:52:52.920 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 69:CF:98:34:A0:77 | Name: undefined
+03-19 12:52:52.940 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 0E:AF:01:7B:96:6E | Name: undefined
+03-19 12:52:52.963 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 58:C8:7E:E5:26:5A | Name: undefined
+03-19 12:52:52.968 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 2D:A4:44:C4:67:90 | Name: undefined
+03-19 12:52:53.613 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 09:7B:E4:80:09:58 | Name: undefined
+03-19 12:52:53.616 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 53:8B:6A:43:74:E8 | Name: undefined
+03-19 12:52:53.652 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: E9:D5:31:4C:84:68 | Name: undefined
+03-19 12:52:53.735 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: D8:78:C9:76:69:2A | Name: JODU51641814306
+03-19 12:52:54.433 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: E2:03:F5:5C:B0:2F | Name: undefined
+03-19 12:52:54.435 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 5B:C5:D7:77:A6:52 | Name: undefined
+03-19 12:52:55.130 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 3A:24:58:E3:66:4C | Name: undefined
+03-19 12:52:55.239 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: F5:E8:5D:FC:56:C1 | Name: undefined
+03-19 12:52:55.242 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 02:5E:C7:2C:59:74 | Name: undefined
+03-19 12:52:55.785 I/Capacitor/Console( 8499): File: http://localhost/assets/index-DIszMCqN.js - Line 83 - Msg: 
+[AURALOCK_DEBUG] BLE_SEEN: 32:3E:71:15:2B:C5 | Name: undefined
+
+

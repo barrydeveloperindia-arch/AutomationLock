@@ -1,0 +1,1002 @@
+﻿--------- beginning of main
+03-19 12:49:29.508  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:29.561  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:29.665  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:29.666  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:29.817  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:30.275  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:30.275  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:30.280  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:30.280  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:30.287  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:30.288  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:30.372  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:30.375  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:30.393  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:30.431  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:30.431  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:30.583  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:30.996  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:30.996  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:31.000  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:31.000  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:31.007  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:31.010  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:31.011  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:31.063  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:31.098  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:31.105  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:31.144  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:31.144  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:31.296  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:31.684  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:31.684  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:31.687  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:31.687  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:31.700  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:31.701  3850  4014 D BluetoothRemoteDevices: Skip name update for 78:BB:C1:BE:F0:18
+03-19 12:49:31.701  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:31.701  3850  4014 D BluetoothRemoteDevices: Skip class update for 78:BB:C1:BE:F0:18
+03-19 12:49:31.701  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:31.701  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE 78:BB:C1:BE:F0:18
+03-19 12:49:31.738  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:31.743  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:31.790  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:31.822  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:31.861  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:31.861  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:32.012  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:32.461  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:32.461  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:32.465  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:32.465  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:32.470  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:32.470  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:32.490  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:32.510  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:32.631  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:32.631  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:32.781  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:33.067  1823  2641 I MiuiNetworkPolicy: updateUidState uid = 10107, uidState = 19
+03-19 12:49:33.132  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:33.132  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:33.136  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:33.136  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:33.141  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:33.148  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:33.163  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:33.261  3132  3132 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+03-19 12:49:33.266  3144  3485 D MobileStatusTracker(2): onSignalStrengthsChanged signalStrength=SignalStrength:{mCdma=CellSignalStrengthCdma: cdmaDbm=2147483647 cdmaEcio=2147483647 evdoDbm=2147483647 evdoEcio=2147483647 evdoSnr=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mGsm=CellSignalStrengthGsm: rssi=2147483647 ber=2147483647 mTa=2147483647 miuiLevel=0 mOptimizedLevel=0 mLevel=0,mWcdma=CellSignalStrengthWcdma: ss=2147483647 ber=2147483647 rscp=2147483647 ecno=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mTdscdma=CellSignalStrengthTdscdma: rssi=2147483647 ber=2147483647 rscp=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mLte=CellSignalStrengthLte: rssi=-61 rsrp=-95 rsrq=-13 rssnr=0 cqiTableIndex=2147483647 cqi=2147483647 ta=2147483647 miuiLevel=5 mOptimizedLevel=0 level=4 parametersUseForLevel=0,mNr=CellSignalStrengthNr:{ csiRsrp = 2147483647 csiRsrq = 2147483647 csiCqiTableIndex = 2147483647 csiCqiReport = [] ssRsrp = 2147483647 ssRsrq = 2147483647 ssSinr = 2147483647 miuiLevel = 0 mOptimizedLevel = 0 level = 0 parametersUseForLevel = 0 },primary=CellSignalStrengthLte,mNrAsPrimaryInNrNsa=false}
+03-19 12:49:33.267  3144  3485 D NetworkController.MobileSignalController(2): update5GConnectState: false
+03-19 12:49:33.267  3144  3485 D NetworkController.MobileSignalController(2): ss use aosp level not 0, 5
+03-19 12:49:33.289  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:33.290  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:33.441  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:33.935  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:33.936  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:33.942  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:33.942  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:33.948  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:33.951  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:33.965  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:34.010  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:34.041  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:34.090  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:34.090  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:34.241  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:34.308  1056  1056 W ThreadPoolForeg: type=1400 audit(0.0:133308): avc: denied { write } for name="traced_producer" dev="tmpfs" ino=23714 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 app=com.google.android.gms
+03-19 12:49:34.403  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938294, pluginId: BluetoothLe, methodName: removeListener
+03-19 12:49:34.403  7475  7475 V Capacitor: callback: 17938294, pluginId: BluetoothLe, methodName: removeListener, methodData: {"eventName":"onScanResult","callbackId":"17938292"}
+03-19 12:49:34.407  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938295, pluginId: BluetoothLe, methodName: stopLEScan
+03-19 12:49:34.407  7475  7475 V Capacitor: callback: 17938295, pluginId: BluetoothLe, methodName: stopLEScan, methodData: {}
+03-19 12:49:34.409  7475  7544 D DeviceScanner: Stop scanning.
+03-19 12:49:34.409  7475  7544 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:34.414  3850 24849 D BtGatt.GattService: stopScan() - queue size =3
+03-19 12:49:34.419  3850  4074 I BtGatt.ScanManager: msg.what = MSG_STOP_BLE_SCAN, msg.arg1 = None
+03-19 12:49:34.419  3850  4074 D BtGatt.ScanManager: track LE scan event: callerPackage = [com.smartdoor.terminal], scanMode = [1], reportDelayMillis = [0], behavior = [2], scannerId = [8], duration = [7940]
+03-19 12:49:34.419  3850  4074 D BtGatt.ScanManager: handling stopping scan  [ScanClient scanModeApp 1 scanModeUsed 1 [appScanStats com.smartdoor.terminal]]
+03-19 12:49:34.421  1085  1085 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:34.425  1085  1085 D vendor.qti.bluetooth@1.0-uart_transport: SocRxDWakeup: Flow off->Change UART baudrate to 38.4kbs->send 0x00->Change UART baudrate to max->Flow on
+03-19 12:49:34.425  1085  1085 I vendor.qti.bluetooth@1.0-uart_transport: ## userial_vendor_ioctl: UART Flow Off 
+03-19 12:49:34.426  3850 24849 D BtGatt.GattService: unregisterScanner() - scannerId=8
+03-19 12:49:34.437  1085  1085 I vendor.qti.bluetooth@1.0-uart_transport: ## userial_vendor_set_baud: 17
+03-19 12:49:34.437  7475  7475 I Capacitor/Console: File:  - Line 353 - Msg: undefined
+03-19 12:49:34.443  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938296, pluginId: BluetoothLe, methodName: addListener
+03-19 12:49:34.444  7475  7475 V Capacitor: callback: 17938296, pluginId: BluetoothLe, methodName: addListener, methodData: {"eventName":"onScanResult"}
+03-19 12:49:34.447  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938297, pluginId: BluetoothLe, methodName: requestLEScan
+03-19 12:49:34.447  7475  7475 V Capacitor: callback: 17938297, pluginId: BluetoothLe, methodName: requestLEScan, methodData: {}
+03-19 12:49:34.449  7475  7544 D DeviceScanner: Stop scanning.
+03-19 12:49:34.449  1085  1085 I vendor.qti.bluetooth@1.0-uart_transport: SetBaudRate: in BOTHER
+03-19 12:49:34.449  1085  1085 I vendor.qti.bluetooth@1.0-uart_transport: ## userial_vendor_ioctl: UART Flow On 
+03-19 12:49:34.449  1085  1085 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:34.450  1085  1085 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceWakeUp: Writing IBS_WAKE_IND
+03-19 12:49:34.450  7475  7544 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:34.450  7475  7544 D BluetoothLeScanner: could not find callback wrapper
+03-19 12:49:34.450  7475  7544 D DeviceScanner: Start scanning.
+03-19 12:49:34.450  7475  7544 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:34.450  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_ACK: 0xFC
+03-19 12:49:34.450  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Signal wack_cond_
+03-19 12:49:34.451  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_ACK: 0xFC
+03-19 12:49:34.451  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Signal wack_cond_
+03-19 12:49:34.451  1085  1085 D vendor.qti.bluetooth@1.0-ibs_handler: DeviceWakeUp: Unblocked from waiting for FC, pthread_cond_timedwait ret = 0
+03-19 12:49:34.453  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:34.453  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:34.455  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=8, status=0, action=1, availableSpace=7
+03-19 12:49:34.455  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 8 status - 0
+03-19 12:49:34.455  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - queue=2
+03-19 12:49:34.456  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - ScanSetting LE 1M Scan mode=0 ScanSetting LE Coded Scan mode=0 mLastConfiguredScanSettingLE1M=1 mLastConfiguredScanSettingLECoded=1 scanPhy=255
+03-19 12:49:34.457  3850  4074 D BtGatt.ScanManager: configureRegularScanParams - scanInterval LE 1M = 660 configureRegularScanParams - scanWindow LE 1M= 66 configureRegularScanParams - scanInterval LE Coded= 660 configureRegularScanParams - scanWindow LE Coded= 66
+03-19 12:49:34.458  3850 24849 D BtGatt.GattService: registerScanner() - UUID=a3542e49-a0f1-479d-9281-4fee85b5d835
+03-19 12:49:34.459  3850  4014 D BtGatt.GattService: onScanParamSetupCompleted : 0
+03-19 12:49:34.459  3850  4014 D BtGatt.GattService: onScannerRegistered() - UUID=a3542e49-a0f1-479d-9281-4fee85b5d835, scannerId=8, status=0
+03-19 12:49:34.460  7475  7665 D BluetoothLeScanner: onScannerRegistered() - status=0 scannerId=8 mScannerId=0
+03-19 12:49:34.462  3850 24849 D BtGatt.GattService: start scan with filters. callingPackage: com.smartdoor.terminal
+03-19 12:49:34.464  3850 24849 D BtGatt.GattService: enforcePrivilegedPermissionIfNeeded([])
+--------- beginning of system
+03-19 12:49:34.470  1823  4981 E AppOps  : Bad call made by uid 1002. Package "com.smartdoor.terminal" does not belong to uid 1002.
+03-19 12:49:34.473  3850 24849 D BtGatt.ScanManager: startScan()  [ScanClient scanModeApp 1 scanModeUsed 1 [appScanStats com.smartdoor.terminal]]
+03-19 12:49:34.473  3850  4074 I BtGatt.ScanManager: msg.what = MSG_RECORD_CALLER, msg.arg1 = None
+03-19 12:49:34.473  3850  4074 I BtGatt.ScanManager: msg.what = MSG_START_BLE_SCAN, msg.arg1 = None
+03-19 12:49:34.473  3850  4074 D BtGatt.ScanManager: handling starting scan
+03-19 12:49:34.475  3850  4074 D BtGatt.ScanManager: isAptXLowLatencyModeEnabled: false
+03-19 12:49:34.477  3850  4074 D BtGatt.ScanManager: track LE scan event: callerPackage = [com.smartdoor.terminal], scanMode = [1], reportDelayMillis = [0], behavior = [1], scannerId = [8], duration = [0]
+03-19 12:49:34.480  3850  4014 D BtGatt.GattService: onScanFilterEnableDisabled() - clientIf=8, status=0, action=1
+03-19 12:49:34.481  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 8 status - 0
+03-19 12:49:34.481  3850  4074 D BtGatt.ScanManager: configureScanFilters rssiThreshold: -128, 0
+03-19 12:49:34.481  3850  4074 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0, deliveryMode=0
+03-19 12:49:34.482  7475  7475 I Capacitor/Console: File:  - Line 353 - Msg: undefined
+03-19 12:49:34.486  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=8, status=0, action=0, availableSpace=6
+03-19 12:49:34.486  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 8 status - 0
+03-19 12:49:34.488  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - queue=3
+03-19 12:49:34.488  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - ScanSetting LE 1M Scan mode=1 ScanSetting LE Coded Scan mode=1 mLastConfiguredScanSettingLE1M=0 mLastConfiguredScanSettingLECoded=0 scanPhy=255
+03-19 12:49:34.489  3850  4074 D BtGatt.ScanManager: configureRegularScanParams - scanInterval LE 1M = 730 configureRegularScanParams - scanWindow LE 1M= 183 configureRegularScanParams - scanInterval LE Coded= 730 configureRegularScanParams - scanWindow LE Coded= 183
+03-19 12:49:34.490  3850  4014 D BtGatt.GattService: onScanParamSetupCompleted : 0
+03-19 12:49:34.522  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:34.522  3850  4014 D BluetoothRemoteDevices: Skip name update for BC:F8:7E:FB:BD:30
+03-19 12:49:34.522  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:34.522  3850  4014 D BluetoothRemoteDevices: Skip class update for BC:F8:7E:FB:BD:30
+03-19 12:49:34.522  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:34.522  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE BC:F8:7E:FB:BD:30
+03-19 12:49:34.541  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:34.564  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:34.580  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:34.592  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:34.600  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:34.600  3850  4014 D BluetoothRemoteDevices: Skip name update for D8:78:C9:76:69:2A
+03-19 12:49:34.601  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:34.601  3850  4014 D BluetoothRemoteDevices: Skip class update for D8:78:C9:76:69:2A
+03-19 12:49:34.601  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:34.601  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE D8:78:C9:76:69:2A
+03-19 12:49:34.605  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:34.607  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:34.621  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:34.643  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:34.668  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:34.690  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:34.694  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:34.713  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:34.739  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:34.752   790   790 W ThreadPoolForeg: type=1400 audit(0.0:133309): avc: denied { write } for name="traced_producer" dev="tmpfs" ino=23714 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 app=com.google.android.gms
+03-19 12:49:34.769  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:34.798  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:35.308  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:35.308  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:35.333  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:35.336  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:35.417  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:35.428  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:35.428  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:35.498  1085  4170 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceSleep: TX Awake, Sending SLEEP_IND
+03-19 12:49:35.526  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:35.526  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:35.677  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:35.775  1823  2641 I MiuiNetworkPolicy: updateUidState uid = 10143, uidState = 19
+03-19 12:49:36.026  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:36.026  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:36.030  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:36.030  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:36.036  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:36.073  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:36.073  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:36.080  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:36.080  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:36.081  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:36.083  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:36.111  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:36.127  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:36.151  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:36.151  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:36.152  3850  4014 D BluetoothRemoteDevices: Skip name update for BC:F8:7E:FB:06:9F
+03-19 12:49:36.152  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:36.152  3850  4014 D BluetoothRemoteDevices: Skip class update for BC:F8:7E:FB:06:9F
+03-19 12:49:36.152  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:36.152  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE BC:F8:7E:FB:06:9F
+03-19 12:49:36.188  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:36.188  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:36.191  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:36.295  1823  2085 D HeapUsage Monitor: HeapAllocSize : 87MB; monitorSize : 500MB
+03-19 12:49:36.339  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:36.596  1823  4540 W ProcessStats: Tracking association SourceState{d9b3072 com.google.android.inputmethod.latin/10214 BTopFgs #217607} whose proc state 2 is better than process ProcessState{9b311a5 com.google.android.gms.persistent/10150 pkg=com.google.android.gms} proc state 3 (103 skipped)
+03-19 12:49:36.752  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:36.752  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:36.756  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:36.756  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:36.762  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:36.763  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:36.764  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:36.770  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:36.771  3850  4014 D BluetoothRemoteDevices: Skip name update for 28:A9:15:56:CC:2F
+03-19 12:49:36.771  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:36.771  3850  4014 D BluetoothRemoteDevices: Skip class update for 28:A9:15:56:CC:2F
+03-19 12:49:36.771  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:36.771  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE 28:A9:15:56:CC:2F
+03-19 12:49:36.809  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:36.831  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:36.835  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:36.929  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:36.929  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:37.080  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:37.500  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:37.501  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:37.504  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:37.505  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:37.509  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:37.509  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:37.524  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:37.552  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:37.556  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:37.606  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:37.606  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:37.610  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:37.611  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:37.611  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:37.640  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:37.678  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:37.678  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:37.829  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:38.289  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:38.290  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:38.293  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:38.293  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:38.297  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:38.301  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:38.305  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:38.322  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:38.343  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:38.364  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:38.366  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:38.393  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:38.461  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:38.461  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:38.612  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:38.945  1823  4996 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=99404151 mSleepTimeMs=49975974 mIdleTimeMs=7913593 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[697594, 262385, 639162, 269741, 68729],mRxTimeMs=35656588}]}
+03-19 12:49:38.966  1823  2202 D KernelCpuUidUserSysTimeReader: Removing uids 99121-99121
+03-19 12:49:38.968  1823  2202 D KernelCpuUidUserSysTimeReader: Removing uids 99120-99120
+03-19 12:49:38.998  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:38.998  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:39.001  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:39.001  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:39.006  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:39.010  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:39.064  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:39.085  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:39.099  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:39.124  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:39.165  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:39.165  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:39.317  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:39.714  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:39.714  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:39.718  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:39.719  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:39.723  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:39.728  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:39.802  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:39.832  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:39.865  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:39.874  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:39.874  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:40.025  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:40.476  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:40.476  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:40.483  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:40.483  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:40.489  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:40.491  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:40.548  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:40.548  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:40.562  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:40.562  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:40.563  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:40.628  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:40.628  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:40.780  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:41.165  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:41.165  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:41.168  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:41.168  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:41.176  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:41.233  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:41.273  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:41.273  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:41.288  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:41.342  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:41.343  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:41.493  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:41.871  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:41.871  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:41.877  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:41.877  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:41.893  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:41.953  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:41.992  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:42.012  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:42.012  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:42.163  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:42.403  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938298, pluginId: BluetoothLe, methodName: removeListener
+03-19 12:49:42.404  7475  7475 V Capacitor: callback: 17938298, pluginId: BluetoothLe, methodName: removeListener, methodData: {"eventName":"onScanResult","callbackId":"17938296"}
+03-19 12:49:42.407  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938299, pluginId: BluetoothLe, methodName: stopLEScan
+03-19 12:49:42.408  7475  7475 V Capacitor: callback: 17938299, pluginId: BluetoothLe, methodName: stopLEScan, methodData: {}
+03-19 12:49:42.409  7475  7544 D DeviceScanner: Stop scanning.
+03-19 12:49:42.410  7475  7544 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:42.414  3850 24849 D BtGatt.GattService: stopScan() - queue size =3
+03-19 12:49:42.421  3850  4074 I BtGatt.ScanManager: msg.what = MSG_STOP_BLE_SCAN, msg.arg1 = None
+03-19 12:49:42.421  3850  4074 D BtGatt.ScanManager: track LE scan event: callerPackage = [com.smartdoor.terminal], scanMode = [1], reportDelayMillis = [0], behavior = [2], scannerId = [8], duration = [7945]
+03-19 12:49:42.421  3850  4074 D BtGatt.ScanManager: handling stopping scan  [ScanClient scanModeApp 1 scanModeUsed 1 [appScanStats com.smartdoor.terminal]]
+03-19 12:49:42.423  1085  1085 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:42.426  1085  1085 D vendor.qti.bluetooth@1.0-uart_transport: SocRxDWakeup: Flow off->Change UART baudrate to 38.4kbs->send 0x00->Change UART baudrate to max->Flow on
+03-19 12:49:42.427  1085  1085 I vendor.qti.bluetooth@1.0-uart_transport: ## userial_vendor_ioctl: UART Flow Off 
+03-19 12:49:42.427  3850 24849 D BtGatt.GattService: unregisterScanner() - scannerId=8
+03-19 12:49:42.438  1085  1085 I vendor.qti.bluetooth@1.0-uart_transport: ## userial_vendor_set_baud: 17
+03-19 12:49:42.440  7475  7475 I Capacitor/Console: File:  - Line 353 - Msg: undefined
+03-19 12:49:42.448  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938300, pluginId: BluetoothLe, methodName: addListener
+03-19 12:49:42.448  7475  7475 V Capacitor: callback: 17938300, pluginId: BluetoothLe, methodName: addListener, methodData: {"eventName":"onScanResult"}
+03-19 12:49:42.451  1085  1085 I vendor.qti.bluetooth@1.0-uart_transport: SetBaudRate: in BOTHER
+03-19 12:49:42.451  1085  1085 I vendor.qti.bluetooth@1.0-uart_transport: ## userial_vendor_ioctl: UART Flow On 
+03-19 12:49:42.451  1085  1085 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:42.451  1085  1085 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceWakeUp: Writing IBS_WAKE_IND
+03-19 12:49:42.451  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938301, pluginId: BluetoothLe, methodName: requestLEScan
+03-19 12:49:42.452  7475  7475 V Capacitor: callback: 17938301, pluginId: BluetoothLe, methodName: requestLEScan, methodData: {}
+03-19 12:49:42.452  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_ACK: 0xFC
+03-19 12:49:42.452  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Signal wack_cond_
+03-19 12:49:42.452  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_ACK: 0xFC
+03-19 12:49:42.452  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Signal wack_cond_
+03-19 12:49:42.452  1085  1085 D vendor.qti.bluetooth@1.0-ibs_handler: DeviceWakeUp: Unblocked from waiting for FC, pthread_cond_timedwait ret = 0
+03-19 12:49:42.453  7475  7544 D DeviceScanner: Stop scanning.
+03-19 12:49:42.454  7475  7544 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:42.454  7475  7544 D BluetoothLeScanner: could not find callback wrapper
+03-19 12:49:42.454  7475  7544 D DeviceScanner: Start scanning.
+03-19 12:49:42.454  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:42.454  7475  7544 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:42.454  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:42.457  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=8, status=0, action=1, availableSpace=7
+03-19 12:49:42.457  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 8 status - 0
+03-19 12:49:42.457  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - queue=2
+03-19 12:49:42.457  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - ScanSetting LE 1M Scan mode=0 ScanSetting LE Coded Scan mode=0 mLastConfiguredScanSettingLE1M=1 mLastConfiguredScanSettingLECoded=1 scanPhy=255
+03-19 12:49:42.460  3850  4074 D BtGatt.ScanManager: configureRegularScanParams - scanInterval LE 1M = 660 configureRegularScanParams - scanWindow LE 1M= 66 configureRegularScanParams - scanInterval LE Coded= 660 configureRegularScanParams - scanWindow LE Coded= 66
+03-19 12:49:42.460  3850 24849 D BtGatt.GattService: registerScanner() - UUID=b1ed7578-3ec2-47a3-9626-5291356b470b
+03-19 12:49:42.461  3850  4014 D BtGatt.GattService: onScanParamSetupCompleted : 0
+03-19 12:49:42.462  3850  4014 D BtGatt.GattService: onScannerRegistered() - UUID=b1ed7578-3ec2-47a3-9626-5291356b470b, scannerId=8, status=0
+03-19 12:49:42.463  7475  7665 D BluetoothLeScanner: onScannerRegistered() - status=0 scannerId=8 mScannerId=0
+03-19 12:49:42.465  3850 24849 D BtGatt.GattService: start scan with filters. callingPackage: com.smartdoor.terminal
+03-19 12:49:42.468  3850 24849 D BtGatt.GattService: enforcePrivilegedPermissionIfNeeded([])
+03-19 12:49:42.473  1823  4539 E AppOps  : Bad call made by uid 1002. Package "com.smartdoor.terminal" does not belong to uid 1002.
+03-19 12:49:42.476  3850 24849 D BtGatt.ScanManager: startScan()  [ScanClient scanModeApp 1 scanModeUsed 1 [appScanStats com.smartdoor.terminal]]
+03-19 12:49:42.476  3850  4074 I BtGatt.ScanManager: msg.what = MSG_RECORD_CALLER, msg.arg1 = None
+03-19 12:49:42.476  3850  4074 I BtGatt.ScanManager: msg.what = MSG_START_BLE_SCAN, msg.arg1 = None
+03-19 12:49:42.476  3850  4074 D BtGatt.ScanManager: handling starting scan
+03-19 12:49:42.478  3850  4074 D BtGatt.ScanManager: isAptXLowLatencyModeEnabled: false
+03-19 12:49:42.481  3850  4074 D BtGatt.ScanManager: track LE scan event: callerPackage = [com.smartdoor.terminal], scanMode = [1], reportDelayMillis = [0], behavior = [1], scannerId = [8], duration = [0]
+03-19 12:49:42.485  3850  4014 D BtGatt.GattService: onScanFilterEnableDisabled() - clientIf=8, status=0, action=1
+03-19 12:49:42.485  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 8 status - 0
+03-19 12:49:42.486  7475  7475 I Capacitor/Console: File:  - Line 353 - Msg: undefined
+03-19 12:49:42.486  3850  4074 D BtGatt.ScanManager: configureScanFilters rssiThreshold: -128, 0
+03-19 12:49:42.486  3850  4074 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0, deliveryMode=0
+03-19 12:49:42.489  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=8, status=0, action=0, availableSpace=6
+03-19 12:49:42.489  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 8 status - 0
+03-19 12:49:42.491  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - queue=3
+03-19 12:49:42.491  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - ScanSetting LE 1M Scan mode=1 ScanSetting LE Coded Scan mode=1 mLastConfiguredScanSettingLE1M=0 mLastConfiguredScanSettingLECoded=0 scanPhy=255
+03-19 12:49:42.492  3850  4074 D BtGatt.ScanManager: configureRegularScanParams - scanInterval LE 1M = 730 configureRegularScanParams - scanWindow LE 1M= 183 configureRegularScanParams - scanInterval LE Coded= 730 configureRegularScanParams - scanWindow LE Coded= 183
+03-19 12:49:42.494  3850  4014 D BtGatt.GattService: onScanParamSetupCompleted : 0
+03-19 12:49:42.519  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:42.535  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:42.544  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:42.564  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:42.564  3850  4014 D BluetoothRemoteDevices: Skip name update for 28:A9:15:56:CC:2F
+03-19 12:49:42.564  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:42.564  3850  4014 D BluetoothRemoteDevices: Skip class update for 28:A9:15:56:CC:2F
+03-19 12:49:42.564  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:42.564  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE 28:A9:15:56:CC:2F
+03-19 12:49:42.575  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:42.598  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:42.598  3850  4014 D BluetoothRemoteDevices: Skip name update for BC:F8:7E:FB:BD:30
+03-19 12:49:42.598  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:42.598  3850  4014 D BluetoothRemoteDevices: Skip class update for BC:F8:7E:FB:BD:30
+03-19 12:49:42.598  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:42.598  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE BC:F8:7E:FB:BD:30
+03-19 12:49:42.614  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:42.618  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:42.638  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:42.659  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:42.660  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:42.667  3132  3132 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+03-19 12:49:42.671  3144  3485 D MobileStatusTracker(2): onSignalStrengthsChanged signalStrength=SignalStrength:{mCdma=CellSignalStrengthCdma: cdmaDbm=2147483647 cdmaEcio=2147483647 evdoDbm=2147483647 evdoEcio=2147483647 evdoSnr=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mGsm=CellSignalStrengthGsm: rssi=2147483647 ber=2147483647 mTa=2147483647 miuiLevel=0 mOptimizedLevel=0 mLevel=0,mWcdma=CellSignalStrengthWcdma: ss=2147483647 ber=2147483647 rscp=2147483647 ecno=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mTdscdma=CellSignalStrengthTdscdma: rssi=2147483647 ber=2147483647 rscp=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mLte=CellSignalStrengthLte: rssi=-61 rsrp=-97 rsrq=-16 rssnr=0 cqiTableIndex=2147483647 cqi=2147483647 ta=2147483647 miuiLevel=5 mOptimizedLevel=0 level=4 parametersUseForLevel=0,mNr=CellSignalStrengthNr:{ csiRsrp = 2147483647 csiRsrq = 2147483647 csiCqiTableIndex = 2147483647 csiCqiReport = [] ssRsrp = 2147483647 ssRsrq = 2147483647 ssSinr = 2147483647 miuiLevel = 0 mOptimizedLevel = 0 level = 0 parametersUseForLevel = 0 },primary=CellSignalStrengthLte,mNrAsPrimaryInNrNsa=false}
+03-19 12:49:42.674  3144  3485 D NetworkController.MobileSignalController(2): update5GConnectState: false
+03-19 12:49:42.674  3144  3485 D NetworkController.MobileSignalController(2): ss use aosp level not 0, 5
+03-19 12:49:42.697  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:42.711  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:42.721  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:42.751  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:43.271  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:43.271  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:43.278  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:43.279  3850  4014 D BluetoothRemoteDevices: Skip name update for D8:78:C9:76:69:2A
+03-19 12:49:43.279  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:43.279  3850  4014 D BluetoothRemoteDevices: Skip class update for D8:78:C9:76:69:2A
+03-19 12:49:43.279  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:43.279  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE D8:78:C9:76:69:2A
+03-19 12:49:43.310  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:43.315  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:43.328  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:43.353  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:43.377  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:43.400  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:43.441  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:43.441  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:43.441  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:43.444  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:43.483  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:43.486  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:43.501  1085  4170 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceSleep: TX Awake, Sending SLEEP_IND
+03-19 12:49:43.502  1085  4170 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:43.653  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:44.076  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:44.076  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:44.081  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:44.081  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:44.113  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:44.127  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:44.132  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:44.139  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:44.141  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:44.161  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:44.182  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:44.250  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:44.250  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:44.401  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:44.776  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:44.776  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:44.780  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:44.781  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:44.787  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:44.789  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:44.877  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:44.893  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:44.913  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:44.914  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:45.064  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:45.238  3132  3132 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+03-19 12:49:45.244  3144  3485 D MobileStatusTracker(2): onSignalStrengthsChanged signalStrength=SignalStrength:{mCdma=CellSignalStrengthCdma: cdmaDbm=2147483647 cdmaEcio=2147483647 evdoDbm=2147483647 evdoEcio=2147483647 evdoSnr=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mGsm=CellSignalStrengthGsm: rssi=2147483647 ber=2147483647 mTa=2147483647 miuiLevel=0 mOptimizedLevel=0 mLevel=0,mWcdma=CellSignalStrengthWcdma: ss=2147483647 ber=2147483647 rscp=2147483647 ecno=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mTdscdma=CellSignalStrengthTdscdma: rssi=2147483647 ber=2147483647 rscp=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mLte=CellSignalStrengthLte: rssi=-61 rsrp=-95 rsrq=-13 rssnr=2 cqiTableIndex=2147483647 cqi=2147483647 ta=2147483647 miuiLevel=5 mOptimizedLevel=0 level=4 parametersUseForLevel=0,mNr=CellSignalStrengthNr:{ csiRsrp = 2147483647 csiRsrq = 2147483647 csiCqiTableIndex = 2147483647 csiCqiReport = [] ssRsrp = 2147483647 ssRsrq = 2147483647 ssSinr = 2147483647 miuiLevel = 0 mOptimizedLevel = 0 level = 0 parametersUseForLevel = 0 },primary=CellSignalStrengthLte,mNrAsPrimaryInNrNsa=false}
+03-19 12:49:45.245  3144  3485 D NetworkController.MobileSignalController(2): update5GConnectState: false
+03-19 12:49:45.246  3144  3485 D NetworkController.MobileSignalController(2): ss use aosp level not 0, 5
+03-19 12:49:45.583  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:45.583  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:45.590  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:45.590  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:45.596  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:45.599  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:45.603  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:45.607  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:45.607  3850  4014 D BluetoothRemoteDevices: Skip name update for 78:BB:C1:56:E7:00
+03-19 12:49:45.607  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:45.607  3850  4014 D BluetoothRemoteDevices: Skip class update for 78:BB:C1:56:E7:00
+03-19 12:49:45.607  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:45.608  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE 78:BB:C1:56:E7:00
+03-19 12:49:45.645  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:45.683  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:45.683  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:45.684  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:45.684  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:45.684  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:45.687  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:45.728  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:45.728  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:45.880  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:46.212  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:46.212  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:46.215  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:46.215  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:46.219  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:46.221  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:46.227  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:46.247  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:46.248  3850  4014 D BluetoothRemoteDevices: Skip name update for BC:F8:7E:FB:06:9F
+03-19 12:49:46.248  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:46.248  3850  4014 D BluetoothRemoteDevices: Skip class update for BC:F8:7E:FB:06:9F
+03-19 12:49:46.248  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:46.248  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE BC:F8:7E:FB:06:9F
+03-19 12:49:46.291  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:46.320  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:46.320  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:46.321  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:46.321  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:46.321  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:46.328  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:46.329  3850  4014 D BluetoothRemoteDevices: Skip name update for 78:BB:C1:BE:F0:18
+03-19 12:49:46.329  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:46.329  3850  4014 D BluetoothRemoteDevices: Skip class update for 78:BB:C1:BE:F0:18
+03-19 12:49:46.329  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:46.329  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE 78:BB:C1:BE:F0:18
+03-19 12:49:46.362  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:46.362  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:46.376  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:46.513  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:47.048  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:47.048  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:47.053  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:47.053  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:47.057  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:47.063  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:47.109  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:47.126  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:47.127  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:47.150  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:47.190  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:47.190  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:47.341  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:47.745  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:47.745  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:47.748  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:47.749  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:47.753  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:47.753  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:47.791  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:47.792  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:47.810  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:47.810  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:47.810  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:47.854  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:47.892  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:47.897  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:47.898  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:48.049  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:48.388  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:48.388  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:48.393  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:48.393  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:48.398  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:48.422  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:48.461  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:48.477  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:48.554  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:48.554  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:48.705  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:49.155  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:49.155  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:49.160  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:49.160  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:49.162  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:49.194  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:49.285  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:49.327  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:49.328  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:49.478  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:49.878  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:49.879  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:49.881  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:49.881  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:49.891  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:49.905  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:49.921  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:49.924  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:50.002  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:50.002  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:50.153  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:50.356  3132  3132 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+03-19 12:49:50.361  3144  3485 D MobileStatusTracker(1): onSignalStrengthsChanged signalStrength=SignalStrength:{mCdma=CellSignalStrengthCdma: cdmaDbm=2147483647 cdmaEcio=2147483647 evdoDbm=2147483647 evdoEcio=2147483647 evdoSnr=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mGsm=CellSignalStrengthGsm: rssi=2147483647 ber=2147483647 mTa=2147483647 miuiLevel=0 mOptimizedLevel=0 mLevel=0,mWcdma=CellSignalStrengthWcdma: ss=2147483647 ber=2147483647 rscp=2147483647 ecno=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mTdscdma=CellSignalStrengthTdscdma: rssi=2147483647 ber=2147483647 rscp=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mLte=CellSignalStrengthLte: rssi=-53 rsrp=-81 rsrq=-8 rssnr=17 cqiTableIndex=2147483647 cqi=2147483647 ta=2147483647 miuiLevel=5 mOptimizedLevel=0 level=4 parametersUseForLevel=0,mNr=CellSignalStrengthNr:{ csiRsrp = 2147483647 csiRsrq = 2147483647 csiCqiTableIndex = 2147483647 csiCqiReport = [] ssRsrp = 2147483647 ssRsrq = 2147483647 ssSinr = 2147483647 miuiLevel = 0 mOptimizedLevel = 0 level = 0 parametersUseForLevel = 0 },primary=CellSignalStrengthLte,mNrAsPrimaryInNrNsa=false}
+03-19 12:49:50.361  3144  3485 D NetworkController.MobileSignalController(1): update5GConnectState: false
+03-19 12:49:50.361  3144  3485 D NetworkController.MobileSignalController(1): ss use aosp level not 0, 5
+03-19 12:49:50.404  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938302, pluginId: BluetoothLe, methodName: removeListener
+03-19 12:49:50.405  7475  7475 V Capacitor: callback: 17938302, pluginId: BluetoothLe, methodName: removeListener, methodData: {"eventName":"onScanResult","callbackId":"17938300"}
+03-19 12:49:50.409  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938303, pluginId: BluetoothLe, methodName: stopLEScan
+03-19 12:49:50.409  7475  7475 V Capacitor: callback: 17938303, pluginId: BluetoothLe, methodName: stopLEScan, methodData: {}
+03-19 12:49:50.410  7475  7544 D DeviceScanner: Stop scanning.
+03-19 12:49:50.410  7475  7544 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:50.414  3850 24849 D BtGatt.GattService: stopScan() - queue size =3
+03-19 12:49:50.419  3850  4074 I BtGatt.ScanManager: msg.what = MSG_STOP_BLE_SCAN, msg.arg1 = None
+03-19 12:49:50.420  3850  4074 D BtGatt.ScanManager: track LE scan event: callerPackage = [com.smartdoor.terminal], scanMode = [1], reportDelayMillis = [0], behavior = [2], scannerId = [8], duration = [7941]
+03-19 12:49:50.420  3850  4074 D BtGatt.ScanManager: handling stopping scan  [ScanClient scanModeApp 1 scanModeUsed 1 [appScanStats com.smartdoor.terminal]]
+03-19 12:49:50.421  1085  1085 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:50.425  3850 24849 D BtGatt.GattService: unregisterScanner() - scannerId=8
+03-19 12:49:50.426  1085  1085 D vendor.qti.bluetooth@1.0-uart_transport: SocRxDWakeup: Flow off->Change UART baudrate to 38.4kbs->send 0x00->Change UART baudrate to max->Flow on
+03-19 12:49:50.426  1085  1085 I vendor.qti.bluetooth@1.0-uart_transport: ## userial_vendor_ioctl: UART Flow Off 
+03-19 12:49:50.436  7475  7475 I Capacitor/Console: File:  - Line 353 - Msg: undefined
+03-19 12:49:50.438  1085  1085 I vendor.qti.bluetooth@1.0-uart_transport: ## userial_vendor_set_baud: 17
+03-19 12:49:50.444  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938304, pluginId: BluetoothLe, methodName: addListener
+03-19 12:49:50.445  7475  7475 V Capacitor: callback: 17938304, pluginId: BluetoothLe, methodName: addListener, methodData: {"eventName":"onScanResult"}
+03-19 12:49:50.448  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938305, pluginId: BluetoothLe, methodName: requestLEScan
+03-19 12:49:50.448  7475  7475 V Capacitor: callback: 17938305, pluginId: BluetoothLe, methodName: requestLEScan, methodData: {}
+03-19 12:49:50.450  7475  7544 D DeviceScanner: Stop scanning.
+03-19 12:49:50.450  7475  7544 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:50.450  7475  7544 D BluetoothLeScanner: could not find callback wrapper
+03-19 12:49:50.451  1085  1085 I vendor.qti.bluetooth@1.0-uart_transport: SetBaudRate: in BOTHER
+03-19 12:49:50.451  1085  1085 I vendor.qti.bluetooth@1.0-uart_transport: ## userial_vendor_ioctl: UART Flow On 
+03-19 12:49:50.451  7475  7544 D DeviceScanner: Start scanning.
+03-19 12:49:50.451  7475  7544 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:50.451  1085  1085 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:50.451  1085  1085 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceWakeUp: Writing IBS_WAKE_IND
+03-19 12:49:50.451  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_ACK: 0xFC
+03-19 12:49:50.451  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Signal wack_cond_
+03-19 12:49:50.452  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_ACK: 0xFC
+03-19 12:49:50.452  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Signal wack_cond_
+03-19 12:49:50.452  1085  1085 D vendor.qti.bluetooth@1.0-ibs_handler: DeviceWakeUp: Unblocked from waiting for FC, pthread_cond_timedwait ret = 0
+03-19 12:49:50.454  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:50.454  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:50.456  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=8, status=0, action=1, availableSpace=7
+03-19 12:49:50.456  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 8 status - 0
+03-19 12:49:50.457  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - queue=2
+03-19 12:49:50.457  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - ScanSetting LE 1M Scan mode=0 ScanSetting LE Coded Scan mode=0 mLastConfiguredScanSettingLE1M=1 mLastConfiguredScanSettingLECoded=1 scanPhy=255
+03-19 12:49:50.458  3850 24849 D BtGatt.GattService: registerScanner() - UUID=cfce89ab-c472-42b1-afe2-77b99b670175
+03-19 12:49:50.460  3850  4014 D BtGatt.GattService: onScannerRegistered() - UUID=cfce89ab-c472-42b1-afe2-77b99b670175, scannerId=8, status=0
+03-19 12:49:50.460  3850  4074 D BtGatt.ScanManager: configureRegularScanParams - scanInterval LE 1M = 660 configureRegularScanParams - scanWindow LE 1M= 66 configureRegularScanParams - scanInterval LE Coded= 660 configureRegularScanParams - scanWindow LE Coded= 66
+03-19 12:49:50.461  3850  4014 D BtGatt.GattService: onScanParamSetupCompleted : 0
+03-19 12:49:50.462  7475  7489 D BluetoothLeScanner: onScannerRegistered() - status=0 scannerId=8 mScannerId=0
+03-19 12:49:50.463  3850 24849 D BtGatt.GattService: start scan with filters. callingPackage: com.smartdoor.terminal
+03-19 12:49:50.466  3850 24849 D BtGatt.GattService: enforcePrivilegedPermissionIfNeeded([])
+03-19 12:49:50.473  1823  4981 E AppOps  : Bad call made by uid 1002. Package "com.smartdoor.terminal" does not belong to uid 1002.
+03-19 12:49:50.476  3850 24849 D BtGatt.ScanManager: startScan()  [ScanClient scanModeApp 1 scanModeUsed 1 [appScanStats com.smartdoor.terminal]]
+03-19 12:49:50.476  3850  4074 I BtGatt.ScanManager: msg.what = MSG_RECORD_CALLER, msg.arg1 = None
+03-19 12:49:50.476  3850  4074 I BtGatt.ScanManager: msg.what = MSG_START_BLE_SCAN, msg.arg1 = None
+03-19 12:49:50.476  3850  4074 D BtGatt.ScanManager: handling starting scan
+03-19 12:49:50.477  3850  4074 D BtGatt.ScanManager: isAptXLowLatencyModeEnabled: false
+03-19 12:49:50.480  3850  4074 D BtGatt.ScanManager: track LE scan event: callerPackage = [com.smartdoor.terminal], scanMode = [1], reportDelayMillis = [0], behavior = [1], scannerId = [8], duration = [0]
+03-19 12:49:50.484  3850  4014 D BtGatt.GattService: onScanFilterEnableDisabled() - clientIf=8, status=0, action=1
+03-19 12:49:50.485  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 8 status - 0
+03-19 12:49:50.485  3850  4074 D BtGatt.ScanManager: configureScanFilters rssiThreshold: -128, 0
+03-19 12:49:50.485  3850  4074 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0, deliveryMode=0
+03-19 12:49:50.487  7475  7475 I Capacitor/Console: File:  - Line 353 - Msg: undefined
+03-19 12:49:50.489  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=8, status=0, action=0, availableSpace=6
+03-19 12:49:50.489  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 8 status - 0
+03-19 12:49:50.491  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - queue=3
+03-19 12:49:50.492  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - ScanSetting LE 1M Scan mode=1 ScanSetting LE Coded Scan mode=1 mLastConfiguredScanSettingLE1M=0 mLastConfiguredScanSettingLECoded=0 scanPhy=255
+03-19 12:49:50.492  3850  4074 D BtGatt.ScanManager: configureRegularScanParams - scanInterval LE 1M = 730 configureRegularScanParams - scanWindow LE 1M= 183 configureRegularScanParams - scanInterval LE Coded= 730 configureRegularScanParams - scanWindow LE Coded= 183
+03-19 12:49:50.493  3850  4014 D BtGatt.GattService: onScanParamSetupCompleted : 0
+03-19 12:49:50.511  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:50.554  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:50.584  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:50.614  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:50.616  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:50.621  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:50.621  3850  4014 D BluetoothRemoteDevices: Skip name update for BC:F8:7E:FB:06:9F
+03-19 12:49:50.621  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:50.621  3850  4014 D BluetoothRemoteDevices: Skip class update for BC:F8:7E:FB:06:9F
+03-19 12:49:50.621  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:50.621  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE BC:F8:7E:FB:06:9F
+03-19 12:49:50.632  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:50.649  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:50.681  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:50.706  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:50.724  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:50.743 28480 28575 D MiuiFastConnectService: stopBleScan: scanning: true
+03-19 12:49:50.744 28480 28575 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:50.748  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:50.749  3850 25254 D BtGatt.GattService: stopScan() - queue size =3
+03-19 12:49:50.756  3850  4074 I BtGatt.ScanManager: msg.what = MSG_STOP_BLE_SCAN, msg.arg1 = None
+03-19 12:49:50.756  3850  4074 D BtGatt.ScanManager: track LE scan event: callerPackage = [com.xiaomi.bluetooth], scanMode = [0], reportDelayMillis = [0], behavior = [2], scannerId = [7], duration = [59941]
+03-19 12:49:50.756  3850  4074 D BtGatt.ScanManager: handling stopping scan  [ScanClient scanModeApp 0 scanModeUsed 0 [appScanStats android.uid.bluetooth:1002]]
+03-19 12:49:50.759  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:50.759  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:50.761  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=7, status=0, action=1, availableSpace=7
+03-19 12:49:50.761  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.762  3850 25254 D BtGatt.GattService: unregisterScanner() - scannerId=7
+03-19 12:49:50.766  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=7, status=0, action=1, availableSpace=8
+03-19 12:49:50.766  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.769  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=7, status=0, action=1, availableSpace=9
+03-19 12:49:50.769  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.773  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=7, status=0, action=1, availableSpace=10
+03-19 12:49:50.773  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.777  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:50.778  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=7, status=0, action=1, availableSpace=11
+03-19 12:49:50.778  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.781  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=7, status=0, action=1, availableSpace=12
+03-19 12:49:50.781  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.783  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - queue=2
+03-19 12:49:50.784  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - ScanSetting LE 1M Scan mode=1 ScanSetting LE Coded Scan mode=1 mLastConfiguredScanSettingLE1M=1 mLastConfiguredScanSettingLECoded=1 scanPhy=255
+03-19 12:49:50.784  3850  4074 D BtGatt.ScanManager: configureRegularScanParams - scanInterval LE 1M = 730 configureRegularScanParams - scanWindow LE 1M= 183 configureRegularScanParams - scanInterval LE Coded= 730 configureRegularScanParams - scanWindow LE Coded= 183
+03-19 12:49:50.785  3850  4014 D BtGatt.GattService: onScanParamSetupCompleted : 0
+03-19 12:49:50.827 28480 28575 D MiuiFastConnectService: handleMessage: MSG_START_BLE_SCAN mode: 0
+03-19 12:49:50.827 28480 28575 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:50.833  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:50.833  3850 25254 D BtGatt.GattService: registerScanner() - UUID=a0a2a5a3-1434-4772-a9a1-844c377bf0a4
+03-19 12:49:50.836  3850  4014 D BtGatt.GattService: onScannerRegistered() - UUID=a0a2a5a3-1434-4772-a9a1-844c377bf0a4, scannerId=7, status=0
+03-19 12:49:50.837 28480 28514 D BluetoothLeScanner: onScannerRegistered() - status=0 scannerId=7 mScannerId=0
+03-19 12:49:50.839  3850 25254 D BtGatt.GattService: start scan with filters. callingPackage: com.xiaomi.bluetooth
+03-19 12:49:50.843  3850 25254 D BtGatt.GattService: enforcePrivilegedPermissionIfNeeded([BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=null, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=911, mManufacturerData=[], mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mOrganizationId=-1, mTDSFlags=-1, mTDSFlagsMask=-1, mWifiNANHash=null], mGroupBasedFiltering=false, BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=null, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=65535, mManufacturerData=[77], mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mOrganizationId=-1, mTDSFlags=-1, mTDSFlagsMask=-1, mWifiNANHash=null], mGroupBasedFiltering=false, BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=null, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=0000fe95-0000-1000-8000-00805f9b34fb, mServiceData=[], mServiceDataMask=null, mManufacturerId=-1, mManufacturerData=null, mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mOrganizationId=-1, mTDSFlags=-1, mTDSFlagsMask=-1, mWifiNANHash=null], mGroupBasedFiltering=false, BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=null, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=0000fdaa-0000-1000-8000-00805f9b34fb, mServiceData=[], mServiceDataMask=null, mManufacturerId=-1, mManufacturerData=null, mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mOrganizationId=-1, mTDSFlags=-1, mTDSFlagsMask=-1, mWifiNANHash=null], mGroupBasedFiltering=false, BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=null, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=0000fdee-0000-1000-8000-00805f9b34fb, mServiceData=[1, 1, 1], mServiceDataMask=null, mManufacturerId=-1, mManufacturerData=null, mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mOrganizationId=-1, mTDSFlags=-1, mTDSFlagsMask=-1, mWifiNANHash=null], mGroupBasedFiltering=false, BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=null, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=0000fd2d-0000-1000-8000-00805f9b34fb, mServiceData=[], mServiceDataMask=null, mManufacturerId=-1, mManufacturerData=null, mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mOrganizationId=-1, mTDSFlags=-1, mTDSFlagsMask=-1, mWifiNANHash=null], mGroupBasedFiltering=false])
+03-19 12:49:50.846  3850 25254 W BluetoothUtils: callingUid is Process.BLUETOOTH_UID
+03-19 12:49:50.846  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:50.846  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:50.851  3850 25254 D BtGatt.ScanManager: startScan()  [ScanClient scanModeApp 0 scanModeUsed 0 [appScanStats android.uid.bluetooth:1002]]
+03-19 12:49:50.852  3850  4074 I BtGatt.ScanManager: msg.what = MSG_RECORD_CALLER, msg.arg1 = None
+03-19 12:49:50.852  3850  4074 I BtGatt.ScanManager: msg.what = MSG_START_BLE_SCAN, msg.arg1 = None
+03-19 12:49:50.852  3850  4074 D BtGatt.ScanManager: handling starting scan
+03-19 12:49:50.853  3850  4074 D BtGatt.ScanManager: isAptXLowLatencyModeEnabled: false
+03-19 12:49:50.854  3850  4074 D BtGatt.ScanManager: track LE scan event: callerPackage = [com.xiaomi.bluetooth], scanMode = [0], reportDelayMillis = [0], behavior = [1], scannerId = [7], duration = [0]
+03-19 12:49:50.859  3850  4014 D BtGatt.GattService: onScanFilterEnableDisabled() - clientIf=7, status=0, action=1
+03-19 12:49:50.860  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.862  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:50.863  3850  4074 D BtGatt.ScanManager: configureScanFilters rssiThreshold: -60, 15
+03-19 12:49:50.863  3850  4074 D BtGatt.ScanManager: Available Filter size: 10
+03-19 12:49:50.867  3850  4014 D BtGatt.GattService: onScanFilterConfig() - clientIf=7, action = 0 status = 0, filterType=0, availableSpace=0
+03-19 12:49:50.867  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.868  3850  4074 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0, deliveryMode=0
+03-19 12:49:50.874  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=7, status=0, action=0, availableSpace=11
+03-19 12:49:50.874  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.876  3850  4014 D BtGatt.GattService: onScanFilterConfig() - clientIf=7, action = 0 status = 0, filterType=0, availableSpace=0
+03-19 12:49:50.876  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.876  3850  4074 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0, deliveryMode=0
+03-19 12:49:50.878  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:50.883  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=7, status=0, action=0, availableSpace=10
+03-19 12:49:50.884  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.886  3850  4014 D BtGatt.GattService: onScanFilterConfig() - clientIf=7, action = 0 status = 0, filterType=0, availableSpace=0
+03-19 12:49:50.886  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.889  3850  4074 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0, deliveryMode=0
+03-19 12:49:50.892  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=7, status=0, action=0, availableSpace=9
+03-19 12:49:50.892  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.896  3850  4014 D BtGatt.GattService: onScanFilterConfig() - clientIf=7, action = 0 status = 0, filterType=0, availableSpace=0
+03-19 12:49:50.896  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.897  3850  4074 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0, deliveryMode=0
+03-19 12:49:50.901  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=7, status=0, action=0, availableSpace=8
+03-19 12:49:50.901  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.902  3850  4014 D BtGatt.GattService: onScanFilterConfig() - clientIf=7, action = 0 status = 0, filterType=0, availableSpace=0
+03-19 12:49:50.902  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.903  3850  4074 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0, deliveryMode=0
+03-19 12:49:50.906  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=7, status=0, action=0, availableSpace=7
+03-19 12:49:50.906  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.908  3850  4014 D BtGatt.GattService: onScanFilterConfig() - clientIf=7, action = 0 status = 0, filterType=0, availableSpace=0
+03-19 12:49:50.908  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.909  3850  4074 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0, deliveryMode=0
+03-19 12:49:50.913  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=7, status=0, action=0, availableSpace=6
+03-19 12:49:50.913  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 7 status - 0
+03-19 12:49:50.914  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - queue=3
+03-19 12:49:50.915  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - ScanSetting LE 1M Scan mode=1 ScanSetting LE Coded Scan mode=1 mLastConfiguredScanSettingLE1M=1 mLastConfiguredScanSettingLECoded=1 scanPhy=255
+03-19 12:49:50.915  3850  4074 D BtGatt.ScanManager: configureRegularScanParams - scanInterval LE 1M = 730 configureRegularScanParams - scanWindow LE 1M= 183 configureRegularScanParams - scanInterval LE Coded= 730 configureRegularScanParams - scanWindow LE Coded= 183
+03-19 12:49:50.915  3850  4014 D BtGatt.GattService: onScanParamSetupCompleted : 0
+03-19 12:49:50.925  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:50.945  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:50.991  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:51.004  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:51.004  3850  4014 D BluetoothRemoteDevices: Skip name update for D8:78:C9:76:69:2A
+03-19 12:49:51.004  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:51.004  3850  4014 D BluetoothRemoteDevices: Skip class update for D8:78:C9:76:69:2A
+03-19 12:49:51.004  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:51.004  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE D8:78:C9:76:69:2A
+03-19 12:49:51.008  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:51.034  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:51.058  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:51.064  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:51.064  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:51.073  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:51.148  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:51.749  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:51.749  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:51.792  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:51.793  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:51.793  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:51.802  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:51.812  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:51.829  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:51.842  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:51.847  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:51.892  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:51.922  1085  4170 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceSleep: TX Awake, Sending SLEEP_IND
+03-19 12:49:51.946  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:51.947  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:52.097  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:52.496  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:52.496  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:52.500  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:52.500  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:52.503  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:52.505  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:52.507  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:52.524   790   790 W PerfettoTrace: type=1400 audit(0.0:133310): avc: denied { write } for name="traced_producer" dev="tmpfs" ino=23714 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 app=com.google.android.gms
+03-19 12:49:52.541  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:52.546  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:52.578  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:52.656  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:52.656  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:52.808  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:52.918  3132  3132 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+03-19 12:49:52.924  3144  3485 D MobileStatusTracker(2): onSignalStrengthsChanged signalStrength=SignalStrength:{mCdma=CellSignalStrengthCdma: cdmaDbm=2147483647 cdmaEcio=2147483647 evdoDbm=2147483647 evdoEcio=2147483647 evdoSnr=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mGsm=CellSignalStrengthGsm: rssi=2147483647 ber=2147483647 mTa=2147483647 miuiLevel=0 mOptimizedLevel=0 mLevel=0,mWcdma=CellSignalStrengthWcdma: ss=2147483647 ber=2147483647 rscp=2147483647 ecno=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mTdscdma=CellSignalStrengthTdscdma: rssi=2147483647 ber=2147483647 rscp=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mLte=CellSignalStrengthLte: rssi=-61 rsrp=-97 rsrq=-15 rssnr=-2 cqiTableIndex=2147483647 cqi=2147483647 ta=2147483647 miuiLevel=5 mOptimizedLevel=0 level=4 parametersUseForLevel=0,mNr=CellSignalStrengthNr:{ csiRsrp = 2147483647 csiRsrq = 2147483647 csiCqiTableIndex = 2147483647 csiCqiReport = [] ssRsrp = 2147483647 ssRsrq = 2147483647 ssSinr = 2147483647 miuiLevel = 0 mOptimizedLevel = 0 level = 0 parametersUseForLevel = 0 },primary=CellSignalStrengthLte,mNrAsPrimaryInNrNsa=false}
+03-19 12:49:52.925  3144  3485 D NetworkController.MobileSignalController(2): update5GConnectState: false
+03-19 12:49:52.925  3144  3485 D NetworkController.MobileSignalController(2): ss use aosp level not 0, 5
+03-19 12:49:53.213  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:53.213  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:53.216  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:53.216  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:53.222  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:53.222  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:53.224  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:53.262  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:53.266  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:53.304  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:53.388  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:53.389  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:53.540  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:53.812  3850  4074 I BtGatt.ScanManager: msg.what = MSG_RESET_BALANCED_APP_SCAN_INFO, msg.arg1 = None
+03-19 12:49:53.985  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:53.985  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:53.988  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:53.988  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:53.992  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:53.996  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:54.001  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:54.001  3850  4014 D BluetoothRemoteDevices: Skip name update for 28:A9:15:56:CC:2F
+03-19 12:49:54.001  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:54.001  3850  4014 D BluetoothRemoteDevices: Skip class update for 28:A9:15:56:CC:2F
+03-19 12:49:54.002  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:54.002  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE 28:A9:15:56:CC:2F
+03-19 12:49:54.011  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:54.022  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:54.045  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:54.055  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:54.060  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:54.138  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:54.138  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:54.289  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:54.688  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:54.688  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:54.691  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:54.691  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:54.697  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:54.698  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:54.737  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:54.770  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:54.786  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:54.848  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:54.848  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:54.999  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:55.401  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:55.401  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:55.409  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:55.409  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:55.415  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:55.432  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:55.432  3850  4014 D BluetoothRemoteDevices: Skip name update for BC:F8:7E:FB:06:9F
+03-19 12:49:55.432  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:55.433  3850  4014 D BluetoothRemoteDevices: Skip class update for BC:F8:7E:FB:06:9F
+03-19 12:49:55.433  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:55.433  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE BC:F8:7E:FB:06:9F
+03-19 12:49:55.453  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:55.473  3132  3132 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+03-19 12:49:55.474  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:55.483  3144  3485 D MobileStatusTracker(2): onSignalStrengthsChanged signalStrength=SignalStrength:{mCdma=CellSignalStrengthCdma: cdmaDbm=2147483647 cdmaEcio=2147483647 evdoDbm=2147483647 evdoEcio=2147483647 evdoSnr=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mGsm=CellSignalStrengthGsm: rssi=2147483647 ber=2147483647 mTa=2147483647 miuiLevel=0 mOptimizedLevel=0 mLevel=0,mWcdma=CellSignalStrengthWcdma: ss=2147483647 ber=2147483647 rscp=2147483647 ecno=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mTdscdma=CellSignalStrengthTdscdma: rssi=2147483647 ber=2147483647 rscp=2147483647 miuiLevel=0 mOptimizedLevel=0 level=0,mLte=CellSignalStrengthLte: rssi=-63 rsrp=-97 rsrq=-13 rssnr=0 cqiTableIndex=2147483647 cqi=2147483647 ta=2147483647 miuiLevel=5 mOptimizedLevel=0 level=4 parametersUseForLevel=0,mNr=CellSignalStrengthNr:{ csiRsrp = 2147483647 csiRsrq = 2147483647 csiCqiTableIndex = 2147483647 csiCqiReport = [] ssRsrp = 2147483647 ssRsrq = 2147483647 ssSinr = 2147483647 miuiLevel = 0 mOptimizedLevel = 0 level = 0 parametersUseForLevel = 0 },primary=CellSignalStrengthLte,mNrAsPrimaryInNrNsa=false}
+03-19 12:49:55.483  3144  3485 D NetworkController.MobileSignalController(2): update5GConnectState: false
+03-19 12:49:55.485  3144  3485 D NetworkController.MobileSignalController(2): ss use aosp level not 0, 5
+03-19 12:49:55.488  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:55.489  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:55.506  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:55.506  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:55.506  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:55.572  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:55.572  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:55.724  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:56.162  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:56.162  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:56.170  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:56.170  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:56.176  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:56.230  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:56.246  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:56.303  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:56.303  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:56.455  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:56.869  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:56.869  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:56.875  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:56.876  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:56.916  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:56.931  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:56.969  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:56.969  3850  4014 D BluetoothRemoteDevices: Skip name update for D4:27:87:94:F4:A7
+03-19 12:49:56.969  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:56.970  3850  4014 D BluetoothRemoteDevices: Skip class update for D4:27:87:94:F4:A7
+03-19 12:49:56.970  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:56.970  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE D4:27:87:94:F4:A7
+03-19 12:49:57.016  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:57.036  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:57.036  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:57.187  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:57.639  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:57.639  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:57.646  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:57.646  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:57.651  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:57.681  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:57.688  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:57.688  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:57.705  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:57.705  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:57.705  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:57.706  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:57.738  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:57.751  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:57.792  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+03-19 12:49:57.793  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK OFF
+03-19 12:49:57.945  1085  4092 D vendor.qti.bluetooth@1.0-wake_lock: Release wakelock is released 
+03-19 12:49:58.293  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+03-19 12:49:58.293  1085  4158 D vendor.qti.bluetooth@1.0-ibs_handler: SerialClockVote: vote for UART CLK ON
+03-19 12:49:58.297  1085  4158 D vendor.qti.bluetooth@1.0-wake_lock: Acquire wakelock is acquired 
+03-19 12:49:58.297  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+03-19 12:49:58.302  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:58.302  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:58.303  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:58.307  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:58.402  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938306, pluginId: BluetoothLe, methodName: removeListener
+03-19 12:49:58.402  7475  7475 V Capacitor: callback: 17938306, pluginId: BluetoothLe, methodName: removeListener, methodData: {"eventName":"onScanResult","callbackId":"17938304"}
+03-19 12:49:58.405  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:58.407  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938307, pluginId: BluetoothLe, methodName: stopLEScan
+03-19 12:49:58.408  7475  7475 V Capacitor: callback: 17938307, pluginId: BluetoothLe, methodName: stopLEScan, methodData: {}
+03-19 12:49:58.409  7475  7544 D DeviceScanner: Stop scanning.
+03-19 12:49:58.410  7475  7544 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:58.414  3850 25254 D BtGatt.GattService: stopScan() - queue size =3
+03-19 12:49:58.419  3850  4074 I BtGatt.ScanManager: msg.what = MSG_STOP_BLE_SCAN, msg.arg1 = None
+03-19 12:49:58.419  3850  4074 D BtGatt.ScanManager: track LE scan event: callerPackage = [com.smartdoor.terminal], scanMode = [1], reportDelayMillis = [0], behavior = [2], scannerId = [8], duration = [7941]
+03-19 12:49:58.420  3850  4074 D BtGatt.ScanManager: handling stopping scan  [ScanClient scanModeApp 1 scanModeUsed 1 [appScanStats com.smartdoor.terminal]]
+03-19 12:49:58.421  1085  1085 I vendor.qti.bluetooth@1.0-ibs_handler: DeviceWakeUp: Writing IBS_WAKE_IND
+03-19 12:49:58.423  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_ACK: 0xFC
+03-19 12:49:58.423  1085  4158 I vendor.qti.bluetooth@1.0-ibs_handler: ProcessIbsCmd: Signal wack_cond_
+03-19 12:49:58.424  3850 25254 D BtGatt.GattService: unregisterScanner() - scannerId=8
+03-19 12:49:58.424  1085  1085 D vendor.qti.bluetooth@1.0-ibs_handler: DeviceWakeUp: Unblocked from waiting for FC, pthread_cond_timedwait ret = 0
+03-19 12:49:58.428  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=8, status=0, action=1, availableSpace=7
+03-19 12:49:58.429  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 8 status - 0
+03-19 12:49:58.429  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - queue=2
+03-19 12:49:58.429  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - ScanSetting LE 1M Scan mode=0 ScanSetting LE Coded Scan mode=0 mLastConfiguredScanSettingLE1M=1 mLastConfiguredScanSettingLECoded=1 scanPhy=255
+03-19 12:49:58.432  3850  4074 D BtGatt.ScanManager: configureRegularScanParams - scanInterval LE 1M = 660 configureRegularScanParams - scanWindow LE 1M= 66 configureRegularScanParams - scanInterval LE Coded= 660 configureRegularScanParams - scanWindow LE Coded= 66
+03-19 12:49:58.434  3850  4014 D BtGatt.GattService: onScanParamSetupCompleted : 0
+03-19 12:49:58.435  7475  7475 I Capacitor/Console: File:  - Line 353 - Msg: undefined
+03-19 12:49:58.444  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938308, pluginId: BluetoothLe, methodName: addListener
+03-19 12:49:58.444  7475  7475 V Capacitor: callback: 17938308, pluginId: BluetoothLe, methodName: addListener, methodData: {"eventName":"onScanResult"}
+03-19 12:49:58.447  7475  7475 V Capacitor/Plugin: To native (Capacitor plugin): callbackId: 17938309, pluginId: BluetoothLe, methodName: requestLEScan
+03-19 12:49:58.447  7475  7475 V Capacitor: callback: 17938309, pluginId: BluetoothLe, methodName: requestLEScan, methodData: {}
+03-19 12:49:58.448  7475  7544 D DeviceScanner: Stop scanning.
+03-19 12:49:58.448  7475  7544 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:58.449  7475  7544 D BluetoothLeScanner: could not find callback wrapper
+03-19 12:49:58.449  7475  7544 D DeviceScanner: Start scanning.
+03-19 12:49:58.449  7475  7544 D BluetoothAdapter: isLeEnabled(): ON
+03-19 12:49:58.454  3850 25254 D BtGatt.GattService: registerScanner() - UUID=02654ee0-58e0-40d0-96f3-598b8b916d48
+03-19 12:49:58.456  3850  4014 D BtGatt.GattService: onScannerRegistered() - UUID=02654ee0-58e0-40d0-96f3-598b8b916d48, scannerId=8, status=0
+03-19 12:49:58.458  7475  7489 D BluetoothLeScanner: onScannerRegistered() - status=0 scannerId=8 mScannerId=0
+03-19 12:49:58.460  3850 25254 D BtGatt.GattService: start scan with filters. callingPackage: com.smartdoor.terminal
+03-19 12:49:58.462  3850 25254 D BtGatt.GattService: enforcePrivilegedPermissionIfNeeded([])
+03-19 12:49:58.467  1823  4539 E AppOps  : Bad call made by uid 1002. Package "com.smartdoor.terminal" does not belong to uid 1002.
+03-19 12:49:58.469  3850 25254 D BtGatt.ScanManager: startScan()  [ScanClient scanModeApp 1 scanModeUsed 1 [appScanStats com.smartdoor.terminal]]
+03-19 12:49:58.470  3850  4074 I BtGatt.ScanManager: msg.what = MSG_RECORD_CALLER, msg.arg1 = None
+03-19 12:49:58.470  3850  4074 I BtGatt.ScanManager: msg.what = MSG_START_BLE_SCAN, msg.arg1 = None
+03-19 12:49:58.470  3850  4074 D BtGatt.ScanManager: handling starting scan
+03-19 12:49:58.471  3850  4074 D BtGatt.ScanManager: isAptXLowLatencyModeEnabled: false
+03-19 12:49:58.473  3850  4074 D BtGatt.ScanManager: track LE scan event: callerPackage = [com.smartdoor.terminal], scanMode = [1], reportDelayMillis = [0], behavior = [1], scannerId = [8], duration = [0]
+03-19 12:49:58.478  7475  7475 I Capacitor/Console: File:  - Line 353 - Msg: undefined
+03-19 12:49:58.479  3850  4014 D BtGatt.GattService: onScanFilterEnableDisabled() - clientIf=8, status=0, action=1
+03-19 12:49:58.479  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 8 status - 0
+03-19 12:49:58.480  3850  4074 D BtGatt.ScanManager: configureScanFilters rssiThreshold: -128, 0
+03-19 12:49:58.480  3850  4074 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0, deliveryMode=0
+03-19 12:49:58.483  3850  4014 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=8, status=0, action=0, availableSpace=6
+03-19 12:49:58.483  3850  4014 D BtGatt.ScanManager: callback done for scannerId - 8 status - 0
+03-19 12:49:58.485  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - queue=3
+03-19 12:49:58.485  3850  4074 D BtGatt.ScanManager: configureRegularScanParams() - ScanSetting LE 1M Scan mode=1 ScanSetting LE Coded Scan mode=1 mLastConfiguredScanSettingLE1M=0 mLastConfiguredScanSettingLECoded=0 scanPhy=255
+03-19 12:49:58.486  3850  4074 D BtGatt.ScanManager: configureRegularScanParams - scanInterval LE 1M = 730 configureRegularScanParams - scanWindow LE 1M= 183 configureRegularScanParams - scanInterval LE Coded= 730 configureRegularScanParams - scanWindow LE Coded= 183
+03-19 12:49:58.487  3850  4014 D BtGatt.GattService: onScanParamSetupCompleted : 0
+03-19 12:49:58.508  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:58.516  3850  4166 E bt_btm  : Malformed LE Advertising Report Event - unsupported legacy_event_type 0x05
+03-19 12:49:58.537  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:58.545  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:58.551  3850  4166 D bt_btm_ble: bool parse_adv_audio_uuids_from_adv_pkt(const uint8_t *, size_t, uint8_t): tmap_cap_pts: false
+03-19 12:49:58.573  3850  4014 D BluetoothRemoteDevices: Property type: 1
+03-19 12:49:58.573  3850  4014 D BluetoothRemoteDevices: Skip name update for D8:78:C9:76:69:2A
+03-19 12:49:58.573  3850  4014 D BluetoothRemoteDevices: Property type: 4
+03-19 12:49:58.573  3850  4014 D BluetoothRemoteDevices: Skip class update for D8:78:C9:76:69:2A
+03-19 12:49:58.574  3850  4014 D BluetoothRemoteDevices: Property type: 5
+03-19 12:49:58.574  3850  4014 D BluetoothRemoteDevices: BT_PROPERTY_TYPE_OF_DEVICE D8:78:C9:76:69:2A
+03-19 12:49:58.586  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult
+03-19 12:49:58.601  7475  7475 V Capacitor/BluetoothLe: Notifying listeners for event onScanResult

@@ -1,7 +1,15 @@
 [
 	{
+		"pkg": "@anuradev/capacitor-background-mode",
+		"classpath": "ar.com.anura.plugins.backgroundmode.BackgroundModePlugin"
+	},
+	{
 		"pkg": "@capacitor-community/bluetooth-le",
 		"classpath": "com.capacitorjs.community.plugins.bluetoothle.BluetoothLe"
+	},
+	{
+		"pkg": "@capacitor-community/text-to-speech",
+		"classpath": "com.getcapacitor.community.tts.TextToSpeechPlugin"
 	},
 	{
 		"pkg": "@capacitor/app",
@@ -10,6 +18,10 @@
 	{
 		"pkg": "@capacitor/camera",
 		"classpath": "com.capacitorjs.plugins.camera.CameraPlugin"
+	},
+	{
+		"pkg": "@capacitor/haptics",
+		"classpath": "com.capacitorjs.plugins.haptics.HapticsPlugin"
 	},
 	{
 		"pkg": "capacitor-native-biometric",

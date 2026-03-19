@@ -1,0 +1,788 @@
+﻿
+03-19 12:48:47.228 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:47.242 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:47.338 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:47.404 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:48.083 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:48.104 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:48.198 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:50.871 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:50.928 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:50.952 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:51.103 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:51.764 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:54.401 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938274, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:48:54.402 V/Capacitor( 7475): callback: 17938274, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"17938272"}
+03-19 12:48:54.405 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938275, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:48:54.405 V/Capacitor( 7475): callback: 17938275, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:48:54.425 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:48:54.432 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938276, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:48:54.432 V/Capacitor( 7475): callback: 17938276, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:48:54.435 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938277, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:48:54.436 V/Capacitor( 7475): callback: 17938277, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:48:54.465 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:48:54.506 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:54.520 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:54.543 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:54.561 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:54.579 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:54.600 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:54.656 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:55.287 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:55.318 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:55.376 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:55.420 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:56.174 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:56.900 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:57.646 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:59.035 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:59.081 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:59.777 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:48:59.810 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:00.427 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:00.472 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:00.489 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:02.404 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938278, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:49:02.404 V/Capacitor( 7475): callback: 17938278, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"17938276"}
+03-19 12:49:02.409 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938279, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:49:02.409 V/Capacitor( 7475): callback: 17938279, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:49:02.449 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:02.455 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938280, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:49:02.455 V/Capacitor( 7475): callback: 17938280, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:49:02.459 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938281, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:49:02.459 V/Capacitor( 7475): callback: 17938281, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:49:02.492 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:02.564 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:02.590 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:02.642 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:02.676 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:02.710 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:02.736 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:02.768 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:02.790 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:02.817 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:03.503 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:03.525 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:04.166 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:04.215 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:04.817 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:04.921 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:05.662 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:06.350 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:06.404 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:06.423 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:06.443 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:06.456 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:07.088 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:09.344 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:10.400 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938282, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:49:10.401 V/Capacitor( 7475): callback: 17938282, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"17938280"}
+03-19 12:49:10.404 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938283, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:49:10.405 V/Capacitor( 7475): callback: 17938283, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:49:10.433 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:10.440 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938284, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:49:10.440 V/Capacitor( 7475): callback: 17938284, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:49:10.443 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938285, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:49:10.444 V/Capacitor( 7475): callback: 17938285, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:49:10.479 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:10.532 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:10.550 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:10.570 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:10.599 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:10.624 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:10.641 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:10.657 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:10.671 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:10.687 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:11.296 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:11.319 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:11.352 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:11.375 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:11.410 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:12.162 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:13.579 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:14.446 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:15.008 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:15.092 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:15.117 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:18.408 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938286, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:49:18.408 V/Capacitor( 7475): callback: 17938286, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"17938284"}
+03-19 12:49:18.413 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938287, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:49:18.414 V/Capacitor( 7475): callback: 17938287, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:49:18.443 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:18.451 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938288, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:49:18.452 V/Capacitor( 7475): callback: 17938288, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:49:18.456 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938289, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:49:18.456 V/Capacitor( 7475): callback: 17938289, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:49:18.501 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:18.561 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:18.591 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:18.618 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:18.642 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:18.663 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:18.682 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:18.703 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:18.742 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:18.772 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:18.802 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:18.834 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:19.360 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:19.393 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:19.468 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:20.216 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:20.944 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:21.023 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:22.347 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:23.068 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:23.821 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:26.402 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938290, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:49:26.403 V/Capacitor( 7475): callback: 17938290, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"17938288"}
+03-19 12:49:26.407 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938291, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:49:26.408 V/Capacitor( 7475): callback: 17938291, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:49:26.437 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:26.444 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938292, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:49:26.445 V/Capacitor( 7475): callback: 17938292, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:49:26.449 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938293, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:49:26.449 V/Capacitor( 7475): callback: 17938293, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:49:26.486 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:26.569 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:26.593 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:26.639 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:26.671 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:26.691 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:26.715 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:26.739 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:26.767 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:26.812 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:26.839 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:26.864 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:27.352 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:28.877 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:28.899 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:31.098 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:31.743 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:32.510 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:34.403 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938294, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:49:34.403 V/Capacitor( 7475): callback: 17938294, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"17938292"}
+03-19 12:49:34.407 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938295, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:49:34.407 V/Capacitor( 7475): callback: 17938295, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:49:34.437 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:34.443 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938296, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:49:34.444 V/Capacitor( 7475): callback: 17938296, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:49:34.447 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938297, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:49:34.447 V/Capacitor( 7475): callback: 17938297, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:49:34.482 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:34.564 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:34.592 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:34.621 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:34.668 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:34.690 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:34.713 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:34.739 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:34.769 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:34.798 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:35.336 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:36.151 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:36.191 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:36.809 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:36.831 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:37.556 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:38.343 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:38.364 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:39.064 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:39.865 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:41.992 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:42.403 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938298, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:49:42.404 V/Capacitor( 7475): callback: 17938298, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"17938296"}
+03-19 12:49:42.407 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938299, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:49:42.408 V/Capacitor( 7475): callback: 17938299, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:49:42.440 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:42.448 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938300, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:49:42.448 V/Capacitor( 7475): callback: 17938300, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:49:42.451 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938301, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:49:42.452 V/Capacitor( 7475): callback: 17938301, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:49:42.486 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:42.519 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:42.544 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:42.575 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:42.614 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:42.638 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:42.660 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:42.697 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:42.721 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:42.751 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:43.328 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:43.353 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:43.377 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:43.400 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:43.486 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:44.161 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:44.182 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:44.893 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:45.645 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:46.291 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:46.376 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:47.109 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:47.126 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:47.892 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:49.924 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:50.404 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938302, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:49:50.405 V/Capacitor( 7475): callback: 17938302, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"17938300"}
+03-19 12:49:50.409 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938303, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:49:50.409 V/Capacitor( 7475): callback: 17938303, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:49:50.436 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:50.444 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938304, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:49:50.445 V/Capacitor( 7475): callback: 17938304, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:49:50.448 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938305, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:49:50.448 V/Capacitor( 7475): callback: 17938305, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:49:50.487 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:50.554 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:50.584 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:50.616 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:50.649 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:50.681 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:50.706 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:50.748 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:50.777 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:50.925 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:50.945 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:51.034 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:51.073 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:51.842 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:51.892 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:52.541 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:53.266 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:54.045 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:55.453 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:55.474 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:57.016 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:57.681 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:57.706 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:58.402 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938306, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:49:58.402 V/Capacitor( 7475): callback: 17938306, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"17938304"}
+03-19 12:49:58.407 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938307, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:49:58.408 V/Capacitor( 7475): callback: 17938307, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:49:58.435 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:58.444 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938308, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:49:58.444 V/Capacitor( 7475): callback: 17938308, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:49:58.447 V/Capacitor/Plugin( 7475): To native (Capacitor plugin): callbackId: 17938309, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:49:58.447 V/Capacitor( 7475): callback: 17938309, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:49:58.478 I/Capacitor/Console( 7475): File:  - Line 353 - Msg: undefined
+03-19 12:49:58.545 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:58.586 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:58.601 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:58.620 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:58.650 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:58.670 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:58.691 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:58.712 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:58.732 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:58.754 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:49:59.350 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:50:00.060 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:50:00.110 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:50:00.121 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:50:01.601 V/Capacitor/BluetoothLe( 7475): Notifying listeners for event onScanResult
+03-19 12:50:02.286 D/TaskView( 3195): TaskView bind task, task=[TaskKey{id=123, stackId=0, baseIntent=Intent { 
+act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 
+cmp=com.smartdoor.terminal/.MainActivity }, userId=0, lastActiveTime=99333758, windowingMode=1, isThumbnailBlur=false, 
+isScreening=false, topActivity=ComponentInfo{com.smartdoor.terminal/com.smartdoor.terminal.MainActivity}, 
+mHashCode=4587845}, title=Englabs Attendance, titleDescription=Englabs Attendance, bounds=null, isLaunchTarget=true, 
+isStackTask=true, isSystemApp=false, isDockable=true, 
+baseActivity=ComponentInfo{com.smartdoor.terminal/com.smartdoor.terminal.MainActivity}, isLocked=false, 
+isAccessLocked=false, mNeedHide=false] , isLock=false
+03-19 12:50:02.287 D/TaskView( 3195): TaskView bind task, task=[TaskKey{id=123, stackId=0, baseIntent=Intent { 
+act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 
+cmp=com.smartdoor.terminal/.MainActivity }, userId=0, lastActiveTime=99333758, windowingMode=1, isThumbnailBlur=false, 
+isScreening=false, topActivity=ComponentInfo{com.smartdoor.terminal/com.smartdoor.terminal.MainActivity}, 
+mHashCode=4587845}, title=Englabs Attendance, titleDescription=Englabs Attendance, bounds=null, isLaunchTarget=true, 
+isStackTask=true, isSystemApp=false, isDockable=true, 
+baseActivity=ComponentInfo{com.smartdoor.terminal/com.smartdoor.terminal.MainActivity}, isLocked=false, 
+isAccessLocked=false, mNeedHide=false] , isLock=false
+03-19 12:50:02.291 D/TaskView( 3195): TaskView bind task, task=[TaskKey{id=123, stackId=0, baseIntent=Intent { 
+act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 
+cmp=com.smartdoor.terminal/.MainActivity }, userId=0, lastActiveTime=99333758, windowingMode=1, isThumbnailBlur=false, 
+isScreening=false, topActivity=ComponentInfo{com.smartdoor.terminal/com.smartdoor.terminal.MainActivity}, 
+mHashCode=4587845}, title=Englabs Attendance, titleDescription=Englabs Attendance, bounds=null, isLaunchTarget=true, 
+isStackTask=true, isSystemApp=false, isDockable=true, 
+baseActivity=ComponentInfo{com.smartdoor.terminal/com.smartdoor.terminal.MainActivity}, isLocked=false, 
+isAccessLocked=false, mNeedHide=false] , isLock=false
+03-19 12:50:02.338 V/Capacitor/AppPlugin( 7475): Notifying listeners for event pause
+03-19 12:50:02.338 D/Capacitor/AppPlugin( 7475): No listeners found for event pause
+03-19 12:50:02.338 D/Capacitor( 7475): App paused
+03-19 12:50:02.359 D/TaskView( 3195): TaskView bind task, task=[TaskKey{id=123, stackId=0, baseIntent=Intent { 
+act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 
+cmp=com.smartdoor.terminal/.MainActivity }, userId=0, lastActiveTime=99333758, windowingMode=1, isThumbnailBlur=false, 
+isScreening=false, topActivity=ComponentInfo{com.smartdoor.terminal/com.smartdoor.terminal.MainActivity}, 
+mHashCode=4587845}, title=Englabs Attendance, titleDescription=Englabs Attendance, bounds=null, isLaunchTarget=true, 
+isStackTask=true, isSystemApp=false, isDockable=true, 
+baseActivity=ComponentInfo{com.smartdoor.terminal/com.smartdoor.terminal.MainActivity}, isLocked=false, 
+isAccessLocked=false, mNeedHide=false] , isLock=false
+03-19 12:50:02.481 D/TaskViewThumbnail( 3195): updateThumbnailScale, t=[TaskKey{id=123, stackId=0, baseIntent=Intent { 
+act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 
+cmp=com.smartdoor.terminal/.MainActivity }, userId=0, lastActiveTime=99333758, windowingMode=1, isThumbnailBlur=false, 
+isScreening=false, topActivity=ComponentInfo{com.smartdoor.terminal/com.smartdoor.terminal.MainActivity}, 
+mHashCode=4587845}, title=Englabs Attendance, titleDescription=Englabs Attendance, bounds=null, isLaunchTarget=true, 
+isStackTask=true, isSystemApp=false, isDockable=true, 
+baseActivity=ComponentInfo{com.smartdoor.terminal/com.smartdoor.terminal.MainActivity}, isLocked=false, 
+isAccessLocked=false, mNeedHide=false] , mThumbnailBitmapSizeAfterScaled=(469, 1042)
+03-19 12:50:02.869 D/Capacitor/AppPlugin( 7475): Firing change: false
+03-19 12:50:02.869 V/Capacitor/AppPlugin( 7475): Notifying listeners for event appStateChange
+03-19 12:50:02.870 D/Capacitor/AppPlugin( 7475): No listeners found for event appStateChange
+03-19 12:50:02.870 D/Capacitor( 7475): App stopped
+03-19 12:50:02.874 D/Capacitor( 7475): Saving instance state!
+03-19 12:50:03.893 D/RecentsContainer( 3195): removeTask: [TaskKey{id=123, stackId=0, baseIntent=Intent { 
+act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 
+cmp=com.smartdoor.terminal/.MainActivity }, userId=0, lastActiveTime=99333758, windowingMode=1, isThumbnailBlur=false, 
+isScreening=false, topActivity=ComponentInfo{com.smartdoor.terminal/com.smartdoor.terminal.MainActivity}, 
+mHashCode=4587845}, title=Englabs Attendance, titleDescription=Englabs Attendance, bounds=null, isLaunchTarget=true, 
+isStackTask=true, isSystemApp=false, isDockable=true, 
+baseActivity=ComponentInfo{com.smartdoor.terminal/com.smartdoor.terminal.MainActivity}, isLocked=false, 
+isAccessLocked=false, mNeedHide=false] 
+03-19 12:50:05.783 D/Capacitor( 7820): Starting BridgeActivity
+03-19 12:50:05.808 D/Capacitor( 7820): Registering plugin instance: CapacitorCookies
+03-19 12:50:05.814 D/Capacitor( 7820): Registering plugin instance: WebView
+03-19 12:50:05.817 D/Capacitor( 7820): Registering plugin instance: CapacitorHttp
+03-19 12:50:05.820 D/Capacitor( 7820): Registering plugin instance: BluetoothLe
+03-19 12:50:05.825 D/Capacitor( 7820): Registering plugin instance: App
+03-19 12:50:05.828 D/Capacitor( 7820): Registering plugin instance: Camera
+03-19 12:50:05.831 D/Capacitor( 7820): Registering plugin instance: NativeBiometric
+03-19 12:50:05.873 W/Capacitor( 7820): Unable to read file at path public/plugins
+03-19 12:50:05.878 D/Capacitor( 7820): Loading app at http://localhost
+03-19 12:50:05.918 D/Capacitor( 7820): Handling local request: http://localhost/
+03-19 12:50:05.939 D/Capacitor( 7820): App started
+03-19 12:50:05.946 D/Capacitor/AppPlugin( 7820): Firing change: true
+03-19 12:50:05.946 V/Capacitor/AppPlugin( 7820): Notifying listeners for event appStateChange
+03-19 12:50:05.946 D/Capacitor/AppPlugin( 7820): No listeners found for event appStateChange
+03-19 12:50:05.947 D/Capacitor( 7820): App resumed
+03-19 12:50:06.067 D/Capacitor( 7820): Handling local request: http://localhost/assets/index-Cu9pRTlu.js
+03-19 12:50:06.071 D/Capacitor( 7820): Handling local request: http://localhost/assets/index-BMq9tTpk.css
+03-19 12:50:06.487 D/Capacitor( 7820): Handling local request: http://localhost/vite.svg
+03-19 12:50:06.488 E/Capacitor( 7820): Unable to open asset URL: http://localhost/vite.svg
+03-19 12:50:06.490 E/Capacitor( 7820): Unable to open asset URL: http://localhost/vite.svg
+03-19 12:50:06.492 E/Capacitor( 7820): Unable to open asset URL: http://localhost/vite.svg
+03-19 12:50:06.492 E/Capacitor( 7820): Unable to open asset URL: http://localhost/vite.svg
+03-19 12:50:06.546 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055793, pluginId: 
+BluetoothLe, methodName: initialize
+03-19 12:50:06.550 V/Capacitor( 7820): callback: 37055793, pluginId: BluetoothLe, methodName: initialize, methodData: 
+{}
+03-19 12:50:06.623 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:06.755 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055794, pluginId: 
+BluetoothLe, methodName: isEnabled
+03-19 12:50:06.756 V/Capacitor( 7820): callback: 37055794, pluginId: BluetoothLe, methodName: isEnabled, methodData: {}
+03-19 12:50:06.804 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055795, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:50:06.804 V/Capacitor( 7820): callback: 37055795, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:50:06.817 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:06.843 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055796, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:50:06.843 V/Capacitor( 7820): callback: 37055796, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:50:06.844 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055797, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:50:06.844 V/Capacitor( 7820): callback: 37055797, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:50:06.894 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:06.962 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:06.971 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:06.987 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:06.996 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:07.033 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:07.044 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:07.082 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:07.130 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:07.916 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:08.499 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:08.515 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:08.593 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:09.311 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:09.433 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:10.086 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:10.105 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:10.157 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:10.815 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:13.675 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:14.801 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055798, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:50:14.802 V/Capacitor( 7820): callback: 37055798, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"37055796"}
+03-19 12:50:14.804 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055799, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:50:14.804 V/Capacitor( 7820): callback: 37055799, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:50:14.819 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:14.822 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055800, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:50:14.822 V/Capacitor( 7820): callback: 37055800, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:50:14.823 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055801, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:50:14.823 V/Capacitor( 7820): callback: 37055801, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:50:14.844 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:14.896 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:14.913 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:14.928 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:14.947 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:14.961 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:14.976 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:15.009 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:15.679 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:15.801 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:16.483 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:16.496 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:16.549 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:16.576 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:17.200 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:17.983 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:19.424 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:21.594 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:21.681 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:22.787 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055802, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:50:22.788 V/Capacitor( 7820): callback: 37055802, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"37055800"}
+03-19 12:50:22.792 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055803, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:50:22.792 V/Capacitor( 7820): callback: 37055803, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:50:22.815 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:22.820 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055804, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:50:22.820 V/Capacitor( 7820): callback: 37055804, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:50:22.821 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055805, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:50:22.821 V/Capacitor( 7820): callback: 37055805, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:50:22.866 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:22.929 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:22.957 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:22.985 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:23.009 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:23.035 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:23.059 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:23.100 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:23.133 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:23.157 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:23.184 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:23.704 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:23.728 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:23.756 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:23.835 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:24.497 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:25.198 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:25.311 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:26.035 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:27.458 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:30.782 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055806, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:50:30.783 V/Capacitor( 7820): callback: 37055806, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"37055804"}
+03-19 12:50:30.787 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055807, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:50:30.788 V/Capacitor( 7820): callback: 37055807, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:50:30.820 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:30.828 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055808, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:50:30.829 V/Capacitor( 7820): callback: 37055808, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:50:30.831 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055809, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:50:30.831 V/Capacitor( 7820): callback: 37055809, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:50:30.861 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:30.906 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:30.933 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:30.959 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:30.984 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:31.025 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:31.052 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:31.078 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:31.106 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:31.732 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:31.815 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:31.843 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:31.860 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:31.883 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:31.902 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:32.519 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:33.224 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:33.247 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:33.299 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:33.975 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:34.063 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:34.708 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:34.745 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:35.485 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:37.692 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:38.784 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055810, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:50:38.785 V/Capacitor( 7820): callback: 37055810, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"37055808"}
+03-19 12:50:38.789 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055811, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:50:38.789 V/Capacitor( 7820): callback: 37055811, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:50:38.820 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:38.828 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055812, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:50:38.828 V/Capacitor( 7820): callback: 37055812, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:50:38.831 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055813, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:50:38.831 V/Capacitor( 7820): callback: 37055813, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:50:38.870 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:38.911 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:38.941 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:38.970 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:38.989 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:39.007 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:39.024 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:39.047 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:39.074 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:39.101 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:39.128 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:39.160 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:39.803 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:39.860 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:40.523 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:40.559 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:40.605 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:41.209 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:41.963 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:42.756 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:44.216 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:46.782 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055814, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:50:46.783 V/Capacitor( 7820): callback: 37055814, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"37055812"}
+03-19 12:50:46.787 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055815, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:50:46.788 V/Capacitor( 7820): callback: 37055815, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:50:46.818 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:46.825 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055816, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:50:46.826 V/Capacitor( 7820): callback: 37055816, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:50:46.829 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055817, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:50:46.830 V/Capacitor( 7820): callback: 37055817, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:50:46.862 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:46.932 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:46.969 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:46.992 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:47.012 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:47.030 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:47.051 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:47.072 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:47.091 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:47.119 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:47.164 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:47.211 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:47.241 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:47.291 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:47.793 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:47.825 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:48.480 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:49.210 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:49.232 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:49.253 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:49.915 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:53.380 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:54.066 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:54.784 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055818, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:50:54.784 V/Capacitor( 7820): callback: 37055818, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"37055816"}
+03-19 12:50:54.788 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055819, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:50:54.788 V/Capacitor( 7820): callback: 37055819, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:50:54.807 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:54.811 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055820, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:50:54.811 V/Capacitor( 7820): callback: 37055820, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:50:54.813 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055821, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:50:54.814 V/Capacitor( 7820): callback: 37055821, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:50:54.840 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:50:54.893 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:54.945 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:54.972 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:54.997 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:55.024 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:55.050 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:55.075 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:55.099 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:55.123 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:55.153 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:55.184 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:55.647 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:55.681 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:55.743 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:55.840 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:56.544 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:57.206 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:57.237 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:57.263 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:50:58.058 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:01.607 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:02.416 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:02.782 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055822, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:51:02.782 V/Capacitor( 7820): callback: 37055822, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"37055820"}
+03-19 12:51:02.786 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055823, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:51:02.787 V/Capacitor( 7820): callback: 37055823, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:51:02.814 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:51:02.822 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055824, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:51:02.823 V/Capacitor( 7820): callback: 37055824, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:51:02.826 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055825, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:51:02.826 V/Capacitor( 7820): callback: 37055825, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:51:02.856 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:51:02.940 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:02.993 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:03.017 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:03.038 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:03.060 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:03.100 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:03.125 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:03.147 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:03.169 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:03.197 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:03.225 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:03.794 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:03.819 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:04.544 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:05.294 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:05.984 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:06.075 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:06.701 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:07.382 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:07.466 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:08.210 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:10.313 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:10.782 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055826, pluginId: 
+BluetoothLe, methodName: removeListener
+03-19 12:51:10.783 V/Capacitor( 7820): callback: 37055826, pluginId: BluetoothLe, methodName: removeListener, 
+methodData: {"eventName":"onScanResult","callbackId":"37055824"}
+03-19 12:51:10.787 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055827, pluginId: 
+BluetoothLe, methodName: stopLEScan
+03-19 12:51:10.788 V/Capacitor( 7820): callback: 37055827, pluginId: BluetoothLe, methodName: stopLEScan, methodData: 
+{}
+03-19 12:51:10.817 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:51:10.825 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055828, pluginId: 
+BluetoothLe, methodName: addListener
+03-19 12:51:10.825 V/Capacitor( 7820): callback: 37055828, pluginId: BluetoothLe, methodName: addListener, methodData: 
+{"eventName":"onScanResult"}
+03-19 12:51:10.828 V/Capacitor/Plugin( 7820): To native (Capacitor plugin): callbackId: 37055829, pluginId: 
+BluetoothLe, methodName: requestLEScan
+03-19 12:51:10.829 V/Capacitor( 7820): callback: 37055829, pluginId: BluetoothLe, methodName: requestLEScan, 
+methodData: {}
+03-19 12:51:10.863 I/Capacitor/Console( 7820): File:  - Line 353 - Msg: undefined
+03-19 12:51:10.933 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:10.969 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:10.999 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:11.023 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:11.043 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:11.063 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:11.083 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:11.111 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:11.148 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:11.178 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:11.208 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:11.237 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:11.953 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:13.223 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:13.974 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:14.086 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:14.725 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+03-19 12:51:16.081 V/Capacitor/BluetoothLe( 7820): Notifying listeners for event onScanResult
+
+

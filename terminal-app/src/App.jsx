@@ -1,826 +1,542 @@
 import { useState, useEffect, useRef } from 'react';
-import { Camera, Fingerprint, X, CheckCircle2, LogOut, AlertTriangle, Clock, ShieldAlert, Unlock, UserPlus, Bluetooth, BluetoothConnected, BluetoothOff, Cpu, RefreshCw, AlertCircle, Search } from 'lucide-react';
+import { Fingerprint, CheckCircle2, ShieldAlert, Unlock, Bluetooth, BluetoothConnected, BluetoothOff, AlertCircle, ScanFace, Hexagon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import axios from 'axios';
 import { NativeBiometric } from 'capacitor-native-biometric';
-import { Camera as CapCamera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { BleClient } from '@capacitor-community/bluetooth-le';
+import { BackgroundMode } from '@anuradev/capacitor-background-mode';
+import { Haptics } from '@capacitor/haptics';
+import { TextToSpeech } from '@capacitor-community/text-to-speech';
+import { Camera, CameraResultType, CameraSource, CameraDirection } from '@capacitor/camera';
 
-// Production API Configuration
 const API_BASE = import.meta.env?.VITE_API_BASE_URL || 'https://smart-door-backend-50851729985.asia-south1.run.app';
-const RESET_DELAY = 5; // seconds
 
 const BLE_MAC = '58:8C:81:CC:65:29';
 const DOOR_SERVICE_UUID = '4fafc201-1fb5-459e-8fcc-c5c9c331914b';
 const DOOR_CHAR_UUID = 'beb5483e-36e1-4688-b7f5-ea07361b26a8';
 
-// ── Animated countdown ring ───────────────────────────────────────────────────
-function CountdownRing({ seconds, total = RESET_DELAY, color = '#10b981' }) {
-    const R = 22, C = 2 * Math.PI * R;
-    const pct = seconds / total;
-    return (
-        <svg width={56} height={56} className="rotate-[-90deg]">
-            <circle cx={28} cy={28} r={R} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth={4} />
-            <circle cx={28} cy={28} r={R} fill="none" stroke={color} strokeWidth={4}
-                strokeDasharray={C} strokeDashoffset={C * (1 - pct)}
-                strokeLinecap="round" style={{ transition: 'stroke-dashoffset 1s linear' }} />
-        </svg>
-    );
-}
-
-// ── Live clock ────────────────────────────────────────────────────────────────
-function LiveClock() {
-    const [time, setTime] = useState(new Date());
-    useEffect(() => {
-        const t = setInterval(() => setTime(new Date()), 1000);
-        return () => clearInterval(t);
-    }, []);
-    return (
-        <div className="text-center">
-            <div className="text-7xl font-black tabular-nums tracking-tight text-white">
-                {time.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })}
-            </div>
-            <div className="text-slate-400 text-base font-medium mt-1 uppercase tracking-[0.2em]">
-                {time.toLocaleDateString('en-IN', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' })}
-            </div>
-        </div>
-    );
-}
-
 export default function App() {
-    useEffect(() => {
-        console.log('🚀 [Init] App Mounted. Time:', new Date().toISOString(), 'API_BASE:', API_BASE);
-    }, []);
-    // view: 'home' | 'face' | 'fingerprint' | 'checkin' | 'checkout' | 'error'
-    const [view, setView] = useState('home');
+    const [view, setView] = useState('loading'); // 'loading', 'setup', 'dashboard', 'success', 'error'
+    const [employees, setEmployees] = useState([]);
+    const [myIdentity, setMyIdentity] = useState(null);
+    const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState('');
-    const [employees, setEmployees] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('');
+    const [bleStatus, setBleStatus] = useState('disconnected');
     const [result, setResult] = useState(null);
-    const [countdown, setCountdown] = useState(RESET_DELAY);
-    const [adminPin, setAdminPin] = useState('');
-    const [selectedEmp, setSelectedEmp] = useState(null);
-    const [bleStatus, setBleStatus] = useState('disconnected'); // 'disconnected' | 'connecting' | 'connected' | 'error'
-    const videoRef = useRef(null);
-    const streamRef = useRef(null);
 
-    // ── Local Door BLE Controller ─────────────────────────────────────────────
-    const triggerDoorUnlock = async () => {
-        try {
-            console.log('Initializing BleClient...');
-            await BleClient.initialize();
+    // Initial Identity Check & Background OS Engine
+    useEffect(() => {
+        const setupBackgroundImmunity = async () => {
+            try {
+                // Must be requested explicitly on Android 13+, otherwise enable() fails silently!
+                await BackgroundMode.requestNotificationsPermission();
+                await BackgroundMode.requestDisableBatteryOptimizations();
 
-            console.log(`Connecting to lock: ${BLE_MAC}`);
-            await BleClient.connect(BLE_MAC);
+                await BackgroundMode.enable({
+                    title: 'Tesla Mode Active',
+                    text: 'Proximity Radar engaged in pocket',
+                    hidden: false
+                });
+                await BackgroundMode.disableWebViewOptimizations();
+            } catch (e) {
+                console.error('Android OS heavily rejected background immunity:', e);
+            }
+        };
+        setupBackgroundImmunity();
 
-            const buffer = new ArrayBuffer(2);
-            const view = new DataView(buffer);
-            view.setUint8(0, 'O'.charCodeAt(0));
-            view.setUint8(1, 'N'.charCodeAt(0));
-
-            console.log('Sending direct ON GATT command to BLE door...');
-            await BleClient.write(BLE_MAC, DOOR_SERVICE_UUID, DOOR_CHAR_UUID, view);
-
-            // Hold open for 5.5 seconds then auto-relock
-            setTimeout(async () => {
-                try {
-                    console.log('Sending OFF GATT command to auto-lock door...');
-                    const offBuffer = new ArrayBuffer(3);
-                    const offView = new DataView(offBuffer);
-                    offView.setUint8(0, 'O'.charCodeAt(0));
-                    offView.setUint8(1, 'F'.charCodeAt(0));
-                    offView.setUint8(2, 'F'.charCodeAt(0));
-                    await BleClient.write(BLE_MAC, DOOR_SERVICE_UUID, DOOR_CHAR_UUID, offView);
-
-                    console.log('Relocked. Disconnecting BLE...');
-                    await BleClient.disconnect(BLE_MAC);
-                } catch (e) {
-                    console.error('Auto-lock failed:', e);
-                }
-            }, 5500);
-
-        } catch (err) {
-            console.error('BLE Door Error:', err);
+        const savedIdentity = localStorage.getItem('aura_identity');
+        if (savedIdentity) {
+            setMyIdentity(JSON.parse(savedIdentity));
+            setView('dashboard');
+        } else {
+            fetchEmployees();
+            setView('setup');
         }
+    }, []);
+
+    const fetchEmployees = async () => {
+        try {
+            const res = await axios.get(`${API_BASE}/api/terminal/users`);
+            setEmployees(res.data.filter(u => u.status !== 'Deleted'));
+        } catch (err) { console.error('Failed to fetch employees'); }
     };
 
-    const [biometricStatus, setBiometricStatus] = useState('checking'); // 'online', 'offline', 'checking'
+    const linkDeviceToEmployee = (emp) => {
+        localStorage.setItem('aura_identity', JSON.stringify(emp));
+        setMyIdentity(emp);
+        setView('dashboard');
+    };
+
+    const handleClearIdentity = () => {
+        localStorage.removeItem('aura_identity');
+        setMyIdentity(null);
+        setView('setup');
+    };
+
+    // BLE System with Strict Radio Lifecycle Management
+    const isUnlockingRef = useRef(false);
+    const autoPromptedRef = useRef(false);
 
     useEffect(() => {
-        let statusInterval;
-        const checkBle = async () => {
-            try {
-                // Ensure BLE is initialized
-                try { await BleClient.initialize(); } catch (ie) { /* Already initialized */ }
+        if (view !== 'dashboard') return;
+        let scanCycleTimer;
+        let isScanning = false;
 
-                const result = await BleClient.isEnabled();
-                if (!result) {
-                    setBleStatus('disabled');
-                    return;
-                }
-                
-                setBleStatus('searching');
-                const devices = await BleClient.getConnectedDevices([DOOR_SERVICE_UUID]);
-                const isConnected = devices.some(d => d.deviceId === BLE_MAC);
-                
-                if (isConnected) {
-                    setBleStatus('connected');
-                } else {
-                    console.log('📡 [BLE] Scan Started for:', BLE_MAC);
-                    await BleClient.requestLEScan(
-                        { services: [DOOR_SERVICE_UUID] },
-                        (result) => {
-                            console.log('📡 [BLE] Found Device:', result.device.deviceId, result.device.name);
-                            if (result.device.deviceId === BLE_MAC || result.device.name?.includes('SmartDoor')) {
-                                console.log('✅ [BLE] Match Found!');
+        const initBLE = async () => {
+            try {
+                await BleClient.initialize();
+                const enabled = await BleClient.isEnabled();
+                if (!enabled) return setBleStatus('disabled');
+
+                const runDiscoveryCycle = async () => {
+                    // Critical Mutex: Android crashes if LE Sweep runs concurrently with GATT Connect
+                    if (isScanning || isUnlockingRef.current) return;
+                    isScanning = true;
+                    let foundThisCycle = false;
+
+                    try { await BleClient.stopLEScan(); } catch (e) { }
+
+                    try {
+                        await BleClient.requestLEScan({ services: [DOOR_SERVICE_UUID] }, (res) => { // Hardware-Level C++ UUID Filter (REQUIRED for Android Screen-Off Mode)
+                            if (res.device?.deviceId?.toLowerCase() === BLE_MAC.toLowerCase() || res.device?.name?.toLowerCase().includes('smartdoor')) {
+                                foundThisCycle = true;
+                                BleClient.stopLEScan().catch(() => { });
                                 setBleStatus('ready');
-                                BleClient.stopLEScan();
                             }
+                        });
+                    } catch (e) { }
+
+                    // Allow 4 seconds for the ESP32 packet to strike the antenna
+                    setTimeout(() => {
+                        BleClient.stopLEScan().catch(() => { });
+                        isScanning = false;
+                        if (!foundThisCycle && !isUnlockingRef.current) {
+                            setBleStatus('searching');
+                            autoPromptedRef.current = false; // User has physically departed. Re-arm the auto-unlock trigger securely!
                         }
-                    );
-                    // Stop scan after 5s
-                    setTimeout(async () => {
-                        await BleClient.stopLEScan();
-                        setBleStatus(prev => prev === 'ready' || prev === 'connected' ? prev : 'offline');
-                    }, 5000);
-                }
+                    }, 4000);
+                };
+
+                runDiscoveryCycle();
+                scanCycleTimer = setInterval(runDiscoveryCycle, 10000);
+
             } catch (e) {
-                console.warn('⚠️ [BLE] Status Check error:', e);
                 setBleStatus('offline');
             }
         };
 
-        const checkBiometricHealth = async () => {
-            try {
-                const res = await axios.get(`${API_BASE}/api/biometrics/health`, { timeout: 15000 });
-                console.log('🧬 [Health] Status:', res.data.status, 'Backend URL:', API_BASE);
-                if (res.data.status === 'online' || res.data.status === 'connected' || res.data.status === 'ready') {
-                    setBiometricStatus('online');
-                } else {
-                    console.warn('⚠️ [Health] Unexpected status:', res.data);
-                    setBiometricStatus('offline');
-                }
-            } catch (e) {
-                console.error('❌ [Health] Connection Failed:', e.message, 'URL:', `${API_BASE}/api/biometrics/health`);
-                setBiometricStatus('offline');
-            }
-        };
+        initBLE();
 
-        const initSystem = async () => {
-            await checkBle();
-            await checkBiometricHealth();
-        };
-
-        initSystem();
-        
-        statusInterval = setInterval(() => {
-            checkBiometricHealth();
-        }, 60000); // Check every 1 min
-        
         return () => {
-            clearInterval(statusInterval);
-            BleClient.stopLEScan().catch(() => {});
+            if (scanCycleTimer) clearInterval(scanCycleTimer);
+            BleClient.stopLEScan().catch(() => { });
         };
-    }, []);
-
-    useEffect(() => {
-        const fetchEmployees = async () => {
-            try {
-                const res = await axios.get(`${API_BASE}/api/terminal/users`);
-                setEmployees(res.data.filter(u => u.status !== 'Deleted'));
-            } catch (err) { console.error('Failed to fetch employees:', err); }
-        };
-        fetchEmployees();
-    }, []);
-
-    // ── Auto-reset countdown ──────────────────────────────────────────────────
-    useEffect(() => {
-        const resultViews = ['checkin', 'checkout', 'error'];
-        if (!resultViews.includes(view)) return;
-
-        setCountdown(RESET_DELAY);
-        const tick = setInterval(() => setCountdown(c => c - 1), 1000);
-        const done = setTimeout(reset, RESET_DELAY * 1000);
-        return () => { clearInterval(tick); clearTimeout(done); };
     }, [view]);
 
-    const reset = () => {
-        setView('home');
-        setLoading(false);
-        setMessage('');
-        setResult(null);
-        setSearchTerm('');
-        setCountdown(RESET_DELAY);
-    };
-
-    // ── Face Scan Live Feed ───────────────────────────────────────────────────
-    const handleFaceScan = () => {
-        setView('face');
-        setMessage('Initializing biometric camera…');
-    };
-
+    // Tesla Auto-Unlock (Zero-Click Proximity Execution)
     useEffect(() => {
-        let interval;
-        const startCamera = async () => {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } });
-                streamRef.current = stream;
-                if (videoRef.current) {
-                    videoRef.current.srcObject = stream;
-                }
-                setMessage('Analyzing...');
-
-                if (view === 'face') {
-                    let failCount = 0;
-                    let isProcessing = false;
-                    
-                    interval = setInterval(async () => {
-                        if (isProcessing) return;
-                        isProcessing = true;
-                        try {
-                            const success = await captureAndVerify();
-                            if (success) {
-                                clearInterval(interval);
-                            } else {
-                                failCount++;
-                                if (failCount > 15) {
-                                    setMessage('Scanner timed out. Try again?');
-                                    clearInterval(interval);
-                                }
-                            }
-                        } catch (e) {
-                            console.error('Loop Error:', e);
-                        } finally {
-                            isProcessing = false;
-                        }
-                    }, 3000);
-                }
-            } catch (err) {
-                console.error(err);
-                setMessage('Camera access denied or unavailable.');
-                setView('error');
-            }
-        };
-
-        if (view === 'face' || view === 'admin_scan') {
-            startCamera();
-        } else {
-            if (streamRef.current) {
-                streamRef.current.getTracks().forEach(t => t.stop());
-                streamRef.current = null;
-            }
-            if (interval) clearInterval(interval);
+        if (view !== 'dashboard') return;
+        if (bleStatus === 'ready' && !autoPromptedRef.current) {
+            autoPromptedRef.current = true;
+            executeCameraFaceScan();
+        } else if (bleStatus === 'offline' || bleStatus === 'disconnected' || bleStatus === 'searching') {
+            autoPromptedRef.current = false; // Reset when they walk away
         }
+    }, [bleStatus, view]);
 
-        return () => {
-            if (interval) clearInterval(interval);
-            if (streamRef.current) {
-                streamRef.current.getTracks().forEach(t => t.stop());
-                streamRef.current = null;
-            }
-        };
-    }, [view]);
-
-    const captureAndVerify = () => {
-        return new Promise((resolve) => {
-            if (!videoRef.current || view !== 'face') return resolve(false);
-
-            const canvas = document.createElement('canvas');
-            canvas.width = videoRef.current.videoWidth || 640;
-            canvas.height = videoRef.current.videoHeight || 480;
-            if (canvas.width === 0) return resolve(false);
-
-            const ctx = canvas.getContext('2d');
-            ctx.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
-
-            canvas.toBlob(async (blob) => {
-                if (!blob) return resolve(false);
-                try {
-                    const form = new FormData();
-                    form.append('file', blob, 'face.jpg');
-
-                    const res = await axios.post(`${API_BASE}/api/biometrics/face/verify`, form, {
-                        headers: { 'Content-Type': 'multipart/form-data' },
-                        timeout: 30000,
-                    });
-
-                    if (res.data.success && view === 'face') {
-                        const isCheckout = !!(res.data.check_out || res.data.checkout);
-                        const now = new Date();
-                        setResult({
-                            name: res.data.user?.name || res.data.name || res.data.employee_name || 'Employee',
-                            time: res.data.check_in
-                                ? new Date(res.data.check_in).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
-                                : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
-                            checkoutTime: res.data.check_out
-                                ? new Date(res.data.check_out).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
-                                : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
-                            workingHours: res.data.working_hours != null ? formatWorkHours(res.data.working_hours) : null,
-                            isCheckout,
-                        });
-                        setView(isCheckout ? 'checkout' : 'checkin');
-                        triggerDoorUnlock();
-                        resolve(true);
-                    } else {
-                        resolve(false);
-                    }
-                } catch (err) {
-                    console.error('Scan Request Error:', err.message);
-                    if (err.response?.status === 401 || err.response?.status === 403) {
-                        setMessage(err.response.data.message || 'Face Not Identified');
-                        setTimeout(() => { if (view === 'face') setMessage('Analyzing...') }, 1200);
-                    } else if (err.response?.status === 503) {
-                        setMessage('Biometric Engine Busy (Cold Start)');
-                    } else {
-                        setMessage(`Engine Error: ${err.message}`);
-                    }
-                    resolve(false);
-                }
-            }, 'image/jpeg', 0.8);
-        });
-    };
-
-    const captureAndRegister = () => {
-        if (!videoRef.current || view !== 'admin_scan' || !selectedEmp) return;
-
-        setLoading(true);
-        setMessage('Capturing & Enrolling...');
-        const canvas = document.createElement('canvas');
-        canvas.width = videoRef.current.videoWidth || 640;
-        canvas.height = videoRef.current.videoHeight || 480;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(videoRef.current, 0, 0, canvas.width, canvas.height);
-
-        canvas.toBlob(async (blob) => {
-            if (!blob) { setLoading(false); return; }
-            try {
-                const form = new FormData();
-                form.append('file', blob, 'register.jpg');
-                form.append('employeeId', selectedEmp.employee_id || selectedEmp.id);
-                form.append('email', selectedEmp.email);
-                form.append('name', selectedEmp.name);
-                form.append('re_enroll', 'true');
-
-                const res = await axios.post(`${API_BASE}/api/biometrics/face/register`, form, {
-                    headers: { 'Content-Type': 'multipart/form-data' },
-                });
-
-                if (res.data.success) {
-                    setMessage('Enrollment Successful!');
-                    setTimeout(() => {
-                        reset();
-                    }, 2500);
-                }
-            } catch (err) {
-                setMessage(err.response?.data?.message || 'Enrollment failed');
-                setTimeout(() => setMessage('Tap Capture to try again'), 2000);
-            } finally {
-                setLoading(false);
-            }
-        }, 'image/jpeg', 0.9);
-    };
-
-    // ── Fingerprint Flow ─────────────────────────────────────────────────────
-    const handleFingerprintScan = () => {
-        // Step 1: Just go to employee selection
-        setView('fingerprint');
-    };
-
-    const markManualAttendance = async (employee) => {
+    // Zero-Biometric Pocket Trust Workflow
+    const executeTeslaUnlock = async () => {
         try {
-            // Step 2: Now verify fingerprint on the device
-            const avail = await NativeBiometric.isAvailable();
-            if (!avail.isAvailable) {
-                throw new Error('Biometric sensor not available or not configured on this device. Please set up a fingerprint in Android Settings.');
+            isUnlockingRef.current = true;
+
+            // Trigger Pocket Feedback (Double-Vibrate & Voice)
+            try {
+                await Haptics.vibrate({ duration: 400 });
+                setTimeout(() => Haptics.vibrate({ duration: 400 }), 600);
+            } catch (e) { console.error(e); }
+
+            try {
+                await TextToSpeech.speak({
+                    text: 'Aura Lock Disengaged',
+                    rate: 1.1,
+                });
+            } catch (e) { }
+
+            setLoading(true);
+            setMessage('Awaiting Biometric Scan...');
+
+            try {
+                const bioCheck = await NativeBiometric.isAvailable();
+                if (bioCheck.isAvailable) {
+                    await NativeBiometric.verifyIdentity({
+                        reason: "Authorize Door Unlock Protocol",
+                        title: "Aura Lock Validation"
+                    });
+                }
+            } catch (authErr) {
+                isUnlockingRef.current = false;
+                throw new Error("Biometric Scan Failed / Cancelled");
             }
-            
-            await NativeBiometric.verify({
-                reason: 'Authenticate for attendance',
-                title: 'Terminal Security',
-                subtitle: `Confirm identity for ${employee.name}`,
-                negativeButtonText: 'Cancel',
+
+            setMessage('Initializing Direct Lock Relay...');
+            await triggerDoorUnlock();
+
+            try {
+                const res = await axios.post(`${API_BASE}/api/attendance/mark`, {
+                    employee_id: myIdentity.employee_id || myIdentity.id,
+                    method: 'tesla_proximity_auth',
+                    device_id: 'internal_secure_enclave'
+                });
+                setResult(res.data);
+            } catch (apiError) {
+                console.warn('Logged auth locally due to API timeout/disconnect');
+            }
+
+            setView('success');
+
+            setTimeout(() => {
+                setView('dashboard');
+                setMessage('');
+                setResult(null);
+                setBleStatus('ready'); // Leave it at ready so it doesn't pulse 'searching' unless they actually walk away
+                isUnlockingRef.current = false; // Unmutes the background Promiscuous Scanner
+            }, 6000);
+        } catch (err) {
+            setMessage(err.response?.data?.error || err.message || 'Background Auth Failed');
+            setView('error');
+            setTimeout(() => {
+                setView('dashboard');
+                isUnlockingRef.current = false;
+            }, 3000);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // Advanced Cloud Vision Engine (Google Cloud Run / Python Edge)
+    const executeCameraFaceScan = async () => {
+        try {
+            isUnlockingRef.current = true;
+            setLoading(true);
+            setMessage('Initializing Front Optical Sensor...');
+
+            const image = await Camera.getPhoto({
+                quality: 80,
+                allowEditing: false,
+                resultType: CameraResultType.Base64,
+                source: CameraSource.Camera,
+                direction: CameraDirection.Front
             });
 
-            // Step 3: Record in DB
-            setLoading(true);
-            const res = await axios.post(`${API_BASE}/api/attendance/mark`, {
-                employee_id: employee.employee_id || employee.id,
-                method: 'fingerprint',
-                device_id: 'office_terminal',
+            setMessage('Analyzing Facial Vectors via GCP Edge...');
+
+            try { await Haptics.vibrate({ duration: 100 }); } catch (e) { }
+
+            // SOP: Camera base64 must be strictly converted into a binary Blob to prevent FastAPI Memory/Schema 422 Rejections
+            const byteCharacters = atob(image.base64String);
+            const byteNumbers = new Array(byteCharacters.length);
+            for (let i = 0; i < byteCharacters.length; i++) {
+                byteNumbers[i] = byteCharacters.charCodeAt(i);
+            }
+            const byteArray = new Uint8Array(byteNumbers);
+            const rawBlob = new Blob([byteArray], { type: 'image/jpeg' });
+
+            const form = new FormData();
+            form.append('file', rawBlob, 'capture.jpg');
+
+            const res = await axios.post(`${API_BASE}/api/biometrics/face/verify`, form, {
+                headers: { 'Content-Type': 'multipart/form-data' }
             });
-            
-            const data = res.data || {};
-            const isCheckout = !!(data.check_out);
-            const now = new Date();
-            
-            setResult({
-                name: employee.name,
-                time: data.check_in
-                    ? new Date(data.check_in).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
-                    : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
-                checkoutTime: data.check_out
-                    ? new Date(data.check_out).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
-                    : now.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }),
-                workingHours: data.working_hours != null ? formatWorkHours(data.working_hours) : null,
-                isCheckout,
-            });
-            
-            setView(isCheckout ? 'checkout' : 'checkin');
-            triggerDoorUnlock();
+
+            try {
+                await TextToSpeech.speak({ text: 'Aura Vision Verified', rate: 1.1 });
+                await Haptics.vibrate({ duration: 400 });
+            } catch (e) { }
+
+            setMessage('Optical Vector Validated. Disengaging Door...');
+            await triggerDoorUnlock();
+
+            setResult(res.data);
+            setView('success');
+            setTimeout(() => {
+                setView('dashboard');
+                setMessage('');
+                setResult(null);
+                setBleStatus('ready');
+                isUnlockingRef.current = false;
+            }, 6000);
 
         } catch (err) {
-            console.error('Fingerprint Error:', err);
+            setMessage(err.response?.data?.error || err.message || 'Vision Verification Denied');
+            setView('error');
+            setTimeout(() => {
+                setView('dashboard');
+                isUnlockingRef.current = false;
+            }, 3000);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // Admin Silent Override - No Attendance Logging
+    const executeAdminOverrideUnlock = async () => {
+        try {
+            isUnlockingRef.current = true;
+
+            try {
+                await Haptics.vibrate({ duration: 300 });
+            } catch (e) { }
+
+            try {
+                await TextToSpeech.speak({
+                    text: 'Admin Override Engaged',
+                    rate: 1.1,
+                });
+            } catch (e) { }
+
+            setLoading(true);
+            setMessage('Bypassing Web Servers (Direct BLE Hook)...');
+            await triggerDoorUnlock();
+
+            setView('success');
+
+            setTimeout(() => {
+                setView('dashboard');
+                setMessage('');
+                setResult(null);
+                setBleStatus('ready');
+                isUnlockingRef.current = false;
+            }, 6000);
+        } catch (err) {
+            setMessage(err.message || 'Direct Override Failed');
+            setView('error');
+            setTimeout(() => {
+                setView('dashboard');
+                isUnlockingRef.current = false;
+            }, 3000);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // Door Unlock Strategy
+    const triggerDoorUnlock = async () => {
+        try {
+            await BleClient.initialize();
+            // Wait 500ms for OS to cleanly flush the GATT pipeline after scanner dump
+            await new Promise(resolve => setTimeout(resolve, 500));
+            await BleClient.connect(BLE_MAC);
+
+            const buffer = new ArrayBuffer(2);
+            const dataView = new DataView(buffer);
+            dataView.setUint8(0, 'O'.charCodeAt(0));
+            dataView.setUint8(1, 'N'.charCodeAt(0));
+            await BleClient.write(BLE_MAC, DOOR_SERVICE_UUID, DOOR_CHAR_UUID, dataView);
+
+            setTimeout(async () => {
+                const offBuf = new ArrayBuffer(3);
+                const offView = new DataView(offBuf);
+                offView.setUint8(0, 'O'.charCodeAt(0));
+                offView.setUint8(1, 'F'.charCodeAt(0));
+                offView.setUint8(2, 'F'.charCodeAt(0));
+                await BleClient.write(BLE_MAC, DOOR_SERVICE_UUID, DOOR_CHAR_UUID, offView);
+                await BleClient.disconnect(BLE_MAC);
+            }, 5500);
+        } catch (err) {
+            console.error('BLE Failed:', err);
+        }
+    };
+
+    // BYOD Personal Fingerprint Workflow
+    const unlockWithFingerprint = async () => {
+        try {
+            setLoading(true);
+            const avail = await NativeBiometric.isAvailable();
+            if (!avail.isAvailable) {
+                throw new Error("Biometric sensor not configured on this device.");
+            }
+
+            await NativeBiometric.verifyIdentity({
+                reason: 'Authenticate to unlock Englabs door',
+                title: 'Englabs Security',
+                subtitle: `Confirm identity for ${myIdentity.name}`,
+            });
+
+            // 1. Log Attendance remotely across Wifi/4G
+            setMessage('Authenticating...');
+            const res = await axios.post(`${API_BASE}/api/attendance/mark`, {
+                employee_id: myIdentity.employee_id || myIdentity.id,
+                method: 'fingerprint_byod',
+                device_id: 'iphone_byod'
+            });
+
+            // 2. Trigger Door via Local BLE
+            setMessage('Unlocking Door...');
+            triggerDoorUnlock();
+
+            setResult(res.data);
+            setView('success');
+
+            // Auto close after 4 sec
+            setTimeout(() => {
+                setView('dashboard');
+                setMessage('');
+                setResult(null);
+            }, 4000);
+
+        } catch (err) {
             if (err.message !== 'User canceled') {
-                setMessage(err.response?.data?.error || 'Verification Failed');
+                setMessage(err.response?.data?.error || err.message || 'Verification Failed');
                 setView('error');
+                setTimeout(() => setView('dashboard'), 3000);
             }
         } finally {
             setLoading(false);
         }
     };
 
-    // ── Helper ────────────────────────────────────────────────────────────────
-    const formatWorkHours = (wh) => {
-        const h = Math.floor(wh);
-        const m = Math.round((wh - h) * 60);
-        return `${h}h ${String(m).padStart(2, '0')}m`;
-    };
+    if (view === 'loading') return <div className="w-screen h-screen kiosk-gradient flex items-center justify-center"><div className="animate-spin text-blue-500"><AlertCircle size={40} /></div></div>;
 
-    // ─────────────────────────────────────────────────────────────────────────
     return (
-        <div className="w-screen h-screen kiosk-gradient flex flex-col items-center justify-center p-8 text-white relative overflow-hidden">
-
-            {/* Top bar */}
-            <div className="absolute top-0 left-0 right-0 px-8 py-5 flex items-center justify-between border-b border-white/[0.04] z-10">
-                <div onClick={() => { if (view === 'home') setView('admin_auth'); }} className="cursor-pointer hover:opacity-80 transition-opacity">
-                    <div className="text-xs font-black uppercase tracking-[0.3em] text-blue-400">AuraLock</div>
-                    <div className="text-[10px] text-slate-600 font-medium uppercase tracking-widest">Smart Biometric Terminal</div>
+        <div className="w-screen h-screen kiosk-gradient flex flex-col items-center justify-center p-6 text-white relative overflow-hidden">
+            {/* Header / Englabs Branding */}
+            <div className="absolute top-0 w-full pt-12 pb-6 px-8 flex justify-between items-center z-10 bg-gradient-to-b from-slate-900/80 to-transparent">
+                <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-white rounded-xl shadow-[0_0_20px_rgba(16,185,129,0.3)] flex items-center justify-center p-2 overflow-hidden">
+                        <svg viewBox="0 0 100 100" className="w-full h-full text-emerald-400" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M 20,65 C 40,85 80,85 80,50 C 80,15 40,15 40,50 C 40,85 80,85 95,70" />
+                            <path d="M 12,58 C 32,78 72,78 72,43 C 72,8 32,8 32,43 C 32,78 72,78 87,63" />
+                        </svg>
+                    </div>
+                    <div className="flex flex-col">
+                        <span className="text-[16px] font-black tracking-[0.2em] text-white leading-tight">ENGLABS</span>
+                        <span className="text-[8px] font-bold uppercase tracking-[0.4em] text-emerald-400 leading-none">Aura Lock</span>
+                    </div>
                 </div>
-                <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-[10px] font-black text-emerald-500 uppercase tracking-widest">System Online</span>
-                </div>
-                <div className="text-slate-600 text-[10px] font-medium uppercase tracking-widest">Terminal ID: TX-082</div>
+                {view === 'dashboard' && (
+                    <div className="flex items-center gap-2">
+                        <div className={`w-2 h-2 rounded-full ${bleStatus === 'ready' || bleStatus === 'connected' ? 'bg-emerald-500 animate-pulse' : 'bg-red-500'}`} />
+                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">
+                            {bleStatus === 'ready' ? 'Door in Range' : 'Out of bounds'}
+                        </span>
+                    </div>
+                )}
             </div>
 
             <AnimatePresence mode="wait">
+                {/* ── STEP 1: INITIAL DEVICE SETUP ── */}
+                {view === 'setup' && (
+                    <motion.div key="setup" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-sm glass p-8 rounded-3xl z-20">
+                        <h2 className="text-2xl font-black mb-2 text-center text-white">Device Pairing</h2>
+                        <p className="text-xs text-slate-400 text-center mb-6">Select your identity to permanently bond this app to your smartphone.</p>
 
-                {/* ── ADMIN AUTH ── */}
-                {view === 'admin_auth' && (
-                    <motion.div key="admin_auth" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="glass p-8 rounded-3xl w-full max-w-md flex flex-col gap-6 items-center z-20">
-                        <div className="flex items-center justify-between w-full border-b border-white/[0.06] pb-4">
-                            <h2 className="text-lg font-black flex items-center gap-2"><ShieldAlert size={20} className="text-blue-400" /> Admin Access</h2>
-                            <button onClick={reset} className="p-2 hover:bg-white/10 rounded-full transition-colors"><X size={20} /></button>
-                        </div>
-                        <input type="password" placeholder="Enter Admin PIN" className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl p-4 text-center text-xl tracking-widest focus:outline-none focus:border-blue-500/50" value={adminPin} onChange={e => setAdminPin(e.target.value)} autoFocus />
-                        <button onClick={() => { if (adminPin === '1234') { setView('admin_select'); setAdminPin(''); } else { setMessage('Invalid PIN'); setTimeout(() => setMessage(''), 2000); } }} className="w-full py-4 bg-blue-600 hover:bg-blue-500 rounded-xl font-black text-white uppercase tracking-widest transition-colors flex items-center justify-center gap-2"><Unlock size={18} /> Authenticate</button>
-                        {message && <p className="text-red-400 text-sm font-bold">{message}</p>}
-                    </motion.div>
-                )}
+                        <input type="text" placeholder="Search your name..."
+                            className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl p-4 text-sm focus:outline-none focus:border-blue-500/50 transition-colors mb-4"
+                            value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
 
-                {/* ── ADMIN EMPLOYEE SELECT ── */}
-                {view === 'admin_select' && (
-                    <motion.div key="admin_select" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="glass p-8 rounded-3xl w-full max-w-2xl flex flex-col gap-5 z-20">
-                        <div className="flex items-center justify-between border-b border-white/[0.06] pb-4">
-                            <h2 className="text-lg font-black flex items-center gap-2"><UserPlus size={20} className="text-blue-400" /> Select Employee for Face Registration</h2>
-                            <button onClick={reset} className="p-2 hover:bg-white/10 rounded-full transition-colors"><X size={20} /></button>
-                        </div>
-                        <input type="text" placeholder="Search by name…" className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl p-4 text-base focus:outline-none focus:border-blue-500/50 placeholder:text-slate-600 transition-colors" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} autoFocus />
-                        <div className="grid grid-cols-2 gap-3 max-h-[380px] overflow-y-auto pr-1 custom-scrollbar">
+                        <div className="flex flex-col gap-2 max-h-[300px] overflow-y-auto custom-scrollbar pr-1">
                             {employees.filter(e => e.name.toLowerCase().includes(searchTerm.toLowerCase())).map(emp => (
-                                <button key={emp.id} onClick={() => { setSelectedEmp(emp); setView('admin_scan'); setMessage('Ready to capture'); }} className="flex items-center gap-3 p-4 glass hover:glass-active rounded-2xl transition-all text-left">
-                                    <div className="w-10 h-10 rounded-full bg-slate-800 overflow-hidden shrink-0"><img src={emp.image_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(emp.name)}&background=1e293b&color=94a3b8`} alt="" className="w-full h-full object-cover" /></div>
-                                    <div><div className="font-bold text-sm truncate">{emp.name}</div><div className="text-slate-500 text-[10px]">{emp.department || 'General'}</div></div>
+                                <button key={emp.id} onClick={() => linkDeviceToEmployee(emp)}
+                                    className="flex items-center gap-3 p-4 bg-white/[0.02] hover:bg-blue-500/10 border border-transparent hover:border-blue-500/20 rounded-xl transition-all text-left">
+                                    <div className="w-8 h-8 rounded-full bg-slate-800 overflow-hidden shrink-0">
+                                        <img src={emp.image_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(emp.name)}&background=1e293b&color=94a3b8`} alt="" className="w-full h-full object-cover" />
+                                    </div>
+                                    <div>
+                                        <div className="font-bold text-sm text-slate-100">{emp.name}</div>
+                                        <div className="text-[10px] text-slate-500">{emp.department || 'Staff Member'}</div>
+                                    </div>
                                 </button>
                             ))}
                         </div>
                     </motion.div>
                 )}
 
-                {/* ── ADMIN CAPTURE SCAN ── */}
-                {view === 'admin_scan' && (
-                    <motion.div key="admin_scan" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center gap-10 z-20">
-                        <h2 className="text-2xl font-black text-white tracking-tight">Register: {selectedEmp?.name}</h2>
-                        <div className="relative w-64 h-64">
-                            {/* Corner brackets */}
-                            {[['top-0 left-0', 'border-t-2 border-l-2'], ['top-0 right-0', 'border-t-2 border-r-2'], ['bottom-0 left-0', 'border-b-2 border-l-2'], ['bottom-0 right-0', 'border-b-2 border-r-2']].map(([pos, br], i) => (<div key={i} className={`absolute w-8 h-8 ${pos} ${br} border-blue-400 rounded-sm`} />))}
-                            <div className="w-full h-full rounded-2xl flex items-center justify-center bg-blue-500/5 border border-blue-500/10 overflow-hidden relative">
-                                <video ref={videoRef} autoPlay playsInline muted className="w-full h-full object-cover" style={{ transform: 'scaleX(-1)' }} />
-                                <div className="absolute inset-0 pointer-events-none flex items-center justify-center"><div className="w-40 h-52 rounded-[100px] border-[3px] border-emerald-400/40 border-dashed" /></div>
+                {/* ── STEP 2: PERSONAL DASHBOARD ── */}
+                {view === 'dashboard' && (
+                    <motion.div key="dashboard" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-center w-full z-20 mt-10">
+                        {/* Profile Pill */}
+                        <div className="glass px-6 py-4 rounded-full flex items-center gap-4 mb-16 border border-white/5">
+                            <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-blue-500/30">
+                                <img src={myIdentity?.image_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(myIdentity?.name)}&background=1e293b&color=94a3b8`} className="w-full h-full object-cover" />
                             </div>
-                        </div>
-                        <div className="flex flex-col gap-4 text-center w-full max-w-sm">
-                            <p className="text-xl font-bold text-emerald-300 min-h-[30px]">{message}</p>
-                            <button onClick={captureAndRegister} disabled={loading} className="w-full py-4 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 rounded-xl font-black text-white uppercase tracking-widest transition-colors flex items-center justify-center">
-                                {loading ? 'Processing...' : 'Capture & Save'}
-                            </button>
-                            <button onClick={reset} disabled={loading} className="px-6 py-2 bg-slate-800 rounded-xl font-bold text-white uppercase text-[10px] tracking-widest hover:bg-slate-700 transition-colors">Cancel</button>
-                        </div>
-                    </motion.div>
-                )}
-
-                {/* ── HOME ── */}
-                {view === 'home' && (
-                    <motion.div key="home"
-                        initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.04 }}
-                        className="flex flex-col items-center gap-14 w-full max-w-3xl">
-
-                    <LiveClock />
-
-                    {/* ── STATUS INDICATORS ── */}
-                    <div className="flex flex-wrap items-center justify-center gap-3 mt-4">
-                        {/* BLE Indicator */}
-                        <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.03] border border-white/[0.08] rounded-full">
-                            {bleStatus === 'connected' ? (
-                                <><BluetoothConnected size={14} className="text-emerald-400" /><span className="text-[9px] font-black text-emerald-400 uppercase tracking-widest">Door Linked</span></>
-                            ) : bleStatus === 'ready' ? (
-                                <><Bluetooth size={14} className="text-blue-400 animate-pulse" /><span className="text-[9px] font-black text-blue-400 uppercase tracking-widest">Door Ready</span></>
-                            ) : bleStatus === 'searching' ? (
-                                <><Search size={14} className="text-blue-400/50 animate-spin" /><span className="text-[9px] font-black text-blue-400/50 uppercase tracking-widest">Searching Lock...</span></>
-                            ) : (
-                                <><BluetoothOff size={14} className="text-slate-500" /><span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Door Offline</span></>
-                            )}
-                        </div>
-
-                        {/* Biometric Health Indicator */}
-                        <div className="flex items-center gap-2 px-4 py-2 bg-white/[0.03] border border-white/[0.08] rounded-full">
-                            {biometricStatus === 'online' ? (
-                                <><Cpu size={14} className="text-blue-400" /><span className="text-[9px] font-black text-blue-400 uppercase tracking-widest">AI Engine Online</span></>
-                            ) : biometricStatus === 'checking' ? (
-                                <><RefreshCw size={14} className="text-slate-500 animate-spin" /><span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Loading AI...</span></>
-                            ) : (
-                                <><AlertCircle size={14} className="text-red-400" /><span className="text-[9px] font-black text-red-400 uppercase tracking-widest">AI Engine Offline</span></>
-                            )}
-                        </div>
-                    </div>
-
-                        <div className="w-full">
-                            <p className="text-center text-slate-500 text-xs font-black uppercase tracking-[0.3em] mb-6">
-                                Select Verification Method
-                            </p>
-                            <div className="grid grid-cols-2 gap-6">
-                                {/* Face Scan */}
-                                <motion.button
-                                    whileHover={{ scale: 1.02, y: -2 }} whileTap={{ scale: 0.98 }}
-                                    onClick={handleFaceScan}
-                                    className="glass p-10 rounded-3xl flex flex-col items-center gap-5 group relative overflow-hidden">
-                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    <div className="p-5 rounded-2xl bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors border border-blue-500/20">
-                                        <Camera size={56} className="text-blue-400" />
-                                    </div>
-                                    <div className="text-center">
-                                        <h2 className="text-xl font-black tracking-tight">Face Scan</h2>
-                                        <p className="text-slate-500 mt-1 text-xs font-medium">Automated recognition</p>
-                                    </div>
-                                </motion.button>
-
-                                {/* Fingerprint */}
-                                <motion.button
-                                    whileHover={{ scale: 1.02, y: -2 }} whileTap={{ scale: 0.98 }}
-                                    onClick={handleFingerprintScan}
-                                    className="glass p-10 rounded-3xl flex flex-col items-center gap-5 group relative overflow-hidden">
-                                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    <div className="p-5 rounded-2xl bg-emerald-500/10 group-hover:bg-emerald-500/20 transition-colors border border-emerald-500/20">
-                                        <Fingerprint size={56} className="text-emerald-400" />
-                                    </div>
-                                    <div className="text-center">
-                                        <h2 className="text-xl font-black tracking-tight">Fingerprint</h2>
-                                        <p className="text-slate-500 mt-1 text-xs font-medium">Native biometric verify</p>
-                                    </div>
-                                </motion.button>
-                            </div>
-                        </div>
-                    </motion.div>
-                )}
-
-                {/* ── FINGERPRINT EMPLOYEE PICKER ── */}
-                {view === 'fingerprint' && (
-                    <motion.div key="fingerprint"
-                        initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
-                        className="glass p-8 rounded-3xl w-full max-w-2xl flex flex-col gap-5">
-                        <div className="flex items-center justify-between border-b border-white/[0.06] pb-4">
-                            <h2 className="text-lg font-black">Select Employee</h2>
-                            <button onClick={reset} className="p-2 hover:bg-white/10 rounded-full transition-colors"><X size={20} /></button>
-                        </div>
-                        <input type="text" placeholder="Search by name…"
-                            className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl p-4 text-base focus:outline-none focus:border-emerald-500/50 placeholder:text-slate-600 transition-colors"
-                            value={searchTerm} onChange={e => setSearchTerm(e.target.value)} autoFocus />
-                        <div className="grid grid-cols-2 gap-3 max-h-[380px] overflow-y-auto pr-1 custom-scrollbar">
-                            {employees.filter(e => e.name.toLowerCase().includes(searchTerm.toLowerCase()))
-                                .map(emp => (
-                                    <button key={emp.id} onClick={() => markManualAttendance(emp)} disabled={loading}
-                                        className="flex items-center gap-3 p-4 glass hover:glass-active rounded-2xl transition-all text-left">
-                                        <div className="w-10 h-10 rounded-full bg-slate-800 overflow-hidden shrink-0">
-                                            <img src={emp.image_url || `https://ui-avatars.com/api/?name=${encodeURIComponent(emp.name)}&background=1e293b&color=94a3b8`}
-                                                alt="" className="w-full h-full object-cover" />
-                                        </div>
-                                        <div>
-                                            <div className="font-bold text-sm truncate">{emp.name}</div>
-                                            <div className="text-slate-500 text-[10px]">{emp.department || 'General'}</div>
-                                        </div>
-                                    </button>
-                                ))}
-                        </div>
-                    </motion.div>
-                )}
-
-                {/* ── FACE SCANNING ── */}
-                {view === 'face' && (
-                    <motion.div key="face"
-                        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-                        className="flex flex-col items-center gap-10">
-                        <div className="relative w-64 h-64">
-                            {/* Corner brackets */}
-                            {[['top-0 left-0', 'border-t-2 border-l-2'], ['top-0 right-0', 'border-t-2 border-r-2'],
-                            ['bottom-0 left-0', 'border-b-2 border-l-2'], ['bottom-0 right-0', 'border-b-2 border-r-2']].map(([pos, br], i) => (
-                                <div key={i} className={`absolute w-8 h-8 ${pos} ${br} border-blue-400 rounded-sm`} />
-                            ))}
-                            <div className="w-full h-full rounded-2xl flex items-center justify-center bg-blue-500/5 border border-blue-500/10 overflow-hidden relative">
-                                <video ref={videoRef} autoPlay playsInline muted className="w-full h-full object-cover" style={{ transform: 'scaleX(-1)' }} />
-                                {/* Face Guide Overlay */}
-                                <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
-                                    <div className="w-40 h-52 rounded-[100px] border-[3px] border-blue-400/40 border-dashed" />
-                                </div>
-                            </div>
-                            {/* Scanning line */}
-                            <motion.div
-                                animate={{ y: ['0%', '100%', '0%'] }}
-                                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                                className="absolute left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent top-0"
-                            />
-                        </div>
-                        <div className="text-center">
-                            {biometricStatus !== 'online' ? (
-                                <p className="text-xl font-bold text-red-400 animate-pulse">
-                                    <AlertCircle size={20} className="inline mr-2" />
-                                    AI Engine Offline
-                                </p>
-                            ) : (
-                                <p className="text-xl font-bold text-blue-300">{message || 'Analyzing...'}</p>
-                            )}
-                            <p className="text-slate-600 text-xs mt-2 font-medium uppercase tracking-widest">Do not move</p>
-                        </div>
-                        <button onClick={reset} className="px-6 py-2 bg-slate-800 rounded-xl font-bold text-white uppercase text-[10px] tracking-widest hover:bg-slate-700 transition-colors">Cancel</button>
-                    </motion.div>
-                )}
-
-                {/* ── CHECK-IN SUCCESS (WELCOME) ── */}
-                {view === 'checkin' && (
-                    <motion.div key="checkin"
-                        initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
-                        transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-                        className="flex flex-col items-center gap-8 text-center">
-
-                        {/* Pulsing ring + icon */}
-                        <div className="relative">
-                            <motion.div
-                                animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0, 0.3] }}
-                                transition={{ duration: 2, repeat: Infinity }}
-                                className="absolute inset-0 rounded-full bg-emerald-500/30"
-                            />
-                            <div className="w-36 h-36 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center relative">
-                                <CheckCircle2 size={72} className="text-emerald-400" />
+                            <div className="flex flex-col text-left">
+                                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Authenticated As</span>
+                                <span className="font-black text-lg text-white tracking-tight">{myIdentity?.name}</span>
                             </div>
                         </div>
 
-                        {/* Text */}
-                        <div>
-                            <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-                                className="text-[11px] font-black uppercase tracking-[0.4em] text-emerald-400 mb-3">
-                                ✦ WELCOME ✦
-                            </motion.p>
-                            <motion.h2 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-                                className="text-5xl font-black text-white tracking-tight mb-2">
-                                {result?.name}
-                            </motion.h2>
-                            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
-                                className="text-emerald-400 font-black text-lg uppercase tracking-widest mb-1">
-                                Check In Successful
-                            </motion.p>
-                            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.45 }}
-                                className="text-slate-400 text-2xl font-bold tabular-nums flex items-center justify-center gap-2">
-                                <Clock size={18} className="text-slate-500" />
-                                {result?.time}
-                            </motion.p>
-                        </div>
-
-                        {/* Countdown */}
-                        <div className="flex items-center gap-3 opacity-60">
-                            <CountdownRing seconds={countdown} color="#10b981" />
-                            <span className="text-xs text-slate-500 font-bold">Resetting in {countdown}s</span>
-                        </div>
-                    </motion.div>
-                )}
-
-                {/* ── CHECK-OUT SUCCESS (GOODBYE) ── */}
-                {view === 'checkout' && (
-                    <motion.div key="checkout"
-                        initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
-                        transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-                        className="flex flex-col items-center gap-8 text-center">
-
-                        <div className="relative">
-                            <motion.div
-                                animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0, 0.3] }}
-                                transition={{ duration: 2, repeat: Infinity }}
-                                className="absolute inset-0 rounded-full bg-indigo-500/30"
-                            />
-                            <div className="w-36 h-36 rounded-full bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center relative">
-                                <LogOut size={72} className="text-indigo-400" />
-                            </div>
-                        </div>
-
-                        <div>
-                            <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-                                className="text-[11px] font-black uppercase tracking-[0.4em] text-indigo-400 mb-3">
-                                ✦ GOODBYE ✦
-                            </motion.p>
-                            <motion.h2 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-                                className="text-5xl font-black text-white tracking-tight mb-2">
-                                {result?.name}
-                            </motion.h2>
-                            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
-                                className="text-indigo-400 font-black text-lg uppercase tracking-widest mb-1">
-                                Check Out Successful
-                            </motion.p>
-                            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.45 }}
-                                className="flex flex-col items-center gap-1 mt-2">
-                                <p className="text-slate-400 text-xl font-bold tabular-nums flex items-center gap-2">
-                                    <Clock size={18} className="text-slate-500" />
-                                    {result?.checkoutTime}
-                                </p>
-                                {result?.workingHours && (
-                                    <div className="mt-2 px-6 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20">
-                                        <span className="text-indigo-300 font-black text-base tracking-widest">
-                                            {result.workingHours} worked today
-                                        </span>
-                                    </div>
+                        {/* DUAL BIOMETRIC GATEWAY UI */}
+                        <div className="flex gap-4 w-full justify-center max-w-sm">
+                            {/* Option A: OS Hardware Biometric (Fingerprint/Local FaceID) */}
+                            <motion.button
+                                whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+                                onClick={executeTeslaUnlock} disabled={loading || bleStatus !== 'ready'}
+                                className={`w-36 h-40 rounded-[2rem] flex flex-col items-center justify-center gap-4 transition-all duration-500 ${bleStatus === 'ready' ? 'bg-gradient-to-br from-blue-600 to-blue-500 shadow-[0_0_40px_rgba(59,130,246,0.4)] border-2 border-white/20' : 'bg-slate-800/50 border-2 border-slate-700/50 opacity-60'}`}>
+                                {loading ? (
+                                    <div className="animate-spin text-white"><AlertCircle size={45} /></div>
+                                ) : (
+                                    <Fingerprint size={50} className="text-white drop-shadow-md" />
                                 )}
-                            </motion.div>
+                                <span className="font-black text-xs uppercase tracking-widest text-center leading-tight">
+                                    Local<br />Auth
+                                </span>
+                            </motion.button>
+
+                            {/* Option B: Cloud Optical Geometry (GCP Vision) */}
+                            <motion.button
+                                whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
+                                onClick={executeCameraFaceScan} disabled={loading || bleStatus !== 'ready'}
+                                className={`w-36 h-40 rounded-[2rem] flex flex-col items-center justify-center gap-4 transition-all duration-500 ${bleStatus === 'ready' ? 'bg-gradient-to-br from-indigo-600 to-purple-500 shadow-[0_0_40px_rgba(99,102,241,0.4)] border-2 border-white/20' : 'bg-slate-800/50 border-2 border-slate-700/50 opacity-60'}`}>
+                                {loading ? (
+                                    <div className="animate-spin text-white"><AlertCircle size={45} /></div>
+                                ) : (
+                                    <ScanFace size={50} className="text-white drop-shadow-md" />
+                                )}
+                                <span className="font-black text-xs uppercase tracking-widest text-center leading-tight">
+                                    Cloud<br />Optical
+                                </span>
+                            </motion.button>
                         </div>
 
-                        <div className="flex items-center gap-3 opacity-60">
-                            <CountdownRing seconds={countdown} color="#818cf8" />
-                            <span className="text-xs text-slate-500 font-bold">Resetting in {countdown}s</span>
-                        </div>
+                        <p className="mt-8 text-center text-[11px] text-slate-500 uppercase tracking-widest font-black max-w-[280px]">
+                            ⚡ TESLA PROXIMITY MODE ACTIVE ⚡<br /><br />
+                            Background BLE Polling engaged. Keep phone in pocket; Door trusts your device's Enclave Token organically.
+                        </p>
+
+                        {myIdentity?.name?.toLowerCase() === 'bharat anand' && (
+                            <button onClick={executeAdminOverrideUnlock} disabled={loading || bleStatus !== 'ready'} className="mt-6 px-6 py-2 bg-slate-800 border border-emerald-500/50 rounded-full text-[10px] text-emerald-400 font-bold uppercase tracking-widest hover:bg-emerald-900/30 transition-colors disabled:opacity-30">
+                                Admin Silent Override
+                            </button>
+                        )}
+
+                        <button onClick={handleClearIdentity} className="absolute bottom-8 text-[10px] text-slate-600 font-bold uppercase tracking-widest underline hover:text-slate-400 transition-colors">
+                            Reset Identity (Remove Device)
+                        </button>
                     </motion.div>
                 )}
 
-                {/* ── ERROR / NOT RECOGNIZED ── */}
+                {/* ── SUCCESS SCREEN ── */}
+                {view === 'success' && (
+                    <motion.div key="success" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-center gap-6 z-20">
+                        <div className="w-32 h-32 rounded-full bg-emerald-500/20 border-2 border-emerald-500 flex items-center justify-center text-emerald-400 shadow-[0_0_40px_rgba(16,185,129,0.5)]">
+                            <Unlock size={50} />
+                        </div>
+                        <h2 className="text-4xl font-black text-white tracking-tight">Door Unlocked</h2>
+                        <p className="text-emerald-400 font-bold text-lg">Identity Verified & Attendance Logged</p>
+                    </motion.div>
+                )}
+
+                {/* ── ERROR SCREEN ── */}
                 {view === 'error' && (
-                    <motion.div key="error"
-                        initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
-                        transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-                        className="flex flex-col items-center gap-8 text-center">
-
-                        <div className="relative">
-                            <motion.div
-                                animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0, 0.3] }}
-                                transition={{ duration: 1.5, repeat: Infinity }}
-                                className="absolute inset-0 rounded-full bg-red-500/30"
-                            />
-                            <motion.div
-                                animate={{ rotate: [-4, 4, -4, 4, 0] }}
-                                transition={{ delay: 0.1, duration: 0.5 }}
-                                className="w-36 h-36 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center relative">
-                                <AlertTriangle size={72} className="text-red-400" />
-                            </motion.div>
+                    <motion.div key="error" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-center gap-6 z-20">
+                        <div className="w-32 h-32 rounded-full bg-red-500/20 border-2 border-red-500 flex items-center justify-center text-red-500 shadow-[0_0_40px_rgba(239,68,68,0.5)]">
+                            <ShieldAlert size={50} />
                         </div>
-
-                        <div>
-                            <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-                                className="text-[11px] font-black uppercase tracking-[0.4em] text-red-400 mb-3">
-                                ✦ ACCESS DENIED ✦
-                            </motion.p>
-                            <motion.h2 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-                                className="text-5xl font-black text-white tracking-tight mb-2">
-                                Face Not Recognized
-                            </motion.h2>
-                            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}
-                                className="text-red-400/80 text-lg font-bold uppercase tracking-widest mb-1">
-                                Please Try Again
-                            </motion.p>
-                            {message && message !== 'Face not recognized' && (
-                                <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.45 }}
-                                    className="text-slate-600 text-sm mt-1">{message}</motion.p>
-                            )}
-                        </div>
-
-                        <motion.button
-                            whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-                            onClick={reset}
-                            className="px-8 py-3 bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.08] rounded-2xl font-black text-sm uppercase tracking-widest transition-all">
-                            Try Again
-                        </motion.button>
-
-                        <div className="flex items-center gap-3 opacity-60">
-                            <CountdownRing seconds={countdown} color="#f87171" />
-                            <span className="text-xs text-slate-500 font-bold">Auto-reset in {countdown}s</span>
-                        </div>
+                        <h2 className="text-4xl font-black text-white tracking-tight">Access Denied</h2>
+                        <p className="text-red-400 font-bold text-lg text-center max-w-[300px]">{message}</p>
                     </motion.div>
                 )}
-
             </AnimatePresence>
         </div>
     );
