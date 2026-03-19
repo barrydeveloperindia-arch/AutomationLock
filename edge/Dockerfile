@@ -20,7 +20,7 @@ COPY dlib-19.24.1-cp310-cp310-linux_x86_64.whl .
 
 # Install statically compiled Dlib wheel, bypassing all C++ build steps completely
 RUN pip install --no-cache-dir dlib-19.24.1-cp310-cp310-linux_x86_64.whl && \
-    pip install --no-cache-dir opencv-python-headless && \
+    pip install --no-cache-dir "opencv-python-headless<4.10.0" && \
     pip install --no-cache-dir -r requirements.txt
 
 # Pre-download face-recognition models to prevent runtime timeouts
