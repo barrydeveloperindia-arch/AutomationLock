@@ -462,9 +462,9 @@ export default function Attendance() {
                                 const name = rec.employees?.name || '—';
                                 const initials = name.slice(0, 2).toUpperCase();
                                 return (
-                                    <tr key={rec.id} 
+                                    <tr key={rec.id}
                                         className="group hover:bg-white/[0.04] cursor-pointer transition-all border-l-2 border-l-transparent hover:border-l-blue-500"
-                                        onClick={() => navigate(`/attendance/employee/${rec.employees?.employee_id || rec.employee_id}`)}>
+                                        onClick={() => navigate(`/admin/attendance/employee/${rec.employees?.employee_id || rec.employee_id}`)}>
                                         {/* Employee */}
                                         <td className="px-4 md:px-6 py-4">
                                             <div className="flex items-center gap-3">

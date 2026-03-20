@@ -252,7 +252,7 @@ export default function Logs() {
                                 </tr>
                             ) : logs.map(log => (
                                 <tr key={log.id}
-                                    onClick={() => log.employee_id && navigate(`/access/employee/${log.employee_id}`)}
+                                    onClick={() => log.employee_id && navigate(`/admin/access/employee/${log.employee_id}`)}
                                     className={`hover:bg-white/[0.03] cursor-pointer transition-all duration-300 group active:scale-[0.995] ${log.status === 'failed' ? 'border-l-2 border-red-500/30' : log.status === 'ambiguous' ? 'border-l-2 border-amber-500/30' : 'border-l-2 border-transparent'}`}>
 
                                     {/* Subject */}
@@ -268,8 +268,8 @@ export default function Logs() {
                                             <div className="min-w-0">
                                                 <div className="text-sm font-bold text-white leading-tight truncate">
                                                     {log.employees?.name ? log.employees.name : (
-                                                        log.method === 'REMOTE' ? 'Remote Unlock' : 
-                                                        log.method === 'FINGERPRINT' ? 'Unknown Fingerprint' : 'Unknown Person'
+                                                        log.method === 'REMOTE' ? 'Remote Unlock' :
+                                                            log.method === 'FINGERPRINT' ? 'Unknown Fingerprint' : 'Unknown Person'
                                                     )}
                                                 </div>
                                                 <div className="text-[10px] text-slate-600 font-medium truncate">
